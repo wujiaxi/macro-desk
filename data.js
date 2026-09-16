@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 18:23 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 18:26 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -298,7 +298,23 @@ export const events = [
       }
     ],
     "verdict": "名义 beat 但实质 miss? 否 ——(程序判定,依据见 §8.1) 事件定价失败? 不可判 —— 卡片无 implied_move(隐含区间数据缺口),不得渲染成「否」",
-    "history": [],
+    "history": [
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +4.9% · 实际 4.27 vs 预期 4.07",
+        "outcome": "次日 -3.93%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-01-28",
+        "what": "EPS 意外 +5.7% · 实际 4.14 vs 预期 3.92",
+        "outcome": "次日 -9.99%（大 beat 5–10%）"
+      },
+      {
+        "when": "2025-10-29",
+        "what": "EPS 意外 +12.7% · 实际 4.13 vs 预期 3.66",
+        "outcome": "次日 -2.92%（巨 beat >10%）"
+      }
+    ],
     "links": [],
     "consensus": {
       "eps": "$4.24",
@@ -619,7 +635,23 @@ export const events = [
       }
     ],
     "verdict": "名义 beat 但实质 miss? 是 ——(程序判定,依据见 §8.2)",
-    "history": [],
+    "history": [
+      {
+        "when": "2026-05-14",
+        "what": "EPS 意外 +6.5% · 实际 2.86 vs 预期 2.69",
+        "outcome": "次日 -0.89%（大 beat 5–10%）"
+      },
+      {
+        "when": "2026-02-12",
+        "what": "EPS 意外 +7.9% · 实际 2.38 vs 预期 2.21",
+        "outcome": "次日 +8.08%（大 beat 5–10%）"
+      },
+      {
+        "when": "2025-11-13",
+        "what": "EPS 意外 +3.6% · 实际 2.17 vs 预期 2.09",
+        "outcome": "次日 +1.25%（中 beat 2–5%）"
+      }
+    ],
     "links": [],
     "consensus": {
       "eps": "$3.394",
@@ -1009,7 +1041,23 @@ export const events = [
       }
     ],
     "verdict": "名义 beat 但实质 miss? 否 ——(程序判定,依据见 §8.2)",
-    "history": [],
+    "history": [
+      {
+        "when": "2026-05-20",
+        "what": "EPS 意外 +5.5% · 实际 1.87 vs 预期 1.77",
+        "outcome": "次日 -1.77%（大 beat 5–10%）"
+      },
+      {
+        "when": "2026-02-25",
+        "what": "EPS 意外 +5.3% · 实际 1.62 vs 预期 1.54",
+        "outcome": "次日 -5.46%（大 beat 5–10%）"
+      },
+      {
+        "when": "2025-11-19",
+        "what": "EPS 意外 +3.5% · 实际 1.3 vs 预期 1.26",
+        "outcome": "次日 -3.15%（中 beat 2–5%）"
+      }
+    ],
     "links": [],
     "consensus": {
       "eps": "$2.092",
@@ -1795,7 +1843,23 @@ export const events = [
     "actual": [],
     "reaction": [],
     "verdict": "",
-    "history": [],
+    "history": [
+      {
+        "when": "2026-07-29",
+        "what": "EPS 意外 +11.8% · 实际 4.74 vs 预期 4.24",
+        "outcome": "次日 +15.51%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +4.9% · 实际 4.27 vs 预期 4.07",
+        "outcome": "次日 -3.93%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-01-28",
+        "what": "EPS 意外 +5.7% · 实际 4.14 vs 预期 3.92",
+        "outcome": "次日 -9.99%（大 beat 5–10%）"
+      }
+    ],
     "links": [],
     "consensus": {},
     "segments": [],
@@ -1912,7 +1976,23 @@ export const events = [
     "actual": [],
     "reaction": [],
     "verdict": "",
-    "history": [],
+    "history": [
+      {
+        "when": "2026-08-04",
+        "what": "EPS 意外 +3.2% · 实际 1.66 vs 预期 1.61",
+        "outcome": "次日 -7.04%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-05-05",
+        "what": "EPS 意外 +5.8% · 实际 1.37 vs 预期 1.29",
+        "outcome": "次日 +18.61%（大 beat 5–10%）"
+      },
+      {
+        "when": "2026-02-03",
+        "what": "EPS 意外 +16.0% · 实际 1.53 vs 预期 1.32",
+        "outcome": "次日 -17.31%（巨 beat >10%）"
+      }
+    ],
     "links": [],
     "consensus": {},
     "segments": [],
@@ -2229,7 +2309,23 @@ export const events = [
     "actual": [],
     "reaction": [],
     "verdict": "",
-    "history": [],
+    "history": [
+      {
+        "when": "2026-05-20",
+        "what": "EPS 意外 +5.5% · 实际 1.87 vs 预期 1.77",
+        "outcome": "次日 -1.77%（大 beat 5–10%）"
+      },
+      {
+        "when": "2026-02-25",
+        "what": "EPS 意外 +5.3% · 实际 1.62 vs 预期 1.54",
+        "outcome": "次日 -5.46%（大 beat 5–10%）"
+      },
+      {
+        "when": "2025-11-19",
+        "what": "EPS 意外 +3.5% · 实际 1.3 vs 预期 1.26",
+        "outcome": "次日 -3.15%（中 beat 2–5%）"
+      }
+    ],
     "links": [],
     "consensus": {},
     "segments": [],
