@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #0b0f14; }
+  * { box-sizing: border-box; }
+  a { color: #2dd4bf; text-decoration: none; }
+  a:hover { color: #5eead4; text-decoration: underline; }
+  ::-webkit-scrollbar { height: 8px; width: 8px; }
+  ::-webkit-scrollbar-thumb { background: #263140; border-radius: 4px; }
+  ::-webkit-scrollbar-track { background: #0f141a; }
+  @keyframes livePulse { 0%,100% { opacity: 1 } 50% { opacity: .25 } }
+</style>
+</helmet>
+<div style="min-height:100vh;background:#0b0f14;color:#e6edf3;font-family:Archivo,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;-webkit-font-smoothing:antialiased">
+
+  <div style="position:sticky;top:0;z-index:20;background:rgba(11,15,20,.92);backdrop-filter:blur(10px);border-bottom:1px solid #1e2630">
+    <div style="max-width:1280px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+      <div style="display:flex;align-items:baseline;gap:10px;min-width:0">
+        <div style="font-size:17px;font-weight:700;letter-spacing:-.01em;white-space:nowrap">{{ metaTitle }}</div>
+        <div style="font-size:12px;color:#7d8b9c;white-space:nowrap">{{ metaSubtitle }}</div>
+      </div>
+      <div style="flex:1"></div>
+      <div style="display:flex;align-items:center;gap:8px;font-family:'Roboto Mono',monospace;font-size:11px;color:#7d8b9c">
+        <span style="width:6px;height:6px;border-radius:50%;background:#2dd4bf;animation:livePulse 2.4s ease-in-out infinite"></span>
+        <span>数据更新 {{ metaUpdated }}</span>
+      </div>
+      <sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ goHome }}" style="font-family:inherit;font-size:12px;font-weight:600;color:#c6d2e0;background:#161c24;border:1px solid #2a3542;border-radius:7px;padding:7px 14px;cursor:pointer" style-hover="background:#1d242e;border-color:#3a4756">← 返回总览</button>
+      </sc-if>
+    </div>
+  </div>
+
+  <sc-if value="{{ showMarkets }}" hint-placeholder-val="{{ true }}">
+    <div style="border-bottom:1px solid #1e2630;background:#0d1219">
+      <div style="max-width:1280px;margin:0 auto;padding:0 22px">
+        <div style="display:flex;gap:0;overflow-x:auto">
+          <sc-for list="{{ markets }}" as="m" hint-placeholder-count="8">
+            <div style="flex:0 0 auto;min-width:138px;padding:11px 16px 12px;border-right:1px solid #171e26">
+              <div style="font-size:10.5px;letter-spacing:.06em;color:#7d8b9c;white-space:nowrap;margin-bottom:5px">{{ m.label }}</div>
+              <div style="display:flex;align-items:baseline;gap:8px">
+                <div style="font-family:'Roboto Mono',monospace;font-size:14.5px;font-weight:500;font-variant-numeric:tabular-nums">{{ m.value }}</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:11.5px;font-weight:500;white-space:nowrap;color: {{ m.color }}">{{ m.chg }}</div>
+              </div>
+              <div style="font-size:10px;color:#5c6875;margin-top:3px;white-space:nowrap">{{ m.note }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <div style="max-width:1280px;margin:0 auto;padding:26px 22px 80px">
+
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+      <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.16em;color:#2dd4bf">NEXT UP · 下一个大事件</div>
+      <div style="flex:1;height:1px;background:#1e2630"></div>
+    </div>
+
+    <div style="background:linear-gradient(160deg,#121922 0%,#0f151c 100%);border:1px solid #23303c;border-radius:14px;padding:26px 28px;margin-bottom:38px">
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:34px;align-items:start">
+        <div style="min-width:0">
+          <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:12px">
+            <span style="font-size:11px;font-weight:600;padding:3px 9px;border-radius:5px;background:#182230;letter-spacing:.04em;color: {{ hero.kindColor }}">{{ hero.kindLabel }}</span>
+            <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#8b98a8">{{ hero.dots }}</span>
+            <span style="font-size:11px;color:#7d8b9c">{{ hero.dateNote }}</span>
+          </div>
+          <div style="font-size:30px;font-weight:700;line-height:1.18;letter-spacing:-.02em;margin-bottom:7px;text-wrap:pretty">{{ hero.title }}</div>
+          <div style="font-size:13.5px;color:#8b98a8;margin-bottom:22px">{{ hero.subtitle }}</div>
+
+          <div style="display:flex;gap:9px;margin-bottom:16px">
+            <sc-for list="{{ hero.clock }}" as="c" hint-placeholder-count="4">
+              <div style="flex:1;background:#0b1016;border:1px solid #222d39;border-radius:9px;padding:11px 6px 9px;text-align:center">
+                <div style="font-family:'Roboto Mono',monospace;font-size:27px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums;color:#e6edf3">{{ c.v }}</div>
+                <div style="font-size:10px;letter-spacing:.1em;color:#6c7a89;margin-top:7px">{{ c.u }}</div>
+              </div>
+            </sc-for>
+          </div>
+          <div style="display:flex;gap:16px;flex-wrap:wrap;font-family:'Roboto Mono',monospace;font-size:11.5px;color:#7d8b9c">
+            <span>{{ hero.etLine }}</span>
+            <span style="color:#2dd4bf">{{ hero.cnLine }}</span>
+          </div>
+        </div>
+
+        <div style="min-width:0;display:flex;flex-direction:column;gap:16px">
+          <div>
+            <div style="font-family:'Roboto Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:#6c7a89;margin-bottom:7px">一句话观点</div>
+            <div style="font-size:14.5px;line-height:1.65;color:#d3dde8;text-wrap:pretty">{{ hero.thesis }}</div>
+          </div>
+          <div>
+            <div style="font-family:'Roboto Mono',monospace;font-size:10.5px;letter-spacing:.14em;color:#6c7a89;margin-bottom:8px">情景概率</div>
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <sc-for list="{{ hero.scenarios }}" as="s" hint-placeholder-count="3">
+                <div style="display:flex;align-items:center;gap:11px">
+                  <div style="width:56px;font-size:12px;font-weight:600;flex:0 0 auto;color: {{ s.color }}">{{ s.tag }}</div>
+                  <div style="flex:1;height:5px;background:#182230;border-radius:3px;overflow:hidden">
+                    <div style="height:100%;border-radius:3px;width: {{ s.prob }};background: {{ s.color }}"></div>
+                  </div>
+                  <div style="font-family:'Roboto Mono',monospace;font-size:11.5px;color:#8b98a8;width:34px;text-align:right;flex:0 0 auto">{{ s.prob }}</div>
+                </div>
+              </sc-for>
+            </div>
+          </div>
+          <div>
+            <button onClick="{{ hero.open }}" style="font-family:inherit;font-size:13px;font-weight:600;color:#08110f;background:#2dd4bf;border:none;border-radius:8px;padding:10px 20px;cursor:pointer" style-hover="background:#5eead4">查看完整前瞻 →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:14px">
+      <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.16em;color:#7d8b9c">日程 · UPCOMING</div>
+      <div style="flex:1;min-width:20px;height:1px;background:#1e2630"></div>
+      <div style="display:flex;gap:6px">
+        <sc-for list="{{ filters }}" as="f" hint-placeholder-count="4">
+          <button onClick="{{ f.onPick }}" style="font-family:inherit;font-size:12px;font-weight:500;border-radius:7px;padding:6px 13px;cursor:pointer;border:1px solid;background: {{ f.bg }};color: {{ f.fg }};border-color: {{ f.bd }}">{{ f.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="background:#0f141a;border:1px solid #1e2630;border-radius:12px;overflow:hidden">
+      <div style="display:grid;grid-template-columns:104px minmax(0,1fr) 128px 116px;gap:14px;padding:9px 18px;border-bottom:1px solid #1a222c;background:#121821;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.12em;color:#6c7a89">
+        <div>日期 ET</div><div>事件</div><div>倒计时</div><div style="text-align:right">状态</div>
+      </div>
+      <sc-for list="{{ upcoming }}" as="r" hint-placeholder-count="9">
+        <div onClick="{{ r.onOpen }}" style="display:grid;grid-template-columns:104px minmax(0,1fr) 128px 116px;gap:14px;padding:13px 18px;border-bottom:1px solid #171e26;cursor:pointer;align-items:center" style-hover="background:#141b24">
+          <div>
+            <div style="font-family:'Roboto Mono',monospace;font-size:15px;font-weight:500;color:#e6edf3;font-variant-numeric:tabular-nums">{{ r.md }}</div>
+            <div style="font-size:10.5px;color:#6c7a89;margin-top:2px">{{ r.wd }}</div>
+          </div>
+          <div style="min-width:0">
+            <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+              <span style="font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:4px;background:#182230;flex:0 0 auto;color: {{ r.kindColor }}">{{ r.kindLabel }}</span>
+              <span style="font-size:14px;font-weight:600;color:#dbe4ee">{{ r.title }}</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#4d5967">{{ r.dots }}</span>
+            </div>
+            <div style="font-size:11.5px;color:#6c7a89;margin-top:4px">{{ r.meta }}</div>
+          </div>
+          <div>
+            <div style="font-family:'Roboto Mono',monospace;font-size:13.5px;font-weight:500;font-variant-numeric:tabular-nums;color: {{ r.cdColor }}">{{ r.cd }}</div>
+            <div style="font-size:10px;color:#5c6875;margin-top:2px">{{ r.cnLine }}</div>
+          </div>
+          <div style="text-align:right">
+            <span style="font-size:11px;font-weight:500;padding:4px 9px;border-radius:5px;border:1px solid;color: {{ r.stColor }};border-color: {{ r.stBorder }}">{{ r.status }}</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+
+    <sc-if value="{{ showLanded }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;align-items:center;gap:14px;margin:38px 0 14px">
+        <div style="font-family:'Roboto Mono',monospace;font-size:11px;letter-spacing:.16em;color:#7d8b9c">靴子落地 · 复盘</div>
+        <div style="flex:1;height:1px;background:#1e2630"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px">
+        <sc-for list="{{ landed }}" as="l" hint-placeholder-count="3">
+          <div onClick="{{ l.onOpen }}" style="background:#0f141a;border:1px solid #1e2630;border-radius:12px;padding:18px 20px;cursor:pointer;display:flex;flex-direction:column;gap:13px" style-hover="border-color:#31404f">
+            <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+              <span style="font-size:10.5px;font-weight:600;padding:2px 7px;border-radius:4px;background:#182230;color: {{ l.kindColor }}">{{ l.kindLabel }}</span>
+              <span style="font-size:14.5px;font-weight:600">{{ l.title }}</span>
+              <span style="font-family:'Roboto Mono',monospace;font-size:10.5px;color:#5c6875;margin-left:auto">{{ l.md }}</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:5px">
+              <sc-for list="{{ l.actual }}" as="a" hint-placeholder-count="2">
+                <div style="display:flex;align-items:baseline;gap:8px;font-size:12px">
+                  <span style="color:#7d8b9c;flex:1;min-width:0">{{ a.name }}</span>
+                  <span style="font-family:'Roboto Mono',monospace;font-weight:600;font-variant-numeric:tabular-nums;color: {{ a.color }}">{{ a.actual }}</span>
+                  <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#5c6875">预期 {{ a.consensus }}</span>
+                </div>
+              </sc-for>
+            </div>
+            <div style="font-size:12.5px;line-height:1.6;color:#95a3b3;border-top:1px solid #1a222c;padding-top:11px;text-wrap:pretty">{{ l.verdictShort }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+
+    <div style="margin-top:44px;padding-top:18px;border-top:1px solid #1a222c;font-size:11.5px;color:#5c6875;line-height:1.7">
+      <div>{{ metaDisclaimer }}</div>
+      <div style="margin-top:4px">标注「按往年推算」的日期为估算，公司正式公告后需手动更新 <span style="font-family:'Roboto Mono',monospace;color:#7d8b9c">data.js</span>。</div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isDetail }}" hint-placeholder-val="{{ false }}">
+  <div style="max-width:1120px;margin:0 auto;padding:26px 22px 90px">
+
+    <div style="display:flex;align-items:flex-start;gap:26px;flex-wrap:wrap;padding-bottom:22px;border-bottom:1px solid #1e2630;margin-bottom:26px">
+      <div style="flex:1;min-width:280px">
+        <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap;margin-bottom:11px">
+          <span style="font-size:11px;font-weight:600;padding:3px 9px;border-radius:5px;background:#182230;color: {{ d.kindColor }}">{{ d.kindLabel }}</span>
+          <span style="font-family:'Roboto Mono',monospace;font-size:12px;font-weight:600;color:#2dd4bf">{{ d.ticker }}</span>
+          <span style="font-family:'Roboto Mono',monospace;font-size:11px;color:#8b98a8">{{ d.dots }}</span>
+          <span style="font-size:11px;color:#7d8b9c">{{ d.confirmNote }}</span>
+        </div>
+        <div style="font-size:29px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-bottom:6px;text-wrap:pretty">{{ d.title }}</div>
+        <div style="font-size:13.5px;color:#8b98a8;margin-bottom:14px">{{ d.subtitle }}</div>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;font-family:'Roboto Mono',monospace;font-size:12px;color:#8b98a8">
+          <span>{{ d.etLine }}</span>
+          <span style="color:#2dd4bf">{{ d.cnLine }}</span>
+        </div>
+      </div>
+      <div style="flex:0 0 auto;background:#0f141a;border:1px solid #222d39;border-radius:11px;padding:15px 20px;min-width:230px">
+        <div style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.14em;color:#6c7a89;margin-bottom:10px">{{ d.clockLabel }}</div>
+        <div style="display:flex;gap:7px">
+          <sc-for list="{{ d.clock }}" as="c" hint-placeholder-count="4">
+            <div style="text-align:center;min-width:44px">
+              <div style="font-family:'Roboto Mono',monospace;font-size:21px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums">{{ c.v }}</div>
+              <div style="font-size:9.5px;letter-spacing:.08em;color:#6c7a89;margin-top:6px">{{ c.u }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+
+    <sc-if value="{{ d.hasThesis }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#101a19;border:1px solid #1d3a36;border-left:3px solid #2dd4bf;border-radius:9px;padding:17px 22px;margin-bottom:30px">
+        <div style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.14em;color:#2dd4bf;margin-bottom:8px">核心判断</div>
+        <div style="font-size:15px;line-height:1.7;color:#d8e2ec;text-wrap:pretty">{{ d.thesis }}</div>
+      </div>
+    </sc-if>
+
+    <div style="display:flex;align-items:center;gap:13px;margin:0 0 18px">
+      <div style="font-family:'Roboto Mono',monospace;font-size:11.5px;letter-spacing:.16em;color:#38bdf8">01 — 事前前瞻</div>
+      <div style="flex:1;height:1px;background:#1e2630"></div>
+    </div>
+
+    <sc-if value="{{ d.showConsensus }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:26px">
+        <div style="font-size:13px;font-weight:600;color:#c6d2e0;margin-bottom:11px">一致预期 · Consensus</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px">
+          <sc-for list="{{ d.consensusCards }}" as="c" hint-placeholder-count="4">
+            <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;padding:14px 16px">
+              <div style="font-size:11px;color:#7d8b9c;margin-bottom:7px">{{ c.name }}</div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:19px;font-weight:600;font-variant-numeric:tabular-nums">{{ c.value }}</div>
+              <div style="font-size:11px;color:#5c6875;margin-top:5px">{{ c.note }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showExpectations }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:26px">
+        <div style="font-size:13px;font-weight:600;color:#c6d2e0;margin-bottom:11px">{{ d.expectationsTitle }}</div>
+        <sc-if value="{{ d.hasExpectations }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;overflow:hidden">
+            <div style="display:grid;grid-template-columns:minmax(0,1.5fr) 1fr 1fr 1.1fr;gap:12px;padding:9px 17px;background:#121821;border-bottom:1px solid #1a222c;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.1em;color:#6c7a89">
+              <div>项目</div><div>一致预期</div><div>前值</div><div>区间 / 备注</div>
+            </div>
+            <sc-for list="{{ d.expectations }}" as="x" hint-placeholder-count="3">
+              <div style="display:grid;grid-template-columns:minmax(0,1.5fr) 1fr 1fr 1.1fr;gap:12px;padding:12px 17px;border-bottom:1px solid #171e26;align-items:baseline">
+                <div style="font-size:12.5px;color:#c6d2e0">{{ x.name }}</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;color:#e6edf3">{{ x.consensus }}</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:12.5px;color:#8b98a8;font-variant-numeric:tabular-nums">{{ x.prior }}</div>
+                <div style="font-size:11.5px;color:#6c7a89">{{ x.tail }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ d.emptyExpectations }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">待填写 — data.js → expectations[]</div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showSegments }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:26px">
+        <div style="font-size:13px;font-weight:600;color:#c6d2e0;margin-bottom:11px">分部业绩预期 · Segments</div>
+        <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;overflow:hidden">
+          <sc-for list="{{ d.segments }}" as="g" hint-placeholder-count="3">
+            <div style="display:grid;grid-template-columns:minmax(0,1.3fr) 1fr 1fr minmax(0,1.4fr);gap:12px;padding:12px 17px;border-bottom:1px solid #171e26;align-items:baseline">
+              <div style="font-size:12.5px;color:#c6d2e0">{{ g.name }}</div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums">{{ g.consensus }}</div>
+              <div style="font-family:'Roboto Mono',monospace;font-size:12.5px;color:#8b98a8">{{ g.prior }}</div>
+              <div style="font-size:11.5px;color:#6c7a89">{{ g.note }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showPricing }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:26px">
+        <div style="font-size:13px;font-weight:600;color:#c6d2e0;margin-bottom:11px">{{ d.pricingTitle }}</div>
+        <sc-if value="{{ d.hasPricing }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:11px">
+            <sc-for list="{{ d.pricing }}" as="p" hint-placeholder-count="4">
+              <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;padding:14px 16px">
+                <div style="font-size:11px;color:#7d8b9c;margin-bottom:7px;line-height:1.4">{{ p.name }}</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;color:#f0c454">{{ p.value }}</div>
+                <div style="font-size:11px;color:#5c6875;margin-top:5px">{{ p.note }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ d.emptyPricing }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">待填写 — data.js → pricing[] / options{}</div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showGuidance }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:13px">
+        <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;padding:16px 18px">
+          <div style="font-size:11px;letter-spacing:.06em;color:#7d8b9c;margin-bottom:10px">指引 Guidance</div>
+          <div style="font-size:12px;color:#6c7a89;margin-bottom:3px">公司指引</div>
+          <div style="font-family:'Roboto Mono',monospace;font-size:14px;font-weight:600;margin-bottom:10px">{{ d.guidance.company }}</div>
+          <div style="font-size:12px;color:#6c7a89;margin-bottom:3px">市场预期</div>
+          <div style="font-family:'Roboto Mono',monospace;font-size:14px;font-weight:600;color:#8b98a8">{{ d.guidance.street }}</div>
+          <div style="font-size:11.5px;color:#6c7a89;margin-top:10px;line-height:1.6">{{ d.guidance.note }}</div>
+        </div>
+        <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;padding:16px 18px">
+          <div style="font-size:11px;letter-spacing:.06em;color:#7d8b9c;margin-bottom:10px">估值与目标价</div>
+          <div style="display:flex;flex-direction:column;gap:7px;margin-bottom:12px">
+            <sc-for list="{{ d.valuation }}" as="v" hint-placeholder-count="3">
+              <div style="display:flex;align-items:baseline;gap:10px;font-size:12.5px">
+                <span style="color:#7d8b9c;flex:1">{{ v.name }}</span>
+                <span style="font-family:'Roboto Mono',monospace;font-weight:600;font-variant-numeric:tabular-nums">{{ v.value }}</span>
+              </div>
+            </sc-for>
+          </div>
+          <div style="border-top:1px solid #1a222c;padding-top:11px;display:flex;align-items:baseline;gap:10px;font-family:'Roboto Mono',monospace;font-size:12.5px">
+            <span style="color:#ef4444">{{ d.targets.low }}</span>
+            <span style="flex:1;text-align:center;font-size:15px;font-weight:600;color:#e6edf3">{{ d.targets.avg }}</span>
+            <span style="color:#22c55e">{{ d.targets.high }}</span>
+          </div>
+          <div style="font-size:11px;color:#5c6875;margin-top:6px;text-align:center">{{ d.targets.n }}</div>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showAgenda }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:26px">
+        <div style="font-size:13px;font-weight:600;color:#c6d2e0;margin-bottom:11px">议程 · Agenda</div>
+        <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;overflow:hidden">
+          <sc-for list="{{ d.agenda }}" as="a" hint-placeholder-count="3">
+            <div style="display:grid;grid-template-columns:150px minmax(0,1fr);gap:14px;padding:12px 17px;border-bottom:1px solid #171e26">
+              <div style="font-family:'Roboto Mono',monospace;font-size:12px;color:#2dd4bf">{{ a.when }}</div>
+              <div style="font-size:12.5px;color:#c6d2e0;line-height:1.6">{{ a.what }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showScenarios }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:26px">
+        <div style="font-size:13px;font-weight:600;color:#c6d2e0;margin-bottom:11px">情景推演 · 三档</div>
+        <sc-if value="{{ d.hasScenarios }}" hint-placeholder-val="{{ false }}">
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:13px">
+            <sc-for list="{{ d.scenarios }}" as="s" hint-placeholder-count="3">
+              <div style="background:#0f141a;border:1px solid #1e2630;border-top:3px solid;border-radius:10px;padding:16px 18px;border-top-color: {{ s.color }}">
+                <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:12px">
+                  <div style="font-size:15px;font-weight:700;color: {{ s.color }}">{{ s.tag }}</div>
+                  <div style="font-family:'Roboto Mono',monospace;font-size:14px;font-weight:600;color:#8b98a8">{{ s.prob }}</div>
+                </div>
+                <div style="font-size:11px;letter-spacing:.06em;color:#6c7a89;margin-bottom:4px">触发条件</div>
+                <div style="font-size:12.5px;line-height:1.65;color:#c6d2e0;margin-bottom:12px;text-wrap:pretty">{{ s.trigger }}</div>
+                <div style="font-size:11px;letter-spacing:.06em;color:#6c7a89;margin-bottom:4px">预期市场反应</div>
+                <div style="font-size:12.5px;line-height:1.65;color:#95a3b3;text-wrap:pretty">{{ s.reaction }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ d.emptyScenarios }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">待填写 — data.js → scenarios[]（tone: hawk / base / dove）</div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showWatch }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:34px">
+        <div style="font-size:13px;font-weight:600;color:#c6d2e0;margin-bottom:11px">关键看点</div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <sc-for list="{{ d.watch }}" as="w" hint-placeholder-count="3">
+            <div style="display:flex;gap:13px;align-items:baseline;background:#0f141a;border:1px solid #1e2630;border-radius:9px;padding:13px 17px">
+              <span style="font-family:'Roboto Mono',monospace;font-size:12px;font-weight:600;color:#2dd4bf;flex:0 0 auto">{{ w.n }}</span>
+              <span style="font-size:13px;line-height:1.65;color:#c6d2e0;text-wrap:pretty">{{ w.text }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <div style="display:flex;align-items:center;gap:13px;margin:0 0 18px">
+      <div style="font-family:'Roboto Mono',monospace;font-size:11.5px;letter-spacing:.16em;color:#f0c454">02 — 靴子落地</div>
+      <div style="flex:1;height:1px;background:#1e2630"></div>
+    </div>
+
+    <sc-if value="{{ d.showActual }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:26px">
+        <div style="font-size:13px;font-weight:600;color:#c6d2e0;margin-bottom:11px">实际公布 vs 预期</div>
+        <sc-if value="{{ d.hasActual }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;overflow:hidden">
+            <div style="display:grid;grid-template-columns:minmax(0,1.5fr) 1fr 1fr 1fr 1fr;gap:12px;padding:9px 17px;background:#121821;border-bottom:1px solid #1a222c;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.1em;color:#6c7a89">
+              <div>项目</div><div>实际</div><div>一致预期</div><div>前值</div><div>预期差</div>
+            </div>
+            <sc-for list="{{ d.actual }}" as="a" hint-placeholder-count="3">
+              <div style="display:grid;grid-template-columns:minmax(0,1.5fr) 1fr 1fr 1fr 1fr;gap:12px;padding:12px 17px;border-bottom:1px solid #171e26;align-items:baseline">
+                <div style="font-size:12.5px;color:#c6d2e0">{{ a.name }}</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:14px;font-weight:700;font-variant-numeric:tabular-nums;color: {{ a.color }}">{{ a.actual }}</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:12.5px;color:#8b98a8">{{ a.consensus }}</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:12.5px;color:#6c7a89">{{ a.prior }}</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:12.5px;font-weight:600;color: {{ a.color }}">{{ a.surprise }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ d.emptyActual }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">尚未公布 — data.js → actual[]（dir: up / down / flat）</div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showAfterHours }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:26px;background:#0f141a;border:1px solid #1e2630;border-radius:10px;padding:16px 18px;display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+        <div>
+          <div style="font-size:11px;color:#7d8b9c;margin-bottom:6px">盘后 / 盘前实际反应</div>
+          <div style="font-family:'Roboto Mono',monospace;font-size:24px;font-weight:700;font-variant-numeric:tabular-nums;color: {{ d.afterHours.color }}">{{ d.afterHours.move }}</div>
+        </div>
+        <div style="flex:1;min-width:180px;font-size:12.5px;line-height:1.65;color:#95a3b3">{{ d.afterHours.note }}</div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showReaction }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:26px">
+        <div style="font-size:13px;font-weight:600;color:#c6d2e0;margin-bottom:11px">资产价格反应</div>
+        <sc-if value="{{ d.hasReaction }}" hint-placeholder-val="{{ false }}">
+          <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;overflow:hidden">
+            <div style="display:grid;grid-template-columns:minmax(0,1.6fr) 1fr 1fr;gap:12px;padding:9px 17px;background:#121821;border-bottom:1px solid #1a222c;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.1em;color:#6c7a89">
+              <div>资产</div><div>当日</div><div>次日</div>
+            </div>
+            <sc-for list="{{ d.reaction }}" as="rx" hint-placeholder-count="4">
+              <div style="display:grid;grid-template-columns:minmax(0,1.6fr) 1fr 1fr;gap:12px;padding:11px 17px;border-bottom:1px solid #171e26;align-items:baseline">
+                <div style="font-size:12.5px;color:#c6d2e0">{{ rx.asset }}</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;color: {{ rx.c0 }}">{{ rx.d0 }}</div>
+                <div style="font-family:'Roboto Mono',monospace;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;color: {{ rx.c1 }}">{{ rx.d1 }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ d.emptyReaction }}" hint-placeholder-val="{{ false }}">
+          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">尚未公布 — data.js → reaction[]</div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showVerdict }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:34px;background:#141310;border:1px solid #3a3320;border-left:3px solid #f0c454;border-radius:9px;padding:17px 22px">
+        <div style="font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.14em;color:#f0c454;margin-bottom:8px">我的结论与仓位含义</div>
+        <div style="font-size:14.5px;line-height:1.75;color:#d8e2ec;text-wrap:pretty">{{ d.verdict }}</div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showHistory }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:30px">
+        <div style="display:flex;align-items:center;gap:13px;margin-bottom:16px">
+          <div style="font-family:'Roboto Mono',monospace;font-size:11.5px;letter-spacing:.16em;color:#a78bfa">03 — 历史同类事件回看</div>
+          <div style="flex:1;height:1px;background:#1e2630"></div>
+        </div>
+        <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;overflow:hidden">
+          <sc-for list="{{ d.history }}" as="h" hint-placeholder-count="3">
+            <div style="display:grid;grid-template-columns:104px minmax(0,1.2fr) minmax(0,1.3fr);gap:14px;padding:12px 17px;border-bottom:1px solid #171e26;align-items:baseline">
+              <div style="font-family:'Roboto Mono',monospace;font-size:12px;color:#a78bfa">{{ h.when }}</div>
+              <div style="font-size:12.5px;color:#c6d2e0;line-height:1.6">{{ h.what }}</div>
+              <div style="font-size:12.5px;color:#8b98a8;line-height:1.6">{{ h.outcome }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showReadThrough }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-bottom:30px">
+        <div style="font-size:13px;font-weight:600;color:#c6d2e0;margin-bottom:11px">链条传导 · Read-through</div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <sc-for list="{{ d.readThrough }}" as="t" hint-placeholder-count="3">
+            <div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px;background:#0f141a;border:1px solid #1e2630;border-radius:9px;padding:13px 17px">
+              <div style="font-size:12px;font-weight:600;color:#a78bfa">{{ t.name }}</div>
+              <div style="font-size:12.5px;line-height:1.65;color:#c6d2e0;text-wrap:pretty">{{ t.value }}</div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ d.showLinks }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:18px;border-top:1px solid #1a222c">
+        <sc-for list="{{ d.links }}" as="lk" hint-placeholder-count="2">
+          <a href="{{ lk.url }}" target="_blank" rel="noreferrer" style="font-size:12px;background:#141b24;border:1px solid #2a3542;border-radius:7px;padding:7px 13px">{{ lk.label }} ↗</a>
+        </sc-for>
+      </div>
+    </sc-if>
+
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ loadError }}" hint-placeholder-val="{{ false }}">
+    <div style="max-width:700px;margin:80px auto;padding:24px;background:#1a1012;border:1px solid #5a2630;border-radius:10px;font-family:'Roboto Mono',monospace;font-size:13px;color:#f3b5bb;line-height:1.7">
+      无法加载 data.js<br />{{ loadError }}
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;upTone&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;美股 · 绿涨红跌&quot;, &quot;A股 · 红涨绿跌&quot;], &quot;default&quot;: &quot;美股 · 绿涨红跌&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;显示&quot; },
+  &quot;showMarkets&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;显示&quot; },
+  &quot;showLanded&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;显示&quot; },
+  &quot;hideEmpty&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;显示&quot; }
+}">
+const KINDS = {
+  macro:    { label: "宏观数据", color: "#38bdf8" },
+  earnings: { label: "财报",     color: "#2dd4bf" },
+  event:    { label: "发布会",   color: "#a78bfa" },
+};
+const TONE = { hawk: "#ef4444", base: "#8b98a8", dove: "#22c55e" };
+const pad = (n) => String(n).padStart(2, "0");
+const isS = (v) => typeof v === "string" && v.trim() !== "";
+const arr = (v) => (Array.isArray(v) ? v : []);
+
+class Component extends DCLogic {
+  state = { data: null, err: "", view: "home", activeId: null, filter: "all", now: Date.now() };
+
+  componentDidMount() {
+    import("./data.js")
+      .then((m) => this.setState({ data: m }))
+      .catch((e) => this.setState({ err: String(e && e.message ? e.message : e) }));
+    this.timer = setInterval(() => this.setState({ now: Date.now() }), 1000);
+  }
+  componentWillUnmount() { clearInterval(this.timer); }
+
+  /* ---- 颜色：涨跌方向 ---- */
+  dirColor(dir) {
+    const cn = String(this.props.upTone ?? "美股 · 绿涨红跌").indexOf("A股") >= 0;
+    const up = cn ? "#ef4444" : "#22c55e";
+    const dn = cn ? "#22c55e" : "#ef4444";
+    if (dir === "up") return up;
+    if (dir === "down") return dn;
+    return "#8b98a8";
+  }
+  /* 从 "+0.5%" / "-3bp" 这类字符串推方向 */
+  signColor(s) {
+    if (!isS(s)) return "#8b98a8";
+    const t = s.trim();
+    if (t[0] === "+") return this.dirColor("up");
+    if (t[0] === "-" || t[0] === "\u2212") return this.dirColor("down");
+    return "#8b98a8";
+  }
+
+  fmt(iso, opts) {
+    try { return new Intl.DateTimeFormat("zh-CN", opts).format(new Date(iso)); }
+    catch (e) { return ""; }
+  }
+  etParts(iso) {
+    const md = this.fmt(iso, { timeZone: "America/New_York", month: "numeric", day: "numeric" });
+    const wd = this.fmt(iso, { timeZone: "America/New_York", weekday: "short" });
+    const hm = this.fmt(iso, { timeZone: "America/New_York", hour: "2-digit", minute: "2-digit", hour12: false });
+    const cn = this.fmt(iso, { timeZone: "Asia/Shanghai", month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: false });
+    return { md, wd, hm, etLine: md + " " + wd + " " + hm + " ET", cnLine: "北京 " + cn };
+  }
+  clock(ms) {
+    const s = Math.max(0, Math.floor(ms / 1000));
+    return [
+      { v: String(Math.floor(s / 86400)), u: "DAYS" },
+      { v: pad(Math.floor((s % 86400) / 3600)), u: "HRS" },
+      { v: pad(Math.floor((s % 3600) / 60)), u: "MIN" },
+      { v: pad(s % 60), u: "SEC" },
+    ];
+  }
+  shortCd(ms) {
+    if (ms <= 0) return "已公布";
+    const s = Math.floor(ms / 1000), d = Math.floor(s / 86400);
+    if (d >= 1) return "T-" + d + "天 " + Math.floor((s % 86400) / 3600) + "时";
+    return "T-" + pad(Math.floor(s / 3600)) + ":" + pad(Math.floor((s % 3600) / 60)) + ":" + pad(s % 60);
+  }
+
+  norm(e) {
+    const k = KINDS[e.kind] || KINDS.macro;
+    const t = new Date(e.date).getTime();
+    const left = t - this.state.now;
+    const p = this.etParts(e.date);
+    const bits = [];
+    if (isS(e.subtitle)) bits.push(e.subtitle);
+    if (arr(e.tags).length) bits.push(arr(e.tags).join(" · "));
+    if (isS(e.dateNote)) bits.push(e.dateNote);
+    return {
+      raw: e, id: e.id, title: e.title, kindLabel: k.label, kindColor: k.color,
+      dots: "\u25CF".repeat(e.importance || 1),
+      t, left, past: left <= 0, md: p.md, wd: p.wd,
+      etLine: p.etLine, cnLine: p.cnLine, meta: bits.join("  ·  "),
+      cd: this.shortCd(left),
+      cdColor: left <= 0 ? "#6c7a89" : left < 86400000 ? "#f0c454" : "#dbe4ee",
+      // 状态胶囊:设计稿模板引用了 status / stColor / stBorder 却从没赋过值,
+      // 于是日程表最右列一直渲染成空框。按 README 5.3 补齐。
+      status: isS(e.thesis) ? "前瞻已就绪" : "待填写",
+      stColor: isS(e.thesis) ? "#2dd4bf" : "#6c7a89",
+      stBorder: isS(e.thesis) ? "#2b6159" : "#28323d",
+      onOpen: () => this.setState({ view: "detail", activeId: e.id }),
+    };
+  }
+
+  renderVals() {
+    const { data, err, view, filter, now } = this.state;
+    const hideEmpty = this.props.hideEmpty ?? false;
+    const base = {
+      metaTitle: "宏观 & 财报事件台", metaSubtitle: "前瞻 · 靴子落地 · 倒计时",
+      metaUpdated: "", metaDisclaimer: "",
+      showMarkets: (this.props.showMarkets ?? true) && !!data,
+      showLanded: this.props.showLanded ?? true,
+      isHome: view === "home", isDetail: view === "detail",
+      loadError: err, markets: [], upcoming: [], landed: [], filters: [],
+      hero: { clock: [], scenarios: [] }, d: { clock: [] },
+      goHome: () => this.setState({ view: "home", activeId: null }),
+    };
+    if (!data) return base;
+
+    const M = data.meta || {};
+    base.metaTitle = M.title || base.metaTitle;
+    base.metaSubtitle = M.subtitle || base.metaSubtitle;
+    base.metaUpdated = M.updated || "";
+    base.metaDisclaimer = M.disclaimer || "";
+
+    base.markets = arr(data.markets).map((m) => ({ ...m, color: this.dirColor(m.dir) }));
+
+    const all = arr(data.events).map((e) => this.norm(e));
+    const fkeys = [["all", "全部"], ["macro", "宏观数据"], ["earnings", "财报"], ["event", "发布会 / Investor Day"]];
+    base.filters = fkeys.map(([k, label]) => {
+      const on = filter === k;
+      return {
+        label, onPick: () => this.setState({ filter: k }),
+        bg: on ? "#16302c" : "#121821", fg: on ? "#5eead4" : "#8b98a8", bd: on ? "#2b6159" : "#242e3a",
+      };
+    });
+
+    const up = all.filter((e) => !e.past).sort((a, b) => a.t - b.t);
+    base.upcoming = filter === "all" ? up : up.filter((e) => e.raw.kind === filter);
+
+    base.landed = all.filter((e) => e.past).sort((a, b) => b.t - a.t).slice(0, 6).map((e) => ({
+      ...e,
+      actual: arr(e.raw.actual).slice(0, 3).map((a) => ({ ...a, color: this.dirColor(a.dir) })),
+      verdictShort: isS(e.raw.verdict) ? e.raw.verdict : "复盘待填写 — data.js → verdict",
+    }));
+
+    /* ---- Hero ---- */
+    const h = up[0];
+    if (h) {
+      const sc = arr(h.raw.scenarios).map((s) => ({ tag: s.tag, prob: s.prob, color: TONE[s.tone] || "#8b98a8" }));
+      base.hero = {
+        title: h.title, subtitle: isS(h.raw.subtitle) ? h.raw.subtitle : arr(h.raw.tags).join(" · "),
+        kindLabel: h.kindLabel, kindColor: h.kindColor, dots: h.dots,
+        dateNote: isS(h.raw.dateNote) ? h.raw.dateNote : "",
+        clock: this.clock(h.left), etLine: h.etLine, cnLine: h.cnLine,
+        thesis: isS(h.raw.thesis) ? h.raw.thesis : "观点待填写 — data.js → thesis",
+        scenarios: sc, open: h.onOpen,
+      };
+    }
+
+    /* ---- Detail ---- */
+    if (view === "detail") {
+      const e = all.find((x) => x.id === this.state.activeId);
+      if (e) {
+        const r = e.raw, kind = r.kind;
+        const cons = r.consensus || {}, gd = r.guidance || {}, op = r.options || {}, tg = r.targets || {}, ah = r.afterHours || {};
+        const consensusCards = [];
+        if (isS(cons.eps)) consensusCards.push({ name: "EPS 一致预期", value: cons.eps, note: isS(cons.epsPrior) ? "去年同期 " + cons.epsPrior : "" });
+        if (isS(cons.rev)) consensusCards.push({ name: "营收一致预期", value: cons.rev, note: [isS(cons.revPrior) ? "去年同期 " + cons.revPrior : "", isS(cons.revYoY) ? cons.revYoY : ""].filter(Boolean).join(" · ") });
+        if (isS(op.impliedMove)) consensusCards.push({ name: "期权隐含涨跌幅", value: op.impliedMove, note: isS(op.iv) ? "IV " + op.iv : "" });
+        if (isS(op.note)) consensusCards.push({ name: "历史财报后波动", value: "\u2014", note: op.note });
+
+        const pricing = arr(r.pricing);
+        const expect = arr(r.expectations).map((x) => ({
+          ...x, prior: isS(x.prior) ? x.prior : "\u2014",
+          tail: [isS(x.range) ? x.range : "", isS(x.note) ? x.note : ""].filter(Boolean).join("  ·  "),
+        }));
+        const actual = arr(r.actual).map((a) => ({ ...a, color: this.dirColor(a.dir) }));
+        const reaction = arr(r.reaction).map((x) => ({ ...x, c0: this.signColor(x.d0), c1: this.signColor(x.d1) }));
+        const scen = arr(r.scenarios).map((s) => ({ ...s, color: TONE[s.tone] || "#8b98a8" }));
+        const watch = arr(r.watch).map((w, i) => ({ n: pad(i + 1), text: w }));
+
+        const show = (has) => has || !hideEmpty;
+        base.d = {
+          title: r.title, subtitle: isS(r.subtitle) ? r.subtitle : (isS(r.org) ? r.org : ""),
+          kindLabel: e.kindLabel, kindColor: e.kindColor, dots: e.dots,
+          ticker: isS(r.ticker) ? r.ticker : "",
+          confirmNote: r.dateConfirmed ? "日期已确认" : "日期待确认",
+          etLine: e.etLine, cnLine: e.cnLine,
+          clock: this.clock(e.left),
+          clockLabel: e.past ? "已公布 · 距今" : "距事件发生",
+          hasThesis: isS(r.thesis), thesis: r.thesis,
+
+          showConsensus: kind === "earnings" && consensusCards.length > 0, consensusCards,
+          expectationsTitle: kind === "earnings" ? "其他关键预期" : "关键预期数值",
+          hasExpectations: expect.length > 0, emptyExpectations: expect.length === 0 && !hideEmpty,
+          showExpectations: kind === "earnings" ? expect.length > 0 : show(expect.length > 0), expectations: expect,
+
+          showSegments: arr(r.segments).length > 0, segments: arr(r.segments),
+          pricingTitle: kind === "earnings" ? "市场当前定价" : "市场当前定价 · 利率与波动",
+          hasPricing: pricing.length > 0, emptyPricing: pricing.length === 0 && !hideEmpty,
+          showPricing: kind === "earnings" ? pricing.length > 0 : show(pricing.length > 0), pricing,
+
+          showGuidance: kind === "earnings" && (isS(gd.company) || isS(gd.street) || arr(r.valuation).length > 0),
+          guidance: { company: isS(gd.company) ? gd.company : "待公布", street: isS(gd.street) ? gd.street : "待填写", note: isS(gd.note) ? gd.note : "" },
+          valuation: arr(r.valuation), targets: { low: isS(tg.low) ? tg.low : "\u2014", avg: isS(tg.avg) ? tg.avg : "\u2014", high: isS(tg.high) ? tg.high : "\u2014", n: isS(tg.n) ? tg.n : "" },
+
+          showAgenda: arr(r.agenda).length > 0, agenda: arr(r.agenda),
+          hasScenarios: scen.length > 0, emptyScenarios: scen.length === 0 && !hideEmpty, showScenarios: show(scen.length > 0), scenarios: scen,
+          showWatch: watch.length > 0, watch,
+
+          hasActual: actual.length > 0, emptyActual: actual.length === 0 && !hideEmpty, showActual: show(actual.length > 0), actual,
+          showAfterHours: kind === "earnings" && isS(ah.move), afterHours: { ...ah, color: this.signColor(ah.move) },
+          hasReaction: reaction.length > 0, emptyReaction: reaction.length === 0 && !hideEmpty, showReaction: show(reaction.length > 0), reaction,
+          showVerdict: isS(r.verdict), verdict: r.verdict,
+
+          showHistory: arr(r.history).length > 0, history: arr(r.history),
+          showReadThrough: arr(r.readThrough).length > 0, readThrough: arr(r.readThrough),
+          showLinks: arr(r.links).length > 0, links: arr(r.links),
+        };
+      }
+    }
+    return base;
+  }
+}
+</script>
+</body>
+</html>
