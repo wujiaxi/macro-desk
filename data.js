@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-17 00:30 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-17 03:08 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -55,10 +55,10 @@ export const markets = [
   },
   {
     "label": "VIX",
-    "value": "17.20",
-    "chg": "+0.10",
+    "value": "17.71",
+    "chg": "+0.51",
     "dir": "up",
-    "note": "2026-09-15"
+    "note": "2026-09-16"
   },
   {
     "label": "US 10Y",
@@ -76,10 +76,10 @@ export const markets = [
   },
   {
     "label": "10月加息概率",
-    "value": "48%",
+    "value": "44%",
     "chg": "",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-09-15 ⚠️"
+    "note": "ZQ 期货自算 · 2026-09-16 ⚠️"
   }
 ];
 
@@ -317,57 +317,6 @@ export const events = [
       "move": "+15.51%",
       "note": "- 实际次日反应 +15.51%(基准收盘 390.54 → 451.1) - 卡片内插预期 +3.85% vs 实际 +15.51%,误差 +11.66%(方向判对) - ⚠️ 实际反应落在同类历史 10–90 分位之外 —— 属尾部事件,不要用它去改反应函数(单次尾部 ≠ 制度变化)"
     }
-  },
-  {
-    "id": "nfp-2026-07-rel2026-08-07",
-    "kind": "macro",
-    "title": "2026-07 非农就业报告",
-    "subtitle": "",
-    "org": "BLS",
-    "ticker": "",
-    "company": "",
-    "date": "2026-08-07T08:30:00-04:00",
-    "dateNote": "08:30 ET",
-    "dateConfirmed": true,
-    "importance": 3,
-    "tags": [
-      "NFP"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-07-02",
-        "what": "非农就业报告（2026-06）",
-        "outcome": "SPX +0.00% · 2Y -3bp"
-      },
-      {
-        "when": "2026-06-05",
-        "what": "非农就业报告（2026-05）",
-        "outcome": "SPX -2.64% · 2Y +12bp"
-      },
-      {
-        "when": "2026-05-08",
-        "what": "非农就业报告（2026-04）",
-        "outcome": "SPX +0.84% · 2Y -2bp"
-      }
-    ],
-    "links": [
-      {
-        "label": "BLS Employment Situation",
-        "url": "https://www.bls.gov/ces/"
-      },
-      {
-        "label": "官方日程",
-        "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
-      }
-    ]
   },
   {
     "id": "cpi-2026-07-rel2026-08-12",
@@ -1064,16 +1013,6 @@ export const events = [
       }
     ],
     "pricing": [
-      {
-        "name": "本次会议隐含变动",
-        "value": "+23bp",
-        "note": "ZQ 自算 · 2026-09-15"
-      },
-      {
-        "name": "P(加息 25bp)",
-        "value": "92%",
-        "note": ""
-      },
       {
         "name": "期货已定价(bp)",
         "value": "23",
