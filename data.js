@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 22:37 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 23:04 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -1714,6 +1714,215 @@ export const events = [
     ]
   },
   {
+    "id": "tsm-fy26q3",
+    "kind": "earnings",
+    "ticker": "TSM",
+    "company": "TSM",
+    "title": "TSM FY26Q3 财报",
+    "subtitle": "盘前",
+    "org": "",
+    "date": "2026-10-14T07:00:00-04:00",
+    "dateNote": "盘前 07:00 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "FY26Q3"
+    ],
+    "thesis": "隐含波动:事件跳空 ±3.03%(由期限结构反解,见 §4), 反应函数一句:近 20 季 beat 率 100%、surprise 与次日涨跌相关系数只有 -0.12 —— 门槛配置:买方 bar 4.736 ≥ 指引隐含上沿 4.361(高 8.6%) —— 市场已按「打满指引」定价, 本票独有的结构:营收在财报前就基本公开了。TSMC 每月发营收,7 月 / 8 月已公布, 动作(四选一):财报前不动 期望值 = Σ(概率 × 涨跌) = -0.62% vs 事件隐含 ±3.03% → 赔率略负,但幅度小到不值得为它做方向性交易 持有者 vs 空仓者(不许合并):",
+    "expectations": [
+      {
+        "name": "公司指引中值",
+        "consensus": "4.235",
+        "prior": "",
+        "range": "vs 卖方一致 -5.1%",
+        "note": ""
+      },
+      {
+        "name": "公司指引上沿",
+        "consensus": "4.361",
+        "prior": "",
+        "range": "vs 卖方一致 -2.2%",
+        "note": ""
+      },
+      {
+        "name": "卖方一致",
+        "consensus": "4.461",
+        "prior": "",
+        "range": "vs 卖方一致 +0.0%",
+        "note": ""
+      },
+      {
+        "name": "买方 bar(历史 beat 分布校准)",
+        "consensus": "4.736",
+        "prior": "",
+        "range": "vs 卖方一致 +6.2%",
+        "note": "市场已按指引打满定价,未打满上沿即实质 miss"
+      },
+      {
+        "name": "卖方最高值",
+        "consensus": "4.72",
+        "prior": "",
+        "range": "vs 卖方一致 +5.8%",
+        "note": ""
+      },
+      {
+        "name": "4Q26 收入指引中值(美元十亿)",
+        "consensus": "50.0",
+        "prior": "",
+        "range": "利好 52.0 / 利空 48.0",
+        "note": "core · 权重 22%"
+      }
+    ],
+    "pricing": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "30%",
+        "trigger": "3Q 毛利率 ≥69%(再超上沿 2pt)且 4Q 营业利益率指引 ≥60%(= 追平卖方隐含)或 FY26 全年口径从「slightly above 40%」上修",
+        "reaction": "+5.62% · $441.2"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "35%",
+        "trigger": "EPS 落在卖方一致 4.461 与买方 bar 4.736 之间;营收如期超指引上沿(10-08 已知);4Q 指引 OPM 57.5–59.5%、毛利率 65–67%,FY26 口径不动",
+        "reaction": "-1.05% · $413.3"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "35%",
+        "trigger": "允许 EPS beat ——即使 EPS > 4.461,只要 ① 4Q 营业利益率指引 ≤56.5%,或 ② 3Q 毛利率 ≤66.5%(未超指引上沿,三季来首次),或 ③ 2nm/海外厂稀释口径被上调",
+        "reaction": "-5.55% · $394.5"
+      }
+    ],
+    "watch": [
+      "FY2026 全年口径与 2027 capex/定价的措辞 — 利好: EX-99.2「Future Outlook」页把 FY2026 美元营收增速口径从「slightly above 40%」上修(给出更高措辞或数字); 或十月就给出 2027 capex 早期区间且 >US$64B; 或首次在公开场合确认 2027 涨价幅度(路透 2026-07-21 报「至多 10%」——二手转述, 公司迄今未在任何备案里确认) — 利空: FY2026 口径一字不改维持「slightly above 40%」而九月营收已使全年跑赢该口径(= 暗示 Q4 减速); 或 2nm/海外厂的毛利率稀释区间被上调(如 3-4pt -> 4-5pt、2-3pt -> 更高或更长); 或被问 2027 时回避、首次出现「digestion / 消化 / 客户库存调整」类措辞",
+      "4Q26 收入指引中值(US$B) · 预期 50.0 · 利好 ≥52.0 · 利空 ≤48.0",
+      "4Q26 营业利益率指引中值(%) · 预期 58.0 · 利好 ≥60.0 · 利空 ≤56.5",
+      "4Q26 毛利率指引中值(%) · 预期 66.5 · 利好 ≥68.0 · 利空 ≤65.0",
+      "3Q26 实际毛利率(%) · 预期 67.5 · 利好 ≥69.0 · 利空 ≤66.5(= 未超指引上沿 67%,三季来首次)",
+      "2nm 占晶圆收入比(%) · 预期 8 · 利好 ≥12 · 利空 ≤5"
+    ],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-16",
+        "what": "EPS 意外 +10.9% · 实际 4.31 vs 预期 3.89",
+        "outcome": "次日 -2.32%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-15",
+        "what": "EPS 意外 +4.7% · 实际 3.49 vs 预期 3.33",
+        "outcome": "次日 -3.13%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-01-15",
+        "what": "EPS 意外 +5.5% · 实际 3.14 vs 预期 2.98",
+        "outcome": "次日 +4.44%（大 beat 5–10%）"
+      }
+    ],
+    "links": [
+      {
+        "label": "TSM IR",
+        "url": "https://investor.tsmc.com/english/quarterly-results/teleconference"
+      },
+      {
+        "label": "investor.tsmc.com · financial-calendar",
+        "url": "https://investor.tsmc.com/english/financial-calendar"
+      }
+    ],
+    "consensus": {
+      "eps": "$4.461",
+      "rev": "$0.00B",
+      "epsPrior": "",
+      "revPrior": "",
+      "revYoY": "",
+      "note": "买方 bar $4.736"
+    },
+    "segments": [
+      {
+        "name": "4Q26 营业利益率指引中值(%)",
+        "consensus": "58.0",
+        "prior": "利好 60.0 / 利空 56.5",
+        "note": "core · 权重 24%"
+      },
+      {
+        "name": "4Q26 毛利率指引中值(%)",
+        "consensus": "66.5",
+        "prior": "利好 68.0 / 利空 65.0",
+        "note": "权重 14%"
+      },
+      {
+        "name": "3Q26 实际毛利率(%)",
+        "consensus": "67.5",
+        "prior": "利好 69.0 / 利空 66.5",
+        "note": "权重 12%"
+      },
+      {
+        "name": "3Q26 实际美元营收(美元十亿)",
+        "consensus": "46.6",
+        "prior": "利好 47.5 / 利空 45.8",
+        "note": "权重 8%"
+      },
+      {
+        "name": "2nm 占晶圆收入比(%)",
+        "consensus": "8.0",
+        "prior": "利好 12.0 / 利空 5.0",
+        "note": "权重 8%"
+      }
+    ],
+    "guidance": {
+      "company": "待公布",
+      "street": "下季 EPS 一致 $4.966",
+      "note": "比较期间 FY26Q4"
+    },
+    "options": {
+      "iv": "",
+      "impliedMove": "±3.03%",
+      "note": "盈亏平衡 $405.06 / $430.38"
+    },
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$422.49"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$487.10"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$443.20"
+      },
+      {
+        "name": "安全边际",
+        "value": "+4.90%"
+      },
+      {
+        "name": "综合分",
+        "value": "73.8"
+      },
+      {
+        "name": "象限动作",
+        "value": "等待企稳分批"
+      }
+    ],
+    "targets": {
+      "low": "$332",
+      "avg": "$487",
+      "high": "$602",
+      "n": "本站三情景加权 · 卖方一致 $527.00"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "cpi-2026-09-rel2026-10-14",
     "kind": "macro",
     "title": "2026-09 CPI",
@@ -1763,88 +1972,6 @@ export const events = [
         "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
       }
     ]
-  },
-  {
-    "id": "tsm-earnings-2026-10-14",
-    "kind": "earnings",
-    "ticker": "TSM",
-    "company": "TSM",
-    "title": "TSM 财报",
-    "subtitle": "盘后",
-    "org": "",
-    "date": "2026-10-14T16:05:00-04:00",
-    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
-    "dateConfirmed": false,
-    "importance": 3,
-    "tags": [
-      "推算日期"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-07-16",
-        "what": "EPS 意外 +10.9% · 实际 4.31 vs 预期 3.89",
-        "outcome": "次日 -2.32%（巨 beat >10%）"
-      },
-      {
-        "when": "2026-04-15",
-        "what": "EPS 意外 +4.7% · 实际 3.49 vs 预期 3.33",
-        "outcome": "次日 -3.13%（中 beat 2–5%）"
-      },
-      {
-        "when": "2026-01-15",
-        "what": "EPS 意外 +5.5% · 实际 3.14 vs 预期 2.98",
-        "outcome": "次日 +4.44%（大 beat 5–10%）"
-      }
-    ],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
-    "valuation": [
-      {
-        "name": "基准收盘价",
-        "value": "$422.49"
-      },
-      {
-        "name": "概率加权目标价",
-        "value": "$487.10"
-      },
-      {
-        "name": "压力调整底线",
-        "value": "$443.20"
-      },
-      {
-        "name": "安全边际",
-        "value": "+4.90%"
-      },
-      {
-        "name": "综合分",
-        "value": "73.8"
-      },
-      {
-        "name": "象限动作",
-        "value": "等待企稳分批"
-      }
-    ],
-    "targets": {
-      "low": "$332",
-      "avg": "$487",
-      "high": "$602",
-      "n": "本站三情景加权 · 卖方一致 $527.00"
-    },
-    "afterHours": {
-      "move": "",
-      "note": ""
-    }
   },
   {
     "id": "conf-gtc-berlin-2026-10-20",
