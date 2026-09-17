@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 20:59 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 21:03 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -317,7 +317,12 @@ export const events = [
         "outcome": "次日 -2.92%（巨 beat >10%）"
       }
     ],
-    "links": [],
+    "links": [
+      {
+        "label": "microsoft.com · press-release-webcast",
+        "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2026-Q4/press-release-webcast"
+      }
+    ],
     "consensus": {
       "eps": "$4.24",
       "rev": "$88.00B",
@@ -654,7 +659,16 @@ export const events = [
         "outcome": "次日 +1.25%（中 beat 2–5%）"
       }
     ],
-    "links": [],
+    "links": [
+      {
+        "label": "AMAT IR",
+        "url": "https://ir.appliedmaterials.com/"
+      },
+      {
+        "label": "触发本次对账的 SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AMAT&type=8-K&dateb=&owner=include&count=10"
+      }
+    ],
     "consensus": {
       "eps": "$3.394",
       "rev": "$9.00B",
@@ -842,7 +856,12 @@ export const events = [
     ],
     "verdict": "名义 beat 但实质 miss? 否 ——(程序判定,依据见 §8.2)",
     "history": [],
-    "links": [],
+    "links": [
+      {
+        "label": "BABA IR",
+        "url": "https://www.alibabagroup.com/en-US/ir-financial-reports-quarterly-results"
+      }
+    ],
     "consensus": {
       "eps": "$10.728",
       "rev": "$268.34B",
@@ -1730,89 +1749,6 @@ export const events = [
     ]
   },
   {
-    "id": "mu-earnings-2026-09-22",
-    "kind": "earnings",
-    "ticker": "MU",
-    "company": "MU",
-    "title": "MU 财报",
-    "subtitle": "盘后",
-    "org": "",
-    "date": "2026-09-22T16:05:00-04:00",
-    "dateNote": "盘后 · 按历史排期推算(基准 2025-09-23),公司未官宣 → 跑 /earnings-preview 建卡",
-    "dateConfirmed": false,
-    "importance": 3,
-    "tags": [
-      "推算日期",
-      "核心"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-06-24",
-        "what": "EPS 意外 +21.4% · 实际 25.11 vs 预期 20.69",
-        "outcome": "次日 +15.74%（巨 beat >10%）"
-      },
-      {
-        "when": "2026-03-18",
-        "what": "EPS 意外 +33.2% · 实际 12.2 vs 预期 9.16",
-        "outcome": "次日 -3.78%（巨 beat >10%）"
-      },
-      {
-        "when": "2025-12-17",
-        "what": "EPS 意外 +20.6% · 实际 4.78 vs 预期 3.96",
-        "outcome": "次日 +10.21%（巨 beat >10%）"
-      }
-    ],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
-    "valuation": [
-      {
-        "name": "基准收盘价",
-        "value": "$823.03"
-      },
-      {
-        "name": "概率加权目标价",
-        "value": "$815.85"
-      },
-      {
-        "name": "压力调整底线",
-        "value": "$581.55"
-      },
-      {
-        "name": "安全边际",
-        "value": "-29.34%"
-      },
-      {
-        "name": "综合分",
-        "value": "58.4"
-      },
-      {
-        "name": "象限动作",
-        "value": "等待企稳分批"
-      }
-    ],
-    "targets": {
-      "low": "$500",
-      "avg": "$816",
-      "high": "$1,200",
-      "n": "本站三情景加权 · 卖方一致 $1,507.38"
-    },
-    "afterHours": {
-      "move": "",
-      "note": ""
-    }
-  },
-  {
     "id": "conf-meta-connect-2026-09-23",
     "kind": "event",
     "title": "Meta Connect",
@@ -1851,6 +1787,180 @@ export const events = [
         "value": "QCOM、NVDA"
       }
     ]
+  },
+  {
+    "id": "mu-fy26q4",
+    "kind": "earnings",
+    "ticker": "MU",
+    "company": "MU",
+    "title": "MU FY26Q4 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-09-30T16:05:00-04:00",
+    "dateNote": "盘后 16:05 ET · 卡片状态 pending",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "FY26Q4",
+      "核心"
+    ],
+    "thesis": "隐含波动:±9.27%(去时值口径)/ ±10.91%(raw),盈亏平衡 825.46 / 1,027.64;到期日 2026-10-02(16 DTE),ATM 925,跨式中价 101.12,put/call 中价比 0.929(下跌保护反而更便宜) 期权贵不贵:近 8 季实际波动中位 ±9.12% → 比值 1.02× = 定价大致公允,方向性下注优于波动性下注 反应函数一句:MU 的 beat 是入场费不是彩票 —— 近 20 季 beat 率 90%、其中 beat 却跌 11 次,surprise 与次日涨跌相关系数仅 0.277(几乎不解释)。定价权在指引与毛利率斜率,不在当季 EPS。 门槛配置(表 ⑦ 裁决):买方 bar 35.912 ≥ 指引上沿 32.000(+12.2%) → 市场已按指引打满定价。未打满即实质 miss,即使名义 beat。 🔴 本卡最重要的一个发现:卖方一致不是独立的 bar,它就是公司指引本身。 动作(四选一):财报前不动 期望值 = +1.76% vs 隐含 ±9.27% → 赔率微正但远小于波动:方向性赌注的回报不足以覆盖两侧尾部 持有者 vs 空仓者(不许合并):",
+    "expectations": [
+      {
+        "name": "FQ1-27 非GAAP EPS 指引中值",
+        "consensus": "37.0",
+        "prior": "",
+        "range": "40.7 / 34.0",
+        "note": "EX-99.1「Business Outlook」表(上季原文两列: GAAP $30.73 +/- $1.00 | 非GAAP $31.00 +/- $1.00)。标签与数值不同行故用 value_line_offset 1; 该行四个数 [30.73, 1.00, 31.00, 1.00], pick max 取非GAAP 中值 —— 非GAAP EPS 恒高于 GAAP(SBC 加回)且高于半宽, 该口径对 FQ1-26/FQ2-26 的「8.19 +/- 0.20 | 8.42 +/- 0.20」旧版式同样成立(取 8.42), 跨版式稳健。⚠️ lint 会对本条报「命中行是区间式, pick 应为 first」—— 这条警告在 MU 上是错的, 不许照做: 该行是 GAAP 与非GAAP 两组「中值 +/- 半宽」并排, pick first 取到的是 GAAP 30.73(低 0.27), 不是我们要的非GAAP 31.00"
+      },
+      {
+        "name": "FQ1-27 收入指引中值(十亿美元)",
+        "consensus": "59.0",
+        "prior": "",
+        "range": "64.0 / 55.0",
+        "note": "EX-99.1「Business Outlook」表(上季原文: Revenue $50.0 billion +/- $1.0 billion, GAAP 与非GAAP 同值)。收入两列相同故 pick first 即可; 不用 max —— 旧版式「$18.70 billion +/- $400 million」里 400 会被 usd_b 误判"
+      }
+    ],
+    "pricing": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "28%",
+        "trigger": "见卡片三情景表",
+        "reaction": "次日 +15.25%"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "30%",
+        "trigger": "见卡片三情景表",
+        "reaction": "次日 +3.19%"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "42%",
+        "trigger": "见卡片三情景表",
+        "reaction": "次日 -8.26%"
+      }
+    ],
+    "watch": [
+      "FY2027 capex 与 SCA 价格天花板的指引措辞 — 利好: 量化说明 SCA 天花板仅适用 existing products、HBM4/HBM4E/新制程不受价格上限约束(或给出 SCA 覆盖比例 × 加权 ASP 的可验证拆分); 或 FY27 净 capex 指引明确配供给纪律措辞(位元供给增速 <= 行业需求增速 / 新增产能已被 SCA 锁定) — 利空: 首次用「价格涨幅放缓 / 正常化 / 客户库存回补接近尾声」类表述解释 FQ1-27 指引; 或重申天花板锁在 CY2026Q2 市价且覆盖面继续扩大; 或 FY27 净 capex 大幅上调而不配供给纪律措辞",
+      "FQ1-27 非GAAP EPS 指引中值(第一定价变量) · 预期 37.00 · 利好 ≥ 40.70(= 下季一致 34.875 × 1.1462) · 利空 < 34.00(低于卖方一致 34.875)",
+      "FQ1-27 收入指引中值 · 预期 59.0B · 利好 ≥ 64.0B · 利空 < 55.0B(低于下季一致 56.656B)",
+      "FQ1-27 非GAAP 毛利率指引 · 预期 87.5% · 利好 ≥ 89.0% · 利空 ≤ 86.0%(= 与 FQ4 指引持平,涨价停)",
+      "FQ4-26 实际收入 · 预期 57,500(百万美元) · 利好 ≥ 61,900(历史超指引中位 +23.7% 复刻) · 利空 < 55,000(beat < 10%,MU.md 预承诺的 sandbag 失效第一证据)",
+      "FQ4-26 实际非GAAP 毛利率 · 预期 88.5% · 利好 ≥ 90.0% · 利空 ≤ 86.5%(仅打平指引,前三季均超 +3.9~6.9pt)",
+      "Cloud Memory BU 收入(AI/HBM 直读) · 预期 19,500(百万美元) · 利好 ≥ 22,000 · 利空 < 17,000",
+      "*(定性)* FY2027 capex 与 SCA 天花板措辞 · 预期 见 §3.2 ①② · 利好 见 P7 bull_if · 利空 见 P7 bear_if"
+    ],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-06-24",
+        "what": "EPS 意外 +21.4% · 实际 25.11 vs 预期 20.69",
+        "outcome": "次日 +15.74%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-03-18",
+        "what": "EPS 意外 +33.2% · 实际 12.2 vs 预期 9.16",
+        "outcome": "次日 -3.78%（巨 beat >10%）"
+      },
+      {
+        "when": "2025-12-17",
+        "what": "EPS 意外 +20.6% · 实际 4.78 vs 预期 3.96",
+        "outcome": "次日 +10.21%（巨 beat >10%）"
+      }
+    ],
+    "links": [
+      {
+        "label": "MU IR",
+        "url": "https://investors.micron.com/news-releases"
+      }
+    ],
+    "consensus": {
+      "eps": "$31.331",
+      "rev": "$50.79B",
+      "epsPrior": "",
+      "revPrior": "",
+      "revYoY": "",
+      "note": "买方 bar $35.912"
+    },
+    "segments": [
+      {
+        "name": "FQ1-27 非GAAP 毛利率指引",
+        "consensus": "87.5",
+        "prior": "",
+        "note": "EX-99.1「Business Outlook」表(上季原文: Approximately 86% | Approximately 86%)。pick max 跨版式稳健: 旧版式「67.0% +/- 1.0% | 68.0% +/- 1.0%」取 68.0 = 非GAAP。bear_at 86.0 = MU.md 事前写死的「走平」档上沿, 与长期卡对齐不另起炉灶。⚠️ 旧版式下 lint 会报「区间式应 pick first」, 同 P1 是误报: pick first 取到 GAAP 67.0, 要的是非GAAP 68.0"
+      },
+      {
+        "name": "FQ4-26 实际收入(百万美元)",
+        "consensus": "57500.0",
+        "prior": "",
+        "note": "EX-99.1「Quarterly Financial Results」表首行(上季原文: Revenue $ 41,456 $ 23,860 $ 9,301 $ 41,456 ... GAAP 与非GAAP 同值故 pick first)。⚠️ probe 必须带尾部的 $: 裸「Revenue」会被同段的「Percent of revenue 84.6 %」按「标签到数字距离」抢走(1 字符 vs 3 字符), lint 实测抽出 84.6 —— 静默把收入换成毛利率。bear_at 55000 = 指引 50,000 的 +10%, 即 MU.md 预承诺的「FQ4 beat <10% = sandbag 机制失效第一证据」—— 该阈值允许名义大幅 beat 仍判 bear, 是 bear_allows_eps_beat 的直接体现"
+      },
+      {
+        "name": "FQ4-26 实际非GAAP 毛利率",
+        "consensus": "88.5",
+        "prior": "",
+        "note": "EX-99.1「Quarterly Financial Results」表第一个 Percent of revenue 行(= 毛利率; 第二个是营业利润率, 靠 section_lines 10 截断在窗口外)。上季原文 84.6 | 74.4 | 37.7 | 84.9 | 74.9 | 39.0 -> pick max 取非GAAP 本季 84.9(非GAAP 毛利率恒 >= GAAP, 且上行周期本季 > 历史季)"
+      },
+      {
+        "name": "Cloud Memory BU 收入(百万美元)",
+        "consensus": "19500.0",
+        "prior": "",
+        "note": "EX-99.1「Quarterly Business Unit Financial Results」-> Cloud Memory Business Unit -> Revenue(上季 $ 13,769 $ 7,749 $ 3,386, 环比 +77.7%)。⚠️ 同一份新闻稿内 BU 版式不一致: CMBU 的 Revenue 与数值同行, 而 CDBU/MCBU/AEBU 的在下一行 —— 若 FQ4 改成下一行版式, 本条会报低置信并要求人工填 value_line_offset, 不会静默取错数(E-32)"
+      }
+    ],
+    "guidance": {
+      "company": "待公布",
+      "street": "下季 EPS 一致 $34.875",
+      "note": "比较期间 FY27Q1"
+    },
+    "options": {
+      "iv": "",
+      "impliedMove": "±9.27%",
+      "note": "盈亏平衡 $825.46 / $1027.64"
+    },
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$823.03"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$815.85"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$581.55"
+      },
+      {
+        "name": "安全边际",
+        "value": "-29.34%"
+      },
+      {
+        "name": "综合分",
+        "value": "58.4"
+      },
+      {
+        "name": "象限动作",
+        "value": "等待企稳分批"
+      }
+    ],
+    "targets": {
+      "low": "$500",
+      "avg": "$816",
+      "high": "$1,200",
+      "n": "本站三情景加权 · 卖方一致 $1,507.38"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
   },
   {
     "id": "nfp-2026-09-rel2026-10-02",
