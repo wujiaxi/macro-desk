@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-17 07:00 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-17 10:53 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -72,7 +72,7 @@ export const markets = [
     "value": "4.67%",
     "chg": "+2.0bp",
     "dir": "up",
-    "note": "as-of 2026-09-15 · 2s10s +33bp"
+    "note": "as-of 2026-09-15 · 2s10s +27bp"
   },
   {
     "label": "10月加息概率",
