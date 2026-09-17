@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-17 16:22 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-17 16:44 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,56 +16,63 @@ export const markets = [
     "value": "7,637.76",
     "chg": "+1.14%",
     "dir": "up",
-    "note": "2026-09-17"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,447.0",
     "chg": "+1.73%",
     "dir": "up",
-    "note": "2026-09-17"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "DXY",
-    "value": "100.31",
-    "chg": "+0.66%",
-    "dir": "up",
-    "note": "2026-09-16"
+    "value": "100.22",
+    "chg": "-0.09%",
+    "dir": "down",
+    "note": "实时 16:44 ET"
   },
   {
     "label": "黄金",
-    "value": "4,387.50",
-    "chg": "+1.26%",
+    "value": "4,381.60",
+    "chg": "+1.07%",
     "dir": "up",
-    "note": "2026-09-16"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "102.43",
-    "chg": "-3.21%",
+    "value": "101.27",
+    "chg": "-0.98%",
     "dir": "down",
-    "note": "2026-09-16"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "BTC",
-    "value": "76,150",
-    "chg": "+0.71%",
+    "value": "76,463",
+    "chg": "+0.42%",
     "dir": "up",
-    "note": "2026-09-16"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "VIX",
-    "value": "15.43",
-    "chg": "-2.28",
+    "value": "15.44",
+    "chg": "-2.27",
     "dir": "down",
-    "note": "2026-09-17"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.01%",
-    "chg": "+1.0bp",
-    "dir": "up",
-    "note": "as-of 2026-09-16"
+    "value": "4.95%",
+    "chg": "-5.9bp",
+    "dir": "down",
+    "note": "实时 16:44 ET"
+  },
+  {
+    "label": "US 30Y",
+    "value": "5.30%",
+    "chg": "-5.3bp",
+    "dir": "down",
+    "note": "实时 16:44 ET"
   },
   {
     "label": "US 2Y",
@@ -670,21 +677,21 @@ export const events = [
         "tag": "偏热",
         "tone": "hawk",
         "prob": "25%",
-        "trigger": "P1 >= 100 or P2 >= 0",
+        "trigger": "当月非农新增(k) ≥ 100 或 前两月净修正(k) ≥ 0",
         "reaction": "2Y +9bp · 10Y +6bp · DXY +0.35% · SPX -0.60% · NDX -0.90%"
       },
       {
         "tag": "符合预期",
         "tone": "base",
         "prob": "45%",
-        "trigger": "P1 in (-50,100) and P2 < 0",
+        "trigger": "当月非农新增(k) 落在 -50 ~ 100 之间 且 前两月净修正(k) < 0",
         "reaction": "2Y -4bp · 10Y -3bp · DXY -0.15% · SPX -0.25% · NDX -0.35%"
       },
       {
         "tag": "偏冷",
         "tone": "dove",
         "prob": "30%",
-        "trigger": "P1 <= -50 and P2 < 0",
+        "trigger": "当月非农新增(k) ≤ -50 且 前两月净修正(k) < 0",
         "reaction": "2Y -11bp · 10Y -7bp · DXY -0.40% · SPX -0.70% · NDX -0.90%"
       }
     ],
@@ -857,21 +864,21 @@ export const events = [
         "tag": "偏热",
         "tone": "hawk",
         "prob": "30%",
-        "trigger": "P1 >= 0.3",
+        "trigger": "核心 CPI 环比(%) ≥ 0.3",
         "reaction": "2Y +8bp · 10Y +6bp · DXY +0.40% · SPX -0.90% · NDX -1.30%"
       },
       {
         "tag": "符合预期",
         "tone": "base",
         "prob": "45%",
-        "trigger": "0.1 < P1 < 0.3",
+        "trigger": "0.1 < 核心 CPI 环比(%) < 0.3",
         "reaction": "2Y -2bp · 10Y -1bp · DXY -0.10% · SPX +0.30% · NDX +0.40%"
       },
       {
         "tag": "偏冷",
         "tone": "dove",
         "prob": "25%",
-        "trigger": "P1 <= 0.1",
+        "trigger": "核心 CPI 环比(%) ≤ 0.1",
         "reaction": "2Y -8bp · 10Y -6bp · DXY -0.30% · SPX +0.50% · NDX +0.70%"
       }
     ],
@@ -1034,28 +1041,28 @@ export const events = [
         "tag": "行动+鹰",
         "tone": "hawk",
         "prob": "45%",
-        "trigger": "P1 > 0 and (P2 >= 4.2 or P4.verdict == 'bear' or P5.verdict == 'bear')",
+        "trigger": "决议(bp,相对上次区间) > 0 且 (2026 末点阵中位(%) ≥ 4.2 或 声明措辞 diff(vs 7/29) 判为利空 或 发布会基调(第二段) 判为利空)",
         "reaction": "2Y +8bp · 10Y +6bp · DXY +0.40% · SPX -0.80% · NDX -1.20%"
       },
       {
         "tag": "行动+鸽",
         "tone": "dove",
         "prob": "40%",
-        "trigger": "P1 > 0 and P2 < 4.2 and P4.verdict != 'bear' and P5.verdict != 'bear'",
+        "trigger": "决议(bp,相对上次区间) > 0 且 2026 末点阵中位(%) < 4.2 且 声明措辞 diff(vs 7/29) ≠ 'bear' 且 发布会基调(第二段) ≠ 'bear'",
         "reaction": "2Y -4bp · 10Y -3bp · DXY -0.20% · SPX +0.60% · NDX +0.90%"
       },
       {
         "tag": "按兵+鹰",
         "tone": "hawk",
         "prob": "5%",
-        "trigger": "P1 <= 0 and (P4.verdict == 'bear' or P5.verdict == 'bear')",
+        "trigger": "决议(bp,相对上次区间) ≤ 0 且 (声明措辞 diff(vs 7/29) 判为利空 或 发布会基调(第二段) 判为利空)",
         "reaction": "2Y -6bp · 10Y -4bp · DXY -0.20% · SPX -0.30% · NDX -0.50%"
       },
       {
         "tag": "按兵+鸽",
         "tone": "dove",
         "prob": "10%",
-        "trigger": "P1 <= 0 and P4.verdict != 'bear' and P5.verdict != 'bear'",
+        "trigger": "决议(bp,相对上次区间) ≤ 0 且 声明措辞 diff(vs 7/29) ≠ 'bear' 且 发布会基调(第二段) ≠ 'bear'",
         "reaction": "2Y -12bp · 10Y -8bp · DXY -0.50% · SPX +1.00% · NDX +1.40%"
       }
     ],
@@ -1303,15 +1310,15 @@ export const events = [
     "readThrough": [
       {
         "name": "QCOM",
-        "value": "新(本台账内 QCOM 无论点卡;相关既有承诺为 QCOM-ID2026-pac6b-fy29 —— Personal AI and Compute 含 XR/可穿戴,FY2029 $60 亿目标) · 偏多,但量级小 · 新硬件继续采用 Snapdragon(AR1 家族 / QCC 系列)+ 品类销量口径上修。参照系:高通器件占 Ray-Ban Display + Neural Band 物料 15.7%(TechInsights 拆解),按 $799 零售价倒推的芯片价值占比是个位数美元级,所以这条传导在 QCOM 的 FY29 $60 亿目标里只是\"故事验证\",不是\"营收兑现\"。⚠️ 归因污染:QCOM 自家 Snapdragon Summit 同在 9/22–24,QCOM 当周的涨跌不可直接归因于 Connect ｜ 同上 · 偏空(唯一的真风险) · 新品出现 Meta 自研 SoC,或 Phoenix 的计算单元(泄露显示为独立 compute puck)采用非高通方案。这是\"份额被拿走\"的一类信号,比销量数字重要一个量级"
+        "value": "新(本台账内 QCOM 无论点卡;相关既有承诺为 QCOM-ID2026-pac6b-fy29 —— Personal AI 且 Compute 含 XR/可穿戴,FY2029 $60 亿目标) · 偏多,但量级小 · 新硬件继续采用 Snapdragon(AR1 家族 / QCC 系列)+ 品类销量口径上修。参照系:高通器件占 Ray-Ban Display + Neural Band 物料 15.7%(TechInsights 拆解),按 $799 零售价倒推的芯片价值占比是个位数美元级,所以这条传导在 QCOM 的 FY29 $60 亿目标里只是\"故事验证\",不是\"营收兑现\"。⚠️ 归因污染:QCOM 自家 Snapdragon Summit 同在 9/22–24,QCOM 当周的涨跌不可直接归因于 Connect ｜ 同上 · 偏空(唯一的真风险) · 新品出现 Meta 自研 SoC,或 Phoenix 的计算单元(泄露显示为独立 compute puck)采用非高通方案。这是\"份额被拿走\"的一类信号,比销量数字重要一个量级"
       },
       {
         "name": "NVDA",
-        "value": "P1(数据中心需求) · 中性 —— 这一行的正确答案是\"零\" · Connect 是消费端与开发者会议,不给 capex、不给训练集群口径、不点名芯片供应商;Meta 的算力叙事只在财报电话会与 SEC 件里出现,本场会最可能的结果是 NVDA 一个字都不被提到。只有一种例外算触发:管理层在台上把某个模型的训练规模/集群规模具名量化(历史上极罕见)。把 Connect 的眼镜发布读成 NVDA 的利好或利空,都是判反"
+        "value": "Keynote 由 Zuckerberg 主讲,主题为 AI / AI 眼镜 / VR(数据中心需求) · 中性 —— 这一行的正确答案是\"零\" · Connect 是消费端与开发者会议,不给 capex、不给训练集群口径、不点名芯片供应商;Meta 的算力叙事只在财报电话会与 SEC 件里出现,本场会最可能的结果是 NVDA 一个字都不被提到。只有一种例外算触发:管理层在台上把某个模型的训练规模/集群规模具名量化(历史上极罕见)。把 Connect 的眼镜发布读成 NVDA 的利好或利空,都是判反"
       },
       {
         "name": "META(主办方自己)",
-        "value": "P2(capex 有没有对价)/ P5(倍数不会自行修复) · 双向,权重集中在 Muse 一条上 · 见 §7.1 C1。主办方在这场会里受影响最小这条通则今年不成立 —— 因为 Muse 是 META 自己的变现叙事,而眼镜的经济含义大部分落在 EssilorLuxottica(未持仓)与 QCOM 身上"
+        "value": "Project Phoenix(轻量 MR 头显)做舞台预览(capex 有没有对价)/ Ray-Ban Display 国际上市重启(倍数不会自行修复) · 双向,权重集中在 Muse 一条上 · 见 §7.1 C1。主办方在这场会里受影响最小这条通则今年不成立 —— 因为 Muse 是 META 自己的变现叙事,而眼镜的经济含义大部分落在 EssilorLuxottica(未持仓)与 QCOM 身上"
       },
       {
         "name": "(表外)EssilorLuxottica",
@@ -1411,7 +1418,7 @@ export const events = [
       }
     ],
     "watch": [
-      "FY2027 capex 与 SCA 价格天花板的指引措辞 — 利好: 量化说明 SCA 天花板仅适用 existing products、HBM4/HBM4E/新制程不受价格上限约束(或给出 SCA 覆盖比例 × 加权 ASP 的可验证拆分); 或 FY27 净 capex 指引明确配供给纪律措辞(位元供给增速 <= 行业需求增速 / 新增产能已被 SCA 锁定) — 利空: 首次用「价格涨幅放缓 / 正常化 / 客户库存回补接近尾声」类表述解释 FQ1-27 指引; 或重申天花板锁在 CY2026Q2 市价且覆盖面继续扩大; 或 FY27 净 capex 大幅上调而不配供给纪律措辞",
+      "FY2027 capex 与 SCA 价格天花板的指引措辞 — 利好: 量化说明 SCA 天花板仅适用 existing products、HBM4/HBM4E/新制程不受价格上限约束(或给出 SCA 覆盖比例 × 加权 ASP 的可验证拆分); 或 FY27 净 capex 指引明确配供给纪律措辞(位元供给增速 ≤ 行业需求增速 / 新增产能已被 SCA 锁定) — 利空: 首次用「价格涨幅放缓 / 正常化 / 客户库存回补接近尾声」类表述解释 FQ1-27 指引; 或重申天花板锁在 CY2026Q2 市价且覆盖面继续扩大; 或 FY27 净 capex 大幅上调而不配供给纪律措辞",
       "买方在问 — ① SCA 的价格天花板,什么时候开始咬住 ASP? · 市场现在假设: SCA(Strategic Customer Agreements)是纯利好 —— take-or-pay + 客户押金,把周期股变成合约股。 · 利好: 管理层量化说明天花板只适用 existing products、HBM4/HBM4E/新制程产品不受限,或给出「SCA 覆盖比例 × 加权 ASP」的可验证拆分。 · 利空: 重申天花板锁定且覆盖面继续扩大,或首次用「价格涨幅正常化」解释 FQ1-27 指引。",
       "买方在问 — ② FY2027 净 capex 给多少 —— 它同时是需求信号和供给威胁 · 利好: FY27 净 capex 明确配供给纪律措辞(位元供给增速 ≤ 行业需求增速 / 新增产能已被 SCA 锁定)。 · 利空: 大幅上调而不配纪律措辞 —— 那会被读成 2028 供给悬崖提前定价,直接命中 MU.md 的 pillar 2(倍数压制,已证伪状态)。",
       "买方在问 — ③ 毛利率的二阶导 —— 涨价到底停没停 · 市场现在假设: FQ4 GM 约 86%(指引),FQ1-27 继续抬。 · 利好: FQ1-27 GM 指引 ≥ 89%;什么算利空:≤ 86%(= 与 FQ4 指引持平,MU.md 预承诺的「走平」档)。 · 利空: ≤ 86%(= 与 FQ4 指引持平,MU.md 预承诺的「走平」档)。",
@@ -1421,7 +1428,7 @@ export const events = [
       "FQ4-26 实际收入 · 预期 57,500(百万美元) · 利好 ≥ 61,900(历史超指引中位 +23.7% 复刻) · 利空 < 55,000(beat < 10%,MU.md 预承诺的 sandbag 失效第一证据)",
       "FQ4-26 实际非GAAP 毛利率 · 预期 88.5% · 利好 ≥ 90.0% · 利空 ≤ 86.5%(仅打平指引,前三季均超 +3.9~6.9pt)",
       "Cloud Memory BU 收入(AI/HBM 直读) · 预期 19,500(百万美元) · 利好 ≥ 22,000 · 利空 < 17,000",
-      "*(定性)* FY2027 capex 与 SCA 天花板措辞 · 预期 见 §3.2 ①② · 利好 见 P7 bull_if · 利空 见 P7 bear_if"
+      "*(定性)* FY2027 capex 与 SCA 天花板措辞 · 预期 见 §3.2 ①② · 利好 见 FQ1-27 收入指引中值(十亿美元) bull_if · 利空 见 FQ1-27 收入指引中值(十亿美元) bear_if"
     ],
     "actual": [],
     "reaction": [],
@@ -1600,21 +1607,21 @@ export const events = [
         "tag": "偏热",
         "tone": "hawk",
         "prob": "25%",
-        "trigger": "P1 >= 160 or P1 > 0 and P2 >= 50",
+        "trigger": "当月非农新增(k) ≥ 160 或 当月非农新增(k) > 0 且 前两月净修正(k) ≥ 50",
         "reaction": "2Y +11bp · 10Y +7bp · DXY +0.45% · SPX -1.00% · NDX -1.40%"
       },
       {
         "tag": "符合预期",
         "tone": "base",
         "prob": "45%",
-        "trigger": "0 < P1 < 160 and P2 < 50",
+        "trigger": "0 < 当月非农新增(k) < 160 且 前两月净修正(k) < 50",
         "reaction": "2Y -3bp · 10Y -2bp · DXY -0.10% · SPX +0.30% · NDX +0.40%"
       },
       {
         "tag": "偏冷",
         "tone": "dove",
         "prob": "30%",
-        "trigger": "P1 <= 0",
+        "trigger": "当月非农新增(k) ≤ 0",
         "reaction": "2Y -11bp · 10Y -7bp · DXY -0.45% · SPX +0.40% · NDX +0.60%"
       }
     ],
@@ -1936,21 +1943,21 @@ export const events = [
         "tag": "偏热",
         "tone": "hawk",
         "prob": "30%",
-        "trigger": "P1 >= 0.3 or (P1 > 0.1 and P4 >= 0.4)",
+        "trigger": "核心 CPI 环比(%) ≥ 0.3 或 (核心 CPI 环比(%) > 0.1 且 supercore 环比(核心服务 ex 住房,派生)(%) ≥ 0.4)",
         "reaction": "2Y +10bp · 10Y +7bp · DXY +0.45% · SPX -1.20% · NDX -1.70%"
       },
       {
         "tag": "符合预期",
         "tone": "base",
         "prob": "45%",
-        "trigger": "0.1 < P1 < 0.3 and P4 < 0.4",
+        "trigger": "0.1 < 核心 CPI 环比(%) < 0.3 且 supercore 环比(核心服务 ex 住房,派生)(%) < 0.4",
         "reaction": "2Y -3bp · 10Y -2bp · DXY -0.10% · SPX +0.40% · NDX +0.60%"
       },
       {
         "tag": "偏冷",
         "tone": "dove",
         "prob": "25%",
-        "trigger": "P1 <= 0.1",
+        "trigger": "核心 CPI 环比(%) ≤ 0.1",
         "reaction": "2Y -11bp · 10Y -8bp · DXY -0.50% · SPX +1.10% · NDX +1.60%"
       }
     ],
@@ -2153,23 +2160,23 @@ export const events = [
       },
       {
         "name": "TSM",
-        "value": "P1(先进制程垄断)· P2(AI 需求结构性放量) · 中性偏多 · 仅当 Rubin 上线读数把「2H26 量产」坐实,才是 P1/P2 的旁证(不是新证据)。欧洲订单不改 TSM 产能分配"
+        "value": "欧洲主权 AI 合作方名单再扩容(国家/电信/云)(先进制程垄断)· Rubin 在欧洲的首批上线读数(AI 需求结构性放量) · 中性偏多 · 仅当 Rubin 上线读数把「2H26 量产」坐实,才是 欧洲主权 AI 合作方名单再扩容(国家/电信/云)/Rubin 在欧洲的首批上线读数 的旁证(不是新证据)。欧洲订单不改 TSM 产能分配"
       },
       {
         "name": "MU",
-        "value": "P3(HBM 份额/价格) · 中性 · Rubin = HBM4 世代。台上给 Rubin 已上线机柜数才有边际信息;只讲架构不讲部署 = 对 MU 零信息量"
+        "value": "工业 AI / Omniverse 的德国落地案例(HBM 份额/价格) · 中性 · Rubin = HBM4 世代。台上给 Rubin 已上线机柜数才有边际信息;只讲架构不讲部署 = 对 MU 零信息量"
       },
       {
         "name": "AVGO",
-        "value": "P1(AI XPU 放量) · 反向 · 若欧洲主权项目里出现非 NVIDIA 方案(自研/ASIC/竞品)占位,是 AVGO 的正面、NVDA P2 的负面。但欧洲主权项目至今 90% 是 NVIDIA(ISC 2026 官方口径),先验极低"
+        "value": "欧洲主权 AI 合作方名单再扩容(国家/电信/云)(AI XPU 放量) · 反向 · 若欧洲主权项目里出现非 NVIDIA 方案(自研/ASIC/竞品)占位,是 AVGO 的正面、NVDA Rubin 在欧洲的首批上线读数 的负面。但欧洲主权项目至今 90% 是 NVIDIA(ISC 2026 官方口径),先验极低"
       },
       {
         "name": "VRT",
-        "value": "P1(DCPI 结构性需求) · 偏多 · 欧洲新增 AI factory 的电与热是 Vertiv 的直接口径。台上给欧洲新增 GW/MW 数才算触发。现价 $239.41,距 52 周高 -37.0%,RSI 41.03"
+        "value": "欧洲主权 AI 合作方名单再扩容(国家/电信/云)(DCPI 结构性需求) · 偏多 · 欧洲新增 AI factory 的电与热是 Vertiv 的直接口径。台上给欧洲新增 GW/MW 数才算触发。现价 $239.41,距 52 周高 -37.0%,RSI 41.03"
       },
       {
         "name": "NVDA(主办方)",
-        "value": "P1(需求/capex)· P2(份额) · 受影响最小 · NVDA 的估值本来就已经计入「它会赢」;欧洲占其营收比重不足以移动 P1。主办方是这张表里最不该动的那个"
+        "value": "欧洲主权 AI 合作方名单再扩容(国家/电信/云)(需求/capex)· Rubin 在欧洲的首批上线读数(份额) · 受影响最小 · NVDA 的估值本来就已经计入「它会赢」;欧洲占其营收比重不足以移动 欧洲主权 AI 合作方名单再扩容(国家/电信/云)。主办方是这张表里最不该动的那个"
       }
     ]
   },
@@ -2437,38 +2444,38 @@ export const events = [
         "tag": "按兵+鹰",
         "tone": "hawk",
         "prob": "40%",
-        "trigger": "P1 <= 0 and (P3.verdict == 'bear' or P4.verdict == 'bear')",
+        "trigger": "决议(bp,相对 3.75-4.00 区间) ≤ 0 且 (声明措辞 diff(vs 2026-09-16) 判为利空 或 发布会基调(第二段,14:30) 判为利空)",
         "reaction": "2Y -3bp · 10Y -2bp · DXY -0.10% · SPX +0.10% · NDX +0.20%"
       },
       {
         "tag": "行动+鹰",
         "tone": "hawk",
         "prob": "26%",
-        "trigger": "P1 >= 25 and (P3.verdict == 'bear' or P4.verdict == 'bear')",
+        "trigger": "决议(bp,相对 3.75-4.00 区间) ≥ 25 且 (声明措辞 diff(vs 2026-09-16) 判为利空 或 发布会基调(第二段,14:30) 判为利空)",
         "reaction": "2Y +12bp · 10Y +7bp · DXY +0.50% · SPX -1.00% · NDX -1.40%"
       },
       {
         "tag": "按兵+鸽",
         "tone": "dove",
         "prob": "20%",
-        "trigger": "P1 <= 0 and P3.verdict != 'bear' and P4.verdict != 'bear'",
+        "trigger": "决议(bp,相对 3.75-4.00 区间) ≤ 0 且 声明措辞 diff(vs 2026-09-16) ≠ 'bear' 且 发布会基调(第二段,14:30) ≠ 'bear'",
         "reaction": "2Y -15bp · 10Y -10bp · DXY -0.60% · SPX +1.20% · NDX +1.70%"
       },
       {
         "tag": "行动+鸽",
         "tone": "dove",
         "prob": "14%",
-        "trigger": "P1 >= 25 and P3.verdict != 'bear' and P4.verdict != 'bear'",
+        "trigger": "决议(bp,相对 3.75-4.00 区间) ≥ 25 且 声明措辞 diff(vs 2026-09-16) ≠ 'bear' 且 发布会基调(第二段,14:30) ≠ 'bear'",
         "reaction": "2Y -2bp · 10Y -3bp · DXY -0.20% · SPX +0.50% · NDX +0.70%"
       }
     ],
     "watch": [
       "声明措辞 diff(vs 2026-09-16) — 利好: 给通胀句加上改善类限定(如 has eased / has moved down),或删弱 Today's policy action will support a timelier return 这种主动认领语气,或把 This Committee will deliver price stability 降格 — 利空: 新增 further firming / additional increases may be appropriate 类前瞻指引;或把 Inflation remains elevated 升级为未改善;或删去把通胀归因于外生因素的措辞(供给冲击/地缘/关税)--在本加息周期里删掉外生归因等于货币政策认领通胀,判 bear,不许照上一轮降息周期模板判 bull(M-22)",
-      "发布会基调(第二段,14:30) — 利好: 主席表示他自设标准(underlying inflation moving to our objective, clearly and at sufficient speed)已被满足或接近满足;或明说 2026 年内不会再加;或首次给出结束加息的条件 — 利空: 主席表示 9 月点阵 4.1% 的年末中位是下限不是上限;或重申标准未被满足并把 12/09 描述成 live;或把商品/能源价格上行列为新的加息理由;或强调金融条件仍不具限制性",
+      "发布会基调(第二段,14:30) — 利好: 主席表示他自设标准(underlying inflation moving to our objective, clearly 且 at sufficient speed)已被满足或接近满足;或明说 2026 年内不会再加;或首次给出结束加息的条件 — 利空: 主席表示 9 月点阵 4.1% 的年末中位是下限不是上限;或重申标准未被满足并把 12/09 描述成 live;或把商品/能源价格上行列为新的加息理由;或强调金融条件仍不具限制性",
       "决议(bp) · 预期 0(维持 3.75–4.00) · 利好 -25 · 利空 +25",
       "鹰派异议票数 · 预期 1 · 利好 0 · 利空 3",
-      "声明措辞 diff(vs 9/16) · 预期 定性 · 利好 见 P3.bull_if · 利空 见 P3.bear_if",
-      "[14:30] 发布会基调 · 预期 定性 · 利好 见 P4.bull_if · 利空 见 P4.bear_if",
+      "声明措辞 diff(vs 9/16) · 预期 定性 · 利好 见 给通胀句加上改善类限定(如 has eased / has moved down),或删弱 Today's policy action will support a timelier return 这种主动认领语气,或把 This Committee will deliver price stability 降格 · 利空 见 新增 further firming / additional increases may be appropriate 类前瞻指引;或把 Inflation remains elevated 升级为未改善;或**删去把通胀归因于外生因素的措辞(供给冲击/地缘/关税)--在本加息周期里删掉外生归因等于货币政策认领通胀,判 bear,不许照上一轮降息周期模板判 bull(M-22)**",
+      "[14:30] 发布会基调 · 预期 定性 · 利好 见 主席表示他自设标准(underlying inflation moving to our objective, clearly 且 at sufficient speed)已被满足或接近满足;或明说 2026 年内不会再加;或首次给出结束加息的条件 · 利空 见 主席表示 9 月点阵 4.1% 的年末中位是下限不是上限;或重申标准未被满足并把 12/09 描述成 live;或把商品/能源价格上行列为新的加息理由;或强调金融条件仍不具限制性",
       "(无 SEP)点阵/实体经济栏 · 预期 本次不发 · 利好 — · 利空 —",
       "资产负债表措辞 · 预期 无变化 · 利好 放缓/停止缩表 · 利空 加速"
     ],
