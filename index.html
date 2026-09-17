@@ -644,13 +644,26 @@ class Component extends DCLogic {
       };
     });
 
-    const up = all.filter((e) => !e.past).sort((a, b) => a.t - b.t);
+    /* 日程表:原设计只列未来事件,于是**事件一发生就从主列表消失** ——
+       今天 14:00 的 FOMC 到了傍晚在日程里一行都找不到,只剩页面最底下一张复盘卡。
+       改成「近 30 天 + 全部未来」的时间轴,已发生的行倒计时显示「已公布」并置灰。 */
+    const LOOKBACK = 30 * 86400000;
+    const future = all.filter((e) => !e.past).sort((a, b) => a.t - b.t);
+    const up = all.filter((e) => !e.past || (now - e.t) <= LOOKBACK).sort((a, b) => a.t - b.t);
     base.upcoming = filter === "all" ? up : up.filter((e) => e.raw.kind === filter);
 
-    base.landed = all.filter((e) => e.past).sort((a, b) => b.t - a.t).slice(0, 6).map((e) => ({
+    /* 复盘区:原来固定取最近 6 条。6 条盖不住 30 天(一个财报季能塞十几场),
+       改成「近 30 天全要」,再兜底至少 6 条免得清淡期空着。 */
+    const pastAll = all.filter((e) => e.past).sort((a, b) => b.t - a.t);
+    const within = pastAll.filter((e) => (now - e.t) <= LOOKBACK);
+    base.landed = (within.length >= 6 ? within : pastAll.slice(0, 6)).map((e) => ({
       ...e,
       actual: arr(e.raw.actual).slice(0, 3).map((a) => ({ ...a, color: this.dirColor(a.dir) })),
-      verdictShort: isS(e.raw.verdict) ? e.raw.verdict : "复盘待填写 — data.js → verdict",
+      /* 卡片那一栏只有两三行高,而复盘正文常有一千多字 —— 整坨塞进去是一片看不了的黑字。
+         这里截断,全文在详情页。 */
+      verdictShort: isS(e.raw.verdict)
+        ? (e.raw.verdict.length > 150 ? e.raw.verdict.slice(0, 150) + "…（详情页看全文）" : e.raw.verdict)
+        : "复盘待填写 — data.js → verdict",
     }));
 
     /* ---- Hero ----
@@ -659,7 +672,7 @@ class Component extends DCLogic {
        整个首屏大倒计时是一句「观点待填写」。
        改成:先在**重要度 3** 里取最近的一场;一场都没有才退回原规则。
        日程表不受影响,仍按时间全列。 */
-    const h = up.find((e) => (e.raw.importance || 1) >= 3) || up[0];
+    const h = future.find((e) => (e.raw.importance || 1) >= 3) || future[0];
     if (h) {
       const sc = arr(h.raw.scenarios).map((s) => ({ tag: s.tag, prob: s.prob, color: TONE[s.tone] || "#8b98a8" }));
       base.hero = {
