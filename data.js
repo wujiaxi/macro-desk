@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 22:18 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 22:19 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -1359,11 +1359,7 @@ export const events = [
     "readThrough": [
       {
         "name": "QCOM",
-        "value": "新(本台账内 QCOM 无论点卡;相关既有承诺为 QCOM-ID2026-pac6b-fy29 —— Personal AI and Compute 含 XR/可穿戴,FY2029 $60 亿目标) · 偏多,但量级小 · 新硬件继续采用 Snapdragon(AR1 家族 / QCC 系列)+ 品类销量口径上修。参照系:高通器件占 Ray-Ban Display + Neural Band 物料 15.7%(TechInsights 拆解),按 $799 零售价倒推的芯片价值占比是个位数美元级,所以这条传导在 QCOM 的 FY29 $60 亿目标里只是\"故事验证\",不是\"营收兑现\"。⚠️ 归因污染:QCOM 自家 Snapdragon Summit 同在 9/22–24,QCOM 当周的涨跌不可直接归因于 Connect"
-      },
-      {
-        "name": "QCOM",
-        "value": "同上 · 偏空(唯一的真风险) · 新品出现 Meta 自研 SoC,或 Phoenix 的计算单元(泄露显示为独立 compute puck)采用非高通方案。这是\"份额被拿走\"的一类信号,比销量数字重要一个量级"
+        "value": "新(本台账内 QCOM 无论点卡;相关既有承诺为 QCOM-ID2026-pac6b-fy29 —— Personal AI and Compute 含 XR/可穿戴,FY2029 $60 亿目标) · 偏多,但量级小 · 新硬件继续采用 Snapdragon(AR1 家族 / QCC 系列)+ 品类销量口径上修。参照系:高通器件占 Ray-Ban Display + Neural Band 物料 15.7%(TechInsights 拆解),按 $799 零售价倒推的芯片价值占比是个位数美元级,所以这条传导在 QCOM 的 FY29 $60 亿目标里只是\"故事验证\",不是\"营收兑现\"。⚠️ 归因污染:QCOM 自家 Snapdragon Summit 同在 9/22–24,QCOM 当周的涨跌不可直接归因于 Connect ｜ 同上 · 偏空(唯一的真风险) · 新品出现 Meta 自研 SoC,或 Phoenix 的计算单元(泄露显示为独立 compute puck)采用非高通方案。这是\"份额被拿走\"的一类信号,比销量数字重要一个量级"
       },
       {
         "name": "NVDA",
