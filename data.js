@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 23:53 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-17 00:10 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -27,24 +27,24 @@ export const markets = [
   },
   {
     "label": "DXY",
-    "value": "99.65",
-    "chg": "+0.19%",
+    "value": "100.31",
+    "chg": "+0.66%",
     "dir": "up",
-    "note": "2026-09-15"
+    "note": "2026-09-16"
   },
   {
     "label": "黄金",
-    "value": "4,332.80",
-    "chg": "-0.44%",
-    "dir": "down",
-    "note": "2026-09-15"
+    "value": "4,387.50",
+    "chg": "+1.26%",
+    "dir": "up",
+    "note": "2026-09-16"
   },
   {
     "label": "WTI 原油",
-    "value": "105.83",
-    "chg": "+4.38%",
-    "dir": "up",
-    "note": "2026-09-15"
+    "value": "102.43",
+    "chg": "-3.21%",
+    "dir": "down",
+    "note": "2026-09-16"
   },
   {
     "label": "BTC",
@@ -1165,6 +1165,11 @@ export const events = [
         "asset": "纳斯达克100",
         "d0": "+0.02%",
         "d1": ""
+      },
+      {
+        "asset": "DXY",
+        "d0": "+0.66%",
+        "d1": ""
       }
     ],
     "verdict": "主导:SEP 的外段路径上移,不是这一次的 25bp。fed funds 中位 2027 3.6→4.1(+50bp)、2028 3.4→3.9(+50bp)、长期中枢 3.1→3.2(+10bp);发布会主席原话「I would be hard-pressed to describe broad financial conditions as restrictive … So we removed a dose of accommodation」——今天只是拿掉一剂宽松,离限制性还有距离。鹰在终点,不在这一步。 被压制:f_priced_in(靴子落地、买事实回补)。加息 92% 被定价、2Y 21 日 run-up 已跑 50bp,按卡片设计这次该是短端回吐;但点阵把终点抬高 50bp 之后,那 50bp 的含义从「提前定价这一次」变成「对后面几次定价不足」,回补的燃料被抽走。同时被压制的还有 f_dissent_split(12–0,不激活)。 我没列到的(表外力量一)点阵外段:P2 的 probe 只取 dots_2026,而 2026 中位 4.1 恰好等于预期值 ⇒ 程序判中性,整条 50bp 的外段上移在卡里无处落地。补:f_dots_outyear,activate = dots_2027 - prev.dots_2027 >= 25 or dots_lr - prev.dots_lr >= 10,dir 2Y:+ 10Y:++ DXY:+ SPX:- NDX:-,strength 3,horizon W(长期中枢那一格打的是 10Y,不是 2Y)。 我没列到的(表外力量二)主席不交点:SEP 脚注写明只有 18 位参与者提交,主席原话「as in June—I have not offered a projection of my own」——两个独立来源互证。全场最鹰的那一票不在分布里,点阵中位系统性低估委员会鹰派程度,而 P2 是 core 论点,带着这个口径缺口在跑。 我没列到的(框架错,不是遗漏)P3 只数票不看方向:7/29 的 3 张异议票全是要求加息的,它们归零是因为中心向鹰派投降,不是委员会转鸽——主席还主动把它定义成决心(「The committee's unanimous vote shows our resolve」)。卡里 P3.bull_at: 0 是从降息周期模板继承来的,方向写反了;同一个方向盲区在 B-9(情景命名)已记过一次,fomc_members.md 的「异议方向」列有这个字段,论点层把它丢了。 定性两条都指向鹰,但 P4 照卡片预写规则会判反:bull_if 写的是「删去供给冲击类表述=利好」,而今天删掉的正是「in part reflecting supply shocks that have driven price increases in certain sectors, including energy」——供给冲击语言是不加息的借口,删掉它等于货币政策认领这轮通胀,实质是 bear。P5 裁 bear(依据见下,证据边界也见下)。",
@@ -1937,11 +1942,86 @@ export const events = [
     "tags": [
       "CPI"
     ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
+    "thesis": "这一次通胀数据的看点不是「涨没涨」,而是汽油把总指数推高的同时,剔除能源和食品的那部分到底有没有继续降温 —— 因为美联储九月刚加了一次息,并且亲口把「停手」的条件定成「底层通胀确实在朝目标走」;十月底那场会议目前是五五开,这份数据就是最后一块拼图。总指数大概率难看,真正定胜负的是里子。",
+    "expectations": [
+      {
+        "name": "核心 CPI 环比(%)",
+        "consensus": "0.2%",
+        "prior": "0.3%",
+        "range": "0.1% ~ 0.3%",
+        "note": "core · 权重 45%"
+      },
+      {
+        "name": "headline CPI 环比(%)",
+        "consensus": "0.4%",
+        "prior": "",
+        "range": "0.2% ~ 0.6%",
+        "note": "权重 15%"
+      },
+      {
+        "name": "shelter 环比(%)",
+        "consensus": "0.2%",
+        "prior": "",
+        "range": "0.1% ~ 0.4%",
+        "note": "权重 15%"
+      },
+      {
+        "name": "supercore 环比(核心服务 ex 住房,派生)(%)",
+        "consensus": "0.2%",
+        "prior": "",
+        "range": "0.1% ~ 0.4%",
+        "note": "权重 10%"
+      },
+      {
+        "name": "核心 CPI 同比 NSA(%)",
+        "consensus": "2.4%",
+        "prior": "",
+        "range": "2.2% ~ 2.6%",
+        "note": "权重 15%"
+      }
+    ],
+    "pricing": [
+      {
+        "name": "SPX 事前 21 日 run-up",
+        "value": "-2.50%",
+        "note": "噪声带 ±0.47"
+      },
+      {
+        "name": "2Y 事前 21 日 run-up",
+        "value": "+50bp",
+        "note": "噪声带 ±4.0"
+      }
+    ],
+    "scenarios": [
+      {
+        "tag": "偏热",
+        "tone": "hawk",
+        "prob": "30%",
+        "trigger": "P1 >= 0.3 or (P1 > 0.1 and P4 >= 0.4)",
+        "reaction": "2Y +10bp · 10Y +7bp · DXY +0.45% · SPX -1.20% · NDX -1.70%"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "45%",
+        "trigger": "0.1 < P1 < 0.3 and P4 < 0.4",
+        "reaction": "2Y -3bp · 10Y -2bp · DXY -0.10% · SPX +0.40% · NDX +0.60%"
+      },
+      {
+        "tag": "偏冷",
+        "tone": "dove",
+        "prob": "25%",
+        "trigger": "P1 <= 0.1",
+        "reaction": "2Y -11bp · 10Y -8bp · DXY -0.50% · SPX +1.10% · NDX +1.60%"
+      }
+    ],
+    "watch": [
+      "核心 CPI 环比(公布一位小数) · 预期 0.2 · 利好 ≤0.1 · 利空 ≥0.3",
+      "headline 环比 · 预期 0.4 · 利好 ≤0.2 · 利空 ≥0.6",
+      "shelter 环比 · 预期 0.2 · 利好 ≤0.2 · 利空 ≥0.4",
+      "supercore(派生,§2.2 公式) · 预期 0.2 · 利好 ≤0.2 · 利空 ≥0.4",
+      "核心同比(NSA) · 预期 2.4 · 利好 ≤2.2 · 利空 ≥2.6"
+    ],
     "actual": [],
     "reaction": [],
     "verdict": "",
