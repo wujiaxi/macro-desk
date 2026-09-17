@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 21:53 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 22:01 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -1039,7 +1039,7 @@ export const events = [
       "FOMC",
       "点阵图"
     ],
-    "thesis": "期望值(程序算):2Y +0.5bp / 10Y +0.5bp / DXY +0.04 / SPX -0.035% / NDX -0.065% 加息本身已被 92% 定价,定价变量在点阵(P2)与发布会(P5),不在决议(P1)",
+    "thesis": "加息本身已被 92% 定价,定价变量在点阵(P2)与发布会(P5),不在决议(P1) 期望值(程序算):2Y +0.5bp / 10Y +0.5bp / DXY +0.04 / SPX -0.035% / NDX -0.065%",
     "expectations": [
       {
         "name": "决议(bp,相对上次区间)",
@@ -1215,7 +1215,7 @@ export const events = [
     "date": "2026-09-23T09:00:00-04:00",
     "dateNote": "不进 SEC 备案,证据等级上限 B",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 3,
     "tags": [
       "product",
       "QCOM",
@@ -1650,7 +1650,7 @@ export const events = [
     "date": "2026-10-20T09:00:00-04:00",
     "dateNote": "不进 SEC 备案,证据等级上限 B",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 3,
     "tags": [
       "product",
       "ASML",
@@ -2489,7 +2489,7 @@ export const events = [
     "date": "2026-11-17T09:00:00-05:00",
     "dateNote": "不进 SEC 备案,证据等级上限 B",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 3,
     "tags": [
       "product",
       "NVDA",
@@ -2612,7 +2612,7 @@ export const events = [
     "date": "2026-11-30T09:00:00-05:00",
     "dateNote": "不进 SEC 备案,证据等级上限 B",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 3,
     "tags": [
       "product",
       "AVGO",
@@ -2653,7 +2653,7 @@ export const events = [
     "date": "2026-11-30T09:00:00-05:00",
     "dateNote": "不进 SEC 备案,证据等级上限 B",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 3,
     "tags": [
       "product",
       "NVDA",
@@ -3130,7 +3130,7 @@ export const events = [
     "date": "2027-03-15T09:00:00-04:00",
     "dateNote": "不进 SEC 备案,证据等级上限 B",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 3,
     "tags": [
       "product",
       "AVGO",
