@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-17 00:10 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-17 00:24 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -55,10 +55,10 @@ export const markets = [
   },
   {
     "label": "VIX",
-    "value": "17.71",
-    "chg": "+0.51",
+    "value": "17.20",
+    "chg": "+0.10",
     "dir": "up",
-    "note": "2026-09-16"
+    "note": "2026-09-15"
   },
   {
     "label": "US 10Y",
@@ -2070,11 +2070,83 @@ export const events = [
       "ASML",
       "SIE.DE"
     ],
-    "thesis": "",
-    "expectations": [],
+    "thesis": "这场会对我意味着什么:这是一场到期前的最后一次公开露面——台账里目前仅有的两条 NVDA 承诺——也恰好都带 2026 年底期限(Rubin「2026 下半年经合作伙伴上市」、Mistral「2026 年扩展到多站点」)都在 12/31 到期,而 GTC Berlin 是它们到期前 NVDA 最后一场大型公开场合(下一场 GTC D.C. 在 11-30,已在 FQ3 财报之后)。这场会的信息量不在「发布什么」,在「还提不提」。 主办方(NVDA):会前不动。现价 $213.90(2026-09-16 收盘)已落进本卡 v7 的入场区 $208.09–214.60 上沿,相对压力调整底线 $221.54 的安全边际 +3.57%(v7 建卡时为 -2.83%)——但这个改善是价格跌出来的,与 GTC Berlin 无关,不要把它算进这场会的账。期权把这场会定价成 ±2.01% 的单日跳动,而 NVDA 的 ATR% 是 3.52% —— 事件溢价小于日常波动,不值得为它择时。要买就按 v7 的入场区买,理由写「回到入场区」,不要写「GTC 前布局」。",
+    "expectations": [
+      {
+        "name": "欧洲主权 AI 合作方名单再扩容(国家/电信/云)",
+        "consensus": "① 上代节奏外推:GTC Paris 2025 与 ISC 2026 两次都是「国家 + 电信 + NCP」三件套",
+        "prior": "B(官方稿模式)",
+        "range": "",
+        "note": "已知,属基本盘。只扩名单 = 零信息量"
+      },
+      {
+        "name": "Rubin 在欧洲的首批上线读数",
+        "consensus": "② 管理层别处预告:CES 2026 稿写死 \"available from partners the second half of 2026\",Berlin(10/20)正落在这个窗口内",
+        "prior": "B(官方新闻稿)",
+        "range": "",
+        "note": "部分已知。市场知道 2H26 这个口径,不知道有没有欧洲客户真的跑起来"
+      },
+      {
+        "name": "工业 AI / Omniverse 的德国落地案例",
+        "consensus": "① 上代节奏:2025-06 德国工业 AI 云点名 Ansys / Cadence / Siemens / Rescale + BMW/奔驰/舍弗勒/沃尔沃",
+        "prior": "B",
+        "range": "",
+        "note": "部分已知"
+      },
+      {
+        "name": "Feynman 架构的时间表",
+        "consensus": "② GTC San Jose 2026(3/16–19)已公布 Feynman 世代(Rosa CPU / LP40 LPU / BlueField-5 / CX10),未给出货时点",
+        "prior": "B(官方 blog)",
+        "range": "",
+        "note": "已知有这个东西,不知道时点。区域场给时点的概率低"
+      },
+      {
+        "name": "新硅片发布",
+        "consensus": "——",
+        "prior": "——",
+        "range": "",
+        "note": "⛔ 无法建立预期。区域性 GTC 历史上不首发架构,不许因为「这是 GTC」就假设有新芯片"
+      },
+      {
+        "name": "欧洲订单的金额/GW 数字",
+        "consensus": "——",
+        "prior": "——",
+        "range": "",
+        "note": "⛔ 无法建立预期。③ 具名供应链报道:本轮一条都没找到。不编"
+      }
+    ],
     "pricing": [],
-    "scenarios": [],
-    "watch": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "20%",
+        "trigger": "Rubin 给出已上线欧洲客户与算力读数,且欧洲主权口径回连 3000 exaflops 那把尺子",
+        "reaction": "NVDA 盘前正向但量级受限于期权定价的 ±2%;SIE.DE 与 VRT 的订单含义大于 NVDA 的估值含义"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "55%",
+        "trigger": "名单扩容 + 架构复述 + 工业 AI 案例,Rubin 仍只说 in full production",
+        "reaction": "零信息量,会前买会后卖的常规兑现;全线不动"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "25%",
+        "trigger": "欧洲口径换成第三把尺子且不回连,或 Rubin 交付措辞后退,或 Mistral 多站点静默删除",
+        "reaction": "NVDA 盘前负向且幅度可超过期权定价的 ±2%(这一档没被定价);传导标的跟跌但基本面未变"
+      }
+    ],
+    "watch": [
+      "Rubin 的措辞 · 预期 重申 \"in full production\",不给部署读数 · 利好 给出具名欧洲客户 + 已上线算力 · 利空 措辞退成「早期访问」「2027 广泛可得」,或完全不提 Rubin 交付状态",
+      "欧洲主权算力口径 · 预期 只给新增名单,不做口径对齐 · 利好 用 exaflops 且回连 3,000 那把尺子给进度 · 利空 换第三个口径(GW / factories 数)且不回连",
+      "Mistral · 预期 顺带提及模型合作 · 利好 明确报多站点扩展的站点数或时点 · 利空 全场不提 Mistral 的算力站点(只提模型不算)",
+      "西门子 / 工业 AI · 预期 出现在伙伴 logo 墙 · 利好 给出可验证的客户数/产线数 · 利空 德国工业 AI 云整体不提",
+      "「谁说的」 · 预期 —— · 利好 —— · 利空 任何「官方口径」数字先答三问:谁说的(姓名职务)/ 原话是什么 / 新披露还是复述。主持人提问、分析师转述、媒体标题不是公司承诺",
+      "单位与口径 · 预期 —— · 利好 —— · 利空 判上修/下修前先核单位(exaflops 训练还是推理?GW 是 IT 还是 gross?),换单位会伪装成指引变化"
+    ],
     "actual": [],
     "reaction": [],
     "verdict": "",
@@ -2082,14 +2154,83 @@ export const events = [
     "links": [
       {
         "label": "官方页面",
-        "url": "https://www.nvidia.com/gtc/dc/"
+        "url": "https://www.nvidia.com/en-eu/gtc/"
+      },
+      {
+        "label": "nvidia.com · conference-schedule",
+        "url": "https://www.nvidia.com/en-eu/gtc/conference-schedule/"
+      },
+      {
+        "label": "nvidianews.nvidia.com · europe-ai-infrastructure",
+        "url": "https://nvidianews.nvidia.com/news/europe-ai-infrastructure"
+      },
+      {
+        "label": "nvidianews.nvidia.com",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-builds-worlds-first-industrial-ai-cloud-to-advance-european-manufacturing"
+      },
+      {
+        "label": "nvidianews.nvidia.com",
+        "url": "https://nvidianews.nvidia.com/news/europe-unveils-a-record-35-new-nvidia-ai-supercomputers"
+      },
+      {
+        "label": "blogs.nvidia.com · gtc-2026-news",
+        "url": "https://blogs.nvidia.com/blog/gtc-2026-news/"
       }
     ],
-    "agenda": [],
+    "agenda": [
+      {
+        "when": "10-20(二) 全天",
+        "what": "Workshops(注册 / 全天动手培训 / Workshop Lunch)。无 keynote"
+      },
+      {
+        "when": "10-21(三) 07:00 CEST 起",
+        "what": "注册开放"
+      },
+      {
+        "when": "10-21(三) keynote 前",
+        "what": "\"GTC Live Keynote Pregame\"(嘉宾暖场)"
+      },
+      {
+        "when": "10-21(三) 11:00–13:00 CEST",
+        "what": "Keynote —— 黄仁勋(创始人兼 CEO),地点 Tempodrom。免费直播,无需注册"
+      },
+      {
+        "when": "10-21(三) 下午",
+        "what": "展区开放 · 分论坛 · 培训认证 · 展区酒会"
+      },
+      {
+        "when": "10-22(四) 全天",
+        "what": "展区 · 上下午分论坛 · 培训认证"
+      }
+    ],
     "readThrough": [
       {
-        "name": "传导标的",
-        "value": "ASML、SIE.DE"
+        "name": "SIE.DE(西门子)",
+        "value": "新(无本地卡) · 偏多,传导里最实的一条 · 台上点名西门子软件栈跑在 NVIDIA 工业 AI 云 / Omniverse 上,且给出可验证的客户或产线数量。只出现 logo = 零信息量。现价 €258.80(2026-09-15 收盘,见 §8 坏行说明),RSI 25.62,SMA200 253.22 —— 位置低,赔率不对称"
+      },
+      {
+        "name": "ASML",
+        "value": "新(无本地卡) · ≈ 无传导。这是我对主数据的异议 · 光刻订单由 TSMC/三星/英特尔的 capex 决定,不由一场区域性 GTC 决定;GTC Berlin 议程里没有任何一条涉及制程设备。除非台上出现「欧洲本地先进制程产能」这类新增内容(概率极低),否则本卡判定 ASML 传导为弱,不据此动 ASML。现价 $1,602.22,RSI 35.39,距 52 周高 -19.8% —— 便宜是别的原因造成的,不要把它记到这场会头上"
+      },
+      {
+        "name": "TSM",
+        "value": "P1(先进制程垄断)· P2(AI 需求结构性放量) · 中性偏多 · 仅当 Rubin 上线读数把「2H26 量产」坐实,才是 P1/P2 的旁证(不是新证据)。欧洲订单不改 TSM 产能分配"
+      },
+      {
+        "name": "MU",
+        "value": "P3(HBM 份额/价格) · 中性 · Rubin = HBM4 世代。台上给 Rubin 已上线机柜数才有边际信息;只讲架构不讲部署 = 对 MU 零信息量"
+      },
+      {
+        "name": "AVGO",
+        "value": "P1(AI XPU 放量) · 反向 · 若欧洲主权项目里出现非 NVIDIA 方案(自研/ASIC/竞品)占位,是 AVGO 的正面、NVDA P2 的负面。但欧洲主权项目至今 90% 是 NVIDIA(ISC 2026 官方口径),先验极低"
+      },
+      {
+        "name": "VRT",
+        "value": "P1(DCPI 结构性需求) · 偏多 · 欧洲新增 AI factory 的电与热是 Vertiv 的直接口径。台上给欧洲新增 GW/MW 数才算触发。现价 $239.41,距 52 周高 -37.0%,RSI 41.03"
+      },
+      {
+        "name": "NVDA(主办方)",
+        "value": "P1(需求/capex)· P2(份额) · 受影响最小 · NVDA 的估值本来就已经计入「它会赢」;欧洲占其营收比重不足以移动 P1。主办方是这张表里最不该动的那个"
       }
     ]
   },
