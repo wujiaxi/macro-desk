@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>实时版 · 宏观 & 财报事件台</title>
+<style>
+  html,body{margin:0;height:100%;background:#0b0f14;color:#e6edf3;
+    font-family:Archivo,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',system-ui,sans-serif}
+  .wrap{height:100%;display:flex;align-items:center;justify-content:center;padding:24px}
+  .card{max-width:540px;text-align:center}
+  h1{font-size:1.5rem;font-weight:700;margin:0 0 12px}
+  p{color:#7d8b9c;line-height:1.85;margin:0 0 20px}
+  a.btn{display:inline-block;padding:11px 22px;border-radius:8px;background:#2dd4bf;color:#06231f;
+    text-decoration:none;font-weight:600;font-size:.95rem}
+  a.alt{color:#2dd4bf;font-size:.85rem}
+  code{font-family:'Roboto Mono',ui-monospace,monospace;font-size:.78rem;color:#5d6b7c;
+    word-break:break-all}
+  .err{color:#f0a0a0}
+</style>
+</head>
+<body>
+<div class="wrap"><div class="card">
+  <h1>正在前往实时版…</h1>
+  <p id="msg">本页地址固定不变，会自动转到本机实时服务的当前地址。</p>
+  <p><a class="btn" id="go" href="#">手动前往</a></p>
+  <p><code id="u"></code></p>
+  <p><a class="alt" href="../">← 回到静态版（始终可用）</a></p>
+</div></div>
+<script>
+// live.json 由 ~/desk_live_publish.sh 在隧道地址变化时自动更新。
+// 加时间戳绕开缓存:Pages 的 CDN 会缓存 json,不绕开就会跳到已失效的旧地址。
+fetch("./live.json?t=" + Date.now()).then(r => r.json()).then(d => {
+  if (!d.url) throw new Error("no url");
+  document.getElementById("u").textContent = d.url + "  （更新于 " + (d.updated || "?") + "）";
+  document.getElementById("go").href = d.url;
+  location.replace(d.url);
+}).catch(e => {
+  document.getElementById("msg").innerHTML =
+    '<span class="err">实时服务当前不可达</span> —— 本机可能没开机，或隧道正在重连。' +
+    '静态版随时可看。';
+});
+</script>
+</body>
+</html>
