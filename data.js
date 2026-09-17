@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 21:03 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 21:09 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -572,48 +572,7 @@ export const events = [
       "中国收入占比 · 预期 ~27% · 利好 持平或回升 · 利空 跌破 25% 且无解释",
       "FY27 WFE 表述 · 预期 定性正面、不给数字 · 利好 给出量化口径且 ≥ 中性 · 利空 回避或转向谨慎措辞"
     ],
-    "actual": [
-      {
-        "name": "FQ4 non-GAAP EPS 指引中值",
-        "actual": "4.02",
-        "consensus": "3.68",
-        "prior": "",
-        "surprise": "证实(触及利好阈值)",
-        "dir": "up"
-      },
-      {
-        "name": "FQ4 收入指引中值(百万美元)",
-        "actual": "10,250",
-        "consensus": "9,500",
-        "prior": "",
-        "surprise": "证实(触及利好阈值)",
-        "dir": "up"
-      },
-      {
-        "name": "FQ3 实际收入(百万美元)",
-        "actual": "9,115",
-        "consensus": "9,050",
-        "prior": "",
-        "surprise": "中性偏好",
-        "dir": "up"
-      },
-      {
-        "name": "FQ3 non-GAAP 毛利率",
-        "actual": "50.4",
-        "consensus": "50",
-        "prior": "",
-        "surprise": "中性偏好",
-        "dir": "up"
-      },
-      {
-        "name": "中国收入(百万美元)",
-        "actual": "2,506",
-        "consensus": "2,444",
-        "prior": "",
-        "surprise": "中性偏好",
-        "dir": "up"
-      }
-    ],
+    "actual": [],
     "reaction": [
       {
         "asset": "S&P 500",
@@ -641,7 +600,7 @@ export const events = [
         "d1": "-0.29%"
       }
     ],
-    "verdict": "名义 beat 但实质 miss? 是 ——(程序判定,依据见 §8.2)",
+    "verdict": "事件定价失败? 否",
     "history": [
       {
         "when": "2026-05-14",
@@ -698,9 +657,9 @@ export const events = [
       }
     ],
     "guidance": {
-      "company": "EPS 4.02",
+      "company": "EPS ⏳ 待法说会",
       "street": "下季 EPS 一致 $3.679",
-      "note": "vs 卖方一致 3.68（+9.27%）"
+      "note": "vs 卖方一致 3.68（—）"
     },
     "options": {
       "iv": "",
@@ -740,8 +699,8 @@ export const events = [
       "n": "本站三情景加权 · 卖方一致 $650.00"
     },
     "afterHours": {
-      "move": "",
-      "note": ""
+      "move": "-5.12%",
+      "note": "- 实际次日反应 -5.12%(基准收盘 534.54 → 507.17) - 隐含区间 ±6.9%(482.83 / 568.39) → 实际 落在区间内"
     }
   },
   {
@@ -793,40 +752,7 @@ export const events = [
       "单季 capex 与三年 3,800 亿口径 · 预期 单季 ~RMB 27–35bn(上季 26,887mn;FY26 累计 126,063mn) · 利好 环比持平/微增 + 维持「超支但可控」 · 利空 明确上修三年总盘子(如传闻的 US$69bn 版本)→ 估值锚被迫从 P/E 换成 EV/Sales",
       "自由现金流(FCF) · 预期 仍为负但收窄;上季 -RMB 17,300mn,FY26 全年 -46,609mn · 利好 亏损收窄至 -10bn 以内,或转正 · 利空 继续 -15bn 以上 → 「FCF 何时转正」无法回答"
     ],
-    "actual": [
-      {
-        "name": "云智能集团收入同比增速(指引等价物, 阿里不给数字指引)",
-        "actual": "45",
-        "consensus": "43",
-        "prior": "",
-        "surprise": "证实(触及利好阈值)",
-        "dir": "up"
-      },
-      {
-        "name": "云 adjusted EBITA margin",
-        "actual": "11.62",
-        "consensus": "10.3",
-        "prior": "",
-        "surprise": "证实(触及利好阈值)",
-        "dir": "up"
-      },
-      {
-        "name": "集团 adjusted EBITA(RMB million)",
-        "actual": "27,329",
-        "consensus": "8,000",
-        "prior": "",
-        "surprise": "证实(触及利好阈值)",
-        "dir": "up"
-      },
-      {
-        "name": "自由现金流(RMB million, 负值为流出)",
-        "actual": "-44,670",
-        "consensus": "-13,000",
-        "prior": "",
-        "surprise": "证伪(触及利空阈值)",
-        "dir": "down"
-      }
-    ],
+    "actual": [],
     "reaction": [
       {
         "asset": "S&P 500",
@@ -854,7 +780,7 @@ export const events = [
         "d1": "-0.10%"
       }
     ],
-    "verdict": "名义 beat 但实质 miss? 否 ——(程序判定,依据见 §8.2)",
+    "verdict": "事件定价失败? 否",
     "history": [],
     "links": [
       {
@@ -939,8 +865,8 @@ export const events = [
       "n": "本站三情景加权 · 卖方一致 $188.09"
     },
     "afterHours": {
-      "move": "",
-      "note": ""
+      "move": "+1.26%",
+      "note": "- 实际次日反应 +1.26%(基准收盘 128.9 → 130.52) - 隐含区间 ±5.8%(113.89 / 130.43) → 实际 落在区间内"
     }
   },
   {
@@ -1002,40 +928,7 @@ export const events = [
       "分部拆分",
       "非GAAP 口径变更"
     ],
-    "actual": [
-      {
-        "name": "FY27Q3 收入指引(第一定价变量)",
-        "actual": "108",
-        "consensus": "103.9",
-        "prior": "",
-        "surprise": "证实(触及利好阈值)",
-        "dir": "up"
-      },
-      {
-        "name": "FY27Q3 非GAAP 毛利率指引",
-        "actual": "74",
-        "consensus": "75",
-        "prior": "",
-        "surprise": "证伪(触及利空阈值)",
-        "dir": "down"
-      },
-      {
-        "name": "本季收入 vs 公司自家指引上沿(「打满指引」检验)",
-        "actual": "96.2",
-        "consensus": "92.82",
-        "prior": "",
-        "surprise": "证实(触及利好阈值)",
-        "dir": "up"
-      },
-      {
-        "name": "数据中心收入",
-        "actual": "89",
-        "consensus": "84",
-        "prior": "",
-        "surprise": "证实(触及利好阈值)",
-        "dir": "up"
-      }
-    ],
+    "actual": [],
     "reaction": [
       {
         "asset": "S&P 500",
@@ -1063,7 +956,7 @@ export const events = [
         "d1": "-0.01%"
       }
     ],
-    "verdict": "名义 beat 但实质 miss? 否 ——(程序判定,依据见 §8.2)",
+    "verdict": "事件定价失败? 不可判 —— 卡片无 implied_move(隐含区间数据缺口),不得渲染成「否」",
     "history": [
       {
         "when": "2026-05-20",
@@ -1149,8 +1042,8 @@ export const events = [
       "n": "本站三情景加权 · 卖方一致 $305.79"
     },
     "afterHours": {
-      "move": "",
-      "note": ""
+      "move": "+8.74%",
+      "note": "- 实际次日反应 +8.74%(基准收盘 209.66 → 227.98)"
     }
   },
   {
