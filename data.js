@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 20:34 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 20:41 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -1651,7 +1651,7 @@ export const events = [
         "d1": ""
       }
     ],
-    "verdict": "",
+    "verdict": "主导:SEP 的外段路径上移,不是这一次的 25bp。fed funds 中位 2027 3.6→4.1(+50bp)、2028 3.4→3.9(+50bp)、长期中枢 3.1→3.2(+10bp);发布会主席原话「I would be hard-pressed to describe broad financial conditions as restrictive … So we removed a dose of accommodation」——今天只是拿掉一剂宽松,离限制性还有距离。鹰在终点,不在这一步。 被压制:f_priced_in(靴子落地、买事实回补)。加息 92% 被定价、2Y 21 日 run-up 已跑 50bp,按卡片设计这次该是短端回吐;但点阵把终点抬高 50bp 之后,那 50bp 的含义从「提前定价这一次」变成「对后面几次定价不足」,回补的燃料被抽走。同时被压制的还有 f_dissent_split(12–0,不激活)。 我没列到的(表外力量一)点阵外段:P2 的 probe 只取 dots_2026,而 2026 中位 4.1 恰好等于预期值 ⇒ 程序判中性,整条 50bp 的外段上移在卡里无处落地。补:f_dots_outyear,activate = dots_2027 - prev.dots_2027 >= 25 or dots_lr - prev.dots_lr >= 10,dir 2Y:+ 10Y:++ DXY:+ SPX:- NDX:-,strength 3,horizon W(长期中枢那一格打的是 10Y,不是 2Y)。 我没列到的(表外力量二)主席不交点:SEP 脚注写明只有 18 位参与者提交,主席原话「as in June—I have not offered a projection of my own」——两个独立来源互证。全场最鹰的那一票不在分布里,点阵中位系统性低估委员会鹰派程度,而 P2 是 core 论点,带着这个口径缺口在跑。 我没列到的(框架错,不是遗漏)P3 只数票不看方向:7/29 的 3 张异议票全是要求加息的,它们归零是因为中心向鹰派投降,不是委员会转鸽——主席还主动把它定义成决心(「The committee's unanimous vote shows our resolve」)。卡里 P3.bull_at: 0 是从降息周期模板继承来的,方向写反了;同一个方向盲区在 B-9(情景命名)已记过一次,fomc_members.md 的「异议方向」列有这个字段,论点层把它丢了。 定性两条都指向鹰,但 P4 照卡片预写规则会判反:bull_if 写的是「删去供给冲击类表述=利好」,而今天删掉的正是「in part reflecting supply shocks that have driven price increases in certain sectors, including energy」——供给冲击语言是不加息的借口,删掉它等于货币政策认领这轮通胀,实质是 bear。P5 裁 bear(依据见下,证据边界也见下)。",
     "history": [
       {
         "when": "2026-07-29",
