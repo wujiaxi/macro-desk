@@ -270,7 +270,7 @@
           </div>
         </sc-if>
         <sc-if value="{{ d.emptyExpectations }}" hint-placeholder-val="{{ false }}">
-          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">待填写 — data.js → expectations[]</div>
+          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">尚未建前瞻卡</div>
         </sc-if>
       </div>
     </sc-if>
@@ -306,7 +306,7 @@
           </div>
         </sc-if>
         <sc-if value="{{ d.emptyPricing }}" hint-placeholder-val="{{ false }}">
-          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">待填写 — data.js → pricing[] / options{}</div>
+          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">尚未建前瞻卡</div>
         </sc-if>
       </div>
     </sc-if>
@@ -375,7 +375,7 @@
           </div>
         </sc-if>
         <sc-if value="{{ d.emptyScenarios }}" hint-placeholder-val="{{ false }}">
-          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">待填写 — data.js → scenarios[]（tone: hawk / base / dove）</div>
+          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">尚未建前瞻卡</div>
         </sc-if>
       </div>
     </sc-if>
@@ -419,7 +419,7 @@
           </div>
         </sc-if>
         <sc-if value="{{ d.emptyActual }}" hint-placeholder-val="{{ false }}">
-          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">尚未公布 — data.js → actual[]（dir: up / down / flat）</div>
+          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">事件尚未发生 · 公布后自动回填</div>
         </sc-if>
       </div>
     </sc-if>
@@ -452,7 +452,7 @@
           </div>
         </sc-if>
         <sc-if value="{{ d.emptyReaction }}" hint-placeholder-val="{{ false }}">
-          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">尚未公布 — data.js → reaction[]</div>
+          <div style="border:1px dashed #253040;border-radius:10px;padding:20px;font-size:12.5px;color:#5c6875;font-family:'Roboto Mono',monospace">事件尚未发生 · 公布后自动回填</div>
         </sc-if>
       </div>
     </sc-if>
@@ -663,7 +663,7 @@ class Component extends DCLogic {
          这里截断,全文在详情页。 */
       verdictShort: isS(e.raw.verdict)
         ? (e.raw.verdict.length > 150 ? e.raw.verdict.slice(0, 150) + "…（详情页看全文）" : e.raw.verdict)
-        : "复盘待填写 — data.js → verdict",
+        : "尚未复盘",
     }));
 
     /* ---- Hero ----
@@ -680,7 +680,7 @@ class Component extends DCLogic {
         kindLabel: h.kindLabel, kindColor: h.kindColor, dots: h.dots,
         dateNote: isS(h.raw.dateNote) ? h.raw.dateNote : "",
         clock: this.clock(h.left), etLine: h.etLine, cnLine: h.cnLine,
-        thesis: isS(h.raw.thesis) ? h.raw.thesis : "观点待填写 — data.js → thesis",
+        thesis: isS(h.raw.thesis) ? h.raw.thesis : "尚未建前瞻卡",
         scenarios: sc, open: h.onOpen,
       };
     }

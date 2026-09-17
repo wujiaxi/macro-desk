@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 21:44 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 21:46 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -247,32 +247,32 @@ export const events = [
       {
         "name": "下季 Azure 增速指引",
         "consensus": "39.0",
-        "prior": "",
-        "note": "法说会讲稿 TranscriptFY26Q4.docx(IR 资产包, CDN 直链可下)。原文:「In Azure, we expect revenue growth of approximately 45% in constant currency」。⚠️ 2026-08-13 更正:此前两次误判为「书面件拿不到、只能人工」并标了 probe_na —— 错的。指引在讲稿里逐项念出、完整可解析"
+        "prior": "利好 42.0 / 利空 36.0",
+        "note": "core · 权重 30%"
       },
       {
         "name": "本季 Azure 增速",
         "consensus": "40.0",
-        "prior": "",
-        "note": "EX-99.1「Revenue in Intelligent Cloud」段的 bullet"
+        "prior": "利好 42.0 / 利空 38.0",
+        "note": "core · 权重 25%"
       },
       {
         "name": "Microsoft Cloud 收入",
         "consensus": "57.5",
-        "prior": "",
-        "note": "EX-99.1 分部段首句"
+        "prior": "利好 59.0 / 利空 56.0",
+        "note": "权重 15%"
       },
       {
         "name": "商业 RPO 同比",
         "consensus": "60.0",
-        "prior": "",
-        "note": "EX-99.1 同上句后半段"
+        "prior": "利好 75.0 / 利空 45.0",
+        "note": "权重 20%"
       },
       {
         "name": "Intelligent Cloud 收入",
         "consensus": "37.5",
-        "prior": "",
-        "note": "EX-99.1「Revenue in Intelligent Cloud was」"
+        "prior": "利好 39.0 / 利空 36.5",
+        "note": "权重 10%"
       }
     ],
     "guidance": {
@@ -463,8 +463,8 @@ export const events = [
         "name": "FY27Q3 收入指引(第一定价变量)",
         "consensus": "103.9",
         "prior": "",
-        "range": "107.0 / 100.8",
-        "note": "EX-99.1 Outlook 段。expect = 卖方对 FY27Q3 的一致收入预期 103.896B(43 家),财报前已存在;阈值规则 = 一致 ±3%(103.9×1.03=107.0 / ×0.97=100.8),规则先于答案设定"
+        "range": "利好 107.0 / 利空 100.8",
+        "note": "core · 权重 35%"
       }
     ],
     "pricing": [],
@@ -591,20 +591,20 @@ export const events = [
       {
         "name": "FY27Q3 非GAAP 毛利率指引",
         "consensus": "75.0",
-        "prior": "",
-        "note": "EX-99.1 Outlook 段。expect = 本季实际非GAAP 毛利率 75.0%(即「维持」),阈值 = ±50bp,恰为公司自己指引区间的半宽"
+        "prior": "利好 75.5 / 利空 74.5",
+        "note": "core · 权重 20%"
       },
       {
         "name": "本季收入 vs 公司自家指引上沿(「打满指引」检验)",
         "consensus": "92.82",
-        "prior": "",
-        "note": "EX-99.1 首段。expect = FQ1 给出的 FQ2 指引上沿 = 91.0×1.02 = 92.82B;bear_at = 指引中值 91.0(只打到中值 = 没有超预期)"
+        "prior": "利好 95.0 / 利空 91.0",
+        "note": "权重 15%"
       },
       {
         "name": "数据中心收入",
         "consensus": "84.0",
-        "prior": "",
-        "note": "EX-99.1 标题要点行。expect = 指引中值 91.0B × 上季 DC 收入占比 92.2%(75.246/81.615)= 83.9 ≈ 84.0 [推断]"
+        "prior": "利好 87.0 / 利空 81.0",
+        "note": "权重 15%"
       }
     ],
     "guidance": {
@@ -673,35 +673,35 @@ export const events = [
         "consensus": "20.0",
         "prior": "-23",
         "range": "100.0 ~ -50.0",
-        "note": "Table B-1 Total nonfarm 1-month change"
+        "note": "core · 权重 35%"
       },
       {
         "name": "前两月净修正(k)",
         "consensus": "-60.0",
         "prior": "",
         "range": "0.0 ~ -120.0",
-        "note": "新闻稿正文 revised 句 / vintage diff"
+        "note": "core · 权重 25%"
       },
       {
         "name": "失业率(%)",
         "consensus": "4.1%",
         "prior": "",
         "range": "4.0% ~ 4.3%",
-        "note": "Table A-1"
+        "note": "权重 18%"
       },
       {
         "name": "时薪环比(%)",
         "consensus": "0.3%",
         "prior": "",
         "range": "0.2% ~ 0.4%",
-        "note": "Table B-3"
+        "note": "权重 17%"
       },
       {
         "name": "劳动参与率(%)",
         "consensus": "61.4%",
         "prior": "",
         "range": "61.7% ~ 61.1%",
-        "note": "Table A-1"
+        "note": "权重 5%"
       }
     ],
     "pricing": [
@@ -867,28 +867,28 @@ export const events = [
         "consensus": "0.2%",
         "prior": "0.2%",
         "range": "0.1% ~ 0.3%",
-        "note": "Table A All items less food and energy SA 1-mo"
+        "note": "core · 权重 45%"
       },
       {
         "name": "headline CPI 环比(%)",
         "consensus": "0.1%",
         "prior": "",
         "range": "0.0% ~ 0.3%",
-        "note": "Table A All items SA 1-mo"
+        "note": "权重 25%"
       },
       {
         "name": "核心 CPI 同比(%)",
         "consensus": "2.5%",
         "prior": "",
         "range": "2.3% ~ 2.7%",
-        "note": "Table A unadjusted 12-mo"
+        "note": "权重 15%"
       },
       {
         "name": "headline 同比(%)",
         "consensus": "3.4%",
         "prior": "",
         "range": "3.2% ~ 3.6%",
-        "note": "Table A unadjusted 12-mo"
+        "note": "权重 15%"
       }
     ],
     "pricing": [
@@ -1046,21 +1046,21 @@ export const events = [
         "consensus": "25.0bp",
         "prior": "0bp",
         "range": "0.0bp ~ 50.0bp",
-        "note": "声明第 2 段 decided to raise/lower/maintain … by X percentage point"
+        "note": "core · 权重 35%"
       },
       {
         "name": "2026 末点阵中位(%)",
         "consensus": "4.1%",
         "prior": "",
         "range": "3.8% ~ 4.4%",
-        "note": "SEP Table 1 Median 行 Federal funds rate 2026 列"
+        "note": "core · 权重 25%"
       },
       {
         "name": "异议票数",
         "consensus": "1.0 票",
         "prior": "",
         "range": "0.0 票 ~ 3.0 票",
-        "note": "声明投票行(两种格式)"
+        "note": "权重 10%"
       }
     ],
     "pricing": [
@@ -1300,15 +1300,15 @@ export const events = [
         "name": "FQ1-27 非GAAP EPS 指引中值",
         "consensus": "37.0",
         "prior": "",
-        "range": "40.7 / 34.0",
-        "note": "EX-99.1「Business Outlook」表(上季原文两列: GAAP $30.73 +/- $1.00 | 非GAAP $31.00 +/- $1.00)。标签与数值不同行故用 value_line_offset 1; 该行四个数 [30.73, 1.00, 31.00, 1.00], pick max 取非GAAP 中值 —— 非GAAP EPS 恒高于 GAAP(SBC 加回)且高于半宽, 该口径对 FQ1-26/FQ2-26 的「8.19 +/- 0.20 | 8.42 +/- 0.20」旧版式同样成立(取 8.42), 跨版式稳健。⚠️ lint 会对本条报「命中行是区间式, pick 应为 first」—— 这条警告在 MU 上是错的, 不许照做: 该行是 GAAP 与非GAAP 两组「中值 +/- 半宽」并排, pick first 取到的是 GAAP 30.73(低 0.27), 不是我们要的非GAAP 31.00"
+        "range": "利好 40.7 / 利空 34.0",
+        "note": "core · 权重 28%"
       },
       {
         "name": "FQ1-27 收入指引中值(十亿美元)",
         "consensus": "59.0",
         "prior": "",
-        "range": "64.0 / 55.0",
-        "note": "EX-99.1「Business Outlook」表(上季原文: Revenue $50.0 billion +/- $1.0 billion, GAAP 与非GAAP 同值)。收入两列相同故 pick first 即可; 不用 max —— 旧版式「$18.70 billion +/- $400 million」里 400 会被 usd_b 误判"
+        "range": "利好 64.0 / 利空 55.0",
+        "note": "权重 17%"
       }
     ],
     "pricing": [],
@@ -1383,26 +1383,26 @@ export const events = [
       {
         "name": "FQ1-27 非GAAP 毛利率指引",
         "consensus": "87.5",
-        "prior": "",
-        "note": "EX-99.1「Business Outlook」表(上季原文: Approximately 86% | Approximately 86%)。pick max 跨版式稳健: 旧版式「67.0% +/- 1.0% | 68.0% +/- 1.0%」取 68.0 = 非GAAP。bear_at 86.0 = MU.md 事前写死的「走平」档上沿, 与长期卡对齐不另起炉灶。⚠️ 旧版式下 lint 会报「区间式应 pick first」, 同 P1 是误报: pick first 取到 GAAP 67.0, 要的是非GAAP 68.0"
+        "prior": "利好 89.5 / 利空 86.0",
+        "note": "core · 权重 15%"
       },
       {
         "name": "FQ4-26 实际收入(百万美元)",
         "consensus": "57500.0",
-        "prior": "",
-        "note": "EX-99.1「Quarterly Financial Results」表首行(上季原文: Revenue $ 41,456 $ 23,860 $ 9,301 $ 41,456 ... GAAP 与非GAAP 同值故 pick first)。⚠️ probe 必须带尾部的 $: 裸「Revenue」会被同段的「Percent of revenue 84.6 %」按「标签到数字距离」抢走(1 字符 vs 3 字符), lint 实测抽出 84.6 —— 静默把收入换成毛利率。bear_at 55000 = 指引 50,000 的 +10%, 即 MU.md 预承诺的「FQ4 beat <10% = sandbag 机制失效第一证据」—— 该阈值允许名义大幅 beat 仍判 bear, 是 bear_allows_eps_beat 的直接体现"
+        "prior": "利好 61900.0 / 利空 55000.0",
+        "note": "权重 12%"
       },
       {
         "name": "FQ4-26 实际非GAAP 毛利率",
         "consensus": "88.5",
-        "prior": "",
-        "note": "EX-99.1「Quarterly Financial Results」表第一个 Percent of revenue 行(= 毛利率; 第二个是营业利润率, 靠 section_lines 10 截断在窗口外)。上季原文 84.6 | 74.4 | 37.7 | 84.9 | 74.9 | 39.0 -> pick max 取非GAAP 本季 84.9(非GAAP 毛利率恒 >= GAAP, 且上行周期本季 > 历史季)"
+        "prior": "利好 90.0 / 利空 86.5",
+        "note": "权重 10%"
       },
       {
         "name": "Cloud Memory BU 收入(百万美元)",
         "consensus": "19500.0",
-        "prior": "",
-        "note": "EX-99.1「Quarterly Business Unit Financial Results」-> Cloud Memory Business Unit -> Revenue(上季 $ 13,769 $ 7,749 $ 3,386, 环比 +77.7%)。⚠️ 同一份新闻稿内 BU 版式不一致: CMBU 的 Revenue 与数值同行, 而 CDBU/MCBU/AEBU 的在下一行 —— 若 FQ4 改成下一行版式, 本条会报低置信并要求人工填 value_line_offset, 不会静默取错数(E-32)"
+        "prior": "利好 22000.0 / 利空 17000.0",
+        "note": "权重 8%"
       }
     ],
     "guidance": {
