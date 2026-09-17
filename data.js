@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-17 16:44 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-17 17:12 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,637.76",
     "chg": "+1.14%",
     "dir": "up",
-    "note": "实时 16:44 ET"
+    "note": "实时 17:12 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,447.0",
     "chg": "+1.73%",
     "dir": "up",
-    "note": "实时 16:44 ET"
+    "note": "实时 17:12 ET"
   },
   {
     "label": "DXY",
     "value": "100.22",
-    "chg": "-0.09%",
+    "chg": "-0.10%",
     "dir": "down",
-    "note": "实时 16:44 ET"
+    "note": "实时 17:12 ET"
   },
   {
     "label": "黄金",
-    "value": "4,381.60",
-    "chg": "+1.07%",
+    "value": "4,380.60",
+    "chg": "+1.04%",
     "dir": "up",
-    "note": "实时 16:44 ET"
+    "note": "实时 17:12 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "101.27",
-    "chg": "-0.98%",
+    "value": "101.09",
+    "chg": "-1.15%",
     "dir": "down",
-    "note": "实时 16:44 ET"
+    "note": "实时 17:12 ET"
   },
   {
     "label": "BTC",
-    "value": "76,463",
-    "chg": "+0.42%",
+    "value": "76,435",
+    "chg": "+0.38%",
     "dir": "up",
-    "note": "实时 16:44 ET"
+    "note": "实时 17:12 ET"
   },
   {
     "label": "VIX",
     "value": "15.44",
     "chg": "-2.27",
     "dir": "down",
-    "note": "实时 16:44 ET"
+    "note": "实时 17:12 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.95%",
     "chg": "-5.9bp",
     "dir": "down",
-    "note": "实时 16:44 ET"
+    "note": "实时 17:12 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.30%",
     "chg": "-5.3bp",
     "dir": "down",
-    "note": "实时 16:44 ET"
+    "note": "实时 17:12 ET"
   },
   {
     "label": "US 2Y",
@@ -516,7 +516,7 @@ export const events = [
         "d1": "-0.01%"
       }
     ],
-    "verdict": "我错在哪(整体):本卡是回放卡、没有事前下注,所以这一行答的是「规则设得对不对」。 三条:① 权重分配错了 —— 15% 给了一句大概率逐字重复的中国口径措辞(结果确实逐字未变、信息量为零、还造成 15% 覆盖缺口),而同一份 EX-99.2 里首次并表的担保 $108.5B / 承诺 $56B / 本季发债 $25.0B 拿到 0%,连 F 层都没有;② 论点集合只覆盖两段式对账的第一段 —— 本次第一定价变量(电话会 FY28 约 +70%)在第二段,已独立复核确认它在 EX-99.1 / EX-99.2 / 同日 10-Q(acc 0001045810-26-000075) 中均无一手出处;③ 对账窗口只有 T+1 —— 内插 +4.05% 在 T+1 差 +4.69pt,在 T+2(自算 209.43 → 217.31,+3.76%)只差 0.29pt,§8.5 的 🔴 背离与 §8.6 的「尾部事件」都只在 T+1 口径下成立。做对了的地方(必须一起记):把 35% 权重押在指引而不是 EPS —— EPS 在三条 bar 上 beat/beat/miss 却按设计不进 S 分,本次再次证明它不定价;以及 F3/F4 的口径提醒真的渲染到了读者眼前(GAAP 2.46 里 7,771 是股权浮盈)。完整推演见 §11。 反应函数要不要改:幅度不改,窗口口径要改。 单季尾部不改反应函数(§8.6 已说明);但 sc.*.move 与 §8.4 / §8.6 应同时给 T+1 与 T+2 两列 —— 本次两个窗口给出方向相反的结论(T+1 背离 +4.69pt 判「尾部事件」/ T+2 只差 0.29pt 判「基本命中」),只报一个窗口会把结论讲反。另建议建卡时对定性论点做一次「上季原文 vs 本季」逐字差分预演,零变更概率高的降权或改成单侧论点(变了才算数)。⚠️ n=1,以上是规则建议,不是对标定值的修改。 是否同步 thesis 卡:已同步,本轮无需再动。 ~/thesis/NVDA.md v7(2026-08-28)催化剂归档已有 2026-08-26 行(事前预期 / 实际 / T+0 +8.74%、T+1 -4.37%、两日累计 +3.98% / 我错在哪),pillar 5「增量买家的信用由 NVDA 承担」已按本季 OCF/净利 0.4034、DSO 45→60、担保 $1,085 亿记为证伪加深。本 skill 不改目标价。⚠️ 值得记一笔:本卡 §11③(b) 与 thesis v7 的 pillar 5 是同一组事实 —— 前瞻卡漏了、thesis 卡抓到了,说明缺口在建卡时的论点构造,不在信息获取。",
+    "verdict": "我错在哪(整体):本卡是回放卡、没有事前下注,所以这一行答的是「规则设得对不对」。 三条:① 权重分配错了 —— 15% 给了一句大概率逐字重复的中国口径措辞(结果确实逐字未变、信息量为零、还造成 15% 覆盖缺口),而同一份 EX-99.2 里首次并表的担保 $108.5B / 承诺 $56B / 本季发债 $25.0B 拿到 0%,连 F 层都没有;② 论点集合只覆盖两段式对账的第一段 —— 本次第一定价变量(电话会 FY28 约 +70%)在第二段,已独立复核确认它在 EX-99.1 / EX-99.2 / 同日 10-Q(acc 0001045810-26-000075) 中均无一手出处;③ 对账窗口只有 T+1 —— 内插 +4.05% 在 T+1 差 +4.69pt,在 T+2(自算 209.43 → 217.31,+3.76%)只差 0.29pt,§8.5 的 🔴 背离与 §8.6 的「尾部事件」都只在 T+1 口径下成立。做对了的地方(必须一起记):把 35% 权重押在指引而不是 EPS —— EPS 在三条 bar 上 beat/beat/miss 却按设计不进 S 分,本次再次证明它不定价;以及股权浮盈与 SBC 的口径提醒真的渲染到了读者眼前(GAAP 2.46 里 7,771 是股权浮盈)。完整推演见 §11。 反应函数要不要改:幅度不改,窗口口径要改。 单季尾部不改反应函数(§8.6 已说明);但 sc.*.move 与 §8.4 / §8.6 应同时给 T+1 与 T+2 两列 —— 本次两个窗口给出方向相反的结论(T+1 背离 +4.69pt 判「尾部事件」/ T+2 只差 0.29pt 判「基本命中」),只报一个窗口会把结论讲反。另建议建卡时对定性论点做一次「上季原文 vs 本季」逐字差分预演,零变更概率高的降权或改成单侧论点(变了才算数)。⚠️ n=1,以上是规则建议,不是对标定值的修改。 是否同步 thesis 卡:已同步,本轮无需再动。 ~/thesis/NVDA.md v7(2026-08-28)催化剂归档已有 2026-08-26 行(事前预期 / 实际 / T+0 +8.74%、T+1 -4.37%、两日累计 +3.98% / 我错在哪),pillar 5「增量买家的信用由 NVDA 承担」已按本季 OCF/净利 0.4034、DSO 45→60、担保 $1,085 亿记为证伪加深。本 skill 不改目标价。⚠️ 值得记一笔:本卡 §11③(b) 与 thesis v7 的 pillar 5 是同一组事实 —— 前瞻卡漏了、thesis 卡抓到了,说明缺口在建卡时的论点构造,不在信息获取。",
     "history": [
       {
         "when": "2026-05-20",
@@ -1207,7 +1207,7 @@ export const events = [
         "consensus": "上一代节奏外推 + 台账里那条 missed 的承诺;2026-01-06 暂停时公司称在\"重新评估\"",
         "prior": "C(无任何新指引)",
         "range": "",
-        "note": "未知 —— 这是本场最干净的二元事件(见 §7.1 C2)"
+        "note": "未知 —— 这是本场最干净的二元事件(见 §7.1 Project Phoenix(轻量 MR 头显)做舞台预览)"
       },
       {
         "name": "AI 眼镜品类销量/产能数字",
@@ -1318,7 +1318,7 @@ export const events = [
       },
       {
         "name": "META(主办方自己)",
-        "value": "Project Phoenix(轻量 MR 头显)做舞台预览(capex 有没有对价)/ Ray-Ban Display 国际上市重启(倍数不会自行修复) · 双向,权重集中在 Muse 一条上 · 见 §7.1 C1。主办方在这场会里受影响最小这条通则今年不成立 —— 因为 Muse 是 META 自己的变现叙事,而眼镜的经济含义大部分落在 EssilorLuxottica(未持仓)与 QCOM 身上"
+        "value": "Project Phoenix(轻量 MR 头显)做舞台预览(capex 有没有对价)/ Ray-Ban Display 国际上市重启(倍数不会自行修复) · 双向,权重集中在 Muse 一条上 · 见 §7.1 Keynote 由 Zuckerberg 主讲,主题为 AI / AI 眼镜 / VR。主办方在这场会里受影响最小这条通则今年不成立 —— 因为 Muse 是 META 自己的变现叙事,而眼镜的经济含义大部分落在 EssilorLuxottica(未持仓)与 QCOM 身上"
       },
       {
         "name": "(表外)EssilorLuxottica",
@@ -1428,7 +1428,7 @@ export const events = [
       "FQ4-26 实际收入 · 预期 57,500(百万美元) · 利好 ≥ 61,900(历史超指引中位 +23.7% 复刻) · 利空 < 55,000(beat < 10%,MU.md 预承诺的 sandbag 失效第一证据)",
       "FQ4-26 实际非GAAP 毛利率 · 预期 88.5% · 利好 ≥ 90.0% · 利空 ≤ 86.5%(仅打平指引,前三季均超 +3.9~6.9pt)",
       "Cloud Memory BU 收入(AI/HBM 直读) · 预期 19,500(百万美元) · 利好 ≥ 22,000 · 利空 < 17,000",
-      "*(定性)* FY2027 capex 与 SCA 天花板措辞 · 预期 见 §3.2 ①② · 利好 见 FQ1-27 收入指引中值(十亿美元) bull_if · 利空 见 FQ1-27 收入指引中值(十亿美元) bear_if"
+      "*(定性)* FY2027 capex 与 SCA 天花板措辞 · 预期 见 §3.2 ①② · 利好 见 FQ1-27 收入指引中值(十亿美元) · 利空 见 FQ1-27 收入指引中值(十亿美元)"
     ],
     "actual": [],
     "reaction": [],
@@ -1631,7 +1631,7 @@ export const events = [
       "失业率(%) · 预期 4.1 · 利好 ≤ 4.0 · 利空 ≥ 4.3",
       "时薪环比(%) · 预期 0.3 · 利好 ≤ 0.2 · 利空 ≥ 0.4",
       "劳动参与率(%) · 预期 61.6 · 利好 ≥ 61.9 · 利空 ≤ 61.3",
-      "一次性因素/回复率 · 预期 无 · 利好 — · 利空 正文点名罢工/天气 → F2=true,靶向削弱 f_head_miss"
+      "一次性因素/回复率 · 预期 无 · 利好 — · 利空 正文点名罢工/天气 ⇒ 本次就业疲软属一次性因素,「新增不及预期」的利空含义要打折"
     ],
     "actual": [],
     "reaction": [],
@@ -2470,11 +2470,11 @@ export const events = [
       }
     ],
     "watch": [
-      "声明措辞 diff(vs 2026-09-16) — 利好: 给通胀句加上改善类限定(如 has eased / has moved down),或删弱 Today's policy action will support a timelier return 这种主动认领语气,或把 This Committee will deliver price stability 降格 — 利空: 新增 further firming / additional increases may be appropriate 类前瞻指引;或把 Inflation remains elevated 升级为未改善;或删去把通胀归因于外生因素的措辞(供给冲击/地缘/关税)--在本加息周期里删掉外生归因等于货币政策认领通胀,判 bear,不许照上一轮降息周期模板判 bull(M-22)",
+      "声明措辞 diff(vs 2026-09-16) — 利好: 给通胀句加上改善类限定(如 has eased / has moved down),或删弱 Today's policy action will support a timelier return 这种主动认领语气,或把 This Committee will deliver price stability 降格 — 利空: 新增 further firming / additional increases may be appropriate 类前瞻指引;或把 Inflation remains elevated 升级为未改善;或删去把通胀归因于外生因素的措辞(供给冲击/地缘/关税)--在本加息周期里删掉外生归因等于货币政策认领通胀,判 bear,不许照上一轮降息周期模板判为利好(这个方向盲区已踩过一次)",
       "发布会基调(第二段,14:30) — 利好: 主席表示他自设标准(underlying inflation moving to our objective, clearly 且 at sufficient speed)已被满足或接近满足;或明说 2026 年内不会再加;或首次给出结束加息的条件 — 利空: 主席表示 9 月点阵 4.1% 的年末中位是下限不是上限;或重申标准未被满足并把 12/09 描述成 live;或把商品/能源价格上行列为新的加息理由;或强调金融条件仍不具限制性",
       "决议(bp) · 预期 0(维持 3.75–4.00) · 利好 -25 · 利空 +25",
       "鹰派异议票数 · 预期 1 · 利好 0 · 利空 3",
-      "声明措辞 diff(vs 9/16) · 预期 定性 · 利好 见 给通胀句加上改善类限定(如 has eased / has moved down),或删弱 Today's policy action will support a timelier return 这种主动认领语气,或把 This Committee will deliver price stability 降格 · 利空 见 新增 further firming / additional increases may be appropriate 类前瞻指引;或把 Inflation remains elevated 升级为未改善;或**删去把通胀归因于外生因素的措辞(供给冲击/地缘/关税)--在本加息周期里删掉外生归因等于货币政策认领通胀,判 bear,不许照上一轮降息周期模板判 bull(M-22)**",
+      "声明措辞 diff(vs 9/16) · 预期 定性 · 利好 见 给通胀句加上改善类限定(如 has eased / has moved down),或删弱 Today's policy action will support a timelier return 这种主动认领语气,或把 This Committee will deliver price stability 降格 · 利空 见 新增 further firming / additional increases may be appropriate 类前瞻指引;或把 Inflation remains elevated 升级为未改善;或**删去把通胀归因于外生因素的措辞(供给冲击/地缘/关税)--在本加息周期里删掉外生归因等于货币政策认领通胀,判 bear,不许照上一轮降息周期模板判为利好(这个方向盲区已踩过一次)**",
       "[14:30] 发布会基调 · 预期 定性 · 利好 见 主席表示他自设标准(underlying inflation moving to our objective, clearly 且 at sufficient speed)已被满足或接近满足;或明说 2026 年内不会再加;或首次给出结束加息的条件 · 利空 见 主席表示 9 月点阵 4.1% 的年末中位是下限不是上限;或重申标准未被满足并把 12/09 描述成 live;或把商品/能源价格上行列为新的加息理由;或强调金融条件仍不具限制性",
       "(无 SEP)点阵/实体经济栏 · 预期 本次不发 · 利好 — · 利空 —",
       "资产负债表措辞 · 预期 无变化 · 利好 放缓/停止缩表 · 利空 加速"
@@ -3459,7 +3459,7 @@ export const events = [
       },
       {
         "name": "NVDA",
-        "value": "数据中心电力作为算力的上游约束 · 弱正相关,信号价值 > 定价价值 · GEV 的燃机在手合同(C4,YE2026 ≥125GW)是「电力够不够」的实物侧读数。上修 ⇒ 电力不是 2027-28 的硬约束;下修或静默删除 ⇒ 电力约束比市场认为的更紧,这对 NVDA 是久期风险而非当季风险。⚠ 本卡不改 NVDA 任何 pillar,越界交棒 /thesis-tracker"
+        "value": "数据中心电力作为算力的上游约束 · 弱正相关,信号价值 > 定价价值 · GEV 的燃机在手合同(电气化 backlog 新目标($60B 之后),YE2026 ≥125GW)是「电力够不够」的实物侧读数。上修 ⇒ 电力不是 2027-28 的硬约束;下修或静默删除 ⇒ 电力约束比市场认为的更紧,这对 NVDA 是久期风险而非当季风险。⚠ 本卡不改 NVDA 任何 pillar,越界交棒 /thesis-tracker"
       }
     ]
   },
