@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 21:40 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 21:44 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -84,108 +84,6 @@ export const markets = [
 ];
 
 export const events = [
-  {
-    "id": "cpi-2026-06-rel2026-07-14",
-    "kind": "macro",
-    "title": "2026-06 CPI",
-    "subtitle": "",
-    "org": "BLS",
-    "ticker": "",
-    "company": "",
-    "date": "2026-07-14T08:30:00-04:00",
-    "dateNote": "08:30 ET",
-    "dateConfirmed": true,
-    "importance": 3,
-    "tags": [
-      "CPI"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-06-10",
-        "what": "CPI（2026-05）",
-        "outcome": "SPX -1.62% · 2Y +0bp"
-      },
-      {
-        "when": "2026-05-12",
-        "what": "CPI（2026-04）",
-        "outcome": "SPX -0.16% · 2Y +5bp"
-      },
-      {
-        "when": "2026-04-10",
-        "what": "CPI（2026-03）",
-        "outcome": "SPX -0.11% · 2Y +3bp"
-      }
-    ],
-    "links": [
-      {
-        "label": "BLS CPI",
-        "url": "https://www.bls.gov/cpi/"
-      },
-      {
-        "label": "官方日程",
-        "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
-      }
-    ]
-  },
-  {
-    "id": "fomc-2026-07-29",
-    "kind": "macro",
-    "title": "FOMC 议息决议",
-    "subtitle": "",
-    "org": "Federal Reserve",
-    "ticker": "",
-    "company": "",
-    "date": "2026-07-29T14:00:00-04:00",
-    "dateNote": "14:00 ET",
-    "dateConfirmed": true,
-    "importance": 3,
-    "tags": [
-      "FOMC"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-06-17",
-        "what": "FOMC 议息决议",
-        "outcome": "SPX -1.21% · 2Y +15bp"
-      },
-      {
-        "when": "2026-04-29",
-        "what": "FOMC 议息决议",
-        "outcome": "SPX -0.04% · 2Y +8bp"
-      },
-      {
-        "when": "2026-03-18",
-        "what": "FOMC 议息决议",
-        "outcome": "SPX -1.36% · 2Y +8bp"
-      }
-    ],
-    "links": [
-      {
-        "label": "FOMC 官方日历",
-        "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
-      },
-      {
-        "label": "官方日程",
-        "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
-      }
-    ]
-  },
   {
     "id": "msft-fy26q4-replay",
     "kind": "earnings",
