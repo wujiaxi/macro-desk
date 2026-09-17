@@ -653,8 +653,13 @@ class Component extends DCLogic {
       verdictShort: isS(e.raw.verdict) ? e.raw.verdict : "复盘待填写 — data.js → verdict",
     }));
 
-    /* ---- Hero ---- */
-    const h = up[0];
+    /* ---- Hero ----
+       原设计:取最近的未来事件。实测问题:最近的那场常常是重要度 1 的边缘事件
+       (2026-09-16 实例:高通峰会排在 MU 财报之前),且它多半还没建卡 ⇒
+       整个首屏大倒计时是一句「观点待填写」。
+       改成:先在**重要度 3** 里取最近的一场;一场都没有才退回原规则。
+       日程表不受影响,仍按时间全列。 */
+    const h = up.find((e) => (e.raw.importance || 1) >= 3) || up[0];
     if (h) {
       const sc = arr(h.raw.scenarios).map((s) => ({ tag: s.tag, prob: s.prob, color: TONE[s.tone] || "#8b98a8" }));
       base.hero = {
