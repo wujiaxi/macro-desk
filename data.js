@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-17 03:15 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-17 07:00 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -48,10 +48,10 @@ export const markets = [
   },
   {
     "label": "BTC",
-    "value": "75,613",
-    "chg": "-3.26%",
-    "dir": "down",
-    "note": "2026-09-15"
+    "value": "76,150",
+    "chg": "+0.71%",
+    "dir": "up",
+    "note": "2026-09-16"
   },
   {
     "label": "VIX",
