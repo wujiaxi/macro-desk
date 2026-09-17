@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 21:09 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 21:22 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -3536,31 +3536,32 @@ export const events = [
         "prior": "[推断]",
         "range": "",
         "note": "否 ← 非共识"
-      },
-      {
-        "name": "情景 · Bull",
-        "consensus": "2028 营收目标 >$58B 且 EBITDA 利润率目标 >22%;并且披露预付款/合同负债对 FCF 的贡献",
-        "prior": "",
-        "range": "",
-        "note": "VRT/ETN 同步走强"
-      },
-      {
-        "name": "情景 · Base",
-        "consensus": "目标温和上调($54–57B、20–21%),FCF 口径不拆分",
-        "prior": "",
-        "range": "",
-        "note": "中性"
-      },
-      {
-        "name": "情景 · Bear",
-        "consensus": "目标原样重申,或以交接为由推迟到 2027;或 FCF 暴增被确认为纯预付款",
-        "prior": "",
-        "range": "",
-        "note": "VRT/ETN 同步回落"
       }
     ],
     "pricing": [],
-    "scenarios": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "25%",
+        "trigger": "2028 营收目标 >$58B 且 EBITDA 利润率目标 >22%(或给出完整 2030 财务框架),并主动拆分预付款对 FCF 的贡献",
+        "reaction": "目标被实质抬高且质量说清;VRT/ETN 同步走强。空仓者会后确认再建仓,不追高"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "45%",
+        "trigger": "目标温和上调至 2028 营收 $54-57B、EBITDA 利润率 20-21%,FCF 口径继续不拆分",
+        "reaction": "已 price in 大半(卖方 FY2027 一致已 $52.74B);中性。不动,等 Q4 财报看预付款流向"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "30%",
+        "trigger": "目标原样重申;或以 CFO 交接为由把多年目标更新推迟到 2027;或 FCF 暴增被确认为纯预付款",
+        "reaction": "杀估值;VRT/ETN 同步回落。观察 $859-898 区(SMA200 减 1ATR 到 SMA200)"
+      }
+    ],
     "watch": [
       "2028(或 2030)营收目标 · 预期 上调至 $54–57B · 利好 >$58B · 利空 原样重申或不给",
       "2028 EBITDA 利润率目标 · 预期 20–21% · 利好 >22% · 利空 ≤20%(即不动)",
@@ -3584,12 +3585,49 @@ export const events = [
         "outcome": "open · 到期 2027-02-15"
       }
     ],
-    "links": [],
+    "links": [
+      {
+        "label": "gevernova.com · events",
+        "url": "https://www.gevernova.com/investor-relations/events"
+      },
+      {
+        "label": "gevernova.com · press-releases",
+        "url": "https://www.gevernova.com/news/press-releases"
+      },
+      {
+        "label": "SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001996810&type=8-K"
+      },
+      {
+        "label": "SEC 备案 · gev-20260825",
+        "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000153/gev-20260825.htm"
+      },
+      {
+        "label": "SEC 备案 · gev-20260630",
+        "url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000148/gev-20260630.htm"
+      }
+    ],
     "agenda": [],
     "readThrough": [
       {
-        "name": "传导标的",
-        "value": "VRT、ETN、PWR、CEG、NVDA"
+        "name": "VRT",
+        "value": "数据中心电力需求(新,无卡) · 正相关,弹性 > GEV · 电气化 backlog 目标自 $60B 再上调 ⇒ 第三方确认数据中心电力需求;GEV 已有 $176B backlog 托底,弹性反而小"
+      },
+      {
+        "name": "ETN",
+        "value": "电气设备订单(新,无卡) · 正相关,弹性 > GEV · 同上;若电气化目标只重申不上调,ETN 的隐含需求曲线跟着走平"
+      },
+      {
+        "name": "PWR",
+        "value": "输配电施工 backlog(新,无卡) · 正相关,滞后 1–2 季 · 燃机 30GW in 2030 配套的并网与输电投资被量化 ⇒ 施工量可见度;只给发电侧不给并网侧 = 不触发"
+      },
+      {
+        "name": "CEG",
+        "value": "既有核电/电力售价(新,无卡) · 反向 · 燃机产能大幅上修 = 2029+ 边际电力供给增加 ⇒ 对 CEG 的长期 PPA 定价是利空;产能路径下修反而利好"
+      },
+      {
+        "name": "NVDA",
+        "value": "数据中心电力作为算力的上游约束 · 弱正相关,信号价值 > 定价价值 · GEV 的燃机在手合同(C4,YE2026 ≥125GW)是「电力够不够」的实物侧读数。上修 ⇒ 电力不是 2027-28 的硬约束;下修或静默删除 ⇒ 电力约束比市场认为的更紧,这对 NVDA 是久期风险而非当季风险。⚠ 本卡不改 NVDA 任何 pillar,越界交棒 /thesis-tracker"
       }
     ]
   },
