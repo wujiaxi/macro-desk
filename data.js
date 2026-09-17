@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 22:19 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 22:36 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -1601,11 +1601,87 @@ export const events = [
     "tags": [
       "NFP"
     ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
+    "thesis": "一句话:这次非农是 10 月 28 日联储会议之前最后一份就业报告,而那场加息市场只给了大约五成概率 —— 2Y:票 负 · 一致(agree 1.0, mass 2.0)· 主导 f_priced_in + f_inline_drift · 被压制 无(基准情形下没有反向力量在场)· 翻转条件:P1 >= 160 或 P2 >= 50 —— 一旦成立,f_head_beat / f_rev_pos 的 strength 2–3 立刻压过两股 strength 1 的漂移项 10Y:票 负 · 一致(agree 1.0, mass 2.0)· 主导同上 · 被压制 无 · 翻转条件:P4 >= 0.4(时薪重新加速 —— 近 6 个月环比只在 0.16–0.27 之间,从没到过,但它是唯一能绕开就业数据直接改路径的变量) DXY:票 负 · 一致但单薄(agree 1.0, mass 仅 1.0,只有 f_priced_in 一股在场)· 被压制 无 · 翻转条件:P1 >= 160",
+    "expectations": [
+      {
+        "name": "当月非农新增(k)",
+        "consensus": "70.0",
+        "prior": "162",
+        "range": "160.0 ~ 0.0",
+        "note": "core · 权重 35%"
+      },
+      {
+        "name": "前两月净修正(k)",
+        "consensus": "0.0",
+        "prior": "",
+        "range": "50.0 ~ -50.0",
+        "note": "core · 权重 25%"
+      },
+      {
+        "name": "失业率(%)",
+        "consensus": "4.1%",
+        "prior": "",
+        "range": "4.0% ~ 4.3%",
+        "note": "权重 18%"
+      },
+      {
+        "name": "时薪环比(%)",
+        "consensus": "0.3%",
+        "prior": "",
+        "range": "0.2% ~ 0.4%",
+        "note": "权重 17%"
+      },
+      {
+        "name": "劳动参与率(%)",
+        "consensus": "61.6%",
+        "prior": "",
+        "range": "61.9% ~ 61.3%",
+        "note": "权重 5%"
+      }
+    ],
+    "pricing": [
+      {
+        "name": "SPX 事前 21 日 run-up",
+        "value": "-2.50%",
+        "note": "噪声带 ±0.79"
+      },
+      {
+        "name": "2Y 事前 21 日 run-up",
+        "value": "+50bp",
+        "note": "噪声带 ±3.0"
+      }
+    ],
+    "scenarios": [
+      {
+        "tag": "偏热",
+        "tone": "hawk",
+        "prob": "25%",
+        "trigger": "P1 >= 160 or P1 > 0 and P2 >= 50",
+        "reaction": "2Y +11bp · 10Y +7bp · DXY +0.45% · SPX -1.00% · NDX -1.40%"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "45%",
+        "trigger": "0 < P1 < 160 and P2 < 50",
+        "reaction": "2Y -3bp · 10Y -2bp · DXY -0.10% · SPX +0.30% · NDX +0.40%"
+      },
+      {
+        "tag": "偏冷",
+        "tone": "dove",
+        "prob": "30%",
+        "trigger": "P1 <= 0",
+        "reaction": "2Y -11bp · 10Y -7bp · DXY -0.45% · SPX +0.40% · NDX +0.60%"
+      }
+    ],
+    "watch": [
+      "当月新增(k) · 预期 +70(三月均值 71.3 代理,非一致预期) · 利好 ≥ +160 · 利空 ≤ 0",
+      "前两月净修正(k) · 预期 0 · 利好 ≥ +50 · 利空 ≤ -50",
+      "失业率(%) · 预期 4.1 · 利好 ≤ 4.0 · 利空 ≥ 4.3",
+      "时薪环比(%) · 预期 0.3 · 利好 ≤ 0.2 · 利空 ≥ 0.4",
+      "劳动参与率(%) · 预期 61.6 · 利好 ≥ 61.9 · 利空 ≤ 61.3",
+      "一次性因素/回复率 · 预期 无 · 利好 — · 利空 正文点名罢工/天气 → F2=true,靶向削弱 f_head_miss"
+    ],
     "actual": [],
     "reaction": [],
     "verdict": "",
