@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 21:49 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 21:53 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -211,7 +211,7 @@ export const events = [
         "d1": "-0.78%"
       }
     ],
-    "verdict": "名义 beat 但实质 miss? 否 ——(程序判定,依据见 §8.1) 事件定价失败? 不可判 —— 卡片无 implied_move(隐含区间数据缺口),不得渲染成「否」",
+    "verdict": "本卡是回放卡,不触发 thesis 卡更新、不触发 /equity-research 重跑。 它的用途只有一个:管线回归测试。改动 earnings_reconcile.py 后重跑本卡,",
     "history": [
       {
         "when": "2026-04-29",
@@ -560,7 +560,7 @@ export const events = [
         "d1": "-0.01%"
       }
     ],
-    "verdict": "名义 beat 但实质 miss? 否 ——(程序判定,依据见 §8.2) 事件定价失败? 不可判 —— 卡片无 implied_move(隐含区间数据缺口),不得渲染成「否」",
+    "verdict": "",
     "history": [
       {
         "when": "2026-05-20",
