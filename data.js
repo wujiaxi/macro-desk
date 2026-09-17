@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 20:41 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 20:59 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -1677,6 +1677,14 @@ export const events = [
       {
         "label": "官方日程",
         "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+      },
+      {
+        "label": "美联储 · fomc",
+        "url": "https://www.federalreserve.gov/monetarypolicy/fomc.htm"
+      },
+      {
+        "label": "美联储 · FOMCpresconf20260916",
+        "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260916.pdf"
       }
     ]
   },
