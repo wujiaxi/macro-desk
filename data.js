@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-16 18:26 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-16 20:34 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -191,15 +191,17 @@ export const events = [
     "kind": "earnings",
     "ticker": "MSFT",
     "company": "MSFT",
-    "title": "MSFT FY26Q4 财报（回放）",
+    "title": "MSFT FY26Q4 财报",
     "subtitle": "盘后",
     "org": "",
     "date": "2026-07-29T16:05:00-04:00",
-    "dateNote": "盘后 16:05 ET",
+    "dateNote": "盘后 16:05 ET · 回放卡(事后重建,非事前预测)",
     "dateConfirmed": true,
     "importance": 3,
     "tags": [
-      "FY26Q4"
+      "回放",
+      "FY26Q4",
+      "核心"
     ],
     "thesis": "隐含波动:数据缺口 —— 回放卡无法回溯取得财报前的期权链,§8.5 的「是否落在隐含区间内」这一项本卡不可判。 反应函数一句:MSFT 近 24 季 beat 率 96%、但 beat 却跌 13/23 次、只看 beat 的季度上涨率仅 43%、次日中位 -0.59% —— beat 是入场费不是彩票,定价权在 Azure 增速与 RPO 口径。 门槛配置:公司不给数字化 EPS 指引(MSFT 的指引在法说会 CFO Outlook 口述),故四条 bar 只有三条;买方 bar 按全样本 surprise 中位校准。 动作(四选一):回放卡不产生动作。 bear 允许 EPS beat:是 —— 上面 13/23 次「beat 却跌」就是依据。",
     "expectations": [],
@@ -512,7 +514,7 @@ export const events = [
     "date": "2026-08-13T16:05:00-04:00",
     "dateNote": "盘后 16:05 ET",
     "dateConfirmed": true,
-    "importance": 3,
+    "importance": 2,
     "tags": [
       "FY26Q3"
     ],
@@ -739,7 +741,7 @@ export const events = [
     "date": "2026-08-20T07:00:00-04:00",
     "dateNote": "盘前 07:00 ET",
     "dateConfirmed": true,
-    "importance": 3,
+    "importance": 2,
     "tags": [
       "FY27Q1"
     ],
@@ -927,15 +929,17 @@ export const events = [
     "kind": "earnings",
     "ticker": "NVDA",
     "company": "NVDA",
-    "title": "NVDA FY27Q2 财报（回放）",
+    "title": "NVDA FY27Q2 财报",
     "subtitle": "盘后",
     "org": "",
     "date": "2026-08-26T16:05:00-04:00",
-    "dateNote": "盘后 16:05 ET",
+    "dateNote": "盘后 16:05 ET · 回放卡(事后重建,非事前预测)",
     "dateConfirmed": true,
     "importance": 3,
     "tags": [
-      "FY27Q2"
+      "回放",
+      "FY27Q2",
+      "核心"
     ],
     "thesis": "财报日 2026-08-26 AMC(SEC 受理 16:21:19 ET)｜基准收盘 $209.66｜隐含波动 ±5.05%(去时值) 反应函数:近 8 季 beat 率 100% 却只涨 2/8 次、均值 -2.78% —— beat 是入场费不是彩票,定价权在指引(surprise 与次日涨跌 |r|=0.27,几乎不解释)。 事前三情景期望值 = -0.56%(0.30×+8.30% + 0.40×-0.73% + 0.30×-9.20%), 即在本卡的概率标定下,这是一笔赔率略负的事件 —— 与该票「beat 却跌 8/20 次」一致。 实际落点:加权 S = +0.45(覆盖权重 100%),内插预期次日反应 +3.33%。 但 core 论点 P2(毛利率指引)触及利空阈值 —— 按卡片定义,这一条使「纯利好」的读法作废。 > ⛔ 本卡为回放卡,expect/bull_at/bear_at 事后补写,「我错在哪」结构性无效。详见页首。",
     "expectations": [
@@ -1139,20 +1143,163 @@ export const events = [
     "ticker": "",
     "company": "",
     "date": "2026-09-04T08:30:00-04:00",
-    "dateNote": "08:30 ET · 无前瞻卡 → 跑 /nfp-event",
+    "dateNote": "08:30 ET · 回放卡(事后重建,非事前预测)",
     "dateConfirmed": true,
     "importance": 3,
     "tags": [
+      "回放",
       "NFP"
     ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
+    "thesis": "一句话:这是一张回放卡——2026-09-04 的非农事前没有建卡,现在按当时可得的信息补建。当时的信息集指向的是「下修链第三次出现」:连着两份报告净下修 -74k、-103k,7 月印出 -23k,而联储 7/29 刚以 9–3 压住三张加息票。在这个信息集上,利率端方向明确向下,股指端是对冲、事前本就不可判;更重要的是五个资产的事前期望值全部小于各自噪声带 —— 这场非农本来就不值得当事件交易,这一条在事前就成立,与事后确实没动是两件独立的事。 2Y:- 一致(agree 1.0,mass 5.0)· 主导 f_rev_neg, f_priced_in · 被压制 无 · 翻转条件:P2 >= 25(下修链断,改由 f_rev_pos 主导) 10Y:- 一致(agree 1.0,mass 5.0)· 主导 f_rev_neg, f_priced_in · 被压制 无 · 翻转条件:同 2Y DXY:- 一致(agree 1.0,mass 4.0)· 主导 f_rev_neg, f_priced_in · 被压制 无 · 翻转条件:同 2Y",
+    "expectations": [
+      {
+        "name": "当月非农新增(k)",
+        "consensus": "20.0",
+        "prior": "-23",
+        "range": "100.0 ~ -50.0",
+        "note": "Table B-1 Total nonfarm 1-month change"
+      },
+      {
+        "name": "前两月净修正(k)",
+        "consensus": "-60.0",
+        "prior": "",
+        "range": "0.0 ~ -120.0",
+        "note": "新闻稿正文 revised 句 / vintage diff"
+      },
+      {
+        "name": "失业率(%)",
+        "consensus": "4.1%",
+        "prior": "",
+        "range": "4.0% ~ 4.3%",
+        "note": "Table A-1"
+      },
+      {
+        "name": "时薪环比(%)",
+        "consensus": "0.3%",
+        "prior": "",
+        "range": "0.2% ~ 0.4%",
+        "note": "Table B-3"
+      },
+      {
+        "name": "劳动参与率(%)",
+        "consensus": "61.4%",
+        "prior": "",
+        "range": "61.7% ~ 61.1%",
+        "note": "Table A-1"
+      }
+    ],
+    "pricing": [
+      {
+        "name": "SPX 事前 21 日 run-up",
+        "value": "+0.31%",
+        "note": "噪声带 ±0.79"
+      },
+      {
+        "name": "2Y 事前 21 日 run-up",
+        "value": "+16bp",
+        "note": "噪声带 ±3.0"
+      }
+    ],
+    "scenarios": [
+      {
+        "tag": "偏热",
+        "tone": "hawk",
+        "prob": "25%",
+        "trigger": "P1 >= 100 or P2 >= 0",
+        "reaction": "2Y +9bp · 10Y +6bp · DXY +0.35% · SPX -0.60% · NDX -0.90%"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "45%",
+        "trigger": "P1 in (-50,100) and P2 < 0",
+        "reaction": "2Y -4bp · 10Y -3bp · DXY -0.15% · SPX -0.25% · NDX -0.35%"
+      },
+      {
+        "tag": "偏冷",
+        "tone": "dove",
+        "prob": "30%",
+        "trigger": "P1 <= -50 and P2 < 0",
+        "reaction": "2Y -11bp · 10Y -7bp · DXY -0.40% · SPX -0.70% · NDX -0.90%"
+      }
+    ],
+    "watch": [
+      "当月新增(k) · 预期 +20(三月均值代理,非一致预期) · 利好 ≥ +100 · 利空 ≤ -50",
+      "前两月净修正(k) · 预期 -60(近两次 -74 / -103 向 0 收缩) · 利好 ≥ 0 · 利空 ≤ -120",
+      "失业率(%) · 预期 4.1 · 利好 ≤ 4.0 · 利空 ≥ 4.3",
+      "AHE 环比(%) · 预期 0.3 · 利好 ≤ 0.2 · 利空 ≥ 0.4",
+      "参与率(%) · 预期 61.4 · 利好 ≥ 61.7 · 利空 ≤ 61.1"
+    ],
+    "actual": [
+      {
+        "name": "当月非农新增(k)",
+        "actual": "162.0",
+        "consensus": "20.0",
+        "prior": "",
+        "surprise": "利好",
+        "dir": "up"
+      },
+      {
+        "name": "前两月净修正(k)",
+        "actual": "55.0",
+        "consensus": "-60.0",
+        "prior": "",
+        "surprise": "利好",
+        "dir": "up"
+      },
+      {
+        "name": "失业率(%)",
+        "actual": "4.1",
+        "consensus": "4.1",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      },
+      {
+        "name": "时薪环比(%)",
+        "actual": "0.3",
+        "consensus": "0.3",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      },
+      {
+        "name": "劳动参与率(%)",
+        "actual": "61.6",
+        "consensus": "61.4",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      }
+    ],
+    "reaction": [
+      {
+        "asset": "S&P 500",
+        "d0": "-0.38%",
+        "d1": "-0.58%"
+      },
+      {
+        "asset": "纳斯达克100",
+        "d0": "+0.21%",
+        "d1": "-0.12%"
+      },
+      {
+        "asset": "US 2Y",
+        "d0": "+3bp",
+        "d1": "+2bp"
+      },
+      {
+        "asset": "US 10Y",
+        "d0": "+1bp",
+        "d1": "+2bp"
+      },
+      {
+        "asset": "DXY",
+        "d0": "+0.16%",
+        "d1": "-0.32%"
+      }
+    ],
+    "verdict": "先说这段的身份:§1–§7 是事后按当时信息集重建的,所以下面这段不是「我当初判对/判错了什么」,而是「当时的信息集,配上这套力量表,会得出什么;它和市场实际发生的差在哪」。两者不是一回事,别混读。 主导为何赢 —— 而且赢得几乎没有信息量。 实际读数代入后,2Y 上只有 f_head_beat(+162k ≥ 100k 阈)与 f_rev_pos(+55k ≥ 25k 阈)激活,票 +4 / mass 6 / agree 0.67,方向为正;2Y 当日 +3.0bp,方向对上了。但这是一次贴着噬声带边缘的胜利:面板 NFP 同日 |Δ2Y| 中位正好是 3.0bp,程序判「超带」靠的是 abs(m) < noise 这个严格小于号。一次落在判定线上的方向命中,不该被当成力量表有预测力的证据。其余四个资产(10Y +1.0bp、DXY +0.162%、SPX -0.376%、NDX +0.21%)全部落在噬声带内,按 M-16 一律不裁 —— 这场非农在五个资产上只产生了一个勉强可裁的观测。 被压制的那股,才是真正解释了当天的那股。 程序按方向把 f_priced_in 归进「被压制」(它在 2Y 上投负,而 2Y 收正)。但把幅度放进来看,结论是反的:P1 高出趋势代理 142k、P2 高出 115k,同时落进 hot 情景,面板里热意外的 2Y p90 是 +13.0bp,事前 sc.hot 也写了 +9bp —— 实际只给了 +3.0bp,不到事前热情景的三分之一。吃掉那 6bp 的,正是 f_priced_in 所描述的东西:发布前 21 个交易日 2Y 已经涨了 16bp、10Y 涨了 14bp,短端涨得比长端多,曲线走平,加息预期在这三周里已经付过钱;7/29 那次 9–3 里已经摆着三张主张立刻加息的票。一个偏热的就业数据对这样一个联储只是确认已知,不是新信息。这里暴露的是框架本身的一个结构性盲区:compose 只投方向、不投幅度,所以一股「把反应压扁」的力量,在方向记分板上永远只能被记成「被压制」,哪怕它才是当天的主角。 这条记在 §9,不改本卡任何 strength/activate(M-12 与事后不许 fit 的纪律)。 「我没列」:残差在噬声带内。 程序四类归类没有给出任何 unlisted 标记 —— 2Y 方向与力量表一致,另外四个资产都在噪声带里,按定义不产生残差。因此本条按规定写死:残差在噬声带内,本次没有需要命名的表外力量。 上一段那个「反应被压扁」的观察是幅度维度的,而四类归类只在方向维度上判残差,它构不成程序意义上的「我没列」;我刻意不把它写进 force-library,因为那个台账的语义是「同一股力量两次被程序判为残差就纳入默认表」,拿一条程序没判出来的观察去占一格,会污染那个计数器。它先留在 §9 当待办。 对了的地方,也要说清为什么对。 事前这张卡唯一真正站住的结论不是方向,是那句「本次不值得当事件交易」:五个资产的事前期望值(2Y -2.85bp / 10Y -1.95bp / DXY -0.1 / SPX -0.47% / NDX -0.65%)全部小于各自噬声带,而事后五个资产里四个落在噬声带内、第一个贴着边。这一条之所以对,和方向判断完全无关 —— 它来自「概率加权后的期望幅度 vs 历史同日噪声」这个纯量级比较,输入只有情景概率、面板分位和 run-up,一个都不依赖对读数的预判。这套方法真正可迁移的部分在这里,不在方向票上。 事前中心情形错在哪。 事前把权重压在「下修链第三次出现」(P2.expect -60,近两次净修正 -74k / -103k),实际是 +55k 上修,偏离 115k;P1 偏离 142k。两根 core 同时被向上证伪。加权 S = 0.633 这个数看着温和,是因为 P1/P2 的 s 都被 截断在 +1.0:打分函数区分不了「刚过阈」和「打穿阈值两三倍」,S 在这种大幅偏离下会系统性低估偏离程度。别拿 S = 0.633 当「大体判对」的证据。 两条口径警告,顺着 §0 往下读。 一、P1 的「证实(bull)」只意味着大幅高于趋势代理(+20k),bar_consensus 是 na,本卡无权说它「超了卖方一致多少」;§8.1 那行 prior +185.0 是相对 -23k 的前值差,也不是 surprise。二、P2 的 +55k 来自新闻稿正文 revised 句(6 月 +20k→+31k、7 月 -23k→+21k,合计 +55k),走的是 M-04 允许的「新闻稿 revised 句」通道,不是 vintage diff —— 因为这场事件事前没落 pre vintage,这本身就是「没建前瞻卡」的直接代价。 regime 不改。 tightening_bias 事前锁死,事后不动(M-12);而且这次读数与它一致(热就业 + 上修,对应 9/16 的加息路径),没有需要复议的地方。",
     "history": [
       {
         "when": "2026-08-07",
@@ -1190,10 +1337,11 @@ export const events = [
     "ticker": "",
     "company": "",
     "date": "2026-09-11T08:30:00-04:00",
-    "dateNote": "08:30 ET",
+    "dateNote": "08:30 ET · 回放卡(事后重建,非事前预测)",
     "dateConfirmed": true,
     "importance": 3,
     "tags": [
+      "回放",
       "CPI"
     ],
     "thesis": "期望值(程序算):2Y -0.5bp / 10Y -0.15bp / DXY 0.0 / SPX -0.01% / NDX -0.035%",
@@ -1367,10 +1515,11 @@ export const events = [
     "ticker": "",
     "company": "",
     "date": "2026-09-16T14:00:00-04:00",
-    "dateNote": "14:00 ET",
+    "dateNote": "14:00 ET · 回放卡(事后重建,非事前预测)",
     "dateConfirmed": true,
     "importance": 3,
     "tags": [
+      "回放",
       "FOMC",
       "点阵图"
     ],
@@ -1542,7 +1691,7 @@ export const events = [
     "date": "2026-09-22T09:00:00-04:00",
     "dateNote": "不发 8-K,无可编程触发,证据上限 B · 无会前卡 → 跑 /conference-preview",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 1,
     "tags": [
       "product",
       "TSM",
@@ -1573,6 +1722,89 @@ export const events = [
     ]
   },
   {
+    "id": "mu-earnings-2026-09-22",
+    "kind": "earnings",
+    "ticker": "MU",
+    "company": "MU",
+    "title": "MU 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-09-22T16:05:00-04:00",
+    "dateNote": "盘后 · 按历史排期推算(基准 2025-09-23),公司未官宣 → 跑 /earnings-preview 建卡",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期",
+      "核心"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-06-24",
+        "what": "EPS 意外 +21.4% · 实际 25.11 vs 预期 20.69",
+        "outcome": "次日 +15.74%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-03-18",
+        "what": "EPS 意外 +33.2% · 实际 12.2 vs 预期 9.16",
+        "outcome": "次日 -3.78%（巨 beat >10%）"
+      },
+      {
+        "when": "2025-12-17",
+        "what": "EPS 意外 +20.6% · 实际 4.78 vs 预期 3.96",
+        "outcome": "次日 +10.21%（巨 beat >10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$823.03"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$815.85"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$581.55"
+      },
+      {
+        "name": "安全边际",
+        "value": "-29.34%"
+      },
+      {
+        "name": "综合分",
+        "value": "58.4"
+      },
+      {
+        "name": "象限动作",
+        "value": "等待企稳分批"
+      }
+    ],
+    "targets": {
+      "low": "$500",
+      "avg": "$816",
+      "high": "$1,200",
+      "n": "本站三情景加权 · 卖方一致 $1,507.38"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "conf-meta-connect-2026-09-23",
     "kind": "event",
     "title": "Meta Connect",
@@ -1583,7 +1815,7 @@ export const events = [
     "date": "2026-09-23T09:00:00-04:00",
     "dateNote": "不发 8-K,无可编程触发,证据上限 B · 无会前卡 → 跑 /conference-preview",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 1,
     "tags": [
       "product",
       "QCOM",
@@ -1715,6 +1947,88 @@ export const events = [
     ]
   },
   {
+    "id": "tsm-earnings-2026-10-14",
+    "kind": "earnings",
+    "ticker": "TSM",
+    "company": "TSM",
+    "title": "TSM 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-10-14T16:05:00-04:00",
+    "dateNote": "盘后 · 按历史排期推算(基准 2025-10-15),公司未官宣 → 跑 /earnings-preview 建卡",
+    "dateConfirmed": false,
+    "importance": 2,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-16",
+        "what": "EPS 意外 +10.9% · 实际 4.31 vs 预期 3.89",
+        "outcome": "次日 -2.32%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-15",
+        "what": "EPS 意外 +4.7% · 实际 3.49 vs 预期 3.33",
+        "outcome": "次日 -3.13%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-01-15",
+        "what": "EPS 意外 +5.5% · 实际 3.14 vs 预期 2.98",
+        "outcome": "次日 +4.44%（大 beat 5–10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$422.49"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$487.10"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$443.20"
+      },
+      {
+        "name": "安全边际",
+        "value": "+4.90%"
+      },
+      {
+        "name": "综合分",
+        "value": "73.8"
+      },
+      {
+        "name": "象限动作",
+        "value": "等待企稳分批"
+      }
+    ],
+    "targets": {
+      "low": "$332",
+      "avg": "$487",
+      "high": "$602",
+      "n": "本站三情景加权 · 卖方一致 $527.00"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "conf-gtc-berlin-2026-10-20",
     "kind": "event",
     "title": "NVIDIA GTC Berlin",
@@ -1725,7 +2039,7 @@ export const events = [
     "date": "2026-10-20T09:00:00-04:00",
     "dateNote": "不发 8-K,无可编程触发,证据上限 B · 无会前卡 → 跑 /conference-preview",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 1,
     "tags": [
       "product",
       "ASML",
@@ -1753,6 +2067,208 @@ export const events = [
         "value": "ASML、SIE.DE"
       }
     ]
+  },
+  {
+    "id": "nflx-earnings-2026-10-20",
+    "kind": "earnings",
+    "ticker": "NFLX",
+    "company": "NFLX",
+    "title": "NFLX 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-10-20T16:05:00-04:00",
+    "dateNote": "盘后 · 按历史排期推算(基准 2025-10-21),公司未官宣 → 跑 /earnings-preview 建卡",
+    "dateConfirmed": false,
+    "importance": 2,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-16",
+        "what": "EPS 意外 +1.4% · 实际 0.8 vs 预期 0.79",
+        "outcome": "次日 -7.26%（小 beat 0–2%）"
+      },
+      {
+        "when": "2026-04-16",
+        "what": "EPS 意外 -1.4% · 实际 1.23 vs 预期 1.25",
+        "outcome": "次日 -9.72%（小 miss 0–2%）"
+      },
+      {
+        "when": "2026-01-20",
+        "what": "EPS 意外 +1.4% · 实际 0.56 vs 预期 0.55",
+        "outcome": "次日 -2.18%（小 beat 0–2%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$71.71"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$79.72"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$70.01"
+      },
+      {
+        "name": "安全边际",
+        "value": "-2.37%"
+      },
+      {
+        "name": "综合分",
+        "value": "52.8"
+      },
+      {
+        "name": "象限动作",
+        "value": "回避"
+      }
+    ],
+    "targets": {
+      "low": "$50",
+      "avg": "$80",
+      "high": "$115",
+      "n": "本站三情景加权 · 卖方一致 $85.00"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "gev-earnings-2026-10-21",
+    "kind": "earnings",
+    "ticker": "GEV",
+    "company": "GEV",
+    "title": "GEV 财报",
+    "subtitle": "盘前",
+    "org": "",
+    "date": "2026-10-21T07:00:00-04:00",
+    "dateNote": "盘前 · 按历史排期推算(基准 2025-10-22),公司未官宣 → 跑 /earnings-preview 建卡",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期",
+      "核心"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "tsla-earnings-2026-10-21",
+    "kind": "earnings",
+    "ticker": "TSLA",
+    "company": "TSLA",
+    "title": "TSLA 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-10-21T16:05:00-04:00",
+    "dateNote": "盘后 · 按历史排期推算(基准 2025-10-22),公司未官宣 → 跑 /earnings-preview 建卡",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期",
+      "核心"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-22",
+        "what": "EPS 意外 -38.4% · 实际 0.33 vs 预期 0.54",
+        "outcome": "次日 -14.52%（miss >2%）"
+      },
+      {
+        "when": "2026-04-22",
+        "what": "EPS 意外 +17.1% · 实际 0.41 vs 预期 0.35",
+        "outcome": "次日 -3.56%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-01-28",
+        "what": "EPS 意外 +11.0% · 实际 0.5 vs 预期 0.45",
+        "outcome": "次日 -3.45%（巨 beat >10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$309.22"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$218.48"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$161.23"
+      },
+      {
+        "name": "安全边际",
+        "value": "-47.86%"
+      },
+      {
+        "name": "综合分",
+        "value": "31.7"
+      },
+      {
+        "name": "象限动作",
+        "value": "双弱-回避/清仓"
+      }
+    ],
+    "targets": {
+      "low": "$130",
+      "avg": "$218",
+      "high": "$392",
+      "n": "本站三情景加权 · 卖方一致 $399.45"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
   },
   {
     "id": "nok-catalyst-2026-10-22",
@@ -1821,6 +2337,88 @@ export const events = [
     }
   },
   {
+    "id": "intc-earnings-2026-10-22",
+    "kind": "earnings",
+    "ticker": "INTC",
+    "company": "INTC",
+    "title": "INTC 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-10-22T16:05:00-04:00",
+    "dateNote": "盘后 · 按历史排期推算(基准 2025-10-23),公司未官宣 → 跑 /earnings-preview 建卡",
+    "dateConfirmed": false,
+    "importance": 2,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-23",
+        "what": "EPS 意外 +92.5% · 实际 0.42 vs 预期 0.22",
+        "outcome": "次日 -7.89%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-23",
+        "what": "EPS 意外 +2108.7% · 实际 0.29 vs 预期 0.01",
+        "outcome": "次日 +23.60%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-01-22",
+        "what": "EPS 意外 +81.5% · 实际 0.15 vs 预期 0.08",
+        "outcome": "次日 -17.03%（巨 beat >10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$97.82"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$83.25"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$63.09"
+      },
+      {
+        "name": "安全边际",
+        "value": "-35.50%"
+      },
+      {
+        "name": "综合分",
+        "value": "59.0"
+      },
+      {
+        "name": "象限动作",
+        "value": "回避"
+      }
+    ],
+    "targets": {
+      "low": "$42",
+      "avg": "$83",
+      "high": "$129",
+      "n": "本站三情景加权 · 卖方一致 $115.17"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "msft-catalyst-2026-10-27",
     "kind": "earnings",
     "ticker": "MSFT",
@@ -1831,9 +2429,10 @@ export const events = [
     "date": "2026-10-27T16:05:00-04:00",
     "dateNote": "取自论点卡催化剂,日期未确认 → 跑 /earnings-preview 建卡",
     "dateConfirmed": false,
-    "importance": 2,
+    "importance": 3,
     "tags": [
-      "催化剂"
+      "催化剂",
+      "核心"
     ],
     "thesis": "",
     "expectations": [],
@@ -1954,6 +2553,375 @@ export const events = [
     ]
   },
   {
+    "id": "googl-earnings-2026-10-28",
+    "kind": "earnings",
+    "ticker": "GOOGL",
+    "company": "GOOGL",
+    "title": "GOOGL 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-10-28T16:05:00-04:00",
+    "dateNote": "盘后 · 按历史排期推算(基准 2025-10-29),公司未官宣 → 跑 /earnings-preview 建卡",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期",
+      "核心"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-22",
+        "what": "EPS 意外 +214.2% · 实际 9.11 vs 预期 2.9",
+        "outcome": "次日 -7.13%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +91.6% · 实际 5.11 vs 预期 2.67",
+        "outcome": "次日 +9.96%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-02-04",
+        "what": "EPS 意外 +7.0% · 实际 2.82 vs 预期 2.64",
+        "outcome": "次日 -0.54%（大 beat 5–10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$319.74"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$298.45"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$257.79"
+      },
+      {
+        "name": "安全边际",
+        "value": "-19.38%"
+      },
+      {
+        "name": "综合分",
+        "value": "50.4"
+      },
+      {
+        "name": "象限动作",
+        "value": "回避(双弱象限:基本面60<65且技术面28<60)"
+      }
+    ],
+    "targets": {
+      "low": "$201",
+      "avg": "$298",
+      "high": "$390",
+      "n": "本站三情景加权 · 卖方一致 $430.00"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "meta-earnings-2026-10-28",
+    "kind": "earnings",
+    "ticker": "META",
+    "company": "META",
+    "title": "META 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-10-28T16:05:00-04:00",
+    "dateNote": "盘后 · 按历史排期推算(基准 2025-10-29),公司未官宣 → 跑 /earnings-preview 建卡",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期",
+      "核心"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-29",
+        "what": "EPS 意外 -14.4% · 实际 6.18 vs 预期 7.22",
+        "outcome": "次日 -7.95%（miss >2%）"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +56.8% · 实际 10.44 vs 预期 6.66",
+        "outcome": "次日 -8.55%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-01-28",
+        "what": "EPS 意外 +8.0% · 实际 8.88 vs 预期 8.22",
+        "outcome": "次日 +10.40%（大 beat 5–10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$578.02"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$647.70"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$535.96"
+      },
+      {
+        "name": "安全边际",
+        "value": "-7.28%"
+      },
+      {
+        "name": "综合分",
+        "value": "53.2"
+      },
+      {
+        "name": "象限动作",
+        "value": "回避"
+      }
+    ],
+    "targets": {
+      "low": "$450",
+      "avg": "$648",
+      "high": "$888",
+      "n": "本站三情景加权 · 卖方一致 $754.84"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "lly-earnings-2026-10-29",
+    "kind": "earnings",
+    "ticker": "LLY",
+    "company": "LLY",
+    "title": "LLY 财报",
+    "subtitle": "盘前",
+    "org": "",
+    "date": "2026-10-29T07:00:00-04:00",
+    "dateNote": "盘前 · 按历史排期推算(基准 2025-10-30),公司未官宣 → 跑 /earnings-preview 建卡",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期",
+      "核心"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "aapl-earnings-2026-10-29",
+    "kind": "earnings",
+    "ticker": "AAPL",
+    "company": "AAPL",
+    "title": "AAPL 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-10-29T16:05:00-04:00",
+    "dateNote": "盘后 · 按历史排期推算(基准 2025-10-30),公司未官宣 → 跑 /earnings-preview 建卡",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期",
+      "核心"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-30",
+        "what": "EPS 意外 +6.7% · 实际 2.02 vs 预期 1.89",
+        "outcome": "次日 -7.35%（大 beat 5–10%）"
+      },
+      {
+        "when": "2026-04-30",
+        "what": "EPS 意外 +3.5% · 实际 2.01 vs 预期 1.94",
+        "outcome": "次日 +3.24%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-01-29",
+        "what": "EPS 意外 +6.3% · 实际 2.84 vs 预期 2.67",
+        "outcome": "次日 +0.46%（大 beat 5–10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$307.12"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$279.95"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$238.08"
+      },
+      {
+        "name": "安全边际",
+        "value": "-22.48%"
+      },
+      {
+        "name": "综合分",
+        "value": "58.4"
+      },
+      {
+        "name": "象限动作",
+        "value": "回避/减持"
+      }
+    ],
+    "targets": {
+      "low": "$205",
+      "avg": "$280",
+      "high": "$345",
+      "n": "本站三情景加权 · 卖方一致 $321.57"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "amzn-earnings-2026-10-29",
+    "kind": "earnings",
+    "ticker": "AMZN",
+    "company": "AMZN",
+    "title": "AMZN 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-10-29T16:05:00-04:00",
+    "dateNote": "盘后 · 按历史排期推算(基准 2025-10-30),公司未官宣 → 跑 /earnings-preview 建卡",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期",
+      "核心"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-30",
+        "what": "EPS 意外 +215.0% · 实际 5.75 vs 预期 1.83",
+        "outcome": "次日 +15.32%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +68.2% · 实际 2.78 vs 预期 1.65",
+        "outcome": "次日 +0.77%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-02-05",
+        "what": "EPS 意外 +0.2% · 实际 1.95 vs 预期 1.95",
+        "outcome": "次日 -5.55%（小 beat 0–2%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$271.58"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$273.97"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$208.21"
+      },
+      {
+        "name": "安全边际",
+        "value": "-23.33%"
+      },
+      {
+        "name": "综合分",
+        "value": "63.7"
+      },
+      {
+        "name": "象限动作",
+        "value": "基本面 61(<65 弱)+ 技术面 70(>=60 强) -> 反弹观望/减持:仓位上限由 6 折降至 4 折,反弹至 277.8-278.6 阻力带为减持位,271.58 以上一股不加;回踩 236-247 三均线收敛带才分批,跌破 226 止损重估"
+      }
+    ],
+    "targets": {
+      "low": "$175",
+      "avg": "$274",
+      "high": "$353",
+      "n": "本站三情景加权 · 卖方一致 $330.00"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "amd-catalyst-2026-11-03",
     "kind": "earnings",
     "ticker": "AMD",
@@ -1964,9 +2932,10 @@ export const events = [
     "date": "2026-11-03T16:05:00-05:00",
     "dateNote": "取自论点卡催化剂,日期未确认 → 跑 /earnings-preview 建卡",
     "dateConfirmed": false,
-    "importance": 2,
+    "importance": 3,
     "tags": [
-      "催化剂"
+      "催化剂",
+      "核心"
     ],
     "thesis": "",
     "expectations": [],
@@ -2256,7 +3225,7 @@ export const events = [
     "date": "2026-11-17T09:00:00-05:00",
     "dateNote": "不发 8-K,无可编程触发,证据上限 B · 无会前卡 → 跑 /conference-preview",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 1,
     "tags": [
       "product",
       "NVDA",
@@ -2297,9 +3266,10 @@ export const events = [
     "date": "2026-11-17T16:05:00-05:00",
     "dateNote": "取自论点卡催化剂,日期未确认 → 跑 /earnings-preview 建卡",
     "dateConfirmed": false,
-    "importance": 2,
+    "importance": 3,
     "tags": [
-      "催化剂"
+      "催化剂",
+      "核心"
     ],
     "thesis": "",
     "expectations": [],
@@ -2379,7 +3349,7 @@ export const events = [
     "date": "2026-11-30T09:00:00-05:00",
     "dateNote": "不发 8-K,无可编程触发,证据上限 B · 无会前卡 → 跑 /conference-preview",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 1,
     "tags": [
       "product",
       "AVGO",
@@ -2420,7 +3390,7 @@ export const events = [
     "date": "2026-11-30T09:00:00-05:00",
     "dateNote": "不发 8-K,无可编程触发,证据上限 B · 无会前卡 → 跑 /conference-preview",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 1,
     "tags": [
       "product",
       "NVDA",
@@ -2716,6 +3686,88 @@ export const events = [
     ]
   },
   {
+    "id": "avgo-earnings-2026-12-10",
+    "kind": "earnings",
+    "ticker": "AVGO",
+    "company": "AVGO",
+    "title": "AVGO 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-12-10T16:05:00-05:00",
+    "dateNote": "盘后 · 按历史排期推算(基准 2025-12-11),公司未官宣 → 跑 /earnings-preview 建卡",
+    "dateConfirmed": false,
+    "importance": 2,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-06-03",
+        "what": "EPS 意外 +1.7% · 实际 2.44 vs 预期 2.4",
+        "outcome": "次日 -12.59%（小 beat 0–2%）"
+      },
+      {
+        "when": "2026-03-04",
+        "what": "EPS 意外 +1.3% · 实际 2.05 vs 预期 2.02",
+        "outcome": "次日 +4.80%（小 beat 0–2%）"
+      },
+      {
+        "when": "2025-12-11",
+        "what": "EPS 意外 +4.4% · 实际 1.95 vs 预期 1.87",
+        "outcome": "次日 -11.43%（中 beat 2–5%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$344.72"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$367.89"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$282.89"
+      },
+      {
+        "name": "安全边际",
+        "value": "-17.94%"
+      },
+      {
+        "name": "综合分",
+        "value": "48.0"
+      },
+      {
+        "name": "象限动作",
+        "value": "回避"
+      }
+    ],
+    "targets": {
+      "low": "$240",
+      "avg": "$368",
+      "high": "$471",
+      "n": "本站三情景加权 · 卖方一致 $521.41"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "fomc-2027-01-27",
     "kind": "macro",
     "title": "FOMC 议息决议",
@@ -2777,7 +3829,7 @@ export const events = [
     "date": "2027-03-15T09:00:00-04:00",
     "dateNote": "不发 8-K,无可编程触发,证据上限 B · 无会前卡 → 跑 /conference-preview",
     "dateConfirmed": true,
-    "importance": 2,
+    "importance": 1,
     "tags": [
       "product",
       "AVGO",
