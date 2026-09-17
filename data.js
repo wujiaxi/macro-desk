@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-17 03:12 ET · ⚠️ 4 条告警: macro_claims(FOMC_2026-10-28.md) 退出码 1: …",
+  "updated": "2026-09-17 03:14 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -2388,11 +2388,90 @@ export const events = [
     "tags": [
       "FOMC"
     ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
+    "thesis": "9 月的点阵已经把答案写完了一半:年内还剩恰好一次加息,10 月和 12 月只能有一次。所以这场会不是\"加不加\"的会,是\"现在加还是等 12 月加\"的会——真正的新信息不在利率,在发布会上主席会不会说\"一次还不够\"。",
+    "expectations": [
+      {
+        "name": "决议(bp,相对 3.75-4.00 区间)",
+        "consensus": "0.0bp",
+        "prior": "25bp",
+        "range": "-25.0bp ~ 25.0bp",
+        "note": "core · 权重 40%"
+      },
+      {
+        "name": "鹰派异议票数(要求更高区间者)",
+        "consensus": "1.0 票",
+        "prior": "",
+        "range": "0.0 票 ~ 3.0 票",
+        "note": "权重 15%"
+      }
+    ],
+    "pricing": [
+      {
+        "name": "本次会议隐含变动",
+        "value": "+11bp",
+        "note": "ZQ 自算 · 2026-09-16"
+      },
+      {
+        "name": "P(加息 25bp)",
+        "value": "44%",
+        "note": "月末会议 N-d=3<7,价格噪声放大 10×;改用次月 2026-11 合约当 r_post"
+      },
+      {
+        "name": "期货已定价(bp)",
+        "value": "11",
+        "note": "2026-09-16"
+      },
+      {
+        "name": "SPX 事前 21 日 run-up",
+        "value": "-2.50%",
+        "note": "噪声带 ±0.75"
+      },
+      {
+        "name": "2Y 事前 21 日 run-up",
+        "value": "+50bp",
+        "note": "噪声带 ±5.0"
+      }
+    ],
+    "scenarios": [
+      {
+        "tag": "按兵+鹰",
+        "tone": "hawk",
+        "prob": "40%",
+        "trigger": "P1 <= 0 and (P3.verdict == 'bear' or P4.verdict == 'bear')",
+        "reaction": "2Y -3bp · 10Y -2bp · DXY -0.10% · SPX +0.10% · NDX +0.20%"
+      },
+      {
+        "tag": "行动+鹰",
+        "tone": "hawk",
+        "prob": "26%",
+        "trigger": "P1 >= 25 and (P3.verdict == 'bear' or P4.verdict == 'bear')",
+        "reaction": "2Y +12bp · 10Y +7bp · DXY +0.50% · SPX -1.00% · NDX -1.40%"
+      },
+      {
+        "tag": "按兵+鸽",
+        "tone": "dove",
+        "prob": "20%",
+        "trigger": "P1 <= 0 and P3.verdict != 'bear' and P4.verdict != 'bear'",
+        "reaction": "2Y -15bp · 10Y -10bp · DXY -0.60% · SPX +1.20% · NDX +1.70%"
+      },
+      {
+        "tag": "行动+鸽",
+        "tone": "dove",
+        "prob": "14%",
+        "trigger": "P1 >= 25 and P3.verdict != 'bear' and P4.verdict != 'bear'",
+        "reaction": "2Y -2bp · 10Y -3bp · DXY -0.20% · SPX +0.50% · NDX +0.70%"
+      }
+    ],
+    "watch": [
+      "声明措辞 diff(vs 2026-09-16) — 利好: 给通胀句加上改善类限定(如 has eased / has moved down),或删弱 Today's policy action will support a timelier return 这种主动认领语气,或把 This Committee will deliver price stability 降格 — 利空: 新增 further firming / additional increases may be appropriate 类前瞻指引;或把 Inflation remains elevated 升级为未改善;或删去把通胀归因于外生因素的措辞(供给冲击/地缘/关税)--在本加息周期里删掉外生归因等于货币政策认领通胀,判 bear,不许照上一轮降息周期模板判 bull(M-22)",
+      "发布会基调(第二段,14:30) — 利好: 主席表示他自设标准(underlying inflation moving to our objective, clearly and at sufficient speed)已被满足或接近满足;或明说 2026 年内不会再加;或首次给出结束加息的条件 — 利空: 主席表示 9 月点阵 4.1% 的年末中位是下限不是上限;或重申标准未被满足并把 12/09 描述成 live;或把商品/能源价格上行列为新的加息理由;或强调金融条件仍不具限制性",
+      "决议(bp) · 预期 0(维持 3.75–4.00) · 利好 -25 · 利空 +25",
+      "鹰派异议票数 · 预期 1 · 利好 0 · 利空 3",
+      "声明措辞 diff(vs 9/16) · 预期 定性 · 利好 见 P3.bull_if · 利空 见 P3.bear_if",
+      "[14:30] 发布会基调 · 预期 定性 · 利好 见 P4.bull_if · 利空 见 P4.bear_if",
+      "(无 SEP)点阵/实体经济栏 · 预期 本次不发 · 利好 — · 利空 —",
+      "资产负债表措辞 · 预期 无变化 · 利好 放缓/停止缩表 · 利空 加速"
+    ],
     "actual": [],
     "reaction": [],
     "verdict": "",
