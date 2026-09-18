@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-18 10:32 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-18 13:16 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,622.15",
-    "chg": "-0.20%",
+    "value": "7,624.44",
+    "chg": "-0.17%",
     "dir": "down",
-    "note": "实时 10:32 ET"
+    "note": "实时 13:16 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "29,429.1",
-    "chg": "-0.06%",
-    "dir": "down",
-    "note": "实时 10:32 ET"
+    "value": "29,459.0",
+    "chg": "+0.04%",
+    "dir": "up",
+    "note": "实时 13:16 ET"
   },
   {
     "label": "DXY",
-    "value": "100.51",
-    "chg": "+0.28%",
+    "value": "100.27",
+    "chg": "+0.03%",
     "dir": "up",
-    "note": "实时 10:32 ET"
+    "note": "实时 13:16 ET"
   },
   {
     "label": "黄金",
-    "value": "4,388.80",
-    "chg": "-0.18%",
-    "dir": "down",
-    "note": "实时 10:32 ET"
+    "value": "4,423.70",
+    "chg": "+0.62%",
+    "dir": "up",
+    "note": "实时 13:16 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "97.91",
-    "chg": "-3.22%",
+    "value": "95.94",
+    "chg": "-5.17%",
     "dir": "down",
-    "note": "实时 10:32 ET"
+    "note": "实时 13:16 ET"
   },
   {
     "label": "BTC",
-    "value": "80,512",
-    "chg": "+5.45%",
+    "value": "80,925",
+    "chg": "+5.99%",
     "dir": "up",
-    "note": "实时 10:32 ET"
+    "note": "实时 13:16 ET"
   },
   {
     "label": "VIX",
-    "value": "15.54",
-    "chg": "+0.10",
-    "dir": "up",
-    "note": "实时 10:32 ET"
+    "value": "15.43",
+    "chg": "-0.01",
+    "dir": "down",
+    "note": "实时 13:16 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.00%",
-    "chg": "+5.1bp",
+    "chg": "+5.3bp",
     "dir": "up",
-    "note": "实时 10:32 ET"
+    "note": "实时 13:16 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.33%",
-    "chg": "+3.4bp",
+    "value": "5.34%",
+    "chg": "+4.0bp",
     "dir": "up",
-    "note": "实时 10:32 ET"
+    "note": "实时 13:16 ET"
   },
   {
     "label": "US 2Y",
@@ -1156,6 +1156,158 @@ export const events = [
     ]
   },
   {
+    "id": "rebal-index-trade-2026-09-18-spx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "标普季度调仓·再平衡交易日(三巫日)",
+    "subtitle": "被动盘落地·2026Q3",
+    "org": "SPX",
+    "date": "2026-09-18T16:00:00-04:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "index",
+      "index_trade",
+      "SPX"
+    ],
+    "thesis": "指数基金在**收盘集合竞价**一次性成交 —— 这才是被动买盘真正落地的那一刻,全年成交量最大的几个收盘之一。",
+    "watch": [
+      "收盘集合竞价成交量(量比中位 7.14x)",
+      "⚠️ 纳指100 这天做的是**权重再平衡**,不是成分大换血;集中度封顶写在**年度重构**那一轮",
+      "⚠️ 标普与纳指100 是两套规则,不许混着说"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "rebal-index-trade-2026-09-18-ndx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "纳指100·季度再平衡",
+    "subtitle": "被动盘落地·2026Q3",
+    "org": "NDX",
+    "date": "2026-09-18T16:00:00-04:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "index",
+      "index_trade",
+      "NDX"
+    ],
+    "thesis": "指数基金在**收盘集合竞价**一次性成交 —— 这才是被动买盘真正落地的那一刻,全年成交量最大的几个收盘之一。",
+    "watch": [
+      "收盘集合竞价成交量(量比中位 7.14x)",
+      "⚠️ 纳指100 这天做的是**权重再平衡**,不是成分大换血;集中度封顶写在**年度重构**那一轮",
+      "⚠️ 标普与纳指100 是两套规则,不许混着说"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "rebal-index-effective-2026-09-21-spx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "标普季度调仓·生效",
+    "subtitle": "生效(被动需求已消失)·2026Q3",
+    "org": "SPX",
+    "date": "2026-09-21T16:00:00-04:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 2,
+    "tags": [
+      "index",
+      "index_effective",
+      "SPX"
+    ],
+    "thesis": "开盘前生效,但被动买盘在**上一个收盘**就已完成。历史上这天之后常见反向 —— **不许把「被纳入」当成这天的买入理由**。",
+    "watch": [
+      "生效日超额:12 例中位 -0.44%,仅 42% 为正",
+      "⚠️ **反向不在生效日当天,在其后那一周**:生效后 5 日中位 -0.67%、只有 33% 为正,尾部到 -13.9%"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "conf-meta-connect-2026-09-23",
     "kind": "event",
     "title": "Meta Connect",
@@ -1325,6 +1477,55 @@ export const events = [
         "value": "未持仓,不建卡 · 偏多 · 品类销量/产能数字若被量化,受益最直接的是它而不是 META。留一行备查,不进动作"
       }
     ]
+  },
+  {
+    "id": "rebal-flow-window-2026-09-30-all",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "季末再平衡窗口",
+    "subtitle": "资金流窗口·2026Q3",
+    "org": "全市场",
+    "date": "2026-09-30T16:00:00-04:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 1,
+    "tags": [
+      "index",
+      "flow_window"
+    ],
+    "thesis": "养老金/目标日期基金按目标权重回补。**方向不固定** —— 取决于本季股债相对表现,股票跑赢越多越要卖股买债。",
+    "watch": [
+      "⚠️ **不许默认「季末=买盘」**,先看本季股债相对表现",
+      "⚠️ 资金流规模若无一手来源,**写「未取到」,不许编**"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
   },
   {
     "id": "mu-fy26q4",
@@ -2875,6 +3076,55 @@ export const events = [
     }
   },
   {
+    "id": "rebal-flow-window-2026-10-30-all",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "月末再平衡窗口",
+    "subtitle": "资金流窗口·2026-10",
+    "org": "全市场",
+    "date": "2026-10-30T16:00:00-04:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 1,
+    "tags": [
+      "index",
+      "flow_window"
+    ],
+    "thesis": "养老金/目标日期基金按目标权重回补。**方向不固定** —— 取决于本季股债相对表现,股票跑赢越多越要卖股买债。",
+    "watch": [
+      "⚠️ **不许默认「季末=买盘」**,先看本季股债相对表现",
+      "⚠️ 资金流规模若无一手来源,**写「未取到」,不许编**"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "amd-catalyst-2026-11-03",
     "kind": "earnings",
     "ticker": "AMD",
@@ -3264,6 +3514,55 @@ export const events = [
     ]
   },
   {
+    "id": "rebal-flow-window-2026-11-30-all",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "月末再平衡窗口",
+    "subtitle": "资金流窗口·2026-11",
+    "org": "全市场",
+    "date": "2026-11-30T16:00:00-05:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 1,
+    "tags": [
+      "index",
+      "flow_window"
+    ],
+    "thesis": "养老金/目标日期基金按目标权重回补。**方向不固定** —— 取决于本季股债相对表现,股票跑赢越多越要卖股买债。",
+    "watch": [
+      "⚠️ **不许默认「季末=买盘」**,先看本季股债相对表现",
+      "⚠️ 资金流规模若无一手来源,**写「未取到」,不许编**"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "nfp-2026-11-rel2026-12-04",
     "kind": "macro",
     "title": "2026-11 非农就业报告",
@@ -3313,6 +3612,58 @@ export const events = [
         "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
       }
     ]
+  },
+  {
+    "id": "rebal-index-announce-2026-12-04-spx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "标普季度调仓·成分变更公告",
+    "subtitle": "成分名单公布·2026Q4",
+    "org": "SPX",
+    "date": "2026-12-04T16:00:00-05:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "index",
+      "index_announce",
+      "SPX"
+    ],
+    "thesis": "名单在**盘后**公布,被纳入的票当晚就跳;但**被动基金还没进场**,这一跳是主动资金抢跑。",
+    "watch": [
+      "纳入/剔除名单(盘后,S&P DJI 官网)",
+      "⚠️ 冲击发生在**公告当晚盘后**:12 例实测拉升中位 +8.21%,11/12 为正",
+      "⚠️ **次日开盘几乎从不超过盘后最高**(10/12 低于) —— 以盘后最高为基准,一周收益中位仅 +0.01%、5/11 为负。**影响力 ≠ 可获取收益**",
+      "⚠️ 成分变更**不止这一天**:并购/破产引发的增删是临时公告,约提前 5 个交易日"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
   },
   {
     "id": "conf-gev-investor-update-2026-12-08",
@@ -3643,6 +3994,309 @@ export const events = [
       "high": "$471",
       "n": "本站三情景加权 · 卖方一致 $521.41"
     },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "rebal-index-announce-2026-12-11-ndx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "纳指100·年度重构公告",
+    "subtitle": "成分名单公布·2026 年度",
+    "org": "NDX",
+    "date": "2026-12-11T16:00:00-05:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "index",
+      "index_announce",
+      "NDX"
+    ],
+    "thesis": "名单在**盘后**公布,被纳入的票当晚就跳;但**被动基金还没进场**,这一跳是主动资金抢跑。",
+    "watch": [
+      "纳入/剔除名单(盘后,S&P DJI 官网)",
+      "⚠️ 冲击发生在**公告当晚盘后**:12 例实测拉升中位 +8.21%,11/12 为正",
+      "⚠️ **次日开盘几乎从不超过盘后最高**(10/12 低于) —— 以盘后最高为基准,一周收益中位仅 +0.01%、5/11 为负。**影响力 ≠ 可获取收益**",
+      "⚠️ 成分变更**不止这一天**:并购/破产引发的增删是临时公告,约提前 5 个交易日"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "rebal-index-trade-2026-12-18-spx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "标普季度调仓·再平衡交易日(三巫日)",
+    "subtitle": "被动盘落地·2026Q4",
+    "org": "SPX",
+    "date": "2026-12-18T16:00:00-05:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "index",
+      "index_trade",
+      "SPX"
+    ],
+    "thesis": "指数基金在**收盘集合竞价**一次性成交 —— 这才是被动买盘真正落地的那一刻,全年成交量最大的几个收盘之一。",
+    "watch": [
+      "收盘集合竞价成交量(量比中位 7.14x)",
+      "⚠️ 纳指100 这天做的是**权重再平衡**,不是成分大换血;集中度封顶写在**年度重构**那一轮",
+      "⚠️ 标普与纳指100 是两套规则,不许混着说"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "rebal-index-trade-2026-12-18-ndx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "纳指100·季度再平衡",
+    "subtitle": "被动盘落地·2026Q4",
+    "org": "NDX",
+    "date": "2026-12-18T16:00:00-05:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "index",
+      "index_trade",
+      "NDX"
+    ],
+    "thesis": "指数基金在**收盘集合竞价**一次性成交 —— 这才是被动买盘真正落地的那一刻,全年成交量最大的几个收盘之一。",
+    "watch": [
+      "收盘集合竞价成交量(量比中位 7.14x)",
+      "⚠️ 纳指100 这天做的是**权重再平衡**,不是成分大换血;集中度封顶写在**年度重构**那一轮",
+      "⚠️ 标普与纳指100 是两套规则,不许混着说"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "rebal-index-effective-2026-12-21-spx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "标普季度调仓·生效",
+    "subtitle": "生效(被动需求已消失)·2026Q4",
+    "org": "SPX",
+    "date": "2026-12-21T16:00:00-05:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 2,
+    "tags": [
+      "index",
+      "index_effective",
+      "SPX"
+    ],
+    "thesis": "开盘前生效,但被动买盘在**上一个收盘**就已完成。历史上这天之后常见反向 —— **不许把「被纳入」当成这天的买入理由**。",
+    "watch": [
+      "生效日超额:12 例中位 -0.44%,仅 42% 为正",
+      "⚠️ **反向不在生效日当天,在其后那一周**:生效后 5 日中位 -0.67%、只有 33% 为正,尾部到 -13.9%"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "rebal-index-effective-2026-12-21-ndx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "纳指100·年度重构生效",
+    "subtitle": "生效(被动需求已消失)·2026 年度",
+    "org": "NDX",
+    "date": "2026-12-21T16:00:00-05:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 2,
+    "tags": [
+      "index",
+      "index_effective",
+      "NDX"
+    ],
+    "thesis": "开盘前生效,但被动买盘在**上一个收盘**就已完成。历史上这天之后常见反向 —— **不许把「被纳入」当成这天的买入理由**。",
+    "watch": [
+      "生效日超额:12 例中位 -0.44%,仅 42% 为正",
+      "⚠️ **反向不在生效日当天,在其后那一周**:生效后 5 日中位 -0.67%、只有 33% 为正,尾部到 -13.9%"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "rebal-flow-window-2026-12-31-all",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "季末再平衡窗口",
+    "subtitle": "资金流窗口·2026Q4",
+    "org": "全市场",
+    "date": "2026-12-31T16:00:00-05:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 1,
+    "tags": [
+      "index",
+      "flow_window"
+    ],
+    "thesis": "养老金/目标日期基金按目标权重回补。**方向不固定** —— 取决于本季股债相对表现,股票跑赢越多越要卖股买债。",
+    "watch": [
+      "⚠️ **不许默认「季末=买盘」**,先看本季股债相对表现",
+      "⚠️ 资金流规模若无一手来源,**写「未取到」,不许编**"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
     "afterHours": {
       "move": "",
       "note": ""
