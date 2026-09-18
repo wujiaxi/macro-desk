@@ -28,16 +28,17 @@
   <p><a class="alt" href="../">← 回到静态版（始终可用）</a></p>
 </div></div>
 <script>
-// live.json 由 ~/desk_live_publish.sh 在隧道地址变化时自动更新。
-// 加时间戳绕开缓存:Pages 的 CDN 会缓存 json,不绕开就会跳到已失效的旧地址。
+// live.json 由隧道脚本在地址变化时更新。加时间戳绕开 Pages CDN 缓存。
+// 2026-09-18 加探活:域名被注册局 serverHold 时目标是 NXDOMAIN,直接 location.replace 会把人扔到
+// 浏览器错误页。先用 no-cors fetch 探一下 —— 不透明响应也算"活"(哪怕 404),只有 DNS/网络失败才 reject。
 fetch("./live.json?t=" + Date.now()).then(r => r.json()).then(d => {
   if (!d.url) throw new Error("no url");
   document.getElementById("u").textContent = d.url + "  （更新于 " + (d.updated || "?") + "）";
   document.getElementById("go").href = d.url;
-  location.replace(d.url);
+  return fetch(d.url, {mode: "no-cors", cache: "no-store"}).then(() => location.replace(d.url));
 }).catch(e => {
   document.getElementById("msg").innerHTML =
-    '<span class="err">实时服务当前不可达</span> —— 本机可能没开机，或隧道正在重连。' +
+    '<span class="err">实时服务当前不可达</span> —— 本机可能没开机、隧道在重连，或域名解析暂时失效。' +
     '静态版随时可看。';
 });
 </script>
