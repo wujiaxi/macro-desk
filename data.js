@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-18 13:16 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-18 15:30 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,624.44",
-    "chg": "-0.17%",
-    "dir": "down",
-    "note": "实时 13:16 ET"
+    "value": "7,638.21",
+    "chg": "+0.02%",
+    "dir": "up",
+    "note": "实时 15:30 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "29,459.0",
-    "chg": "+0.04%",
+    "value": "29,533.2",
+    "chg": "+0.29%",
     "dir": "up",
-    "note": "实时 13:16 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "DXY",
-    "value": "100.27",
-    "chg": "+0.03%",
-    "dir": "up",
-    "note": "实时 13:16 ET"
+    "value": "100.20",
+    "chg": "-0.04%",
+    "dir": "down",
+    "note": "实时 15:30 ET"
   },
   {
     "label": "黄金",
-    "value": "4,423.70",
-    "chg": "+0.62%",
+    "value": "4,420.10",
+    "chg": "+0.53%",
     "dir": "up",
-    "note": "实时 13:16 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "95.94",
-    "chg": "-5.17%",
+    "value": "95.56",
+    "chg": "-5.55%",
     "dir": "down",
-    "note": "实时 13:16 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "BTC",
-    "value": "80,925",
-    "chg": "+5.99%",
+    "value": "81,193",
+    "chg": "+6.35%",
     "dir": "up",
-    "note": "实时 13:16 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "VIX",
-    "value": "15.43",
-    "chg": "-0.01",
+    "value": "15.00",
+    "chg": "-0.44",
     "dir": "down",
-    "note": "实时 13:16 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.00%",
-    "chg": "+5.3bp",
+    "chg": "+5.1bp",
     "dir": "up",
-    "note": "实时 13:16 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.34%",
-    "chg": "+4.0bp",
+    "value": "5.33%",
+    "chg": "+3.5bp",
     "dir": "up",
-    "note": "实时 13:16 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "US 2Y",
@@ -304,14 +304,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "-5.30%"
-      },
-      {
-        "name": "综合分",
-        "value": "72.8"
-      },
-      {
-        "name": "象限动作",
-        "value": "买入/持有"
       }
     ],
     "targets": {
@@ -585,14 +577,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "-2.82%"
-      },
-      {
-        "name": "综合分",
-        "value": "70.8"
-      },
-      {
-        "name": "象限动作",
-        "value": "买入/持有（本卡读作『持有不加』—— 安全边际 -2.83% 为负，矩阵允许的『买入』一档被安全边际否决）"
       }
     ],
     "targets": {
@@ -1717,14 +1701,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "-29.34%"
-      },
-      {
-        "name": "综合分",
-        "value": "58.4"
-      },
-      {
-        "name": "象限动作",
-        "value": "等待企稳分批"
       }
     ],
     "targets": {
@@ -2053,14 +2029,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "+4.90%"
-      },
-      {
-        "name": "综合分",
-        "value": "73.8"
-      },
-      {
-        "name": "象限动作",
-        "value": "等待企稳分批"
       }
     ],
     "targets": {
@@ -2478,14 +2446,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "-47.86%"
-      },
-      {
-        "name": "综合分",
-        "value": "31.7"
-      },
-      {
-        "name": "象限动作",
-        "value": "双弱-回避/清仓"
       }
     ],
     "targets": {
@@ -2560,14 +2520,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "-5.30%"
-      },
-      {
-        "name": "综合分",
-        "value": "72.8"
-      },
-      {
-        "name": "象限动作",
-        "value": "买入/持有"
       }
     ],
     "targets": {
@@ -2772,14 +2724,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "-19.38%"
-      },
-      {
-        "name": "综合分",
-        "value": "50.4"
-      },
-      {
-        "name": "象限动作",
-        "value": "回避(双弱象限:基本面60<65且技术面28<60)"
       }
     ],
     "targets": {
@@ -2854,14 +2798,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "-7.28%"
-      },
-      {
-        "name": "综合分",
-        "value": "53.2"
-      },
-      {
-        "name": "象限动作",
-        "value": "回避"
       }
     ],
     "targets": {
@@ -2972,14 +2908,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "-22.48%"
-      },
-      {
-        "name": "综合分",
-        "value": "58.4"
-      },
-      {
-        "name": "象限动作",
-        "value": "回避/减持"
       }
     ],
     "targets": {
@@ -3054,14 +2982,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "-23.33%"
-      },
-      {
-        "name": "综合分",
-        "value": "63.7"
-      },
-      {
-        "name": "象限动作",
-        "value": "基本面 61(<65 弱)+ 技术面 70(>=60 强) -> 反弹观望/减持:仓位上限由 6 折降至 4 折,反弹至 277.8-278.6 阻力带为减持位,271.58 以上一股不加;回踩 236-247 三均线收敛带才分批,跌破 226 止损重估"
       }
     ],
     "targets": {
@@ -3185,14 +3105,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "-35.47%"
-      },
-      {
-        "name": "综合分",
-        "value": "66.6"
-      },
-      {
-        "name": "象限动作",
-        "value": "买入/持有(象限机械结论;安全边际 -35.5% 触发强制降级, 实际动作为持有不加仓)"
       }
     ],
     "targets": {
@@ -3410,14 +3322,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "-2.82%"
-      },
-      {
-        "name": "综合分",
-        "value": "70.8"
-      },
-      {
-        "name": "象限动作",
-        "value": "买入/持有（本卡读作『持有不加』—— 安全边际 -2.83% 为负，矩阵允许的『买入』一档被安全边际否决）"
       }
     ],
     "targets": {
@@ -3978,14 +3882,6 @@ export const events = [
       {
         "name": "安全边际",
         "value": "-17.94%"
-      },
-      {
-        "name": "综合分",
-        "value": "48.0"
-      },
-      {
-        "name": "象限动作",
-        "value": "回避"
       }
     ],
     "targets": {
