@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-19 00:30 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
+  "updated": "2026-09-19 10:29 ET · ⚠️ 2 条告警: 会议日历 [ALERT] ocp-summit: 按 cadence 推算下一场…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,77 +16,77 @@ export const markets = [
     "value": "7,650.50",
     "chg": "+0.17%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:29 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,644.2",
     "chg": "+0.67%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:29 ET"
   },
   {
     "label": "DXY",
     "value": "100.22",
     "chg": "-0.01%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:29 ET"
   },
   {
     "label": "黄金",
     "value": "4,424.90",
     "chg": "+0.64%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:29 ET"
   },
   {
     "label": "WTI 原油",
     "value": "100.30",
     "chg": "-0.86%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:29 ET"
   },
   {
     "label": "BTC",
-    "value": "81,102",
-    "chg": "+0.27%",
+    "value": "81,531",
+    "chg": "+0.80%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:29 ET"
   },
   {
     "label": "VIX",
     "value": "14.81",
     "chg": "-0.63",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:29 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.00%",
     "chg": "+5.1bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:29 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.33%",
     "chg": "+3.5bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:29 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.67%",
     "chg": "-7.0bp",
     "dir": "down",
-    "note": "as-of 2026-09-17 · 2s10s +27bp"
+    "note": "as-of 2026-09-17 · 2s10s +25bp"
   },
   {
     "label": "10月加息概率",
-    "value": "55%",
+    "value": "57%",
     "chg": "",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-09-17 ⚠️"
+    "note": "ZQ 期货自算 · 2026-09-18 ⚠️"
   }
 ];
 
@@ -1138,108 +1138,6 @@ export const events = [
         "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260916.pdf"
       }
     ]
-  },
-  {
-    "id": "rebal-index-trade-2026-09-18-spx",
-    "kind": "macro",
-    "ticker": "",
-    "company": "",
-    "title": "标普季度调仓·再平衡交易日(三巫日)",
-    "subtitle": "被动盘落地·2026Q3",
-    "org": "SPX",
-    "date": "2026-09-18T16:00:00-04:00",
-    "dateNote": "规则算出的日期,非估计值",
-    "dateConfirmed": true,
-    "importance": 3,
-    "tags": [
-      "index",
-      "index_trade",
-      "SPX"
-    ],
-    "thesis": "指数基金在**收盘集合竞价**一次性成交 —— 这才是被动买盘真正落地的那一刻,全年成交量最大的几个收盘之一。",
-    "watch": [
-      "收盘集合竞价成交量(量比中位 7.14x)",
-      "⚠️ 纳指100 这天做的是**权重再平衡**,不是成分大换血;集中度封顶写在**年度重构**那一轮",
-      "⚠️ 标普与纳指100 是两套规则,不许混着说"
-    ],
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [],
-    "links": [
-      {
-        "label": "标普指数方法论",
-        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
-      },
-      {
-        "label": "纳斯达克100 方法论",
-        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
-      }
-    ],
-    "consensus": {},
-    "segments": {},
-    "guidance": {},
-    "options": {},
-    "valuation": [],
-    "targets": {},
-    "afterHours": {
-      "move": "",
-      "note": ""
-    }
-  },
-  {
-    "id": "rebal-index-trade-2026-09-18-ndx",
-    "kind": "macro",
-    "ticker": "",
-    "company": "",
-    "title": "纳指100·季度再平衡",
-    "subtitle": "被动盘落地·2026Q3",
-    "org": "NDX",
-    "date": "2026-09-18T16:00:00-04:00",
-    "dateNote": "规则算出的日期,非估计值",
-    "dateConfirmed": true,
-    "importance": 3,
-    "tags": [
-      "index",
-      "index_trade",
-      "NDX"
-    ],
-    "thesis": "指数基金在**收盘集合竞价**一次性成交 —— 这才是被动买盘真正落地的那一刻,全年成交量最大的几个收盘之一。",
-    "watch": [
-      "收盘集合竞价成交量(量比中位 7.14x)",
-      "⚠️ 纳指100 这天做的是**权重再平衡**,不是成分大换血;集中度封顶写在**年度重构**那一轮",
-      "⚠️ 标普与纳指100 是两套规则,不许混着说"
-    ],
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [],
-    "links": [
-      {
-        "label": "标普指数方法论",
-        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
-      },
-      {
-        "label": "纳斯达克100 方法论",
-        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
-      }
-    ],
-    "consensus": {},
-    "segments": {},
-    "guidance": {},
-    "options": {},
-    "valuation": [],
-    "targets": {},
-    "afterHours": {
-      "move": "",
-      "note": ""
-    }
   },
   {
     "id": "rebal-index-effective-2026-09-21-spx",
@@ -2569,11 +2467,11 @@ export const events = [
       {
         "name": "本次会议隐含变动",
         "value": "+14bp",
-        "note": "ZQ 自算 · 2026-09-17"
+        "note": "ZQ 自算 · 2026-09-18"
       },
       {
         "name": "P(加息 25bp)",
-        "value": "55%",
+        "value": "57%",
         "note": "月末会议 N-d=3<7,价格噪声放大 10×;改用次月 2026-11 合约当 r_post"
       },
       {
