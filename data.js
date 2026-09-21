@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-21 13:00 ET",
+  "updated": "2026-09-21 13:30 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,754.01",
-    "chg": "+1.35%",
+    "value": "7,758.40",
+    "chg": "+1.41%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "30,380.8",
-    "chg": "+2.49%",
+    "value": "30,384.6",
+    "chg": "+2.50%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "DXY",
-    "value": "100.39",
-    "chg": "+0.08%",
+    "value": "100.40",
+    "chg": "+0.09%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "黄金",
-    "value": "4,384.10",
-    "chg": "-0.27%",
+    "value": "4,380.20",
+    "chg": "-0.35%",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "91.31",
-    "chg": "-2.83%",
+    "value": "91.65",
+    "chg": "-2.47%",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "BTC",
-    "value": "85,968",
-    "chg": "+5.92%",
+    "value": "85,902",
+    "chg": "+5.84%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "VIX",
-    "value": "15.08",
-    "chg": "+0.27",
+    "value": "15.01",
+    "chg": "+0.20",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.95%",
-    "chg": "-4.3bp",
+    "value": "4.96%",
+    "chg": "-3.7bp",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.29%",
-    "chg": "-3.9bp",
+    "value": "5.30%",
+    "chg": "-3.5bp",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "US 2Y",
