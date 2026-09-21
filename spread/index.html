@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>持仓利差台 · Macro Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;background:#0b0f14}
+  *{box-sizing:border-box}
+  body{color:#e6edf3;font-family:Archivo,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+       -webkit-font-smoothing:antialiased;font-size:14px;line-height:1.5}
+  a{color:#2dd4bf;text-decoration:none}
+  a:hover{color:#5eead4}
+  ::-webkit-scrollbar{height:8px;width:8px}
+  ::-webkit-scrollbar-thumb{background:#263140;border-radius:4px}
+  ::-webkit-scrollbar-track{background:#0f141a}
+  @keyframes livePulse{0%,100%{opacity:1}50%{opacity:.25}}
+  .mono{font-family:'Roboto Mono',monospace;font-variant-numeric:tabular-nums}
+  .wrap{max-width:1280px;margin:0 auto;padding:22px}
+  .rail{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:22px}
+  .cell{background:#0f141a;border:1px solid #1e2630;border-radius:10px;padding:14px 16px}
+  .lab{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:#7d8b9c;font-weight:600}
+  .big{font-family:'Roboto Mono',monospace;font-variant-numeric:tabular-nums;font-size:27px;
+       font-weight:600;line-height:1.05;margin-top:8px}
+  .note{font-size:11.5px;color:#7d8b9c;margin-top:5px}
+  .gauge{height:4px;border-radius:3px;background:#161c24;overflow:hidden;margin-top:10px}
+  .gauge i{display:block;height:100%;border-radius:3px;background:#2dd4bf;transition:width .5s ease}
+  h2{font-size:15px;font-weight:600;margin:0}
+  .sechead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px;margin-bottom:11px}
+  .hint{font-size:11.5px;color:#7d8b9c}
+  section{margin-bottom:26px}
+  .panel{background:#0f141a;border:1px solid #1e2630;border-radius:10px;padding:14px 16px 8px}
+  .cw{overflow-x:auto}
+  .tools{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+  .chip{font:inherit;font-size:12px;padding:5px 12px;border-radius:999px;cursor:pointer;
+        border:1px solid #263140;background:#0f141a;color:#c6d2e0}
+  .chip[aria-pressed="true"]{background:#16302c;border-color:#2dd4bf;color:#2dd4bf}
+  .chip:focus-visible{outline:2px solid #2dd4bf;outline-offset:2px}
+  .issuer{border:1px solid #1e2630;border-radius:10px;background:#0f141a;margin-bottom:9px;overflow:hidden}
+  .ihead{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;padding:12px 15px;cursor:pointer;
+         background:none;border:0;width:100%;text-align:left;font:inherit;color:inherit}
+  .ihead:hover{background:#131a22}
+  .ihead:focus-visible{outline:2px solid #2dd4bf;outline-offset:-2px}
+  .tick{font-family:'Roboto Mono',monospace;font-weight:600;font-size:13.5px;
+        background:#16202b;color:#c6d2e0;padding:3px 9px;border-radius:5px}
+  .iname{font-weight:500;font-size:13.5px}
+  .icount{font-size:11.5px;color:#7d8b9c}
+  .isp{margin-left:auto;display:flex;align-items:baseline;gap:7px}
+  .isp b{font-family:'Roboto Mono',monospace;font-variant-numeric:tabular-nums;font-size:18px;font-weight:600}
+  .isp span{font-size:10px;color:#7d8b9c;letter-spacing:.07em;text-transform:uppercase}
+  .caret{color:#7d8b9c;font-size:10px;width:11px;flex:none}
+  .tw{overflow-x:auto;border-top:1px solid #1e2630}
+  table{border-collapse:collapse;width:100%;min-width:680px}
+  th,td{padding:7px 13px;text-align:right;white-space:nowrap;border-bottom:1px solid #161d26}
+  th{font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:#7d8b9c;font-weight:600;background:#111820}
+  td:first-child,th:first-child{text-align:left;white-space:normal;min-width:200px}
+  tbody tr:last-child td{border-bottom:0}
+  tbody tr:hover td{background:#131a22}
+  .num{font-family:'Roboto Mono',monospace;font-variant-numeric:tabular-nums;font-size:12.5px}
+  .up{color:#2dd4bf}.down{color:#f87171}
+  .src{font-family:'Roboto Mono',monospace;font-size:9.5px;padding:2px 6px;border-radius:4px;
+       border:1px solid #263140;color:#7d8b9c}
+  .src.finra{border-color:#2dd4bf;color:#2dd4bf;background:#12251f}
+  .spc{position:relative}
+  .bar{position:absolute;left:0;top:50%;transform:translateY(-50%);height:16px;border-radius:2px;opacity:.28;pointer-events:none}
+  .spc .v{position:relative}
+  .err{color:#f87171;font-size:12.5px;padding:10px 14px;background:#2a1618;border:1px solid #58252a;
+       border-radius:8px;margin-bottom:14px}
+  footer{margin-top:32px;padding-top:16px;border-top:1px solid #1e2630;color:#7d8b9c;font-size:11.5px;line-height:1.7}
+  footer b{color:#c6d2e0;font-weight:600}
+  footer ul{margin:8px 0 0;padding-left:18px}
+  footer li{margin-bottom:4px}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  @media (max-width:560px){.wrap{padding:16px}.big{font-size:23px}.isp{margin-left:0;width:100%}}
+</style>
+</head>
+<body>
+
+<div style="position:sticky;top:0;z-index:20;background:rgba(11,15,20,.92);backdrop-filter:blur(10px);border-bottom:1px solid #1e2630">
+  <div style="max-width:1280px;margin:0 auto;padding:14px 22px;display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+    <div style="display:flex;align-items:baseline;gap:10px;min-width:0">
+      <div style="font-size:17px;font-weight:700;letter-spacing:-.01em;white-space:nowrap">Macro Desk</div>
+      <div style="font-size:12px;color:#7d8b9c;white-space:nowrap">持仓公司债信用利差</div>
+    </div>
+    <nav style="display:flex;align-items:center;gap:2px;padding:2px;border:1px solid #1e2630;border-radius:8px;background:#0f141a">
+      <a href="../" style="padding:5px 12px;border-radius:6px;color:#7d8b9c;font-size:12px;font-weight:500;text-decoration:none;white-space:nowrap">事件台</a>
+      <a href="../archive/" style="padding:5px 12px;border-radius:6px;color:#7d8b9c;font-size:12px;font-weight:500;text-decoration:none;white-space:nowrap">每日复盘</a>
+      <a href="https://quant-v31-market-desk.pigxyz.chatgpt.site/" target="_blank" rel="noopener noreferrer" style="padding:5px 12px;border-radius:6px;color:#7d8b9c;font-size:12px;font-weight:500;text-decoration:none;white-space:nowrap">量化台<span style="font-size:9px;opacity:.6;margin-left:3px">&#8599;</span></a>
+      <span style="padding:5px 12px;border-radius:6px;background:#16202b;color:#e6edf3;font-size:12px;font-weight:600;white-space:nowrap">利差台</span>
+    </nav>
+    <div style="flex:1"></div>
+    <div style="display:flex;align-items:center;gap:8px;font-family:'Roboto Mono',monospace;font-size:11px;color:#7d8b9c">
+      <span style="width:6px;height:6px;border-radius:50%;background:#2dd4bf;animation:livePulse 2.4s ease-in-out infinite"></span>
+      <span id="stamp">取数中…</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div id="errbox"></div>
+
+  <div class="rail">
+    <div class="cell">
+      <div class="lab">CNN 恐惧贪婪</div>
+      <div class="big" id="fgVal">—</div><div class="note" id="fgNote">取数中</div>
+      <div class="gauge"><i id="fgBar" style="width:0%"></i></div>
+    </div>
+    <div class="cell">
+      <div class="lab">标普500 站上20日线</div>
+      <div class="big" id="spxVal">—</div><div class="note" id="spxNote">取数中</div>
+      <div class="gauge"><i id="spxBar" style="width:0%"></i></div>
+    </div>
+    <div class="cell">
+      <div class="lab">纳指100 站上20日线</div>
+      <div class="big" id="ndxVal">—</div><div class="note" id="ndxNote">取数中</div>
+      <div class="gauge"><i id="ndxBar" style="width:0%"></i></div>
+    </div>
+    <div class="cell">
+      <div class="lab">持仓平均信用利差</div>
+      <div class="big" id="avgVal">—</div><div class="note" id="avgNote">取数中</div>
+      <div class="gauge"><i id="avgBar" style="width:0%"></i></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="sechead"><h2>均线广度</h2><div class="hint" id="brHint">S5TW／NDTW · 近一年日线</div></div>
+    <div class="panel"><div class="cw"><svg id="breadth" viewBox="0 0 900 250" width="100%" height="250"
+      role="img" aria-label="标普500 与纳指100 站上均线的成分股占比走势"><text x="450" y="128" text-anchor="middle"
+      font-size="13" fill="#7d8b9c" font-family="Archivo,sans-serif">正在取广度历史…</text></svg></div></div>
+  </section>
+
+  <section>
+    <div class="sechead"><h2>美国国债收益率曲线</h2><div class="hint" id="curveHint">利差的基准线</div></div>
+    <div class="panel"><div class="cw"><svg id="curve" viewBox="0 0 900 220" width="100%" height="220"
+      role="img" aria-label="美国国债收益率曲线"><text x="450" y="112" text-anchor="middle" font-size="13"
+      fill="#7d8b9c" font-family="Archivo,sans-serif">正在取国债曲线…</text></svg></div></div>
+  </section>
+
+  <section>
+    <div class="sechead"><h2>持仓公司债</h2><div class="hint" id="bondHint">点公司名展开逐只债券</div></div>
+    <div class="tools">
+      <button class="chip" id="onlyFinra" type="button" aria-pressed="true">只看 FINRA 报价</button>
+      <button class="chip" id="sortBy" type="button" aria-pressed="false">按利差排序</button>
+      <button class="chip" id="expandAll" type="button" aria-pressed="false">全部展开</button>
+    </div>
+    <div id="issuers"><div class="issuer"><div style="padding:16px;color:#7d8b9c;font-size:13px">正在取 22 家公司的债券报价…</div></div></div>
+  </section>
+
+  <footer>
+    <b>口径</b>
+    <ul>
+      <li><b>利差</b>＝该债到期收益率 − 同到期日美国国债收益率（曲线线性插值），单位基点。这是市场对这家公司的信用定价，比债券价格本身更能说明问题。</li>
+      <li><b>报价来源</b>：<span class="src finra">FINRA</span> 是美国场外市场（TRACE）报价，口径最权威；其余为德国交易所（FWB／SWB／GETTEX／MUN／DUS）挂牌，同一只债在欧洲挂牌、流动性远低于美国场外，只在 FINRA 无报价时作后备。债券与国债曲线为本页实时取数，多数为延迟约 15 分钟的流式报价。</li>
+      <li><b>均线广度</b>取 S5TW／NDTW（标普500／纳指100 站上 20 日均线的成分股占比，Barchart 日终）与 S5TH／NDTH（200 日）。这两类符号只存在于 TradingView 的图表通道，而那条通道校验 Origin、浏览器不允许伪造，所以由本机脚本日更抓好推到本站，这里读那份 JSON。<b>恐惧贪婪</b>同理：CNN 校验 Referer，只认 cnn.com 的，前端直取永远是 418。</li>
+      <li>持仓 26 张论点卡里，<b>4 家没有在外流通的公司债</b>（TSLA／TSM／BE／DUOL），不在此追踪。另有几家（HOOD／NBIS／CMOC）在外的是<b>可转债</b>——零息或低息、价格远高于面值（转股价值推上去的），没有常规到期收益率，算不出对国债的利差，所以列出来但不给数字。</li>
+    </ul>
+  </footer>
+</div>
+
+<script>
+const ISSUERS=[
+ {t:"AAPL", n:"苹果",        q:"Apple Inc",              p:["apple inc"]},
+ {t:"MSFT", n:"微软",        q:"Microsoft",              p:["microsoft corp"]},
+ {t:"GOOGL",n:"谷歌",        q:"Alphabet",               p:["alphabet inc"]},
+ {t:"AMZN", n:"亚马逊",      q:"Amazon.com",             p:["amazon.com"]},
+ {t:"META", n:"Meta",        q:"Meta Platforms",         p:["meta platforms"]},
+ {t:"NVDA", n:"英伟达",      q:"NVIDIA Corporation",     p:["nvidia corp"]},
+ {t:"MU",   n:"美光",        q:"Micron Technology",      p:["micron tech"]},
+ {t:"AVGO", n:"博通",        q:"Broadcom",               p:["broadcom"]},
+ {t:"AMD",  n:"AMD",         q:"Advanced Micro Devices", p:["advanced micro devices"]},
+ {t:"GEV",  n:"GE Vernova",  q:"GE Vernova",             p:["ge vernova"]},
+ {t:"LLY",  n:"礼来",        q:"Eli Lilly",              p:["eli lilly"]},
+ {t:"INTC", n:"英特尔",      q:"Intel Corporation",      p:["intel corp"]},
+ {t:"MRVL", n:"Marvell",     q:"Marvell",                p:["marvell tech"]},
+ {t:"VRT",  n:"Vertiv",      q:"Vertiv",                 p:["vertiv"]},
+ {t:"VST",  n:"Vistra",      q:"Vistra",                 p:["vistra"]},
+ {t:"BABA", n:"阿里巴巴",    q:"Alibaba Group",          p:["alibaba group"]},
+ {t:"ABNB", n:"爱彼迎",      q:"Airbnb",                 p:["airbnb"]},
+ {t:"HOOD", n:"Robinhood",   q:"Robinhood",              p:["robinhood markets"]},
+ {t:"NBIS", n:"Nebius",      q:"Nebius",                 p:["nebius group"]},
+ {t:"NOK",  n:"诺基亚",      q:"Nokia Oyj",              p:["nokia oyj"]},
+ {t:"SKH",  n:"SK 海力士",   q:"SK hynix",               p:["sk hynix"]},
+ {t:"CMOC", n:"洛阳钼业",    q:"CMOC",                   p:["cmoc"]},
+];
+const state={bonds:{},meta:{},curve:[],onlyFinra:true,sortSpread:false,open:new Set(),errs:[]};
+
+// Content-Type 必须 text/plain：TradingView 的 CORS 只放行 Referer 与 Accept，
+// application/json 会触发预检然后被拒。服务端不校验这个头，照常解析 JSON。
+async function scan(market,body){
+  const r=await fetch("https://scanner.tradingview.com/"+market+"/scan",
+    {method:"POST",headers:{"Content-Type":"text/plain;charset=UTF-8"},body:JSON.stringify(body)});
+  if(!r.ok) throw new Error("HTTP "+r.status);
+  return r.json();
+}
+const fmt=(v,d=2)=>(v==null||!isFinite(v))?"—":v.toFixed(d);
+const pct=v=>(v==null||!isFinite(v))?"—":(v>0?"+":"")+v.toFixed(2)+"%";
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+function ymd(n){const s=String(n);return s.length===8?s.slice(0,4)+"-"+s.slice(4,6)+"-"+s.slice(6):"—";}
+function yearsTo(n){const s=String(n);if(s.length!==8)return null;
+  const d=new Date(+s.slice(0,4),+s.slice(4,6)-1,+s.slice(6));
+  return (d-new Date())/(365.25*24*3600*1000);}
+
+async function loadCurve(){
+  // 不要按到期日排序再截断：升序取前 N 全是短期国库券，曲线长端整段缺失，
+  // 于是每只长久期公司债都在 clamp 后的短端基准上算利差，利差集体虚高。取全量。
+  const d=await scan("bond",{filter:[{left:"description",operation:"match",right:"United States Treasury"}],
+    columns:["description","maturity_date","yield_to_maturity"],range:[0,2999]});
+  const seen=new Set(),pts=[];
+  for(const row of (d.data||[])){
+    const [desc,mat,y]=row.d;
+    if(!desc||!mat||y==null||!isFinite(y)||seen.has(desc)) continue;
+    seen.add(desc);
+    const t=yearsTo(mat);
+    if(t==null||t<=.02||t>31||y<0||y>15) continue;
+    pts.push([t,y]);
+  }
+  pts.sort((a,b)=>a[0]-b[0]);
+  state.curve=pts; return pts;
+}
+function ustAt(y){
+  const c=state.curve;
+  if(!c.length||y==null) return null;
+  if(y<=c[0][0]) return c[0][1];
+  if(y>=c[c.length-1][0]) return c[c.length-1][1];
+  for(let i=1;i<c.length;i++) if(c[i][0]>=y){
+    const [x0,y0]=c[i-1],[x1,y1]=c[i];
+    return x1===x0?y1:y0+(y1-y0)*(y-x0)/(x1-x0);
+  }
+  return null;
+}
+async function loadIssuer(iss){
+  const d=await scan("bond",{filter:[{left:"description",operation:"match",right:iss.q}],
+    columns:["name","description","close","change","maturity_date","yield_to_maturity"],range:[0,400]});
+  const by=new Map(); let matched=0;
+  for(const row of (d.data||[])){
+    const [nm,desc,close,chg,mat,ytm]=row.d;
+    if(!desc) continue;
+    const low=desc.toLowerCase();
+    // 模糊检索负责召回，严格前缀负责排除：搜 Amazon 会带回
+    // "Amazon Conservation Designated Activity Company"（雨林保护机构，与公司无关）。
+    const hit=iss.p.find(p=>low.startsWith(p));
+    if(!hit) continue;
+    matched++;
+    // 可转债没有常规 YTM（TradingView 给 null），算不了对国债的利差。
+    // 这类要和「没检索到」分开说，否则「这家只有可转债」会长得像「取数失败」。
+    if(ytm==null||!isFinite(ytm)||mat==null) continue;
+    const ex=(row.s||"").split(":")[0], prev=by.get(desc);
+    if(!prev||(ex==="FINRA"&&prev.ex!=="FINRA")||(ex===prev.ex&&prev.chg==null&&chg!=null))
+      by.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ytm,ex});
+  }
+  const rows=[...by.values()].map(b=>{
+    const t=yearsTo(b.mat),u=ustAt(t);
+    return {...b,years:t,ust:u,spread:u==null?null:(b.ytm-u)*100};
+  }).sort((a,b)=>a.years-b.years);
+  state.meta[iss.t]={matched};
+  return rows;
+}
+async function loadLocal(){
+  const r=await fetch("../data/breadth.json",{cache:"no-store"});
+  if(!r.ok) throw new Error("HTTP "+r.status);
+  return r.json();
+}
+
+/* ── 图 ── */
+function drawBreadth(series){
+  const el=document.getElementById("breadth");
+  const live=series.filter(s=>s.pts&&s.pts.length);
+  if(!live.length){el.innerHTML='<text x="450" y="128" text-anchor="middle" font-size="13" fill="#7d8b9c" font-family="Archivo,sans-serif">广度历史取数失败</text>';return false;}
+  const W=900,H=250,L=42,R=96,T=16,B=30;
+  const n=Math.max(...live.map(s=>s.pts.length));
+  const X=i=>L+i/(n-1)*(W-L-R), Y=v=>T+(100-v)/100*(H-T-B);
+  let g="";
+  for(const v of [0,20,50,80,100]){
+    const em=v===50;
+    g+=`<line x1="${L}" y1="${Y(v).toFixed(1)}" x2="${W-R}" y2="${Y(v).toFixed(1)}" stroke="#263140" stroke-width="1" ${em?'stroke-dasharray="4 3"':'stroke-opacity=".55"'}/>`;
+    g+=`<text x="${L-7}" y="${(Y(v)+4).toFixed(1)}" text-anchor="end" font-size="10.5" fill="#7d8b9c" font-family="Roboto Mono,monospace">${v}</text>`;
+  }
+  const f=live[0].pts;
+  for(let i=0;i<f.length;i+=Math.max(1,Math.floor(f.length/4))){
+    const d=new Date(f[i][0]*1000);
+    g+=`<text x="${X(i).toFixed(1)}" y="${H-9}" text-anchor="middle" font-size="10.5" fill="#7d8b9c" font-family="Roboto Mono,monospace">${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}</text>`;
+  }
+  let paths="",taken=[];
+  for(const s of [...live].sort((a,b)=>(a.minor?0:1)-(b.minor?0:1))){
+    const off=n-s.pts.length;
+    const d=s.pts.map((p,i)=>(i?"L":"M")+X(i+off).toFixed(1)+" "+Y(p[1]).toFixed(1)).join(" ");
+    paths+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="${s.minor?1.1:1.9}" stroke-linejoin="round" stroke-opacity="${s.minor?.42:1}" ${s.minor?'stroke-dasharray="3 3"':''}/>`;
+    if(s.minor) continue;
+    const last=s.pts[s.pts.length-1];
+    let ly=Y(last[1]);
+    while(taken.some(t=>Math.abs(t-ly)<20)) ly+=20;
+    taken.push(ly);
+    paths+=`<circle cx="${X(n-1).toFixed(1)}" cy="${Y(last[1]).toFixed(1)}" r="3.2" fill="${s.color}"/>
+      <text x="${W-R+9}" y="${(ly+3).toFixed(1)}" font-size="13" fill="${s.color}" font-family="Roboto Mono,monospace" font-weight="600">${last[1].toFixed(1)}</text>
+      <text x="${W-R+9}" y="${(ly+16).toFixed(1)}" font-size="9.5" fill="#7d8b9c" font-family="Archivo,sans-serif">${s.label}</text>`;
+  }
+  el.innerHTML=g+paths; return true;
+}
+function drawCurve(){
+  const el=document.getElementById("curve"),pts=state.curve;
+  if(!pts.length){el.innerHTML='<text x="450" y="112" text-anchor="middle" font-size="13" fill="#7d8b9c" font-family="Archivo,sans-serif">国债曲线取数失败</text>';return;}
+  const W=900,H=220,L=48,R=20,T=16,B=30;
+  const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]);
+  const xmax=Math.max(...xs);
+  const ymin=Math.floor(Math.min(...ys)*2)/2-.2, ymax=Math.ceil(Math.max(...ys)*2)/2+.2;
+  const X=v=>L+v/xmax*(W-L-R), Y=v=>T+(ymax-v)/(ymax-ymin)*(H-T-B);
+  let g="";
+  for(let v=Math.ceil(ymin*2)/2;v<=ymax;v+=.5){
+    g+=`<line x1="${L}" y1="${Y(v).toFixed(1)}" x2="${W-R}" y2="${Y(v).toFixed(1)}" stroke="#263140" stroke-opacity=".55" stroke-width="1"/>
+        <text x="${L-7}" y="${(Y(v)+4).toFixed(1)}" text-anchor="end" font-size="10.5" fill="#7d8b9c" font-family="Roboto Mono,monospace">${v.toFixed(1)}</text>`;
+  }
+  for(const tk of [1,2,3,5,7,10,20,30]) if(tk<=xmax)
+    g+=`<text x="${X(tk).toFixed(1)}" y="${H-9}" text-anchor="middle" font-size="10.5" fill="#7d8b9c" font-family="Roboto Mono,monospace">${tk}y</text>`;
+  const bins=new Map();
+  for(const [t,y] of pts){const k=Math.round(t*4)/4;(bins.get(k)||bins.set(k,[]).get(k)).push(y);}
+  const sm=[...bins.entries()].map(([k,a])=>{a.sort((x,y)=>x-y);return [k,a[Math.floor(a.length/2)]];}).sort((a,b)=>a[0]-b[0]);
+  const line=sm.map((p,i)=>(i?"L":"M")+X(p[0]).toFixed(1)+" "+Y(p[1]).toFixed(1)).join(" ");
+  const area=line+` L ${X(sm[sm.length-1][0]).toFixed(1)} ${Y(ymin).toFixed(1)} L ${X(sm[0][0]).toFixed(1)} ${Y(ymin).toFixed(1)} Z`;
+  const last=sm[sm.length-1];
+  el.innerHTML=`${g}<path d="${area}" fill="#2dd4bf" fill-opacity=".08"/>
+    <path d="${line}" fill="none" stroke="#2dd4bf" stroke-width="2" stroke-linejoin="round"/>
+    <circle cx="${X(last[0]).toFixed(1)}" cy="${Y(last[1]).toFixed(1)}" r="3.4" fill="#2dd4bf"/>
+    <text x="${(X(last[0])-7).toFixed(1)}" y="${(Y(last[1])-9).toFixed(1)}" text-anchor="end" font-size="11.5" fill="#2dd4bf" font-family="Roboto Mono,monospace">${last[1].toFixed(2)}%</text>`;
+  document.getElementById("curveHint").textContent=`${sm.length} 个期限点 · 短端 ${sm[0][1].toFixed(2)}% · 长端 ${last[1].toFixed(2)}%`;
+}
+
+function rowsOf(iss){
+  let r=state.bonds[iss.t]||[];
+  if(state.onlyFinra){const f=r.filter(b=>b.ex==="FINRA"); if(f.length) r=f;}
+  return r;
+}
+function renderIssuers(){
+  const host=document.getElementById("issuers");
+  const all=ISSUERS.map(iss=>{
+    const rows=rowsOf(iss), ok=rows.filter(b=>b.spread!=null);
+    return {iss,rows,avg:ok.length?ok.reduce((s,b)=>s+b.spread,0)/ok.length:null};
+  });
+  const got=all.filter(x=>x.rows.length), missing=all.filter(x=>!x.rows.length);
+  if(state.sortSpread) got.sort((a,b)=>(b.avg??-1e9)-(a.avg??-1e9));
+  if(!got.length&&!missing.length){host.innerHTML='<div class="issuer"><div style="padding:16px;color:#7d8b9c">没有取到债券数据</div></div>';return;}
+  const maxAbs=Math.max(60,...got.flatMap(x=>x.rows.map(b=>Math.abs(b.spread||0))));
+  host.innerHTML=got.map(({iss,rows,avg})=>{
+    const open=state.open.has(iss.t);
+    const cls=avg==null?"":(avg<100?"up":avg>250?"down":"");
+    const body=open?`<div class="tw"><table><thead><tr><th>债券</th><th>到期</th><th>来源</th><th>价格</th><th>涨跌</th><th>到期收益率</th><th>同期美债</th><th>利差 bp</th></tr></thead><tbody>${rows.map(b=>{
+      const w=b.spread==null?0:Math.min(100,Math.abs(b.spread)/maxAbs*100);
+      const col=b.spread==null?"#263140":(b.spread<0?"#2dd4bf":"#f87171");
+      return `<tr><td>${esc(b.short||b.desc)}</td><td class="num">${ymd(b.mat)}</td>
+        <td><span class="src ${b.ex==="FINRA"?"finra":""}">${esc(b.ex)}</span></td>
+        <td class="num">${fmt(b.close)}</td>
+        <td class="num ${b.chg>0?"up":b.chg<0?"down":""}">${pct(b.chg)}</td>
+        <td class="num">${fmt(b.ytm)}%</td>
+        <td class="num" style="color:#7d8b9c">${fmt(b.ust)}%</td>
+        <td class="num spc"><span class="bar" style="width:${w.toFixed(0)}%;background:${col}"></span><span class="v">${b.spread==null?"—":(b.spread>0?"+":"")+b.spread.toFixed(0)}</span></td></tr>`;
+    }).join("")}</tbody></table></div>`:"";
+    return `<div class="issuer"><button class="ihead" type="button" data-t="${iss.t}" aria-expanded="${open}">
+      <span class="caret">${open?"▼":"▶"}</span><span class="tick">${iss.t}</span>
+      <span class="iname">${iss.n}</span>
+      <span class="icount">${rows.length} 只${rows.some(b=>b.ex==="FINRA")?"":" · 无 FINRA 报价"}</span>
+      <span class="isp"><b class="${cls}">${avg==null?"—":(avg>0?"+":"")+avg.toFixed(0)}</b><span>平均利差</span></span>
+    </button>${body}</div>`;
+  }).join("")+missing.map(({iss})=>{
+    const m=state.meta[iss.t];
+    const why = m==null ? "本次取数失败"
+      : m.matched>0 ? `仅有 ${m.matched} 只可转债 · 无到期收益率，算不出利差`
+      : "无在外流通的普通公司债";
+    return `<div class="issuer" style="opacity:.5"><div class="ihead" style="cursor:default">
+      <span class="caret"></span><span class="tick">${iss.t}</span><span class="iname">${iss.n}</span>
+      <span class="icount">${why}</span></div></div>`;
+  }).join("");
+  host.querySelectorAll(".ihead[data-t]").forEach(b=>b.addEventListener("click",()=>{
+    const t=b.dataset.t; state.open.has(t)?state.open.delete(t):state.open.add(t); renderIssuers();
+  }));
+  const flat=got.flatMap(x=>x.rows).filter(b=>b.spread!=null);
+  const wavg=flat.length?flat.reduce((s,b)=>s+b.spread,0)/flat.length:null;
+  document.getElementById("avgVal").textContent=wavg==null?"—":(wavg>0?"+":"")+wavg.toFixed(0);
+  document.getElementById("avgNote").textContent=wavg==null?"无数据":`${flat.length} 只债 · ${got.length} 家公司`;
+  const ab=document.getElementById("avgBar");
+  ab.style.width=wavg==null?"0%":Math.min(100,Math.abs(wavg)/400*100)+"%";
+  ab.style.background=wavg==null?"#263140":(wavg<150?"#2dd4bf":wavg>300?"#f87171":"#f0c454");
+  document.getElementById("bondHint").textContent=`${got.length} 家有报价 · 共 ${flat.length} 只债券`+(missing.length?` · ${missing.length} 家未取到`:"");
+}
+function showErr(){
+  document.getElementById("errbox").innerHTML=state.errs.length?`<div class="err">${esc(state.errs.join("；"))}</div>`:"";
+}
+
+async function boot(){
+  state.errs=[];
+  const paint=(el,p,note)=>{
+    document.getElementById(el+"Val").textContent=p==null?"—":p.toFixed(0)+(el==="fg"?"":"%");
+    document.getElementById(el+"Note").textContent=note;
+    const b=document.getElementById(el+"Bar");
+    b.style.width=(p==null?0:Math.max(0,Math.min(100,p)))+"%";
+    b.style.background=p==null?"#263140":p<30?"#f87171":p>70?"#2dd4bf":"#f0c454";
+  };
+
+  loadLocal().then(j=>{
+    if(j.fg&&j.fg.score!=null){
+      const v=j.fg.score, lab={"extreme fear":"极度恐惧",fear:"恐惧",neutral:"中性",greed:"贪婪","extreme greed":"极度贪婪"}[j.fg.rating]||j.fg.rating||"";
+      document.getElementById("fgVal").textContent=Math.round(v);
+      document.getElementById("fgNote").textContent=`${lab} · 一月前 ${Math.round(j.fg.prev_month)}`;
+      const b=document.getElementById("fgBar");
+      b.style.width=v+"%"; b.style.background=v<25?"#f87171":v>75?"#2dd4bf":"#f0c454";
+    }else{ document.getElementById("fgNote").textContent="未取到"; }
+    const S=c=>(j.series&&j.series[c]||{}).points||null;
+    const ok=drawBreadth([
+      {label:"标普500 20日",color:"#2dd4bf",pts:S("S5TW")},
+      {label:"纳指100 20日",color:"#f0c454",pts:S("NDTW")},
+      {label:"标普500 200日",color:"#2dd4bf",pts:S("S5TH"),minor:true},
+      {label:"纳指100 200日",color:"#f0c454",pts:S("NDTH"),minor:true},
+    ]);
+    for(const [el,code] of [["spx","S5TW"],["ndx","NDTW"]]){
+      const pts=S(code);
+      if(!pts||!pts.length){paint(el,null,code+" 未取到");continue;}
+      const last=pts[pts.length-1][1],prev=pts.length>1?pts[pts.length-2][1]:null;
+      paint(el,last,code+(prev==null?"":(last-prev>=0?" · 较前日 +":" · 较前日 ")+(last-prev).toFixed(1)));
+    }
+    if(ok){
+      const days=Math.max(...Object.values(j.series||{}).map(s=>s.points.length));
+      const age=Math.round((Date.now()-new Date(j.updated))/36e5);
+      document.getElementById("brHint").textContent=
+        `S5TW／NDTW（实线 20 日）与 S5TH／NDTH（虚线 200 日）· 近 ${days} 个交易日 · `+
+        (age<24?`${age} 小时前更新`:`${Math.round(age/24)} 天前更新`);
+    }
+  }).catch(e=>{
+    state.errs.push("本站广度／情绪数据取数失败（"+e.message+"）");
+    drawBreadth([]); showErr();
+  });
+
+  try{ await loadCurve(); }catch(e){ state.errs.push("国债曲线取数失败（"+e.message+"），利差无法计算"); }
+  drawCurve();
+
+  for(let i=0;i<ISSUERS.length;i+=5){
+    await Promise.all(ISSUERS.slice(i,i+5).map(async iss=>{
+      try{ state.bonds[iss.t]=await loadIssuer(iss); }
+      catch(e){ state.bonds[iss.t]=[]; state.errs.push(iss.t+" 取数失败"); }
+    }));
+    renderIssuers();
+  }
+  showErr();
+  document.getElementById("stamp").textContent="数据更新 "+new Date().toLocaleString("zh-CN",{hour12:false});
+}
+
+document.getElementById("onlyFinra").addEventListener("click",e=>{
+  state.onlyFinra=!state.onlyFinra; e.currentTarget.setAttribute("aria-pressed",String(state.onlyFinra)); renderIssuers();});
+document.getElementById("sortBy").addEventListener("click",e=>{
+  state.sortSpread=!state.sortSpread; e.currentTarget.setAttribute("aria-pressed",String(state.sortSpread)); renderIssuers();});
+document.getElementById("expandAll").addEventListener("click",e=>{
+  const on=state.open.size<ISSUERS.length/2;
+  state.open=on?new Set(ISSUERS.map(i=>i.t)):new Set();
+  e.currentTarget.setAttribute("aria-pressed",String(on)); renderIssuers();});
+boot();
+</script>
+</body>
+</html>
