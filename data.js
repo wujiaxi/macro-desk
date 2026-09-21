@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-21 14:00 ET",
+  "updated": "2026-09-21 14:30 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,759.96",
-    "chg": "+1.43%",
+    "value": "7,769.10",
+    "chg": "+1.55%",
     "dir": "up",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "30,410.6",
-    "chg": "+2.59%",
+    "value": "30,449.4",
+    "chg": "+2.72%",
     "dir": "up",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "DXY",
     "value": "100.41",
     "chg": "+0.10%",
     "dir": "up",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "黄金",
-    "value": "4,381.30",
-    "chg": "-0.33%",
+    "value": "4,389.30",
+    "chg": "-0.15%",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "92.27",
-    "chg": "-1.81%",
+    "value": "92.43",
+    "chg": "-1.64%",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "BTC",
-    "value": "85,902",
-    "chg": "+5.84%",
+    "value": "85,942",
+    "chg": "+5.89%",
     "dir": "up",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "VIX",
-    "value": "14.99",
-    "chg": "+0.18",
+    "value": "15.03",
+    "chg": "+0.22",
     "dir": "up",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.97%",
-    "chg": "-2.7bp",
+    "chg": "-2.8bp",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.30%",
-    "chg": "-2.7bp",
+    "chg": "-2.8bp",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "US 2Y",
