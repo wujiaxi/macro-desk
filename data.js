@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-22 12:00 ET",
+  "updated": "2026-09-22 12:30 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,761.29",
-    "chg": "-0.04%",
+    "value": "7,759.78",
+    "chg": "-0.06%",
     "dir": "down",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "30,614.4",
-    "chg": "+0.43%",
+    "value": "30,593.8",
+    "chg": "+0.37%",
     "dir": "up",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "DXY",
     "value": "100.68",
     "chg": "+0.32%",
     "dir": "up",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "黄金",
-    "value": "4,364.00",
-    "chg": "-0.34%",
+    "value": "4,363.70",
+    "chg": "-0.35%",
     "dir": "down",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "91.71",
-    "chg": "-1.36%",
+    "value": "91.66",
+    "chg": "-1.41%",
     "dir": "down",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "BTC",
-    "value": "86,417",
-    "chg": "-0.20%",
+    "value": "86,085",
+    "chg": "-0.59%",
     "dir": "down",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "VIX",
-    "value": "14.39",
-    "chg": "-0.47",
+    "value": "14.30",
+    "chg": "-0.56",
     "dir": "down",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.98%",
-    "chg": "+1.3bp",
+    "value": "4.97%",
+    "chg": "+1.1bp",
     "dir": "up",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.31%",
-    "chg": "+1.3bp",
+    "chg": "+1.0bp",
     "dir": "up",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "US 2Y",
