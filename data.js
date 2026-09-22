@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-22 10:00 ET",
+  "updated": "2026-09-22 10:28 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,80 +13,80 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,769.09",
+    "value": "7,768.59",
     "chg": "+0.06%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:28 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "30,636.4",
-    "chg": "+0.51%",
+    "value": "30,663.1",
+    "chg": "+0.59%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:28 ET"
   },
   {
     "label": "DXY",
-    "value": "100.44",
-    "chg": "+0.09%",
+    "value": "100.53",
+    "chg": "+0.17%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:28 ET"
   },
   {
     "label": "黄金",
-    "value": "4,376.80",
-    "chg": "-0.05%",
+    "value": "4,366.80",
+    "chg": "-0.28%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:28 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "90.77",
-    "chg": "-2.37%",
+    "value": "90.72",
+    "chg": "-2.42%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:28 ET"
   },
   {
     "label": "BTC",
-    "value": "86,343",
-    "chg": "-0.29%",
+    "value": "86,051",
+    "chg": "-0.62%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:28 ET"
   },
   {
     "label": "VIX",
-    "value": "14.72",
-    "chg": "-0.14",
+    "value": "14.38",
+    "chg": "-0.48",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:28 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.94%",
-    "chg": "-2.0bp",
+    "value": "4.95%",
+    "chg": "-0.8bp",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:28 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.28%",
-    "chg": "-1.6bp",
+    "value": "5.29%",
+    "chg": "-0.6bp",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:28 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.76%",
     "chg": "+9.0bp",
     "dir": "up",
-    "note": "as-of 2026-09-18 · 2s10s +25bp"
+    "note": "as-of 2026-09-18 · 2s10s +20bp"
   },
   {
     "label": "10月加息概率",
     "value": "57%",
     "chg": "",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-09-18 ⚠️"
+    "note": "ZQ 期货自算 · 2026-09-21 ⚠️"
   }
 ];
 
@@ -1087,56 +1087,6 @@ export const events = [
         "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260916.pdf"
       }
     ]
-  },
-  {
-    "id": "rebal-index-effective-2026-09-21-spx",
-    "kind": "macro",
-    "ticker": "",
-    "company": "",
-    "title": "标普季度调仓·生效",
-    "subtitle": "生效(被动需求已消失)·2026Q3",
-    "org": "SPX",
-    "date": "2026-09-21T16:00:00-04:00",
-    "dateNote": "规则算出的日期,非估计值",
-    "dateConfirmed": true,
-    "importance": 2,
-    "tags": [
-      "index",
-      "index_effective",
-      "SPX"
-    ],
-    "thesis": "开盘前生效,但被动买盘在**上一个收盘**就已完成。历史上这天之后常见反向 —— **不许把「被纳入」当成这天的买入理由**。",
-    "watch": [
-      "生效日超额:12 例中位 -0.44%,仅 42% 为正",
-      "⚠️ **反向不在生效日当天,在其后那一周**:生效后 5 日中位 -0.67%、只有 33% 为正,尾部到 -13.9%"
-    ],
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [],
-    "links": [
-      {
-        "label": "标普指数方法论",
-        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
-      },
-      {
-        "label": "纳斯达克100 方法论",
-        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
-      }
-    ],
-    "consensus": {},
-    "segments": {},
-    "guidance": {},
-    "options": {},
-    "valuation": [],
-    "targets": {},
-    "afterHours": {
-      "move": "",
-      "note": ""
-    }
   },
   {
     "id": "conf-meta-connect-2026-09-23",
@@ -2416,7 +2366,7 @@ export const events = [
       {
         "name": "本次会议隐含变动",
         "value": "+14bp",
-        "note": "ZQ 自算 · 2026-09-18"
+        "note": "ZQ 自算 · 2026-09-21"
       },
       {
         "name": "P(加息 25bp)",
