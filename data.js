@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-22 00:30 ET",
+  "updated": "2026-09-22 09:00 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,764.70",
     "chg": "+1.49%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,482.3",
     "chg": "+2.83%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "DXY",
-    "value": "100.35",
-    "chg": "-0.10%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "100.46",
+    "chg": "+0.10%",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "黄金",
-    "value": "4,374.10",
-    "chg": "-0.23%",
+    "value": "4,370.60",
+    "chg": "-0.19%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "93.35",
-    "chg": "+0.51%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "90.33",
+    "chg": "-2.84%",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "BTC",
-    "value": "85,551",
-    "chg": "-1.20%",
+    "value": "86,016",
+    "chg": "-0.66%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "VIX",
-    "value": "14.87",
-    "chg": "+0.06",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "14.67",
+    "chg": "-0.19",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.96%",
-    "chg": "-3.5bp",
+    "value": "4.94%",
+    "chg": "-2.4bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.30%",
-    "chg": "-3.5bp",
+    "value": "5.27%",
+    "chg": "-2.3bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 2Y",
@@ -316,57 +316,6 @@ export const events = [
       "move": "+15.51%",
       "note": "- 实际次日反应 +15.51%(基准收盘 390.54 → 451.1) - 卡片内插预期 +3.85% vs 实际 +15.51%,误差 +11.66%(方向判对) - ⚠️ 实际反应落在同类历史 10–90 分位之外 —— 属尾部事件,不要用它去改反应函数(单次尾部 ≠ 制度变化)"
     }
-  },
-  {
-    "id": "cpi-2026-07-rel2026-08-12",
-    "kind": "macro",
-    "title": "2026-07 CPI",
-    "subtitle": "",
-    "org": "BLS",
-    "ticker": "",
-    "company": "",
-    "date": "2026-08-12T08:30:00-04:00",
-    "dateNote": "08:30 ET",
-    "dateConfirmed": true,
-    "importance": 3,
-    "tags": [
-      "CPI"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-07-14",
-        "what": "CPI（2026-06）",
-        "outcome": "SPX +0.38% · 2Y -8bp"
-      },
-      {
-        "when": "2026-06-10",
-        "what": "CPI（2026-05）",
-        "outcome": "SPX -1.62% · 2Y +0bp"
-      },
-      {
-        "when": "2026-05-12",
-        "what": "CPI（2026-04）",
-        "outcome": "SPX -0.16% · 2Y +5bp"
-      }
-    ],
-    "links": [
-      {
-        "label": "BLS CPI",
-        "url": "https://www.bls.gov/cpi/"
-      },
-      {
-        "label": "官方日程",
-        "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
-      }
-    ]
   },
   {
     "id": "nvda-fy27q2-replay",
@@ -3840,6 +3789,80 @@ export const events = [
     "options": {},
     "valuation": [],
     "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "mu-earnings-2026-12-16",
+    "kind": "earnings",
+    "ticker": "MU",
+    "company": "MU",
+    "title": "MU 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-12-16T16:05:00-05:00",
+    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-06-24",
+        "what": "EPS 意外 +21.4% · 实际 25.11 vs 预期 20.69",
+        "outcome": "次日 +15.74%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-03-18",
+        "what": "EPS 意外 +33.2% · 实际 12.2 vs 预期 9.16",
+        "outcome": "次日 -3.78%（巨 beat >10%）"
+      },
+      {
+        "when": "2025-12-17",
+        "what": "EPS 意外 +20.6% · 实际 4.78 vs 预期 3.96",
+        "outcome": "次日 +10.21%（巨 beat >10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$823.03"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$815.85"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$581.55"
+      },
+      {
+        "name": "安全边际",
+        "value": "-29.34%"
+      }
+    ],
+    "targets": {
+      "low": "$500",
+      "avg": "$816",
+      "high": "$1,200",
+      "n": "本站三情景加权 · 卖方一致 $1,507.38"
+    },
     "afterHours": {
       "move": "",
       "note": ""
