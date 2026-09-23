@@ -90,7 +90,6 @@
       <a href="../archive/" style="padding:5px 12px;border-radius:6px;color:#7d8b9c;font-size:12px;font-weight:500;text-decoration:none;white-space:nowrap">每日复盘</a>
       <a href="https://quant-v31-market-desk.pigxyz.chatgpt.site/" target="_blank" rel="noopener noreferrer" style="padding:5px 12px;border-radius:6px;color:#7d8b9c;font-size:12px;font-weight:500;text-decoration:none;white-space:nowrap">量化台<span style="font-size:9px;opacity:.6;margin-left:3px">&#8599;</span></a>
       <span style="padding:5px 12px;border-radius:6px;background:#16202b;color:#e6edf3;font-size:12px;font-weight:600;white-space:nowrap">利差台</span>
-      <a href="../gex/" style="padding:5px 12px;border-radius:6px;color:#7d8b9c;font-size:12px;font-weight:500;text-decoration:none;white-space:nowrap">GEX</a>
     </nav>
     <div style="flex:1"></div>
     <div style="display:flex;align-items:center;gap:8px;font-family:'Roboto Mono',monospace;font-size:11px;color:#7d8b9c">
@@ -127,6 +126,10 @@
   </div>
 
   <section>
+    <div class="sechead"><h2>数据核对</h2><div class="hint">每次打开页面实时跑 · 不通过的债标 ⚠ 且不计入平均利差</div></div>
+    <div class="rail" id="checks" style="margin-bottom:0"><div class="cell"><div class="note">核对中…</div></div></div>
+  </section>
+  <section>
     <div class="sechead"><h2>均线广度</h2><div class="hint" id="brHint">S5TW／NDTW · 近一年日线</div></div>
     <div class="panel"><div class="cw"><svg id="breadth" viewBox="0 0 900 250" width="100%" height="250"
       role="img" aria-label="标普500 与纳指100 站上均线的成分股占比走势"><text x="450" y="128" text-anchor="middle"
@@ -157,6 +160,7 @@
   <footer>
     <b>口径</b>
     <ul>
+      <li><b>数据核对</b>：① 每只固定票息债的到期收益率都用价格、票息、到期日<b>独立重算</b>，与行情源差 &gt;5bp 判不通过、不计入平均（一年内到期的对价格小数位太敏感，不核）；② 债券名称里的票息／到期日须与结构化字段一致；③ FINRA 价与德国交易所同一只债的中位价比，差 &gt;3 个点提示；④ 本页拼出的国债曲线与<b>美国财政部官方收益率曲线</b>（上一交易日日终，每日抓取）逐期限比。官方是日终、本页是盘中实时，整体水平差就是今天的利率变动，所以核的是<b>形状</b>：各期限偏差扣掉中位数后 &gt;8bp 判不通过。整体水平本身这里无法独立核对。</li>
       <li><b>利差</b>＝该债到期收益率 − 同到期日美国国债收益率（曲线线性插值），单位基点。这是市场对这家公司的信用定价，比债券价格本身更能说明问题。</li>
       <li><b>报价来源</b>：<span class="src finra">FINRA</span> 是美国场外市场（TRACE）报价，口径最权威；其余为德国交易所（FWB／SWB／GETTEX／MUN／DUS）挂牌，同一只债在欧洲挂牌、流动性远低于美国场外，只在 FINRA 无报价时作后备。债券与国债曲线为本页实时取数，多数为延迟约 15 分钟的流式报价。</li>
       <li><b>均线广度</b>取 S5TW／NDTW（标普500／纳指100 站上 20 日均线的成分股占比，Barchart 日终）与 S5TH／NDTH（200 日）。这两类符号只存在于 TradingView 的图表通道，而那条通道校验 Origin、浏览器不允许伪造，所以由本机脚本日更抓好推到本站，这里读那份 JSON。<b>恐惧贪婪</b>同理：CNN 校验 Referer，只认 cnn.com 的，前端直取永远是 418。</li>
@@ -237,18 +241,94 @@ function ustAt(y){
   }
   return null;
 }
+/* ── 数据核对(每次加载实时跑) ──
+   ① 到期收益率:用价格、票息、到期日独立重算,与行情源给的比。偏差 >5bp 判不通过、不计入平均。
+      一年内到期的债对价格小数位极敏感,不核(标「短债不核」)。浮息／零息等非固定票息不核。
+   ② 名称字段:债券名称里写的票息与到期日,必须和结构化字段一致。不一致判不通过、不计入平均。
+   ③ 跨交易所:FINRA 价与德国交易所同一只债的中位价差 >3 个点,只提示(欧洲报价常不活跃)。 */
+const FREQ={"semi-annual":2,"annual":1,"quarterly":4,"monthly":12};
+function ytmCalc(price,cpn,matN,freq){
+  const s=String(matN), mat=new Date(Date.UTC(+s.slice(0,4),+s.slice(4,6)-1,+s.slice(6)));
+  const now=new Date(), settle=new Date(Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate()+1));
+  const months=12/freq, cfs=[]; let d=mat;
+  while(d>settle){cfs.push(d);const y=d.getUTCFullYear(),m=d.getUTCMonth()-months,day=d.getUTCDate()>28?28:d.getUTCDate();d=new Date(Date.UTC(y,m,day));}
+  if(!cfs.length) return null;
+  cfs.reverse(); const prev=d, c=cpn/freq, per=(cfs[0]-prev);
+  const dirty=price+c*((settle-prev)/per), t0=(cfs[0]-settle)/per;
+  const pv=y=>{const r=y/100/freq;let v=0;for(let i=0;i<cfs.length;i++) v+=(c+(i===cfs.length-1?100:0))/Math.pow(1+r,t0+i);return v;};
+  let lo=-5,hi=40; for(let i=0;i<80;i++){const m=(lo+hi)/2; if(pv(m)>dirty) lo=m; else hi=m;}
+  return (lo+hi)/2;
+}
+const MON={JAN:1,FEB:2,MAR:3,APR:4,MAY:5,JUN:6,JUL:7,AUG:8,SEP:9,OCT:10,NOV:11,DEC:12};
+function checkBond(b,venues){
+  const c={};
+  const m=b.desc.match(/([\d.]+)% (\d{2})-([A-Z]{3})-(\d{4})/);
+  if(!m) c.desc="skip";
+  else{ const mn=+(m[4]+String(MON[m[3]]).padStart(2,"0")+m[2]);
+        // 字段票息四舍五入到 3 位小数,名称里可能写 4 位(1.2525% vs 1.253),容差取舍入误差 0.0005
+        c.desc=(b.cpn!=null&&Math.abs(+m[1]-b.cpn)<=0.0005+1e-9&&mn===+b.mat)?"ok":"bad"; }
+  if(b.ctype!=="fixed-rate"||b.cpn==null||b.close==null) c.ytm={st:"skip",why:"非固定票息"};
+  else if(b.years<=1) c.ytm={st:"skip",why:"短债不核"};
+  else{ const mine=ytmCalc(b.close,b.cpn,b.mat,FREQ[b.fq]||2), dbp=(mine-b.ytm)*100;
+        c.ytm={st:Math.abs(dbp)<=5?"ok":"bad",mine,dbp}; }
+  const others=venues.filter(v=>v.ex!=="FINRA").map(v=>v.close).sort((x,y)=>x-y);
+  if(b.ex==="FINRA"&&others.length){const med=others[Math.floor(others.length/2)];c.venue={med,diff:b.close-med,st:Math.abs(b.close-med)>3?"warn":"ok"};}
+  c.excluded=c.desc==="bad"||c.ytm.st==="bad";
+  return c;
+}
+function chkCell(c){
+  const why=[];
+  if(c.ytm.st==="bad") why.push(`收益率重算 ${c.ytm.mine.toFixed(3)}%，与行情源差 ${c.ytm.dbp.toFixed(1)}bp`);
+  if(c.desc==="bad") why.push("名称里的票息／到期日与字段不一致");
+  if(c.venue&&c.venue.st==="warn") why.push(`FINRA 价与欧洲交易所中位价差 ${c.venue.diff.toFixed(2)} 点`);
+  if(why.length) return `<span class="tag" style="border-color:#f87171;color:#f87171" title="${esc(why.join("；"))}">⚠ ${c.excluded?"不计入":"提示"}</span>`;
+  if(c.ytm.st==="ok") return `<span class="tag s" title="收益率独立重算差 ${c.ytm.dbp.toFixed(1)}bp">✓</span>`;
+  return `<span class="tag" title="${esc(c.ytm.why||"")}">${esc(c.ytm.why||"—")}</span>`;
+}
+function renderChecks(){
+  const all=ISSUERS.flatMap(i=>state.bonds[i.t]||[]);
+  if(!all.length) return;
+  const y=all.filter(b=>b.chk.ytm.st!=="skip"), yb=y.filter(b=>b.chk.ytm.st==="bad");
+  const worst=y.length?Math.max(...y.map(b=>Math.abs(b.chk.ytm.dbp))):null;
+  const d=all.filter(b=>b.chk.desc!=="skip"), db=d.filter(b=>b.chk.desc==="bad");
+  const v=all.filter(b=>b.chk.venue), vw=v.filter(b=>b.chk.venue.st==="warn");
+  const u=state.ustChk;
+  const cell=(ok,lab,big,note)=>`<div class="cell"><div class="lab">${lab}</div><div class="big" style="font-size:20px;color:${ok?"#2dd4bf":"#f87171"}">${big}</div><div class="note">${note}</div></div>`;
+  document.getElementById("checks").innerHTML=
+    cell(!yb.length,"收益率独立重算",`${y.length-yb.length}/${y.length}`,`用价格·票息·到期日重算 · 最大偏差 ${worst==null?"—":worst.toFixed(1)}bp（阈值 5bp）· 一年内到期不核`)+
+    cell(!db.length,"名称 vs 字段",`${d.length-db.length}/${d.length}`,"名称里写的票息与到期日须与结构化字段一致")+
+    cell(!vw.length,"FINRA vs 欧洲交易所",`${v.length-vw.length}/${v.length}`,"同一只债价差 ≤3 个点 · 超出只提示（欧洲报价常不活跃）")+
+    (u?cell(u.bad===0,"国债曲线形状 vs 财政部官方",`${u.n-u.bad}/${u.n}`,`官方 ${u.date} 日终 · 整体差 ${u.level>=0?"+":""}${u.level.toFixed(0)}bp 视为今日利率变动 · 扣除后最大偏差 ${u.worst.toFixed(0)}bp（阈值 8bp）`)
+      :cell(false,"国债曲线 vs 财政部官方","—","官方曲线未取到"));
+}
+function checkCurve(){
+  const o=state.official; if(!o||!state.curve.length) return;
+  const rows=o.points.filter(([t])=>t>=1).map(([t,y])=>{const m=ustAt(t);return {t,y,m,d:m==null?null:(m-y)*100};});
+  const ok=rows.filter(r=>r.d!=null);
+  // 官方是上一交易日日终,本页是盘中实时:整体水平差≈今天利率的变动,不算错(2026-09-23 实测整体 +15bp,
+  // 同日 10 年期实际 +17bp)。能核的是**形状**:各期限偏差扣掉中位数后应很小,>8bp 判不通过。
+  const ds=ok.map(r=>r.d).sort((a,b)=>a-b), med=ds[Math.floor(ds.length/2)];
+  const shape=ok.map(r=>r.d-med);
+  state.ustChk={date:o.date,n:ok.length,bad:shape.filter(x=>Math.abs(x)>8).length,worst:Math.max(...shape.map(Math.abs)),level:med,rows};
+  document.getElementById("curveHint").textContent+=` · 对照财政部官方（${o.date} 日终）：整体 ${med>=0?"+":""}${med.toFixed(0)}bp（≈今日利率变动）· 形状偏差最大 ${state.ustChk.worst.toFixed(0)}bp`;
+}
+async function loadOfficial(){
+  const r=await fetch("../data/ust_official.json",{cache:"no-store"});
+  if(!r.ok) throw new Error("HTTP "+r.status);
+  state.official=await r.json();
+}
 async function loadIssuer(iss){
   // 分页取全:单页上限 400 条(每只债在多个交易所各一条),GOOGL/AMZN 超过 400 会被截断漏债
   const body=r=>({filter:[{left:"description",operation:"match",right:iss.q}],
     columns:["name","description","close","change","maturity_date","yield_to_maturity",
              "conversion_option","current_coupon","outstanding_amount","fundamental_currency_code","put_next_date",
-             "bond_issuer_stock_symbol","issue_date"],range:r});
+             "bond_issuer_stock_symbol","issue_date","coupon_frequency","coupon_type_current","bond_type_gen"],range:r});
   const d=await scan("bond",body([0,400]));
   for(let i=400;i<(d.totalCount||0);i+=400) d.data=d.data.concat((await scan("bond",body([i,i+400]))).data||[]);
   const todayN=+new Date().toISOString().slice(0,10).replace(/-/g,"");
-  const by=new Map(),cv=new Map(); let matched=0;
+  const by=new Map(),cv=new Map(),venues=new Map(); let matched=0;
   for(const row of (d.data||[])){
-    const [nm,desc,close,chg,mat,ytm,conv,cpn,out,cur,put,stk,iss0]=row.d;
+    const [nm,desc,close,chg,mat,ytm,conv,cpn,out,cur,put,stk,iss0,fq,ctype,btype]=row.d;
     if(!desc) continue;
     const low=desc.toLowerCase();
     // 模糊检索负责召回，严格前缀负责排除：搜 Amazon 会带回
@@ -256,6 +336,7 @@ async function loadIssuer(iss){
     const hit=iss.p.find(p=>low.startsWith(p));
     if(!hit) continue;
     if(mat!=null&&mat<todayN) continue;          // 已到期的债剔除(行情源目前会自己下架,这里不依赖它)
+    if(btype==="preferred") continue;            // 优先股不是债(GOOGL 名下的可转优先股存托凭证曾被当成债,收益率核对抓出)
     matched++;
     const ex=(row.s||"").split(":")[0];
     // 可转／可交换债按 TradingView 的 conversion_option 字段认，不按「没有 YTM」猜：
@@ -268,13 +349,16 @@ async function loadIssuer(iss){
       continue;
     }
     if(ytm==null||!isFinite(ytm)||mat==null) continue;
+    if(close!=null) (venues.get(desc)||venues.set(desc,[]).get(desc)).push({ex,close});
     const prev=by.get(desc);
     if(!prev||(ex==="FINRA"&&prev.ex!=="FINRA")||(ex===prev.ex&&prev.chg==null&&chg!=null))
-      by.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ytm,ex,iss:iss0});
+      by.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ytm,ex,iss:iss0,cpn,fq,ctype});
   }
   const rows=[...by.values()].map(b=>{
     const t=yearsTo(b.mat),u=ustAt(t);
-    return {...b,years:t,ust:u,spread:u==null?null:(b.ytm-u)*100};
+    const r={...b,years:t,ust:u,spread:u==null?null:(b.ytm-u)*100};
+    r.chk=checkBond(r,venues.get(b.desc)||[]);
+    return r;
   }).sort((a,b)=>a.years-b.years);
   state.meta[iss.t]={matched,conv:cv.size};
   state.conv[iss.t]=[...cv.values()].sort((a,b)=>String(a.mat).localeCompare(String(b.mat)));
@@ -368,7 +452,7 @@ function rowsOf(iss){
 function renderIssuers(){
   const host=document.getElementById("issuers");
   const all=ISSUERS.map(iss=>{
-    const rows=rowsOf(iss), ok=rows.filter(b=>b.spread!=null);
+    const rows=rowsOf(iss), ok=rows.filter(b=>b.spread!=null&&!b.chk.excluded);
     return {iss,rows,avg:ok.length?ok.reduce((s,b)=>s+b.spread,0)/ok.length:null};
   });
   const got=all.filter(x=>x.rows.length), missing=all.filter(x=>!x.rows.length);
@@ -378,7 +462,7 @@ function renderIssuers(){
   host.innerHTML=got.map(({iss,rows,avg})=>{
     const open=state.open.has(iss.t);
     const cls=avg==null?"":(avg<100?"up":avg>250?"down":"");
-    const body=open?`<div class="tw"><table><thead><tr><th>债券</th><th>发行日</th><th>到期</th><th>来源</th><th>价格</th><th>涨跌</th><th>到期收益率</th><th>同期美债</th><th>利差 bp</th></tr></thead><tbody>${rows.map(b=>{
+    const body=open?`<div class="tw"><table><thead><tr><th>债券</th><th>发行日</th><th>到期</th><th>来源</th><th>价格</th><th>涨跌</th><th>到期收益率</th><th>同期美债</th><th>利差 bp</th><th>核对</th></tr></thead><tbody>${rows.map(b=>{
       const w=b.spread==null?0:Math.min(100,Math.abs(b.spread)/maxAbs*100);
       const col=b.spread==null?"#263140":(b.spread<0?"#2dd4bf":"#f87171");
       return `<tr><td>${esc(b.short||b.desc)}</td><td class="num" style="color:#7d8b9c">${isd(b.iss)}</td><td class="num">${ymd(b.mat)}</td>
@@ -387,7 +471,8 @@ function renderIssuers(){
         <td class="num ${b.chg>0?"up":b.chg<0?"down":""}">${pct(b.chg)}</td>
         <td class="num">${fmt(b.ytm)}%</td>
         <td class="num" style="color:#7d8b9c">${fmt(b.ust)}%</td>
-        <td class="num spc"><span class="bar" style="width:${w.toFixed(0)}%;background:${col}"></span><span class="v">${b.spread==null?"—":(b.spread>0?"+":"")+b.spread.toFixed(0)}</span></td></tr>`;
+        <td class="num spc"><span class="bar" style="width:${w.toFixed(0)}%;background:${col}"></span><span class="v">${b.spread==null?"—":(b.spread>0?"+":"")+b.spread.toFixed(0)}</span></td>
+        <td>${chkCell(b.chk)}</td></tr>`;
     }).join("")}</tbody></table></div>`:"";
     return `<div class="issuer"><button class="ihead" type="button" data-t="${iss.t}" aria-expanded="${open}">
       <span class="caret">${open?"▼":"▶"}</span><span class="tick">${iss.t}</span>
@@ -408,7 +493,8 @@ function renderIssuers(){
   host.querySelectorAll(".ihead[data-t]").forEach(b=>b.addEventListener("click",()=>{
     const t=b.dataset.t; state.open.has(t)?state.open.delete(t):state.open.add(t); renderIssuers();
   }));
-  const flat=got.flatMap(x=>x.rows).filter(b=>b.spread!=null);
+  const flat=got.flatMap(x=>x.rows).filter(b=>b.spread!=null&&!b.chk.excluded);
+  renderChecks();
   const wavg=flat.length?flat.reduce((s,b)=>s+b.spread,0)/flat.length:null;
   document.getElementById("avgVal").textContent=wavg==null?"—":(wavg>0?"+":"")+wavg.toFixed(0);
   document.getElementById("avgNote").textContent=wavg==null?"无数据":`${flat.length} 只债 · ${got.length} 家公司`;
@@ -502,6 +588,7 @@ async function boot(){
 
   try{ await loadCurve(); }catch(e){ state.errs.push("国债曲线取数失败（"+e.message+"），利差无法计算"); }
   drawCurve();
+  try{ await loadOfficial(); checkCurve(); }catch(e){ state.errs.push("财政部官方曲线取数失败（"+e.message+"）"); }
 
   for(let i=0;i<ISSUERS.length;i+=5){
     await Promise.all(ISSUERS.slice(i,i+5).map(async iss=>{
