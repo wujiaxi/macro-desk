@@ -159,7 +159,7 @@
       <li><b>利差</b>＝该债到期收益率 − 同到期日美国国债收益率（曲线线性插值），单位基点。这是市场对这家公司的信用定价，比债券价格本身更能说明问题。</li>
       <li><b>报价来源</b>：<span class="src finra">FINRA</span> 是美国场外市场（TRACE）报价，口径最权威；其余为德国交易所（FWB／SWB／GETTEX／MUN／DUS）挂牌，同一只债在欧洲挂牌、流动性远低于美国场外，只在 FINRA 无报价时作后备。债券与国债曲线为本页实时取数，多数为延迟约 15 分钟的流式报价。</li>
       <li><b>均线广度</b>取 S5TW／NDTW（标普500／纳指100 站上 20 日均线的成分股占比，Barchart 日终）与 S5TH／NDTH（200 日）。这两类符号只存在于 TradingView 的图表通道，而那条通道校验 Origin、浏览器不允许伪造，所以由本机脚本日更抓好推到本站，这里读那份 JSON。<b>恐惧贪婪</b>同理：CNN 校验 Referer，只认 cnn.com 的，前端直取永远是 418。</li>
-      <li>持仓 26 张论点卡里，<b>4 家没有在外流通的公司债</b>（TSLA／TSM／BE／DUOL），不在此追踪。<b>可转／可交换债</b>按 TradingView 的 <span class="mono">conversion_option</span> 字段识别，单列一节、<b>不计入平均利差</b>：它的价格主要是转股期权的价值（比如价格是面值的 4 倍多），收益率反映的不是信用定价。数据源不提供转股价／转股比例，所以这里<b>不给平价、转股溢价和 delta</b>，只列价格、票息、回售日和在外金额。</li>
+      <li>持仓 26 张论点卡里，<b>4 家没有在外流通的公司债</b>（TSLA／TSM／BE／DUOL），不在此追踪。<b>可转／可交换债</b>按 TradingView 的 <span class="mono">conversion_option</span> 字段识别，单列一节、<b>不计入平均利差</b>：它的价格主要是转股期权的价值（比如价格是面值的 4 倍多），收益率反映的不是信用定价。<b>转股价</b>不在行情源里，取自 SEC 一手件（点数字可跳原文，悬停看引用原话），由 <span class="mono">convert_terms.py</span> 逐条核对原文后生成；有分红调整的（BABA）取最新一次调整公告，带 * 的是由调整后转股比例反推（1000÷比例）。NBIS 这批债本金会分阶段增值到面值的 120–125%，但<b>转股按原始面值计</b>，所以转股价就是公告值。「正股 vs 转股价」＝正股现价 ÷ 转股价 − 1。CMOC 是可交换债、不在 SEC 备案，转股价暂缺。价格口径（按原始面值还是增值后本金）行情源未说明，所以<b>不给转股溢价</b>。</li>
     </ul>
   </footer>
 </div>
@@ -189,7 +189,7 @@ const ISSUERS=[
  {t:"SKH",  n:"SK 海力士",   q:"SK hynix",               p:["sk hynix"]},
  {t:"CMOC", n:"洛阳钼业",    q:"CMOC",                   p:["cmoc"]},
 ];
-const state={bonds:{},conv:{},meta:{},curve:[],onlyFinra:true,sortSpread:false,open:new Set(),errs:[]};
+const state={bonds:{},conv:{},terms:{},stock:{},meta:{},curve:[],onlyFinra:true,sortSpread:false,open:new Set(),errs:[]};
 
 // Content-Type 必须 text/plain：TradingView 的 CORS 只放行 Referer 与 Accept，
 // application/json 会触发预检然后被拒。服务端不校验这个头，照常解析 JSON。
@@ -238,10 +238,11 @@ function ustAt(y){
 async function loadIssuer(iss){
   const d=await scan("bond",{filter:[{left:"description",operation:"match",right:iss.q}],
     columns:["name","description","close","change","maturity_date","yield_to_maturity",
-             "conversion_option","current_coupon","outstanding_amount","fundamental_currency_code","put_next_date"],range:[0,400]});
+             "conversion_option","current_coupon","outstanding_amount","fundamental_currency_code","put_next_date",
+             "bond_issuer_stock_symbol"],range:[0,400]});
   const by=new Map(),cv=new Map(); let matched=0;
   for(const row of (d.data||[])){
-    const [nm,desc,close,chg,mat,ytm,conv,cpn,out,cur,put]=row.d;
+    const [nm,desc,close,chg,mat,ytm,conv,cpn,out,cur,put,stk]=row.d;
     if(!desc) continue;
     const low=desc.toLowerCase();
     // 模糊检索负责召回，严格前缀负责排除：搜 Amazon 会带回
@@ -256,7 +257,7 @@ async function loadIssuer(iss){
     if(conv==="convertible"||conv==="exchangeable"){
       const pc=cv.get(desc);
       if(!pc||(ex==="FINRA"&&pc.ex!=="FINRA")||(ex===pc.ex&&pc.chg==null&&chg!=null))
-        cv.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ex,conv,cpn,out,cur,put});
+        cv.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ex,conv,cpn,out,cur,put,stk});
       continue;
     }
     if(ytm==null||!isFinite(ytm)||mat==null) continue;
@@ -271,6 +272,17 @@ async function loadIssuer(iss){
   state.meta[iss.t]={matched,conv:cv.size};
   state.conv[iss.t]=[...cv.values()].sort((a,b)=>String(a.mat).localeCompare(String(b.mat)));
   return rows;
+}
+// 转股价 TradingView 不提供,来自 SEC 一手件,由 ~/convert_terms.py 核对原文后生成
+async function loadTerms(){
+  const r=await fetch("../data/converts.json",{cache:"no-store"});
+  if(!r.ok) throw new Error("HTTP "+r.status);
+  state.terms=await r.json();
+}
+async function loadStocks(syms){
+  if(!syms.length) return;
+  const d=await scan("america",{symbols:{tickers:syms},columns:["close"]});
+  for(const row of (d.data||[])) state.stock[row.s]=row.d[0];
 }
 async function loadLocal(){
   const r=await fetch("../data/breadth.json",{cache:"no-store"});
@@ -409,17 +421,22 @@ function renderConvs(){
     const k="cv:"+iss.t, open=state.open.has(k);
     const cur=[...new Set(rows.map(b=>b.cur).filter(Boolean))];
     const tot=cur.length===1?money(rows.reduce((s,b)=>s+(b.out||0),0),cur[0]):"—";
-    const body=open?`<div class="tw"><table><thead><tr><th>债券</th><th>类型</th><th>到期</th><th>下一回售日</th><th>来源</th><th>价格（% 面值）</th><th>涨跌</th><th>票息</th><th>在外金额</th></tr></thead><tbody>${rows.map(b=>`<tr>
+    const body=open?`<div class="tw"><table><thead><tr><th>债券</th><th>类型</th><th>到期</th><th>下一回售日</th><th>来源</th><th>价格（% 面值）</th><th>涨跌</th><th>票息</th><th>转股价</th><th>正股 vs 转股价</th><th>在外金额</th></tr></thead><tbody>${rows.map(b=>{
+        const tm=state.terms[iss.t+"|"+b.cpn+"|"+b.mat], s=state.stock[b.stk];
+        const mny=tm&&s?(s/tm.price-1)*100:null;
+        return `<tr>
         <td>${esc(b.short||b.desc)}</td><td>${b.conv==="exchangeable"?"可交换":"可转换"}</td>
         <td class="num">${ymd(b.mat)}</td><td class="num" style="color:#7d8b9c">${day(b.put)}</td>
         <td><span class="src ${b.ex==="FINRA"?"finra":""}">${esc(b.ex)}</span></td>
         <td class="num">${fmt(b.close)}</td>
         <td class="num ${b.chg>0?"up":b.chg<0?"down":""}">${pct(b.chg)}</td>
         <td class="num">${b.cpn==null?"—":fmt(b.cpn,3).replace(/\.?0+$/,"")+"%"}</td>
-        <td class="num">${money(b.out,b.cur)}</td></tr>`).join("")}</tbody></table></div>`:"";
+        <td class="num">${tm?`<a href="${esc(tm.url)}" target="_blank" rel="noopener noreferrer" title="${esc(tm.src+"：“"+tm.quote+"”")}" style="color:inherit">$${fmt(tm.price)}${tm.derived?"*":""}</a>`:"—"}</td>
+        <td class="num ${mny==null?"":mny>=0?"up":"down"}">${mny==null?"—":(mny>=0?"价内 +":"价外 ")+mny.toFixed(0)+"%"}</td>
+        <td class="num">${money(b.out,b.cur)}</td></tr>`;}).join("")}</tbody></table></div>`:"";
     return `<div class="issuer"><button class="ihead" type="button" data-k="${k}" aria-expanded="${open}">
       <span class="caret">${open?"▼":"▶"}</span><span class="tick">${iss.t}</span>
-      <span class="iname">${iss.n}</span><span class="icount">${rows.length} 只${rows.some(b=>b.ex==="FINRA")?"":" · 无 FINRA 报价"}</span>
+      <span class="iname">${iss.n}</span><span class="icount">${rows.length} 只${rows.some(b=>b.ex==="FINRA")?"":" · 无 FINRA 报价"}${state.stock[rows[0].stk]!=null?` · 正股 $${fmt(state.stock[rows[0].stk])}`:""}</span>
       <span class="isp"><b>${tot}</b><span>在外合计</span></span>
     </button>${body}</div>`;
   }).join("");
@@ -486,6 +503,10 @@ async function boot(){
     }));
     renderIssuers(); renderConvs();
   }
+  try{ await loadTerms(); }catch(e){ state.errs.push("转股条款取数失败（"+e.message+"）"); }
+  const syms=[...new Set(Object.values(state.conv).flat().map(b=>b.stk).filter(Boolean))];
+  try{ await loadStocks(syms); }catch(e){ state.errs.push("正股报价取数失败（"+e.message+"）"); }
+  renderConvs();
   showErr();
   document.getElementById("stamp").textContent="数据更新 "+new Date().toLocaleString("zh-CN",{hour12:false});
 }
