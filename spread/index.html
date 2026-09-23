@@ -203,6 +203,7 @@ async function scan(market,body){
 const fmt=(v,d=2)=>(v==null||!isFinite(v))?"—":v.toFixed(d);
 const pct=v=>(v==null||!isFinite(v))?"—":(v>0?"+":"")+v.toFixed(2)+"%";
 const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+function isd(t){if(!t)return "—";const d=new Date(t*1000);return d.getUTCFullYear()+"-"+String(d.getUTCMonth()+1).padStart(2,"0")+"-"+String(d.getUTCDate()).padStart(2,"0");}
 function ymd(n){const s=String(n);return s.length===8?s.slice(0,4)+"-"+s.slice(4,6)+"-"+s.slice(6):"—";}
 function yearsTo(n){const s=String(n);if(s.length!==8)return null;
   const d=new Date(+s.slice(0,4),+s.slice(4,6)-1,+s.slice(6));
@@ -237,19 +238,24 @@ function ustAt(y){
   return null;
 }
 async function loadIssuer(iss){
-  const d=await scan("bond",{filter:[{left:"description",operation:"match",right:iss.q}],
+  // 分页取全:单页上限 400 条(每只债在多个交易所各一条),GOOGL/AMZN 超过 400 会被截断漏债
+  const body=r=>({filter:[{left:"description",operation:"match",right:iss.q}],
     columns:["name","description","close","change","maturity_date","yield_to_maturity",
              "conversion_option","current_coupon","outstanding_amount","fundamental_currency_code","put_next_date",
-             "bond_issuer_stock_symbol"],range:[0,400]});
+             "bond_issuer_stock_symbol","issue_date"],range:r});
+  const d=await scan("bond",body([0,400]));
+  for(let i=400;i<(d.totalCount||0);i+=400) d.data=d.data.concat((await scan("bond",body([i,i+400]))).data||[]);
+  const todayN=+new Date().toISOString().slice(0,10).replace(/-/g,"");
   const by=new Map(),cv=new Map(); let matched=0;
   for(const row of (d.data||[])){
-    const [nm,desc,close,chg,mat,ytm,conv,cpn,out,cur,put,stk]=row.d;
+    const [nm,desc,close,chg,mat,ytm,conv,cpn,out,cur,put,stk,iss0]=row.d;
     if(!desc) continue;
     const low=desc.toLowerCase();
     // 模糊检索负责召回，严格前缀负责排除：搜 Amazon 会带回
     // "Amazon Conservation Designated Activity Company"（雨林保护机构，与公司无关）。
     const hit=iss.p.find(p=>low.startsWith(p));
     if(!hit) continue;
+    if(mat!=null&&mat<todayN) continue;          // 已到期的债剔除(行情源目前会自己下架,这里不依赖它)
     matched++;
     const ex=(row.s||"").split(":")[0];
     // 可转／可交换债按 TradingView 的 conversion_option 字段认，不按「没有 YTM」猜：
@@ -258,13 +264,13 @@ async function loadIssuer(iss){
     if(conv==="convertible"||conv==="exchangeable"){
       const pc=cv.get(desc);
       if(!pc||(ex==="FINRA"&&pc.ex!=="FINRA")||(ex===pc.ex&&pc.chg==null&&chg!=null))
-        cv.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ex,conv,cpn,out,cur,put,stk});
+        cv.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ex,conv,cpn,out,cur,put,stk,iss:iss0});
       continue;
     }
     if(ytm==null||!isFinite(ytm)||mat==null) continue;
     const prev=by.get(desc);
     if(!prev||(ex==="FINRA"&&prev.ex!=="FINRA")||(ex===prev.ex&&prev.chg==null&&chg!=null))
-      by.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ytm,ex});
+      by.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ytm,ex,iss:iss0});
   }
   const rows=[...by.values()].map(b=>{
     const t=yearsTo(b.mat),u=ustAt(t);
@@ -372,10 +378,10 @@ function renderIssuers(){
   host.innerHTML=got.map(({iss,rows,avg})=>{
     const open=state.open.has(iss.t);
     const cls=avg==null?"":(avg<100?"up":avg>250?"down":"");
-    const body=open?`<div class="tw"><table><thead><tr><th>债券</th><th>到期</th><th>来源</th><th>价格</th><th>涨跌</th><th>到期收益率</th><th>同期美债</th><th>利差 bp</th></tr></thead><tbody>${rows.map(b=>{
+    const body=open?`<div class="tw"><table><thead><tr><th>债券</th><th>发行日</th><th>到期</th><th>来源</th><th>价格</th><th>涨跌</th><th>到期收益率</th><th>同期美债</th><th>利差 bp</th></tr></thead><tbody>${rows.map(b=>{
       const w=b.spread==null?0:Math.min(100,Math.abs(b.spread)/maxAbs*100);
       const col=b.spread==null?"#263140":(b.spread<0?"#2dd4bf":"#f87171");
-      return `<tr><td>${esc(b.short||b.desc)}</td><td class="num">${ymd(b.mat)}</td>
+      return `<tr><td>${esc(b.short||b.desc)}</td><td class="num" style="color:#7d8b9c">${isd(b.iss)}</td><td class="num">${ymd(b.mat)}</td>
         <td><span class="src ${b.ex==="FINRA"?"finra":""}">${esc(b.ex)}</span></td>
         <td class="num">${fmt(b.close)}</td>
         <td class="num ${b.chg>0?"up":b.chg<0?"down":""}">${pct(b.chg)}</td>
@@ -422,12 +428,12 @@ function renderConvs(){
     const k="cv:"+iss.t, open=state.open.has(k);
     const cur=[...new Set(rows.map(b=>b.cur).filter(Boolean))];
     const tot=cur.length===1?money(rows.reduce((s,b)=>s+(b.out||0),0),cur[0]):"—";
-    const body=open?`<div class="tw"><table><thead><tr><th>债券</th><th>类型</th><th>到期</th><th>下一回售日</th><th>来源</th><th>价格（% 面值）</th><th>涨跌</th><th>票息</th><th>转股价</th><th>正股 vs 转股价</th><th>在外金额</th></tr></thead><tbody>${rows.map(b=>{
+    const body=open?`<div class="tw"><table><thead><tr><th>债券</th><th>类型</th><th>发行日</th><th>到期</th><th>下一回售日</th><th>来源</th><th>价格（% 面值）</th><th>涨跌</th><th>票息</th><th>转股价</th><th>正股 vs 转股价</th><th>在外金额</th></tr></thead><tbody>${rows.map(b=>{
         const tm=state.terms[iss.t+"|"+b.cpn+"|"+b.mat], s=state.stock[b.stk];
         const mny=tm&&s?(s/tm.price-1)*100:null;
         return `<tr>
         <td>${esc(b.short||b.desc)}</td><td>${b.conv==="exchangeable"?"可交换":"可转换"}</td>
-        <td class="num">${ymd(b.mat)}</td><td class="num" style="color:#7d8b9c">${day(b.put)}</td>
+        <td class="num" style="color:#7d8b9c">${isd(b.iss)}</td><td class="num">${ymd(b.mat)}</td><td class="num" style="color:#7d8b9c">${day(b.put)}</td>
         <td><span class="src ${b.ex==="FINRA"?"finra":""}">${esc(b.ex)}</span></td>
         <td class="num">${fmt(b.close)}</td>
         <td class="num ${b.chg>0?"up":b.chg<0?"down":""}">${pct(b.chg)}</td>
