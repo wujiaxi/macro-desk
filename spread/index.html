@@ -149,13 +149,17 @@
     <div id="issuers"><div class="issuer"><div style="padding:16px;color:#7d8b9c;font-size:13px">正在取 22 家公司的债券报价…</div></div></div>
   </section>
 
+  <section>
+    <div class="sechead"><h2>可转债／可交换债</h2><div class="hint" id="convHint">不计入平均利差</div></div>
+    <div id="convs"><div class="issuer"><div style="padding:16px;color:#7d8b9c;font-size:13px">取数中…</div></div></div>
+  </section>
   <footer>
     <b>口径</b>
     <ul>
       <li><b>利差</b>＝该债到期收益率 − 同到期日美国国债收益率（曲线线性插值），单位基点。这是市场对这家公司的信用定价，比债券价格本身更能说明问题。</li>
       <li><b>报价来源</b>：<span class="src finra">FINRA</span> 是美国场外市场（TRACE）报价，口径最权威；其余为德国交易所（FWB／SWB／GETTEX／MUN／DUS）挂牌，同一只债在欧洲挂牌、流动性远低于美国场外，只在 FINRA 无报价时作后备。债券与国债曲线为本页实时取数，多数为延迟约 15 分钟的流式报价。</li>
       <li><b>均线广度</b>取 S5TW／NDTW（标普500／纳指100 站上 20 日均线的成分股占比，Barchart 日终）与 S5TH／NDTH（200 日）。这两类符号只存在于 TradingView 的图表通道，而那条通道校验 Origin、浏览器不允许伪造，所以由本机脚本日更抓好推到本站，这里读那份 JSON。<b>恐惧贪婪</b>同理：CNN 校验 Referer，只认 cnn.com 的，前端直取永远是 418。</li>
-      <li>持仓 26 张论点卡里，<b>4 家没有在外流通的公司债</b>（TSLA／TSM／BE／DUOL），不在此追踪。另有几家（HOOD／NBIS／CMOC）在外的是<b>可转债</b>——零息或低息、价格远高于面值（转股价值推上去的），没有常规到期收益率，算不出对国债的利差，所以列出来但不给数字。</li>
+      <li>持仓 26 张论点卡里，<b>4 家没有在外流通的公司债</b>（TSLA／TSM／BE／DUOL），不在此追踪。<b>可转／可交换债</b>按 TradingView 的 <span class="mono">conversion_option</span> 字段识别，单列一节、<b>不计入平均利差</b>：它的价格主要是转股期权的价值（比如价格是面值的 4 倍多），收益率反映的不是信用定价。数据源不提供转股价／转股比例，所以这里<b>不给平价、转股溢价和 delta</b>，只列价格、票息、回售日和在外金额。</li>
     </ul>
   </footer>
 </div>
@@ -185,7 +189,7 @@ const ISSUERS=[
  {t:"SKH",  n:"SK 海力士",   q:"SK hynix",               p:["sk hynix"]},
  {t:"CMOC", n:"洛阳钼业",    q:"CMOC",                   p:["cmoc"]},
 ];
-const state={bonds:{},meta:{},curve:[],onlyFinra:true,sortSpread:false,open:new Set(),errs:[]};
+const state={bonds:{},conv:{},meta:{},curve:[],onlyFinra:true,sortSpread:false,open:new Set(),errs:[]};
 
 // Content-Type 必须 text/plain：TradingView 的 CORS 只放行 Referer 与 Accept，
 // application/json 会触发预检然后被拒。服务端不校验这个头，照常解析 JSON。
@@ -233,10 +237,11 @@ function ustAt(y){
 }
 async function loadIssuer(iss){
   const d=await scan("bond",{filter:[{left:"description",operation:"match",right:iss.q}],
-    columns:["name","description","close","change","maturity_date","yield_to_maturity"],range:[0,400]});
-  const by=new Map(); let matched=0;
+    columns:["name","description","close","change","maturity_date","yield_to_maturity",
+             "conversion_option","current_coupon","outstanding_amount","fundamental_currency_code","put_next_date"],range:[0,400]});
+  const by=new Map(),cv=new Map(); let matched=0;
   for(const row of (d.data||[])){
-    const [nm,desc,close,chg,mat,ytm]=row.d;
+    const [nm,desc,close,chg,mat,ytm,conv,cpn,out,cur,put]=row.d;
     if(!desc) continue;
     const low=desc.toLowerCase();
     // 模糊检索负责召回，严格前缀负责排除：搜 Amazon 会带回
@@ -244,10 +249,18 @@ async function loadIssuer(iss){
     const hit=iss.p.find(p=>low.startsWith(p));
     if(!hit) continue;
     matched++;
-    // 可转债没有常规 YTM（TradingView 给 null），算不了对国债的利差。
-    // 这类要和「没检索到」分开说，否则「这家只有可转债」会长得像「取数失败」。
+    const ex=(row.s||"").split(":")[0];
+    // 可转／可交换债按 TradingView 的 conversion_option 字段认，不按「没有 YTM」猜：
+    // 没有 YTM 的还有浮息债、永续、混合资本债，而可转债的价格主要是期权价值，
+    // 混进利差平均会把信用定价搅脏，所以单列一节、不进平均。
+    if(conv==="convertible"||conv==="exchangeable"){
+      const pc=cv.get(desc);
+      if(!pc||(ex==="FINRA"&&pc.ex!=="FINRA")||(ex===pc.ex&&pc.chg==null&&chg!=null))
+        cv.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ex,conv,cpn,out,cur,put});
+      continue;
+    }
     if(ytm==null||!isFinite(ytm)||mat==null) continue;
-    const ex=(row.s||"").split(":")[0], prev=by.get(desc);
+    const prev=by.get(desc);
     if(!prev||(ex==="FINRA"&&prev.ex!=="FINRA")||(ex===prev.ex&&prev.chg==null&&chg!=null))
       by.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ytm,ex});
   }
@@ -255,7 +268,8 @@ async function loadIssuer(iss){
     const t=yearsTo(b.mat),u=ustAt(t);
     return {...b,years:t,ust:u,spread:u==null?null:(b.ytm-u)*100};
   }).sort((a,b)=>a.years-b.years);
-  state.meta[iss.t]={matched};
+  state.meta[iss.t]={matched,conv:cv.size};
+  state.conv[iss.t]=[...cv.values()].sort((a,b)=>String(a.mat).localeCompare(String(b.mat)));
   return rows;
 }
 async function loadLocal(){
@@ -365,7 +379,8 @@ function renderIssuers(){
   }).join("")+missing.map(({iss})=>{
     const m=state.meta[iss.t];
     const why = m==null ? "本次取数失败"
-      : m.matched>0 ? `仅有 ${m.matched} 只可转债 · 无到期收益率，算不出利差`
+      : m.conv>0 ? `仅有 ${m.conv} 只可转／可交换债 · 见下方「可转债」`
+      : m.matched>0 ? `${m.matched} 只债券均无到期收益率（浮息／永续等），算不出利差`
       : "无在外流通的普通公司债";
     return `<div class="issuer" style="opacity:.5"><div class="ihead" style="cursor:default">
       <span class="caret"></span><span class="tick">${iss.t}</span><span class="iname">${iss.n}</span>
@@ -382,6 +397,37 @@ function renderIssuers(){
   ab.style.width=wavg==null?"0%":Math.min(100,Math.abs(wavg)/400*100)+"%";
   ab.style.background=wavg==null?"#263140":(wavg<150?"#2dd4bf":wavg>300?"#f87171":"#f0c454");
   document.getElementById("bondHint").textContent=`${got.length} 家有报价 · 共 ${flat.length} 只债券`+(missing.length?` · ${missing.length} 家未取到`:"");
+}
+function renderConvs(){
+  const host=document.getElementById("convs");
+  const got=ISSUERS.map(iss=>({iss,rows:state.conv[iss.t]||[]})).filter(x=>x.rows.length);
+  const money=(v,c)=>v==null||!isFinite(v)?"—":(v/1e8).toFixed(v>=1e9?0:1)+(c==="USD"?" 亿美元":" 亿 "+(c||"?"));
+  const day=t=>{if(!t)return "—";const d=new Date(t*1000);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");};
+  if(!got.length){host.innerHTML='<div class="issuer"><div style="padding:16px;color:#7d8b9c;font-size:13px">持仓公司没有在外的可转／可交换债</div></div>';
+    document.getElementById("convHint").textContent="不计入平均利差";return;}
+  host.innerHTML=got.map(({iss,rows})=>{
+    const k="cv:"+iss.t, open=state.open.has(k);
+    const cur=[...new Set(rows.map(b=>b.cur).filter(Boolean))];
+    const tot=cur.length===1?money(rows.reduce((s,b)=>s+(b.out||0),0),cur[0]):"—";
+    const body=open?`<div class="tw"><table><thead><tr><th>债券</th><th>类型</th><th>到期</th><th>下一回售日</th><th>来源</th><th>价格（% 面值）</th><th>涨跌</th><th>票息</th><th>在外金额</th></tr></thead><tbody>${rows.map(b=>`<tr>
+        <td>${esc(b.short||b.desc)}</td><td>${b.conv==="exchangeable"?"可交换":"可转换"}</td>
+        <td class="num">${ymd(b.mat)}</td><td class="num" style="color:#7d8b9c">${day(b.put)}</td>
+        <td><span class="src ${b.ex==="FINRA"?"finra":""}">${esc(b.ex)}</span></td>
+        <td class="num">${fmt(b.close)}</td>
+        <td class="num ${b.chg>0?"up":b.chg<0?"down":""}">${pct(b.chg)}</td>
+        <td class="num">${b.cpn==null?"—":fmt(b.cpn,3).replace(/\.?0+$/,"")+"%"}</td>
+        <td class="num">${money(b.out,b.cur)}</td></tr>`).join("")}</tbody></table></div>`:"";
+    return `<div class="issuer"><button class="ihead" type="button" data-k="${k}" aria-expanded="${open}">
+      <span class="caret">${open?"▼":"▶"}</span><span class="tick">${iss.t}</span>
+      <span class="iname">${iss.n}</span><span class="icount">${rows.length} 只${rows.some(b=>b.ex==="FINRA")?"":" · 无 FINRA 报价"}</span>
+      <span class="isp"><b>${tot}</b><span>在外合计</span></span>
+    </button>${body}</div>`;
+  }).join("");
+  host.querySelectorAll(".ihead[data-k]").forEach(b=>b.addEventListener("click",()=>{
+    const k=b.dataset.k; state.open.has(k)?state.open.delete(k):state.open.add(k); renderConvs();
+  }));
+  const n=got.reduce((s,x)=>s+x.rows.length,0);
+  document.getElementById("convHint").textContent=`${got.length} 家 · 共 ${n} 只 · 不计入平均利差`;
 }
 function showErr(){
   document.getElementById("errbox").innerHTML=state.errs.length?`<div class="err">${esc(state.errs.join("；"))}</div>`:"";
@@ -438,7 +484,7 @@ async function boot(){
       try{ state.bonds[iss.t]=await loadIssuer(iss); }
       catch(e){ state.bonds[iss.t]=[]; state.errs.push(iss.t+" 取数失败"); }
     }));
-    renderIssuers();
+    renderIssuers(); renderConvs();
   }
   showErr();
   document.getElementById("stamp").textContent="数据更新 "+new Date().toLocaleString("zh-CN",{hour12:false});
@@ -450,8 +496,8 @@ document.getElementById("sortBy").addEventListener("click",e=>{
   state.sortSpread=!state.sortSpread; e.currentTarget.setAttribute("aria-pressed",String(state.sortSpread)); renderIssuers();});
 document.getElementById("expandAll").addEventListener("click",e=>{
   const on=state.open.size<ISSUERS.length/2;
-  state.open=on?new Set(ISSUERS.map(i=>i.t)):new Set();
-  e.currentTarget.setAttribute("aria-pressed",String(on)); renderIssuers();});
+  state.open=on?new Set(ISSUERS.flatMap(i=>[i.t,"cv:"+i.t])):new Set();
+  e.currentTarget.setAttribute("aria-pressed",String(on)); renderIssuers(); renderConvs();});
 boot();
 </script>
 </body>
