@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-23 10:30 ET",
+  "updated": "2026-09-23 11:00 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,718.52",
-    "chg": "-0.59%",
+    "value": "7,732.52",
+    "chg": "-0.41%",
     "dir": "down",
-    "note": "实时 10:30 ET"
+    "note": "实时 11:00 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "30,388.3",
-    "chg": "-1.12%",
+    "value": "30,533.7",
+    "chg": "-0.65%",
     "dir": "down",
-    "note": "实时 10:30 ET"
+    "note": "实时 11:00 ET"
   },
   {
     "label": "DXY",
     "value": "101.07",
     "chg": "+0.34%",
     "dir": "up",
-    "note": "实时 10:30 ET"
+    "note": "实时 11:00 ET"
   },
   {
     "label": "黄金",
-    "value": "4,314.70",
-    "chg": "-1.49%",
+    "value": "4,321.70",
+    "chg": "-1.33%",
     "dir": "down",
-    "note": "实时 10:30 ET"
+    "note": "实时 11:00 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "91.96",
-    "chg": "+2.92%",
+    "value": "92.06",
+    "chg": "+3.03%",
     "dir": "up",
-    "note": "实时 10:30 ET"
+    "note": "实时 11:00 ET"
   },
   {
     "label": "BTC",
-    "value": "84,016",
-    "chg": "-2.53%",
+    "value": "84,521",
+    "chg": "-1.95%",
     "dir": "down",
-    "note": "实时 10:30 ET"
+    "note": "实时 11:00 ET"
   },
   {
     "label": "VIX",
     "value": "14.67",
     "chg": "+0.46",
     "dir": "up",
-    "note": "实时 10:30 ET"
+    "note": "实时 11:00 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.05%",
-    "chg": "+8.2bp",
+    "value": "5.06%",
+    "chg": "+9.6bp",
     "dir": "up",
-    "note": "实时 10:30 ET"
+    "note": "实时 11:00 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.36%",
-    "chg": "+5.2bp",
+    "value": "5.37%",
+    "chg": "+6.8bp",
     "dir": "up",
-    "note": "实时 10:30 ET"
+    "note": "实时 11:00 ET"
   },
   {
     "label": "US 2Y",
