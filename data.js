@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-23 00:30 ET",
+  "updated": "2026-09-23 09:00 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,764.64",
     "chg": "-0.00%",
     "dir": "flat",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,732.4",
     "chg": "+0.82%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "DXY",
-    "value": "100.69",
-    "chg": "-0.01%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "100.94",
+    "chg": "+0.21%",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "黄金",
-    "value": "4,383.90",
-    "chg": "+0.25%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "4,340.60",
+    "chg": "-0.90%",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "89.01",
-    "chg": "-0.81%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "91.11",
+    "chg": "+1.97%",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "BTC",
-    "value": "87,026",
-    "chg": "+0.96%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "85,482",
+    "chg": "-0.83%",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "VIX",
-    "value": "14.21",
-    "chg": "-0.65",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "14.31",
+    "chg": "+0.10",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.97%",
-    "chg": "+0.5bp",
+    "value": "4.99%",
+    "chg": "+2.2bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.30%",
-    "chg": "+0.7bp",
+    "value": "5.32%",
+    "chg": "+2.1bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 2Y",
@@ -84,7 +84,7 @@ export const markets = [
   {
     "label": "10月加息概率",
     "value": "57%",
-    "chg": "",
+    "chg": "一周前 48%",
     "dir": "flat",
     "note": "ZQ 期货自算 · 2026-09-21 ⚠️"
   }
