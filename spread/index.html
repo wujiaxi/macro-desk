@@ -150,7 +150,7 @@
       <button class="chip" id="sortBy" type="button" aria-pressed="false">按利差排序</button>
       <button class="chip" id="expandAll" type="button" aria-pressed="false">全部展开</button>
     </div>
-    <div id="issuers"><div class="issuer"><div style="padding:16px;color:#7d8b9c;font-size:13px">正在取 22 家公司的债券报价…</div></div></div>
+    <div id="issuers"><div class="issuer"><div style="padding:16px;color:#7d8b9c;font-size:13px">正在取债券报价…</div></div></div>
   </section>
 
   <section>
@@ -160,6 +160,7 @@
   <footer>
     <b>口径</b>
     <ul>
+      <li><b>币种</b>：只有美元债减美国国债算利差。欧元、英镑、日元等非美元债照常列出、标明币种，但不算利差、不进平均（它们要减各自货币的无风险利率）。<b>对照</b>：甲骨文（ORCL）与软银集团是 AI 链上杠杆最高、信用最弱的两家，列出来作参照，不是持仓，不计入「持仓平均信用利差」；软银只认「SoftBank Group」名下的债，排除旗下电信子公司 SoftBank Corp.。</li>
       <li><b>数据核对</b>：① 每只固定票息债的到期收益率都用价格、票息、到期日<b>独立重算</b>，与行情源差 &gt;5bp 判不通过、不计入平均（一年内到期的对价格小数位太敏感，不核）；② 债券名称里的票息／到期日须与结构化字段一致；③ FINRA 价与德国交易所同一只债的中位价比，差 &gt;3 个点提示；④ 本页拼出的国债曲线与<b>美国财政部官方收益率曲线</b>（上一交易日日终，每日抓取）逐期限比。官方是日终、本页是盘中实时，整体水平差就是今天的利率变动，所以核的是<b>形状</b>：各期限偏差扣掉中位数后 &gt;8bp 判不通过。整体水平本身这里无法独立核对。</li>
       <li><b>利差</b>＝该债到期收益率 − 同到期日美国国债收益率（曲线线性插值），单位基点。这是市场对这家公司的信用定价，比债券价格本身更能说明问题。</li>
       <li><b>报价来源</b>：<span class="src finra">FINRA</span> 是美国场外市场（TRACE）报价，口径最权威；其余为德国交易所（FWB／SWB／GETTEX／MUN／DUS）挂牌，同一只债在欧洲挂牌、流动性远低于美国场外，只在 FINRA 无报价时作后备。债券与国债曲线为本页实时取数，多数为延迟约 15 分钟的流式报价。</li>
@@ -193,7 +194,10 @@ const ISSUERS=[
  {t:"NOK",  n:"诺基亚",      q:"Nokia Oyj",              p:["nokia oyj"]},
  {t:"SKH",  n:"SK 海力士",   q:"SK hynix",               p:["sk hynix"]},
  {t:"CMOC", n:"洛阳钼业",    q:"CMOC",                   p:["cmoc"]},
+ {t:"ORCL", n:"甲骨文",      q:"Oracle",                 p:["oracle corp"]},
+ {t:"SFTBY",n:"软银集团",    q:"SoftBank",               p:["softbank group"]},
 ];
+const CMP=new Set(["ORCL","SFTBY"]);   // 对照组:AI 链上信用最弱的两家,不是持仓,不计入持仓平均
 const state={bonds:{},conv:{},terms:{},stock:{},meta:{},curve:[],onlyFinra:true,sortSpread:false,open:new Set(),errs:[]};
 
 // Content-Type 必须 text/plain：TradingView 的 CORS 只放行 Referer 与 Accept，
@@ -228,10 +232,29 @@ async function loadCurve(){
     pts.push([t,y]);
   }
   pts.sort((a,b)=>a[0]-b[0]);
-  state.curve=pts; return pts;
+  state.curve=pts;
+  // 算利差用的基准:按季度分箱取中位数(与图一致)。直接在原始点之间插值会被个别坏点带偏 ——
+  // 2026-09-25 实测 0.8 年处有一只报 2.17%(周围都是 4.5–4.6%),5 年处基准因此比财政部官方低 17.5bp,核对面板抓出。
+  const bins=new Map();
+  for(const [t,y] of pts){const k=Math.round(t*4)/4;(bins.get(k)||bins.set(k,[]).get(k)).push(y);}
+  state.curveBin=[...bins.entries()].map(([k,a])=>{a.sort((x,y)=>x-y);return [k,a[Math.floor(a.length/2)]];}).sort((a,b)=>a[0]-b[0]);
+  return pts;
 }
+// 利差基准(2026-09-25 改):财政部官方曲线 + 今日平移。业内标准的利差基准就是这条官方(新券)曲线;
+// TradingView 上的美债只有欧洲交易所的报价、以老券为主,有坏点也有系统偏差(1 年处老券比官方高约 10bp)。
+// 官方是上一交易日日终 ⇒ 加一个平移:盘中报价与官方逐期限差的中位数。官方取不到时退回分箱中位数曲线。
 function ustAt(y){
-  const c=state.curve;
+  const o=state.official;
+  if(o&&state.shift!=null&&y!=null){
+    const c=o.points;
+    if(y<=c[0][0]) return c[0][1]+state.shift;
+    if(y>=c[c.length-1][0]) return c[c.length-1][1]+state.shift;
+    for(let i=1;i<c.length;i++) if(c[i][0]>=y){const [x0,y0]=c[i-1],[x1,y1]=c[i];return y0+(y1-y0)*(y-x0)/(x1-x0)+state.shift;}
+  }
+  return ustBin(y);
+}
+function ustBin(y){
+  const c=state.curveBin||state.curve;
   if(!c.length||y==null) return null;
   if(y<=c[0][0]) return c[0][1];
   if(y>=c[c.length-1][0]) return c[c.length-1][1];
@@ -298,19 +321,22 @@ function renderChecks(){
     cell(!yb.length,"收益率独立重算",`${y.length-yb.length}/${y.length}`,`用价格·票息·到期日重算 · 最大偏差 ${worst==null?"—":worst.toFixed(1)}bp（阈值 5bp）· 一年内到期不核`)+
     cell(!db.length,"名称 vs 字段",`${d.length-db.length}/${d.length}`,"名称里写的票息与到期日须与结构化字段一致")+
     cell(!vw.length,"FINRA vs 欧洲交易所",`${v.length-vw.length}/${v.length}`,"同一只债价差 ≤3 个点 · 超出只提示（欧洲报价常不活跃）")+
-    (u?cell(u.bad===0,"国债曲线形状 vs 财政部官方",`${u.n-u.bad}/${u.n}`,`官方 ${u.date} 日终 · 整体差 ${u.level>=0?"+":""}${u.level.toFixed(0)}bp 视为今日利率变动 · 扣除后最大偏差 ${u.worst.toFixed(0)}bp（阈值 8bp）`)
+    (u?cell(!u.fail,"利差基准：财政部官方曲线",u.fail?"异常":"正常",`官方 ${u.date} 日终 ${u.ageDays>3.5?"⚠ 已超过 3 天未更新":""} · 今日平移 ${u.level>=0?"+":""}${u.level.toFixed(0)}bp（>40bp 判异常）· 盘中报价曲线与官方的形状差最大 ${u.worst.toFixed(0)}bp（欧洲交易所老券报价，仅提示）`)
       :cell(false,"国债曲线 vs 财政部官方","—","官方曲线未取到"));
 }
 function checkCurve(){
   const o=state.official; if(!o||!state.curve.length) return;
-  const rows=o.points.filter(([t])=>t>=1).map(([t,y])=>{const m=ustAt(t);return {t,y,m,d:m==null?null:(m-y)*100};});
+  const rows=o.points.filter(([t])=>t>=1).map(([t,y])=>{const m=ustBin(t);return {t,y,m,d:m==null?null:(m-y)*100};});
   const ok=rows.filter(r=>r.d!=null);
   // 官方是上一交易日日终,本页是盘中实时:整体水平差≈今天利率的变动,不算错(2026-09-23 实测整体 +15bp,
   // 同日 10 年期实际 +17bp)。能核的是**形状**:各期限偏差扣掉中位数后应很小,>8bp 判不通过。
   const ds=ok.map(r=>r.d).sort((a,b)=>a-b), med=ds[Math.floor(ds.length/2)];
   const shape=ok.map(r=>r.d-med);
-  state.ustChk={date:o.date,n:ok.length,bad:shape.filter(x=>Math.abs(x)>8).length,worst:Math.max(...shape.map(Math.abs)),level:med,rows};
-  document.getElementById("curveHint").textContent+=` · 对照财政部官方（${o.date} 日终）：整体 ${med>=0?"+":""}${med.toFixed(0)}bp（≈今日利率变动）· 形状偏差最大 ${state.ustChk.worst.toFixed(0)}bp`;
+  state.shift=med/100;                                            // 今日平移(百分点),用于利差基准
+  const ageDays=(Date.now()-new Date(o.date+"T21:00:00Z"))/864e5;
+  state.ustChk={date:o.date,n:ok.length,worst:Math.max(...shape.map(Math.abs)),level:med,rows,ageDays,
+                fail:ageDays>3.5||Math.abs(med)>40};
+  document.getElementById("curveHint").textContent+=` · 利差基准＝财政部官方曲线（${o.date} 日终）${med>=0?"+":""}${med.toFixed(0)}bp 今日平移`;
 }
 async function loadOfficial(){
   const r=await fetch("../data/ust_official.json",{cache:"no-store"});
@@ -352,11 +378,13 @@ async function loadIssuer(iss){
     if(close!=null) (venues.get(desc)||venues.set(desc,[]).get(desc)).push({ex,close});
     const prev=by.get(desc);
     if(!prev||(ex==="FINRA"&&prev.ex!=="FINRA")||(ex===prev.ex&&prev.chg==null&&chg!=null))
-      by.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ytm,ex,iss:iss0,cpn,fq,ctype});
+      by.set(desc,{desc,short:desc.slice(hit.length).replace(/^[\s.,]+/,"")||desc,close,chg,mat,ytm,ex,iss:iss0,cpn,fq,ctype,cur});
   }
   const rows=[...by.values()].map(b=>{
     const t=yearsTo(b.mat),u=ustAt(t);
-    const r={...b,years:t,ust:u,spread:u==null?null:(b.ytm-u)*100};
+    // 只有美元债能减美债算利差;欧元/日元等要减各自的无风险利率,这里不算(2026-09-25 前误把非美元债也减美债)
+    const usd=!b.cur||b.cur==="USD";
+    const r={...b,years:t,ust:usd?u:null,spread:(u==null||!usd)?null:(b.ytm-u)*100,nonusd:!usd};
     r.chk=checkBond(r,venues.get(b.desc)||[]);
     return r;
   }).sort((a,b)=>a.years-b.years);
@@ -471,13 +499,13 @@ function renderIssuers(){
         <td class="num ${b.chg>0?"up":b.chg<0?"down":""}">${pct(b.chg)}</td>
         <td class="num">${fmt(b.ytm)}%</td>
         <td class="num" style="color:#7d8b9c">${fmt(b.ust)}%</td>
-        <td class="num spc"><span class="bar" style="width:${w.toFixed(0)}%;background:${col}"></span><span class="v">${b.spread==null?"—":(b.spread>0?"+":"")+b.spread.toFixed(0)}</span></td>
+        <td class="num spc"><span class="bar" style="width:${w.toFixed(0)}%;background:${col}"></span><span class="v">${b.nonusd?`<span class="dim" title="非美元债不对美债算利差">${esc(b.cur)}</span>`:b.spread==null?"—":(b.spread>0?"+":"")+b.spread.toFixed(0)}</span></td>
         <td>${chkCell(b.chk)}</td></tr>`;
     }).join("")}</tbody></table></div>`:"";
     return `<div class="issuer"><button class="ihead" type="button" data-t="${iss.t}" aria-expanded="${open}">
       <span class="caret">${open?"▼":"▶"}</span><span class="tick">${iss.t}</span>
-      <span class="iname">${iss.n}</span>
-      <span class="icount">${rows.length} 只${rows.some(b=>b.ex==="FINRA")?"":" · 无 FINRA 报价"}</span>
+      <span class="iname">${iss.n}</span>${CMP.has(iss.t)?' <span class="src" title="不是持仓,不计入持仓平均利差">对照</span>':""}
+      <span class="icount">${rows.length} 只${rows.some(b=>b.ex==="FINRA")?"":" · 无 FINRA 报价"}${rows.some(b=>b.nonusd)?` · 含 ${rows.filter(b=>b.nonusd).length} 只非美元债`:""}</span>
       <span class="isp"><b class="${cls}">${avg==null?"—":(avg>0?"+":"")+avg.toFixed(0)}</b><span>平均利差</span></span>
     </button>${body}</div>`;
   }).join("")+missing.map(({iss})=>{
@@ -493,11 +521,11 @@ function renderIssuers(){
   host.querySelectorAll(".ihead[data-t]").forEach(b=>b.addEventListener("click",()=>{
     const t=b.dataset.t; state.open.has(t)?state.open.delete(t):state.open.add(t); renderIssuers();
   }));
-  const flat=got.flatMap(x=>x.rows).filter(b=>b.spread!=null&&!b.chk.excluded);
+  const flat=got.filter(x=>!CMP.has(x.iss.t)).flatMap(x=>x.rows).filter(b=>b.spread!=null&&!b.chk.excluded);
   renderChecks();
   const wavg=flat.length?flat.reduce((s,b)=>s+b.spread,0)/flat.length:null;
   document.getElementById("avgVal").textContent=wavg==null?"—":(wavg>0?"+":"")+wavg.toFixed(0);
-  document.getElementById("avgNote").textContent=wavg==null?"无数据":`${flat.length} 只债 · ${got.length} 家公司`;
+  document.getElementById("avgNote").textContent=wavg==null?"无数据":`${flat.length} 只美元债 · ${got.filter(x=>!CMP.has(x.iss.t)).length} 家持仓公司`;
   const ab=document.getElementById("avgBar");
   ab.style.width=wavg==null?"0%":Math.min(100,Math.abs(wavg)/400*100)+"%";
   ab.style.background=wavg==null?"#263140":(wavg<150?"#2dd4bf":wavg>300?"#f87171":"#f0c454");
