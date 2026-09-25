@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-25 00:30 ET",
+  "updated": "2026-09-25 04:32 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,704.13",
     "chg": "-0.02%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 04:32 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,478.9",
     "chg": "+0.03%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 04:32 ET"
   },
   {
     "label": "DXY",
-    "value": "101.27",
-    "chg": "+0.05%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "101.12",
+    "chg": "-0.15%",
+    "dir": "down",
+    "note": "实时 04:32 ET"
   },
   {
     "label": "黄金",
-    "value": "4,303.20",
-    "chg": "-0.44%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "4,315.40",
+    "chg": "+0.23%",
+    "dir": "up",
+    "note": "实时 04:32 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "93.08",
-    "chg": "-0.51%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "93.56",
+    "chg": "+0.47%",
+    "dir": "up",
+    "note": "实时 04:32 ET"
   },
   {
     "label": "BTC",
-    "value": "84,108",
-    "chg": "-0.33%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "84,386",
+    "chg": "+0.00%",
+    "dir": "flat",
+    "note": "实时 04:32 ET"
   },
   {
     "label": "VIX",
-    "value": "15.67",
-    "chg": "+0.50",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "15.54",
+    "chg": "-0.13",
+    "dir": "down",
+    "note": "实时 04:32 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.16%",
     "chg": "+4.8bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 04:32 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.46%",
     "chg": "+6.0bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 04:32 ET"
   },
   {
     "label": "US 2Y",
@@ -84,7 +84,7 @@ export const markets = [
   {
     "label": "10月加息概率",
     "value": "73%",
-    "chg": "一周前 44%",
+    "chg": "一周前 55%",
     "dir": "flat",
     "note": "ZQ 期货自算 · 2026-09-23 ⚠️"
   }
@@ -1085,6 +1085,239 @@ export const events = [
       {
         "label": "美联储 · FOMCpresconf20260916",
         "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260916.pdf"
+      }
+    ]
+  },
+  {
+    "id": "conf-meta-connect-2026-09-23",
+    "kind": "event",
+    "title": "Meta Connect",
+    "subtitle": "可穿戴出货与资本开支叙事、Llama 开源节奏",
+    "org": "META",
+    "ticker": "META",
+    "company": "",
+    "date": "2026-09-23T09:00:00-04:00",
+    "dateNote": "不进 SEC 备案,证据等级上限 B",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "product",
+      "QCOM",
+      "NVDA"
+    ],
+    "thesis": "这场会对我意味着什么:Connect 从来不是 META 的财务事件(近五届次日涨跌绝对值中位仅 0.81%),但今年它第一次踩在一个刚刚上线、已经有价格标签的 AI 产品(Muse,9/8 上线,$20/$100 月费)之上 —— 真正的问题不是眼镜发什么,而是管理层会不会第一次给 Muse 一个数字。 主办方(META):会前不加。三条独立理由同向:① 期权已按 约 2.1%–2.9% 的事件跳空定价(自算,见 §2),是历史实现中位 0.81% 的 2.6–3.6 倍,买事件已无赔率;② RSI14 84.1 极度超买、价在 SMA20 上方 +12.6%;③ 这波 +16%(8/28 $578.02 → 9/15 $670.24)是 Muse 上线驱动的,已经把\"AI 能变现\"这件事提前买了,会上重复一遍等于零信息量。",
+    "expectations": [
+      {
+        "name": "Keynote 由 Zuckerberg 主讲,主题为 AI / AI 眼镜 / VR",
+        "consensus": "官方原话:\"Join Founder and CEO Mark Zuckerberg as he shares how Meta is building a future for everyone\";官方描述 \"showcasing our latest breakthroughs in AI technologies, AI glasses and VR\"(https://www.meta.com/connect/)",
+        "prior": "A-(官方页面)",
+        "range": "",
+        "note": "已知"
+      },
+      {
+        "name": "Project Phoenix(轻量 MR 头显)做舞台预览",
+        "consensus": "Horizon OS 处方镜片固件包里泄出图像(UploadVR 发现,Road to VR 2026 报道);曾用代号 Puffin / Loma / Stanley;头部单元 <110 克;商用时点\"2027 上半年\"出自 Business Insider 拿到的内部备忘录,\"<$1,000\"出自 WSJ 2025 报道",
+        "prior": "C(泄露 + 具名媒体)",
+        "range": "",
+        "note": "部分已知(VR 垂直媒体已充分报道,但未进入主流卖方叙事)"
+      },
+      {
+        "name": "Muse / Muse Spark 的开发者接口与生态",
+        "consensus": "官方开发者议程列有 Muse Spark 相关场次(vr.org 2026 整理);Muse 本体已于 2026-09-08 上线,分免费 / Power $20 月 / Maximum $100 月三档(TechCrunch、Axios、CNBC 2026-09-08)",
+        "prior": "B(产品已上线,官方口径)",
+        "range": "",
+        "note": "高度已知,且已被买过一轮(9/9 盘中一度 +7.2%)"
+      },
+      {
+        "name": "Ray-Ban Display 的软件能力扩展(Web Apps / Wearables Device Access Toolkit)",
+        "consensus": "官方开发者议程(vr.org 2026-09 整理);CES 2026 Meta 已发过 Display 的 teleprompter 与神经手写(Meta Quest 官方博客,2026-01)",
+        "prior": "B",
+        "range": "",
+        "note": "部分已知"
+      },
+      {
+        "name": "Ray-Ban Display 国际上市重启",
+        "consensus": "上一代节奏外推 + 台账里那条 missed 的承诺;2026-01-06 暂停时公司称在\"重新评估\"",
+        "prior": "C(无任何新指引)",
+        "range": "",
+        "note": "未知 —— 这是本场最干净的二元事件(见 §7.1 Project Phoenix(轻量 MR 头显)做舞台预览)"
+      },
+      {
+        "name": "AI 眼镜品类销量/产能数字",
+        "consensus": "EssilorLuxottica 称 2025 年卖出 700 万副以上(CNBC 2026-02-11);IDC 给 Meta 在智能眼镜市场 69.2% 份额(2026 Q1);Bloomberg 报道双方在讨论把产能提到 2000 万副/年 —— 后者是报道不是承诺",
+        "prior": "C(具名媒体)",
+        "range": "",
+        "note": "行业内已知,未量化进 META 估值"
+      },
+      {
+        "name": "平价眼镜线的新款",
+        "consensus": "本项预期应当调低:$299 起的 \"Meta Glasses\"(Adventurer / Fury / by Kylie,26 种组合、17 国)已在 2026-06-23 单独发布(Meta 官方博客),不是留给 Connect 的牌",
+        "prior": "A-(官方博客)",
+        "range": "",
+        "note": "已知,已消化"
+      },
+      {
+        "name": "财务口径(营收 / capex / Muse 收入)",
+        "consensus": "无法建立预期 —— Connect 不给财务指引,2027 capex 口径的公司自述裁决点是 10 月底 Q3 财报",
+        "prior": "—",
+        "range": "",
+        "note": "—"
+      }
+    ],
+    "pricing": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "20%",
+        "trigger": "Muse 拿到具名的可量化口径,或国际上市重启带具体国家与日期",
+        "reaction": "META 上行,量级参照历史上沿(次日 +2% 一档);QCOM 温和偏多但被同期 Snapdragon Summit 污染,不可直接归因"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "55%",
+        "trigger": "按既定节奏迭代:Phoenix 只给 preview、Display 只给软件扩展、Muse 不给数字、国际上市不提",
+        "reaction": "会前买会后卖的常规兑现,量级落在历史中位附近(次日 ±1% 内);传导标的中性"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "25%",
+        "trigger": "国际上市被静默删除;或 Phoenix 口径退到未来数年;或 Muse 回避变现同时放宽免费额度;或新硬件出现非高通方案",
+        "reaction": "META 下行,但主要风险是把 10 月底 Q3 财报的 Pillar 2 判定推向 capex 仍无对价;QCOM 在份额类信号出现时偏空"
+      }
+    ],
+    "watch": [
+      "Muse 有没有数字 · 预期 没有 · 利好 管理层具名给出任一可量化采用/付费口径 · 利空 只演 demo,且同时放宽免费额度",
+      "Ray-Ban Display 国际上市 · 预期 不提 · 利好 给出国家 + 日期 · 利空 全程不提且不解释暂停",
+      "Project Phoenix · 预期 给 preview,不给价与开卖日 · 利好 给 <$1,000 与 2027 上半年确切窗口 + 开发者套件 · 利空 口径退到\"未来数年\"或完全不提",
+      "芯片归属 · 预期 不点名(Meta 从不在 keynote 提供应商) · 利好 新品 spec 页/规格表确认 Snapdragon · 利空 出现 Meta 自研 SoC 或非高通方案",
+      "品类销量/产能 · 预期 只给形容词 · 利好 首次给出具体出货数或确认 2000 万产能 · 利空 明确承认供给受限延续到 2027",
+      "谁说的 · 预期 —— · 利好 —— · 利空 ——"
+    ],
+    "actual": [
+      {
+        "name": "Muse 会不会第一次拿到一个数字",
+        "actual": "Muse 没有任何采用/付费/收入数字,只有形容词;宣布 Muse 上 AI 眼镜,时间只说 in the coming months(不算时间表);未见放宽免费额度。新增硬件 Muse Charm(口袋设备,later this year 再说)",
+        "consensus": "只讲能力、生态与 Muse Spark 开发者接口,不给任何订阅用户数、付费转化或收入口径(与 9/8 上线时一致:仅披露定价档位与免费额度,未给采用数据)",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      },
+      {
+        "name": "Ray-Ban Display 国际上市:上次承诺过,这次如果不提就是坏消息",
+        "actual": "Ray-Ban Display 首次可网购;英国 £749、加拿大 CA$1,149 当日开卖;法/意/德 €899 当日预订、10 月 13 日上市。比原承诺(法意加英)多了德国",
+        "consensus": "不提。2026-01-06 暂停后至今未给新日期,本场也未在官方议程里预告国际市场环节",
+        "prior": "",
+        "surprise": "利好",
+        "dir": "up"
+      },
+      {
+        "name": "Project Phoenix 给到哪一步",
+        "actual": "Project Phoenix 以 Meta VR Glasses 发布:2027 年春、$1,299.99、约 100 克、分体计算单元。给了价格与窗口(超出事前「只 preview」),但没有开放开发者套件申请(没达到事前写的利好条件),且价格高于此前报道的 1,000 美元以下 —— 两个方向相抵,判中性",
+        "consensus": "台上做 preview,不给零售价与开卖日。注意:2027 上半年出自 Business Insider 的内部备忘录、<$1000 出自 WSJ 2025 报道,两者都不是管理层公开承诺,故事前预期不含任何官方时间表",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      },
+      {
+        "name": "AI 眼镜品类的量:会不会第一次被量化",
+        "actual": "没有任何出货数或产能数字;只有 world's best-selling 形容词与「年底前 100+ 款式」;Meta Glasses 新进新加坡/韩国/墨西哥(当日)、巴西/阿联酋(即将)。未承认供给受限",
+        "consensus": "只给势头形容词,不给具体出货数。现有公开锚点全部来自第三方:EssilorLuxottica 称 2025 年售出 700 万副以上(CNBC 2026-02-11)、IDC 给 Meta 2026Q1 智能眼镜份额 69.2%",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      },
+      {
+        "name": "芯片归属有没有变",
+        "actual": "官方材料确认 Meta VR Glasses 采用高通新款 Snapdragon Reality Elite;其余新眼镜(Ray-Ban Meta Gen 3 / Audio)的芯片本场材料未写",
+        "consensus": "keynote 不点名芯片供应商(Meta 历来不提),归属只能靠会后规格页与拆解确认。现状:Ray-Ban Display 用 Snapdragon AR1 Gen 1、Neural Band 用 QCC5100-001,高通器件占该系统物料 15.7%(TechInsights 拆解)",
+        "prior": "",
+        "surprise": "利好",
+        "dir": "up"
+      }
+    ],
+    "reaction": [
+      {
+        "asset": "META",
+        "d0": "+1.02%",
+        "d1": "+4.50%"
+      },
+      {
+        "asset": "QCOM",
+        "d0": "-0.52%",
+        "d1": "-1.51%"
+      },
+      {
+        "asset": "NVDA",
+        "d0": "-1.47%",
+        "d1": "-0.41%"
+      },
+      {
+        "asset": "QQQ",
+        "d0": "-0.84%",
+        "d1": "-0.01%"
+      }
+    ],
+    "verdict": "判定:偏利好,但利好不在最关键的问题上。 硬件这边的执行比我预期的好:Ray-Ban Display 终于在海外开卖,VR 眼镜给出了价格和上市时间,眼镜产品线扩到 100 多款。但对估值最重要的「Muse 能不能赚钱」,这场会仍然没有给出任何数字。 凭哪几个数: ① Ray-Ban Display 在加拿大、英国当天开卖(£749 / 1,149 加元),法国、意大利、德国 10 月 13 日上市(899 欧元)—— 去年承诺的是「2026 年初」,晚了约 9 个月,但多了德国;② 新的 Meta VR Glasses 定在 2027 年春、1,299.99 美元,比此前媒体报道的「1,000 美元以下」贵约 30%;③ Muse 只有「反响非常好」这类形容词,没有用户数、付费数或收入;④ 会后第一个交易日(9/24)META 收涨 4.5%,纳指 100 ETF 基本持平。 对市场什么意思: 这场会证明了眼镜和 VR 硬件在按计划推进,但「巨额 AI 投入有没有回报」这个核心问题,要等 10 月底的三季度财报。高通的新芯片被 Meta VR 眼镜官方确认采用,但高通自己的年度峰会同一时间在开,它 9/24 跌 1.5% 分不清是哪场会的影响。 可信度边界: 所有信息来自 Meta 官方博客(公司署名,不是具名高管的原话),证据等级 B,不进 SEC 备案。另外 META 在会前的 9/21 已经单日大涨 11%,原因我还没核实;9/24 的 4.5% 里有多少是这场会带来的,目前无法区分。",
+    "history": [],
+    "links": [
+      {
+        "label": "官方页面",
+        "url": "https://www.meta.com/blog/connect-2026-save-the-date/"
+      },
+      {
+        "label": "meta.com · connect",
+        "url": "https://www.meta.com/connect/"
+      },
+      {
+        "label": "meta.com · agenda",
+        "url": "https://www.meta.com/connect/agenda/"
+      },
+      {
+        "label": "meta.com",
+        "url": "https://www.meta.com/blog/connect-2025-day-one-keynote-ai-glasses-ray-ban-display-neural-band-metaverse-news/"
+      },
+      {
+        "label": "techcrunch.com",
+        "url": "https://techcrunch.com/2026/01/06/meta-pauses-international-expansion-of-its-ray-ban-display-glasses/"
+      },
+      {
+        "label": "cnbc.com · meta-ray-ban-display-ai-glasses-pause",
+        "url": "https://www.cnbc.com/2026/01/06/meta-ray-ban-display-ai-glasses-pause.html"
+      }
+    ],
+    "agenda": [
+      {
+        "when": "9/23(三)16:00 PT",
+        "what": "Meta Connect Keynote —— Mark Zuckerberg(创始人兼 CEO)主讲"
+      },
+      {
+        "when": "9/24(四)10:00 PT",
+        "what": "Developer State of the Union —— Meta 多位专家,面向开发者的技术方向"
+      },
+      {
+        "when": "9/24 起(点播)",
+        "what": "开发者分场:Meta VR 与 AI 眼镜选型、游戏引擎 SDK、VR 上的 Android 应用、Web/WebXR 沉浸式体验、无手柄交互实践"
+      }
+    ],
+    "readThrough": [
+      {
+        "name": "QCOM",
+        "value": "新(本台账内 QCOM 无论点卡;相关既有承诺为 QCOM-ID2026-pac6b-fy29 —— Personal AI 且 Compute 含 XR/可穿戴,FY2029 $60 亿目标) · 偏多,但量级小 · 新硬件继续采用 Snapdragon(AR1 家族 / QCC 系列)+ 品类销量口径上修。参照系:高通器件占 Ray-Ban Display + Neural Band 物料 15.7%(TechInsights 拆解),按 $799 零售价倒推的芯片价值占比是个位数美元级,所以这条传导在 QCOM 的 FY29 $60 亿目标里只是\"故事验证\",不是\"营收兑现\"。⚠️ 归因污染:QCOM 自家 Snapdragon Summit 同在 9/22–24,QCOM 当周的涨跌不可直接归因于 Connect ｜ 同上 · 偏空(唯一的真风险) · 新品出现 Meta 自研 SoC,或 Phoenix 的计算单元(泄露显示为独立 compute puck)采用非高通方案。这是\"份额被拿走\"的一类信号,比销量数字重要一个量级"
+      },
+      {
+        "name": "NVDA",
+        "value": "Keynote 由 Zuckerberg 主讲,主题为 AI / AI 眼镜 / VR(数据中心需求) · 中性 —— 这一行的正确答案是\"零\" · Connect 是消费端与开发者会议,不给 capex、不给训练集群口径、不点名芯片供应商;Meta 的算力叙事只在财报电话会与 SEC 件里出现,本场会最可能的结果是 NVDA 一个字都不被提到。只有一种例外算触发:管理层在台上把某个模型的训练规模/集群规模具名量化(历史上极罕见)。把 Connect 的眼镜发布读成 NVDA 的利好或利空,都是判反"
+      },
+      {
+        "name": "META(主办方自己)",
+        "value": "Project Phoenix(轻量 MR 头显)做舞台预览(capex 有没有对价)/ Ray-Ban Display 国际上市重启(倍数不会自行修复) · 双向,权重集中在 Muse 一条上 · 见 §7.1 Keynote 由 Zuckerberg 主讲,主题为 AI / AI 眼镜 / VR。主办方在这场会里受影响最小这条通则今年不成立 —— 因为 Muse 是 META 自己的变现叙事,而眼镜的经济含义大部分落在 EssilorLuxottica(未持仓)与 QCOM 身上"
+      },
+      {
+        "name": "(表外)EssilorLuxottica",
+        "value": "未持仓,不建卡 · 偏多 · 品类销量/产能数字若被量化,受益最直接的是它而不是 META。留一行备查,不进动作"
       }
     ]
   },
