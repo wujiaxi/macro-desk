@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-25 16:00 ET",
+  "updated": "2026-09-25 16:30 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,73 +13,73 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,743.50",
+    "value": "7,743.41",
     "chg": "+0.51%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,608.1",
     "chg": "+0.42%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "DXY",
-    "value": "100.98",
-    "chg": "-0.29%",
+    "value": "101.01",
+    "chg": "-0.26%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "黄金",
-    "value": "4,328.60",
-    "chg": "+0.53%",
+    "value": "4,325.60",
+    "chg": "+0.46%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "92.33",
-    "chg": "-0.85%",
+    "value": "92.66",
+    "chg": "-0.49%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "BTC",
-    "value": "84,007",
-    "chg": "-0.45%",
+    "value": "84,045",
+    "chg": "-0.40%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "VIX",
-    "value": "14.73",
-    "chg": "-0.94",
+    "value": "14.87",
+    "chg": "-0.80",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.18%",
     "chg": "+2.2bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.50%",
     "chg": "+4.3bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "US 2Y",
-    "value": "4.85%",
-    "chg": "+14.0bp",
+    "value": "4.87%",
+    "chg": "+2.0bp",
     "dir": "up",
-    "note": "as-of 2026-09-23 · 2s10s +31bp"
+    "note": "as-of 2026-09-24 · 2s10s +31bp"
   },
   {
     "label": "10月加息概率",
@@ -1096,7 +1096,8 @@ export const events = [
     "org": "META",
     "ticker": "META",
     "company": "",
-    "date": "2026-09-23T09:00:00-04:00",
+    "date": "2026-09-23T19:00:00-04:00",
+    "dateEnd": "2026-09-23T21:00:00-04:00",
     "dateNote": "不进 SEC 备案,证据等级上限 B",
     "dateConfirmed": true,
     "importance": 3,
@@ -1332,7 +1333,7 @@ export const events = [
     "date": "2026-09-30T16:00:00-04:00",
     "dateNote": "规则算出的日期,非估计值",
     "dateConfirmed": true,
-    "importance": 1,
+    "importance": 3,
     "tags": [
       "index",
       "flow_window"
@@ -2035,7 +2036,8 @@ export const events = [
     "org": "NVDA",
     "ticker": "NVDA",
     "company": "",
-    "date": "2026-10-20T09:00:00-04:00",
+    "date": "2026-10-21T05:00:00-04:00",
+    "dateEnd": "2026-10-21T07:00:00-04:00",
     "dateNote": "不进 SEC 备案,证据等级上限 B",
     "dateConfirmed": true,
     "importance": 3,
@@ -2865,7 +2867,7 @@ export const events = [
     "date": "2026-10-30T16:00:00-04:00",
     "dateNote": "规则算出的日期,非估计值",
     "dateConfirmed": true,
-    "importance": 1,
+    "importance": 3,
     "tags": [
       "index",
       "flow_window"
@@ -3088,7 +3090,8 @@ export const events = [
     "ticker": "MSFT",
     "company": "",
     "date": "2026-11-17T09:00:00-05:00",
-    "dateNote": "不进 SEC 备案,证据等级上限 B",
+    "dateEnd": null,
+    "dateNote": "keynote 时间未公布,暂按开幕日 09:00 ET 显示 · 不进 SEC 备案,证据等级上限 B",
     "dateConfirmed": true,
     "importance": 3,
     "tags": [
@@ -3195,47 +3198,6 @@ export const events = [
     }
   },
   {
-    "id": "conf-gtc-dc-2026-11-30",
-    "kind": "event",
-    "title": "NVIDIA GTC Washington D.C.",
-    "subtitle": "主权 AI 与美国政策口径、出口管制相关表态",
-    "org": "NVDA",
-    "ticker": "NVDA",
-    "company": "",
-    "date": "2026-11-30T09:00:00-05:00",
-    "dateNote": "不进 SEC 备案,证据等级上限 B",
-    "dateConfirmed": true,
-    "importance": 3,
-    "tags": [
-      "product",
-      "AVGO",
-      "TSM",
-      "INTC"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [],
-    "links": [
-      {
-        "label": "官方页面",
-        "url": "https://www.nvidia.com/gtc/dc/"
-      }
-    ],
-    "agenda": [],
-    "readThrough": [
-      {
-        "name": "传导标的",
-        "value": "AVGO、TSM、INTC"
-      }
-    ]
-  },
-  {
     "id": "conf-aws-reinvent-2026-11-30",
     "kind": "event",
     "title": "AWS re:Invent",
@@ -3244,7 +3206,8 @@ export const events = [
     "ticker": "AMZN",
     "company": "",
     "date": "2026-11-30T09:00:00-05:00",
-    "dateNote": "不进 SEC 备案,证据等级上限 B",
+    "dateEnd": null,
+    "dateNote": "keynote 时间未公布,暂按开幕日 09:00 ET 显示 · 不进 SEC 备案,证据等级上限 B",
     "dateConfirmed": true,
     "importance": 3,
     "tags": [
@@ -3287,7 +3250,7 @@ export const events = [
     "date": "2026-11-30T16:00:00-05:00",
     "dateNote": "规则算出的日期,非估计值",
     "dateConfirmed": true,
-    "importance": 1,
+    "importance": 3,
     "tags": [
       "index",
       "flow_window"
@@ -3324,6 +3287,48 @@ export const events = [
       "move": "",
       "note": ""
     }
+  },
+  {
+    "id": "conf-gtc-dc-2026-11-30",
+    "kind": "event",
+    "title": "NVIDIA GTC Washington D.C.",
+    "subtitle": "主权 AI 与美国政策口径、出口管制相关表态",
+    "org": "NVDA",
+    "ticker": "NVDA",
+    "company": "",
+    "date": "2026-12-01T14:00:00-05:00",
+    "dateEnd": "2026-12-01T16:00:00-05:00",
+    "dateNote": "不进 SEC 备案,证据等级上限 B",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "product",
+      "AVGO",
+      "TSM",
+      "INTC"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "官方页面",
+        "url": "https://www.nvidia.com/gtc/dc/"
+      }
+    ],
+    "agenda": [],
+    "readThrough": [
+      {
+        "name": "传导标的",
+        "value": "AVGO、TSM、INTC"
+      }
+    ]
   },
   {
     "id": "nfp-2026-11-rel2026-12-04",
@@ -3437,7 +3442,8 @@ export const events = [
     "ticker": "GEV",
     "company": "",
     "date": "2026-12-08T09:00:00-05:00",
-    "dateNote": "日期按历年惯例推算,公司未官宣 · 不进 SEC 备案,证据等级上限 B",
+    "dateEnd": null,
+    "dateNote": "日期按历年惯例推算,公司未官宣 · keynote 时间未公布,暂按开幕日 09:00 ET 显示 · 不进 SEC 备案,证据等级上限 B",
     "dateConfirmed": false,
     "importance": 3,
     "tags": [
@@ -4093,7 +4099,7 @@ export const events = [
     "date": "2026-12-31T16:00:00-05:00",
     "dateNote": "规则算出的日期,非估计值",
     "dateConfirmed": true,
-    "importance": 1,
+    "importance": 3,
     "tags": [
       "index",
       "flow_window"
@@ -4191,7 +4197,8 @@ export const events = [
     "ticker": "NVDA",
     "company": "",
     "date": "2027-03-15T09:00:00-04:00",
-    "dateNote": "不进 SEC 备案,证据等级上限 B",
+    "dateEnd": null,
+    "dateNote": "keynote 时间未公布,暂按开幕日 09:00 ET 显示 · 不进 SEC 备案,证据等级上限 B",
     "dateConfirmed": true,
     "importance": 3,
     "tags": [
