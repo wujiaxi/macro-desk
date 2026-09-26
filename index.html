@@ -263,7 +263,7 @@
         <sc-if value="{{ d.hasExpectations }}" hint-placeholder-val="{{ false }}">
           <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;overflow:hidden">
             <div style="display:grid;grid-template-columns:minmax(0,1.5fr) 1fr 1fr 1.1fr;gap:12px;padding:9px 17px;background:#121821;border-bottom:1px solid #1a222c;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.1em;color:#6c7a89">
-              <div>项目</div><div>一致预期</div><div>前值</div><div>区间 / 备注</div>
+              <div>{{ d.expCols.a }}</div><div>{{ d.expCols.b }}</div><div>{{ d.expCols.c }}</div><div>{{ d.expCols.d }}</div>
             </div>
             <sc-for list="{{ d.expectations }}" as="x" hint-placeholder-count="3">
               <div style="display:grid;grid-template-columns:minmax(0,1.5fr) 1fr 1fr 1.1fr;gap:12px;padding:12px 17px;border-bottom:1px solid #171e26;align-items:baseline">
@@ -411,7 +411,7 @@
         <sc-if value="{{ d.hasActual }}" hint-placeholder-val="{{ false }}">
           <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;overflow:hidden">
             <div style="display:grid;grid-template-columns:minmax(0,1.5fr) 1fr 1fr 1fr 1fr;gap:12px;padding:9px 17px;background:#121821;border-bottom:1px solid #1a222c;font-family:'Roboto Mono',monospace;font-size:10px;letter-spacing:.1em;color:#6c7a89">
-              <div>项目</div><div>实际</div><div>一致预期</div><div>前值</div><div>预期差</div>
+              <div>{{ d.actCols.a }}</div><div>{{ d.actCols.b }}</div><div>{{ d.actCols.c }}</div><div>{{ d.actCols.d }}</div><div>{{ d.actCols.e }}</div>
             </div>
             <sc-for list="{{ d.actual }}" as="a" hint-placeholder-count="3">
               <div style="display:grid;grid-template-columns:minmax(0,1.5fr) 1fr 1fr 1fr 1fr;gap:12px;padding:12px 17px;border-bottom:1px solid #171e26;align-items:baseline">
@@ -473,7 +473,7 @@
     <sc-if value="{{ d.showHistory }}" hint-placeholder-val="{{ false }}">
       <div style="margin-bottom:30px">
         <div style="display:flex;align-items:center;gap:13px;margin-bottom:16px">
-          <div style="font-family:'Roboto Mono',monospace;font-size:11.5px;letter-spacing:.16em;color:#a78bfa">03 — 历史同类事件回看</div>
+          <div style="font-family:'Roboto Mono',monospace;font-size:11.5px;letter-spacing:.16em;color:#a78bfa">{{ d.historyTitle }}</div>
           <div style="flex:1;height:1px;background:#1e2630"></div>
         </div>
         <div style="background:#0f141a;border:1px solid #1e2630;border-radius:10px;overflow:hidden">
@@ -490,7 +490,7 @@
 
     <sc-if value="{{ d.showReadThrough }}" hint-placeholder-val="{{ false }}">
       <div style="margin-bottom:30px">
-        <div style="font-size:13px;font-weight:600;color:#c6d2e0;margin-bottom:11px">链条传导 · Read-through</div>
+        <div style="font-size:13px;font-weight:600;color:#c6d2e0;margin-bottom:11px">{{ d.readThroughTitle }}</div>
         <div style="display:flex;flex-direction:column;gap:9px">
           <sc-for list="{{ d.readThrough }}" as="t" hint-placeholder-count="3">
             <div style="display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px;background:#0f141a;border:1px solid #1e2630;border-radius:9px;padding:13px 17px">
@@ -714,6 +714,10 @@ class Component extends DCLogic {
         const watch = arr(r.watch).map((w, i) => ({ n: pad(i + 1), text: w }));
 
         const show = (has) => has || !hideEmpty;
+        /* 指数调仓事件带 labels:改小节标题与表头(缺省的「一致预期 / 前值」是给财报与宏观的,
+           套在「12 月模拟 / 现权重」上会误导)。没有 labels 的事件一切照旧。 */
+        const lb = r.labels || {};
+        const pick = (v, dflt) => (isS(v) ? v : dflt);
         base.d = {
           title: r.title, subtitle: isS(r.subtitle) ? r.subtitle : (isS(r.org) ? r.org : ""),
           kindLabel: e.kindLabel, kindColor: e.kindColor, dots: e.dots,
@@ -725,21 +729,25 @@ class Component extends DCLogic {
           hasThesis: isS(r.thesis), thesis: r.thesis,
 
           showConsensus: kind === "earnings" && consensusCards.length > 0, consensusCards,
-          expectationsTitle: kind === "earnings" ? "其他关键预期" : "关键预期数值",
-          hasExpectations: expect.length > 0, emptyExpectations: expect.length === 0 && !hideEmpty,
-          showExpectations: kind === "earnings" ? expect.length > 0 : show(expect.length > 0), expectations: expect,
+          expectationsTitle: pick(lb.expectations, kind === "earnings" ? "其他关键预期" : "关键预期数值"),
+          expCols: Object.assign({ a: "项目", b: "一致预期", c: "前值", d: "区间 / 备注" }, lb.expCols || {}),
+          actCols: Object.assign({ a: "项目", b: "实际", c: "一致预期", d: "前值", e: "预期差" }, lb.actCols || {}),
+          historyTitle: pick(lb.history, "03 — 历史同类事件回看"),
+          readThroughTitle: pick(lb.readThrough, "链条传导 · Read-through"),
+          hasExpectations: expect.length > 0, emptyExpectations: expect.length === 0 && !hideEmpty && !lb.programFilled,
+          showExpectations: (kind === "earnings" || lb.programFilled) ? expect.length > 0 : show(expect.length > 0), expectations: expect,
 
           showSegments: arr(r.segments).length > 0, segments: arr(r.segments),
-          pricingTitle: kind === "earnings" ? "市场当前定价" : "市场当前定价 · 利率与波动",
-          hasPricing: pricing.length > 0, emptyPricing: pricing.length === 0 && !hideEmpty,
-          showPricing: kind === "earnings" ? pricing.length > 0 : show(pricing.length > 0), pricing,
+          pricingTitle: pick(lb.pricing, kind === "earnings" ? "市场当前定价" : "市场当前定价 · 利率与波动"),
+          hasPricing: pricing.length > 0, emptyPricing: pricing.length === 0 && !hideEmpty && !lb.programFilled,
+          showPricing: (kind === "earnings" || lb.programFilled) ? pricing.length > 0 : show(pricing.length > 0), pricing,
 
           showGuidance: kind === "earnings" && (isS(gd.company) || isS(gd.street) || arr(r.valuation).length > 0),
           guidance: { company: isS(gd.company) ? gd.company : "待公布", street: isS(gd.street) ? gd.street : "待填写", note: isS(gd.note) ? gd.note : "" },
           valuation: arr(r.valuation), targets: { low: isS(tg.low) ? tg.low : "\u2014", avg: isS(tg.avg) ? tg.avg : "\u2014", high: isS(tg.high) ? tg.high : "\u2014", n: isS(tg.n) ? tg.n : "" },
 
           showAgenda: arr(r.agenda).length > 0, agenda: arr(r.agenda),
-          hasScenarios: scen.length > 0, emptyScenarios: scen.length === 0 && !hideEmpty, showScenarios: show(scen.length > 0), scenarios: scen,
+          hasScenarios: scen.length > 0, emptyScenarios: scen.length === 0 && !hideEmpty, showScenarios: lb.noScenarios ? false : show(scen.length > 0), scenarios: scen,
           showWatch: watch.length > 0, watch,
 
           hasActual: actual.length > 0, emptyActual: actual.length === 0 && !hideEmpty, showActual: show(actual.length > 0), actual,
