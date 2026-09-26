@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-25 20:10 ET",
+  "updated": "2026-09-25 20:30 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,743.41",
     "chg": "+0.51%",
     "dir": "up",
-    "note": "实时 20:10 ET"
+    "note": "实时 20:30 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,608.1",
     "chg": "+0.42%",
     "dir": "up",
-    "note": "实时 20:10 ET"
+    "note": "实时 20:30 ET"
   },
   {
     "label": "DXY",
     "value": "101.04",
     "chg": "-0.24%",
     "dir": "down",
-    "note": "实时 20:10 ET"
+    "note": "实时 20:30 ET"
   },
   {
     "label": "黄金",
     "value": "4,320.50",
     "chg": "+0.34%",
     "dir": "up",
-    "note": "实时 20:10 ET"
+    "note": "实时 20:30 ET"
   },
   {
     "label": "WTI 原油",
     "value": "92.44",
     "chg": "-0.73%",
     "dir": "down",
-    "note": "实时 20:10 ET"
+    "note": "实时 20:30 ET"
   },
   {
     "label": "BTC",
-    "value": "84,061",
-    "chg": "+0.31%",
+    "value": "83,941",
+    "chg": "+0.16%",
     "dir": "up",
-    "note": "实时 20:10 ET"
+    "note": "实时 20:30 ET"
   },
   {
     "label": "VIX",
     "value": "14.87",
     "chg": "-0.80",
     "dir": "down",
-    "note": "实时 20:10 ET"
+    "note": "实时 20:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.18%",
     "chg": "+2.2bp",
     "dir": "up",
-    "note": "实时 20:10 ET"
+    "note": "实时 20:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.50%",
     "chg": "+4.3bp",
     "dir": "up",
-    "note": "实时 20:10 ET"
+    "note": "实时 20:30 ET"
   },
   {
     "label": "US 2Y",
@@ -4152,133 +4152,133 @@ export const events = [
     "expectations": [
       {
         "name": "MU · Micron Technology Inc",
-        "consensus": "3.98%",
-        "prior": "5.09%",
-        "range": "-1.11pp · 被动 -$5.6B ≈ 0.22 天成交",
-        "note": "价格 ±20% 扫描 -2.12 ~ -0.43pp · 方向稳定"
+        "consensus": "4.00%",
+        "prior": "5.11%",
+        "range": "-1.10pp · 被动 -$5.5B ≈ 0.22 天成交",
+        "note": "价格 ±20% 扫描 -2.10 ~ -0.80pp · 方向稳定"
       },
       {
         "name": "AMD · Advanced Micro Devices Inc",
         "consensus": "3.86%",
-        "prior": "4.29%",
-        "range": "-0.42pp · 被动 -$2.1B ≈ 0.18 天成交",
-        "note": "价格 ±20% 扫描 -1.26 ~ -0.17pp · 方向稳定"
+        "prior": "4.30%",
+        "range": "-0.43pp · 被动 -$2.2B ≈ 0.19 天成交",
+        "note": "价格 ±20% 扫描 -1.21 ~ -0.16pp · 方向稳定"
       },
       {
         "name": "INTC · Intel Corp",
-        "consensus": "2.42%",
-        "prior": "2.69%",
-        "range": "-0.27pp · 被动 -$1.3B ≈ 0.12 天成交",
-        "note": "价格 ±20% 扫描 -0.35 ~ -0.11pp · 方向稳定"
+        "consensus": "2.52%",
+        "prior": "2.80%",
+        "range": "-0.28pp · 被动 -$1.4B ≈ 0.13 天成交",
+        "note": "价格 ±20% 扫描 -0.37 ~ +0.08pp · 方向不稳,不下结论"
       },
       {
         "name": "AMAT · Applied Materials Inc",
-        "consensus": "1.44%",
-        "prior": "1.60%",
+        "consensus": "1.42%",
+        "prior": "1.57%",
         "range": "-0.16pp · 被动 -$0.8B ≈ 0.28 天成交",
-        "note": "价格 ±20% 扫描 -0.21 ~ -0.06pp · 方向稳定"
+        "note": "价格 ±20% 扫描 -0.21 ~ -0.07pp · 方向稳定"
       },
       {
         "name": "MRVL · Marvell Technology Inc",
-        "consensus": "0.86%",
-        "prior": "0.96%",
+        "consensus": "0.85%",
+        "prior": "0.95%",
         "range": "-0.10pp · 被动 -$0.5B ≈ 0.10 天成交",
         "note": "价格 ±20% 扫描 -0.13 ~ -0.04pp · 方向不稳,不下结论"
       },
       {
         "name": "ABNB · Airbnb Inc",
-        "consensus": "0.25%",
-        "prior": "0.28%",
-        "range": "-0.03pp · 被动 -$0.1B ≈ 0.16 天成交",
+        "consensus": "0.24%",
+        "prior": "0.27%",
+        "range": "-0.03pp · 被动 -$0.1B ≈ 0.15 天成交",
         "note": "价格 ±20% 扫描 -0.04 ~ -0.01pp · 方向不稳,不下结论"
       },
       {
         "name": "NBIS · Nebius Group NV",
-        "consensus": "0.21%",
+        "consensus": "0.22%",
         "prior": "0.24%",
-        "range": "-0.02pp · 被动 -$0.1B ≈ 0.03 天成交",
+        "range": "-0.03pp · 被动 -$0.1B ≈ 0.04 天成交",
         "note": "价格 ±20% 扫描 -0.03 ~ -0.01pp · 方向不稳,不下结论"
       },
       {
         "name": "GOOGL · Alphabet Inc Class A",
-        "consensus": "3.10%",
+        "consensus": "3.11%",
         "prior": "3.04%",
-        "range": "+0.05pp · 被动 +$0.3B ≈ 0.03 天成交",
-        "note": "价格 ±20% 扫描 -0.34 ~ +0.63pp · 方向不稳,不下结论"
+        "range": "+0.07pp · 被动 +$0.3B ≈ 0.04 天成交",
+        "note": "价格 ±20% 扫描 -0.33 ~ +0.64pp · 方向不稳,不下结论"
       },
       {
         "name": "AMZN · Amazon.com Inc",
-        "consensus": "4.13%",
-        "prior": "4.06%",
-        "range": "+0.07pp · 被动 +$0.4B ≈ 0.04 天成交",
-        "note": "价格 ±20% 扫描 -0.45 ~ +0.97pp · 方向不稳,不下结论"
+        "consensus": "4.17%",
+        "prior": "4.08%",
+        "range": "+0.09pp · 被动 +$0.5B ≈ 0.05 天成交",
+        "note": "价格 ±20% 扫描 -0.44 ~ +1.01pp · 方向不稳,不下结论"
       },
       {
         "name": "MSFT · Microsoft Corp",
-        "consensus": "5.88%",
-        "prior": "5.78%",
-        "range": "+0.10pp · 被动 +$0.5B ≈ 0.05 天成交",
-        "note": "价格 ±20% 扫描 -0.65 ~ +1.19pp · 方向不稳,不下结论"
+        "consensus": "5.73%",
+        "prior": "5.60%",
+        "range": "+0.13pp · 被动 +$0.6B ≈ 0.06 天成交",
+        "note": "价格 ±20% 扫描 -0.60 ~ +1.18pp · 方向不稳,不下结论"
       },
       {
         "name": "AAPL · Apple Inc",
-        "consensus": "7.64%",
-        "prior": "7.51%",
-        "range": "+0.13pp · 被动 +$0.7B ≈ 0.05 天成交",
-        "note": "价格 ±20% 扫描 -0.84 ~ +1.55pp · 方向不稳,不下结论"
+        "consensus": "7.60%",
+        "prior": "7.43%",
+        "range": "+0.17pp · 被动 +$0.8B ≈ 0.06 天成交",
+        "note": "价格 ±20% 扫描 -0.79 ~ +1.56pp · 方向不稳,不下结论"
       },
       {
         "name": "NVDA · NVIDIA Corp",
-        "consensus": "8.33%",
-        "prior": "8.18%",
-        "range": "+0.14pp · 被动 +$0.7B ≈ 0.03 天成交",
-        "note": "价格 ±20% 扫描 -0.91 ~ +1.69pp · 方向不稳,不下结论"
+        "consensus": "8.39%",
+        "prior": "8.20%",
+        "range": "+0.19pp · 被动 +$0.9B ≈ 0.03 天成交",
+        "note": "价格 ±20% 扫描 -0.88 ~ +1.73pp · 方向不稳,不下结论"
       },
       {
         "name": "META · Meta Platforms Inc",
-        "consensus": "3.98%",
-        "prior": "3.37%",
-        "range": "+0.61pp · 被动 +$3.0B ≈ 0.20 天成交",
-        "note": "价格 ±20% 扫描 -0.53 ~ +1.33pp · 方向不稳,不下结论"
+        "consensus": "4.10%",
+        "prior": "3.50%",
+        "range": "+0.60pp · 被动 +$3.0B ≈ 0.20 天成交",
+        "note": "价格 ±20% 扫描 -0.54 ~ +0.85pp · 方向不稳,不下结论"
+      },
+      {
+        "name": "TSLA · Tesla Inc",
+        "consensus": "4.00%",
+        "prior": "3.01%",
+        "range": "+0.99pp · 被动 +$5.0B ≈ 0.35 天成交",
+        "note": "价格 ±20% 扫描 +0.16 ~ +1.63pp · 方向稳定"
       },
       {
         "name": "WMT · Walmart Inc",
         "consensus": "3.21%",
         "prior": "2.19%",
-        "range": "+1.03pp · 被动 +$5.2B ≈ 2.13 天成交",
+        "range": "+1.02pp · 被动 +$5.1B ≈ 2.06 天成交",
         "note": "不在关注名单,未做扫描"
       },
       {
-        "name": "TSLA · Tesla Inc",
-        "consensus": "3.98%",
-        "prior": "2.95%",
-        "range": "+1.03pp · 被动 +$5.2B ≈ 0.36 天成交",
-        "note": "价格 ±20% 扫描 +0.17 ~ +1.65pp · 方向稳定"
-      },
-      {
         "name": "SPCX · Space Exploration Technologies Corp",
-        "consensus": "3.98%",
+        "consensus": "4.00%",
         "prior": "2.66%",
-        "range": "+1.32pp · 被动 +$6.6B ≈ 0.50 天成交",
+        "range": "+1.34pp · 被动 +$6.7B ≈ 0.50 天成交",
         "note": "不在关注名单,未做扫描"
       },
       {
         "name": "AVGO · Broadcom Inc",
-        "consensus": "4.04%",
+        "consensus": "4.00%",
         "prior": "2.53%",
-        "range": "+1.51pp · 被动 +$7.6B ≈ 0.77 天成交",
-        "note": "价格 ±20% 扫描 +0.49 ~ +2.08pp · 方向稳定"
+        "range": "+1.48pp · 被动 +$7.4B ≈ 0.74 天成交",
+        "note": "价格 ±20% 扫描 +0.51 ~ +1.63pp · 方向稳定"
       }
     ],
     "pricing": [
       {
         "name": "特别再平衡触线距离",
-        "value": "32.5% / 48%",
+        "value": "32.2% / 48%",
         "note": ">4.5% 的公司合计;最大 8.2%(线 24%)"
       },
       {
         "name": "跟踪资金(下限)",
-        "value": "$502B",
+        "value": "$500B",
         "note": "只算 QQQ + QQQM(QQQM 本轮取不到)"
       },
       {
@@ -4482,133 +4482,133 @@ export const events = [
     "expectations": [
       {
         "name": "MU · Micron Technology Inc",
-        "consensus": "3.98%",
-        "prior": "5.09%",
-        "range": "-1.11pp · 被动 -$5.6B ≈ 0.22 天成交",
-        "note": "价格 ±20% 扫描 -2.12 ~ -0.43pp · 方向稳定"
+        "consensus": "4.00%",
+        "prior": "5.11%",
+        "range": "-1.10pp · 被动 -$5.5B ≈ 0.22 天成交",
+        "note": "价格 ±20% 扫描 -2.10 ~ -0.80pp · 方向稳定"
       },
       {
         "name": "AMD · Advanced Micro Devices Inc",
         "consensus": "3.86%",
-        "prior": "4.29%",
-        "range": "-0.42pp · 被动 -$2.1B ≈ 0.18 天成交",
-        "note": "价格 ±20% 扫描 -1.26 ~ -0.17pp · 方向稳定"
+        "prior": "4.30%",
+        "range": "-0.43pp · 被动 -$2.2B ≈ 0.19 天成交",
+        "note": "价格 ±20% 扫描 -1.21 ~ -0.16pp · 方向稳定"
       },
       {
         "name": "INTC · Intel Corp",
-        "consensus": "2.42%",
-        "prior": "2.69%",
-        "range": "-0.27pp · 被动 -$1.3B ≈ 0.12 天成交",
-        "note": "价格 ±20% 扫描 -0.35 ~ -0.11pp · 方向稳定"
+        "consensus": "2.52%",
+        "prior": "2.80%",
+        "range": "-0.28pp · 被动 -$1.4B ≈ 0.13 天成交",
+        "note": "价格 ±20% 扫描 -0.37 ~ +0.08pp · 方向不稳,不下结论"
       },
       {
         "name": "AMAT · Applied Materials Inc",
-        "consensus": "1.44%",
-        "prior": "1.60%",
+        "consensus": "1.42%",
+        "prior": "1.57%",
         "range": "-0.16pp · 被动 -$0.8B ≈ 0.28 天成交",
-        "note": "价格 ±20% 扫描 -0.21 ~ -0.06pp · 方向稳定"
+        "note": "价格 ±20% 扫描 -0.21 ~ -0.07pp · 方向稳定"
       },
       {
         "name": "MRVL · Marvell Technology Inc",
-        "consensus": "0.86%",
-        "prior": "0.96%",
+        "consensus": "0.85%",
+        "prior": "0.95%",
         "range": "-0.10pp · 被动 -$0.5B ≈ 0.10 天成交",
         "note": "价格 ±20% 扫描 -0.13 ~ -0.04pp · 方向不稳,不下结论"
       },
       {
         "name": "ABNB · Airbnb Inc",
-        "consensus": "0.25%",
-        "prior": "0.28%",
-        "range": "-0.03pp · 被动 -$0.1B ≈ 0.16 天成交",
+        "consensus": "0.24%",
+        "prior": "0.27%",
+        "range": "-0.03pp · 被动 -$0.1B ≈ 0.15 天成交",
         "note": "价格 ±20% 扫描 -0.04 ~ -0.01pp · 方向不稳,不下结论"
       },
       {
         "name": "NBIS · Nebius Group NV",
-        "consensus": "0.21%",
+        "consensus": "0.22%",
         "prior": "0.24%",
-        "range": "-0.02pp · 被动 -$0.1B ≈ 0.03 天成交",
+        "range": "-0.03pp · 被动 -$0.1B ≈ 0.04 天成交",
         "note": "价格 ±20% 扫描 -0.03 ~ -0.01pp · 方向不稳,不下结论"
       },
       {
         "name": "GOOGL · Alphabet Inc Class A",
-        "consensus": "3.10%",
+        "consensus": "3.11%",
         "prior": "3.04%",
-        "range": "+0.05pp · 被动 +$0.3B ≈ 0.03 天成交",
-        "note": "价格 ±20% 扫描 -0.34 ~ +0.63pp · 方向不稳,不下结论"
+        "range": "+0.07pp · 被动 +$0.3B ≈ 0.04 天成交",
+        "note": "价格 ±20% 扫描 -0.33 ~ +0.64pp · 方向不稳,不下结论"
       },
       {
         "name": "AMZN · Amazon.com Inc",
-        "consensus": "4.13%",
-        "prior": "4.06%",
-        "range": "+0.07pp · 被动 +$0.4B ≈ 0.04 天成交",
-        "note": "价格 ±20% 扫描 -0.45 ~ +0.97pp · 方向不稳,不下结论"
+        "consensus": "4.17%",
+        "prior": "4.08%",
+        "range": "+0.09pp · 被动 +$0.5B ≈ 0.05 天成交",
+        "note": "价格 ±20% 扫描 -0.44 ~ +1.01pp · 方向不稳,不下结论"
       },
       {
         "name": "MSFT · Microsoft Corp",
-        "consensus": "5.88%",
-        "prior": "5.78%",
-        "range": "+0.10pp · 被动 +$0.5B ≈ 0.05 天成交",
-        "note": "价格 ±20% 扫描 -0.65 ~ +1.19pp · 方向不稳,不下结论"
+        "consensus": "5.73%",
+        "prior": "5.60%",
+        "range": "+0.13pp · 被动 +$0.6B ≈ 0.06 天成交",
+        "note": "价格 ±20% 扫描 -0.60 ~ +1.18pp · 方向不稳,不下结论"
       },
       {
         "name": "AAPL · Apple Inc",
-        "consensus": "7.64%",
-        "prior": "7.51%",
-        "range": "+0.13pp · 被动 +$0.7B ≈ 0.05 天成交",
-        "note": "价格 ±20% 扫描 -0.84 ~ +1.55pp · 方向不稳,不下结论"
+        "consensus": "7.60%",
+        "prior": "7.43%",
+        "range": "+0.17pp · 被动 +$0.8B ≈ 0.06 天成交",
+        "note": "价格 ±20% 扫描 -0.79 ~ +1.56pp · 方向不稳,不下结论"
       },
       {
         "name": "NVDA · NVIDIA Corp",
-        "consensus": "8.33%",
-        "prior": "8.18%",
-        "range": "+0.14pp · 被动 +$0.7B ≈ 0.03 天成交",
-        "note": "价格 ±20% 扫描 -0.91 ~ +1.69pp · 方向不稳,不下结论"
+        "consensus": "8.39%",
+        "prior": "8.20%",
+        "range": "+0.19pp · 被动 +$0.9B ≈ 0.03 天成交",
+        "note": "价格 ±20% 扫描 -0.88 ~ +1.73pp · 方向不稳,不下结论"
       },
       {
         "name": "META · Meta Platforms Inc",
-        "consensus": "3.98%",
-        "prior": "3.37%",
-        "range": "+0.61pp · 被动 +$3.0B ≈ 0.20 天成交",
-        "note": "价格 ±20% 扫描 -0.53 ~ +1.33pp · 方向不稳,不下结论"
+        "consensus": "4.10%",
+        "prior": "3.50%",
+        "range": "+0.60pp · 被动 +$3.0B ≈ 0.20 天成交",
+        "note": "价格 ±20% 扫描 -0.54 ~ +0.85pp · 方向不稳,不下结论"
+      },
+      {
+        "name": "TSLA · Tesla Inc",
+        "consensus": "4.00%",
+        "prior": "3.01%",
+        "range": "+0.99pp · 被动 +$5.0B ≈ 0.35 天成交",
+        "note": "价格 ±20% 扫描 +0.16 ~ +1.63pp · 方向稳定"
       },
       {
         "name": "WMT · Walmart Inc",
         "consensus": "3.21%",
         "prior": "2.19%",
-        "range": "+1.03pp · 被动 +$5.2B ≈ 2.13 天成交",
+        "range": "+1.02pp · 被动 +$5.1B ≈ 2.06 天成交",
         "note": "不在关注名单,未做扫描"
       },
       {
-        "name": "TSLA · Tesla Inc",
-        "consensus": "3.98%",
-        "prior": "2.95%",
-        "range": "+1.03pp · 被动 +$5.2B ≈ 0.36 天成交",
-        "note": "价格 ±20% 扫描 +0.17 ~ +1.65pp · 方向稳定"
-      },
-      {
         "name": "SPCX · Space Exploration Technologies Corp",
-        "consensus": "3.98%",
+        "consensus": "4.00%",
         "prior": "2.66%",
-        "range": "+1.32pp · 被动 +$6.6B ≈ 0.50 天成交",
+        "range": "+1.34pp · 被动 +$6.7B ≈ 0.50 天成交",
         "note": "不在关注名单,未做扫描"
       },
       {
         "name": "AVGO · Broadcom Inc",
-        "consensus": "4.04%",
+        "consensus": "4.00%",
         "prior": "2.53%",
-        "range": "+1.51pp · 被动 +$7.6B ≈ 0.77 天成交",
-        "note": "价格 ±20% 扫描 +0.49 ~ +2.08pp · 方向稳定"
+        "range": "+1.48pp · 被动 +$7.4B ≈ 0.74 天成交",
+        "note": "价格 ±20% 扫描 +0.51 ~ +1.63pp · 方向稳定"
       }
     ],
     "pricing": [
       {
         "name": "特别再平衡触线距离",
-        "value": "32.5% / 48%",
+        "value": "32.2% / 48%",
         "note": ">4.5% 的公司合计;最大 8.2%(线 24%)"
       },
       {
         "name": "跟踪资金(下限)",
-        "value": "$502B",
+        "value": "$500B",
         "note": "只算 QQQ + QQQM(QQQM 本轮取不到)"
       },
       {
@@ -4735,133 +4735,133 @@ export const events = [
     "expectations": [
       {
         "name": "MU · Micron Technology Inc",
-        "consensus": "3.98%",
-        "prior": "5.09%",
-        "range": "-1.11pp · 被动 -$5.6B ≈ 0.22 天成交",
-        "note": "价格 ±20% 扫描 -2.12 ~ -0.43pp · 方向稳定"
+        "consensus": "4.00%",
+        "prior": "5.11%",
+        "range": "-1.10pp · 被动 -$5.5B ≈ 0.22 天成交",
+        "note": "价格 ±20% 扫描 -2.10 ~ -0.80pp · 方向稳定"
       },
       {
         "name": "AMD · Advanced Micro Devices Inc",
         "consensus": "3.86%",
-        "prior": "4.29%",
-        "range": "-0.42pp · 被动 -$2.1B ≈ 0.18 天成交",
-        "note": "价格 ±20% 扫描 -1.26 ~ -0.17pp · 方向稳定"
+        "prior": "4.30%",
+        "range": "-0.43pp · 被动 -$2.2B ≈ 0.19 天成交",
+        "note": "价格 ±20% 扫描 -1.21 ~ -0.16pp · 方向稳定"
       },
       {
         "name": "INTC · Intel Corp",
-        "consensus": "2.42%",
-        "prior": "2.69%",
-        "range": "-0.27pp · 被动 -$1.3B ≈ 0.12 天成交",
-        "note": "价格 ±20% 扫描 -0.35 ~ -0.11pp · 方向稳定"
+        "consensus": "2.52%",
+        "prior": "2.80%",
+        "range": "-0.28pp · 被动 -$1.4B ≈ 0.13 天成交",
+        "note": "价格 ±20% 扫描 -0.37 ~ +0.08pp · 方向不稳,不下结论"
       },
       {
         "name": "AMAT · Applied Materials Inc",
-        "consensus": "1.44%",
-        "prior": "1.60%",
+        "consensus": "1.42%",
+        "prior": "1.57%",
         "range": "-0.16pp · 被动 -$0.8B ≈ 0.28 天成交",
-        "note": "价格 ±20% 扫描 -0.21 ~ -0.06pp · 方向稳定"
+        "note": "价格 ±20% 扫描 -0.21 ~ -0.07pp · 方向稳定"
       },
       {
         "name": "MRVL · Marvell Technology Inc",
-        "consensus": "0.86%",
-        "prior": "0.96%",
+        "consensus": "0.85%",
+        "prior": "0.95%",
         "range": "-0.10pp · 被动 -$0.5B ≈ 0.10 天成交",
         "note": "价格 ±20% 扫描 -0.13 ~ -0.04pp · 方向不稳,不下结论"
       },
       {
         "name": "ABNB · Airbnb Inc",
-        "consensus": "0.25%",
-        "prior": "0.28%",
-        "range": "-0.03pp · 被动 -$0.1B ≈ 0.16 天成交",
+        "consensus": "0.24%",
+        "prior": "0.27%",
+        "range": "-0.03pp · 被动 -$0.1B ≈ 0.15 天成交",
         "note": "价格 ±20% 扫描 -0.04 ~ -0.01pp · 方向不稳,不下结论"
       },
       {
         "name": "NBIS · Nebius Group NV",
-        "consensus": "0.21%",
+        "consensus": "0.22%",
         "prior": "0.24%",
-        "range": "-0.02pp · 被动 -$0.1B ≈ 0.03 天成交",
+        "range": "-0.03pp · 被动 -$0.1B ≈ 0.04 天成交",
         "note": "价格 ±20% 扫描 -0.03 ~ -0.01pp · 方向不稳,不下结论"
       },
       {
         "name": "GOOGL · Alphabet Inc Class A",
-        "consensus": "3.10%",
+        "consensus": "3.11%",
         "prior": "3.04%",
-        "range": "+0.05pp · 被动 +$0.3B ≈ 0.03 天成交",
-        "note": "价格 ±20% 扫描 -0.34 ~ +0.63pp · 方向不稳,不下结论"
+        "range": "+0.07pp · 被动 +$0.3B ≈ 0.04 天成交",
+        "note": "价格 ±20% 扫描 -0.33 ~ +0.64pp · 方向不稳,不下结论"
       },
       {
         "name": "AMZN · Amazon.com Inc",
-        "consensus": "4.13%",
-        "prior": "4.06%",
-        "range": "+0.07pp · 被动 +$0.4B ≈ 0.04 天成交",
-        "note": "价格 ±20% 扫描 -0.45 ~ +0.97pp · 方向不稳,不下结论"
+        "consensus": "4.17%",
+        "prior": "4.08%",
+        "range": "+0.09pp · 被动 +$0.5B ≈ 0.05 天成交",
+        "note": "价格 ±20% 扫描 -0.44 ~ +1.01pp · 方向不稳,不下结论"
       },
       {
         "name": "MSFT · Microsoft Corp",
-        "consensus": "5.88%",
-        "prior": "5.78%",
-        "range": "+0.10pp · 被动 +$0.5B ≈ 0.05 天成交",
-        "note": "价格 ±20% 扫描 -0.65 ~ +1.19pp · 方向不稳,不下结论"
+        "consensus": "5.73%",
+        "prior": "5.60%",
+        "range": "+0.13pp · 被动 +$0.6B ≈ 0.06 天成交",
+        "note": "价格 ±20% 扫描 -0.60 ~ +1.18pp · 方向不稳,不下结论"
       },
       {
         "name": "AAPL · Apple Inc",
-        "consensus": "7.64%",
-        "prior": "7.51%",
-        "range": "+0.13pp · 被动 +$0.7B ≈ 0.05 天成交",
-        "note": "价格 ±20% 扫描 -0.84 ~ +1.55pp · 方向不稳,不下结论"
+        "consensus": "7.60%",
+        "prior": "7.43%",
+        "range": "+0.17pp · 被动 +$0.8B ≈ 0.06 天成交",
+        "note": "价格 ±20% 扫描 -0.79 ~ +1.56pp · 方向不稳,不下结论"
       },
       {
         "name": "NVDA · NVIDIA Corp",
-        "consensus": "8.33%",
-        "prior": "8.18%",
-        "range": "+0.14pp · 被动 +$0.7B ≈ 0.03 天成交",
-        "note": "价格 ±20% 扫描 -0.91 ~ +1.69pp · 方向不稳,不下结论"
+        "consensus": "8.39%",
+        "prior": "8.20%",
+        "range": "+0.19pp · 被动 +$0.9B ≈ 0.03 天成交",
+        "note": "价格 ±20% 扫描 -0.88 ~ +1.73pp · 方向不稳,不下结论"
       },
       {
         "name": "META · Meta Platforms Inc",
-        "consensus": "3.98%",
-        "prior": "3.37%",
-        "range": "+0.61pp · 被动 +$3.0B ≈ 0.20 天成交",
-        "note": "价格 ±20% 扫描 -0.53 ~ +1.33pp · 方向不稳,不下结论"
+        "consensus": "4.10%",
+        "prior": "3.50%",
+        "range": "+0.60pp · 被动 +$3.0B ≈ 0.20 天成交",
+        "note": "价格 ±20% 扫描 -0.54 ~ +0.85pp · 方向不稳,不下结论"
+      },
+      {
+        "name": "TSLA · Tesla Inc",
+        "consensus": "4.00%",
+        "prior": "3.01%",
+        "range": "+0.99pp · 被动 +$5.0B ≈ 0.35 天成交",
+        "note": "价格 ±20% 扫描 +0.16 ~ +1.63pp · 方向稳定"
       },
       {
         "name": "WMT · Walmart Inc",
         "consensus": "3.21%",
         "prior": "2.19%",
-        "range": "+1.03pp · 被动 +$5.2B ≈ 2.13 天成交",
+        "range": "+1.02pp · 被动 +$5.1B ≈ 2.06 天成交",
         "note": "不在关注名单,未做扫描"
       },
       {
-        "name": "TSLA · Tesla Inc",
-        "consensus": "3.98%",
-        "prior": "2.95%",
-        "range": "+1.03pp · 被动 +$5.2B ≈ 0.36 天成交",
-        "note": "价格 ±20% 扫描 +0.17 ~ +1.65pp · 方向稳定"
-      },
-      {
         "name": "SPCX · Space Exploration Technologies Corp",
-        "consensus": "3.98%",
+        "consensus": "4.00%",
         "prior": "2.66%",
-        "range": "+1.32pp · 被动 +$6.6B ≈ 0.50 天成交",
+        "range": "+1.34pp · 被动 +$6.7B ≈ 0.50 天成交",
         "note": "不在关注名单,未做扫描"
       },
       {
         "name": "AVGO · Broadcom Inc",
-        "consensus": "4.04%",
+        "consensus": "4.00%",
         "prior": "2.53%",
-        "range": "+1.51pp · 被动 +$7.6B ≈ 0.77 天成交",
-        "note": "价格 ±20% 扫描 +0.49 ~ +2.08pp · 方向稳定"
+        "range": "+1.48pp · 被动 +$7.4B ≈ 0.74 天成交",
+        "note": "价格 ±20% 扫描 +0.51 ~ +1.63pp · 方向稳定"
       }
     ],
     "pricing": [
       {
         "name": "特别再平衡触线距离",
-        "value": "32.5% / 48%",
+        "value": "32.2% / 48%",
         "note": ">4.5% 的公司合计;最大 8.2%(线 24%)"
       },
       {
         "name": "跟踪资金(下限)",
-        "value": "$502B",
+        "value": "$500B",
         "note": "只算 QQQ + QQQM(QQQM 本轮取不到)"
       },
       {
