@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-26 10:18 ET",
+  "updated": "2026-09-26 22:32 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,743.41",
     "chg": "+0.51%",
     "dir": "up",
-    "note": "实时 10:18 ET"
+    "note": "实时 22:32 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,608.1",
     "chg": "+0.42%",
     "dir": "up",
-    "note": "实时 10:18 ET"
+    "note": "实时 22:32 ET"
   },
   {
     "label": "DXY",
     "value": "100.97",
     "chg": "-0.30%",
     "dir": "down",
-    "note": "实时 10:18 ET"
+    "note": "实时 22:32 ET"
   },
   {
     "label": "黄金",
     "value": "4,321.20",
     "chg": "+0.36%",
     "dir": "up",
-    "note": "实时 10:18 ET"
+    "note": "实时 22:32 ET"
   },
   {
     "label": "WTI 原油",
     "value": "92.41",
     "chg": "-0.76%",
     "dir": "down",
-    "note": "实时 10:18 ET"
+    "note": "实时 22:32 ET"
   },
   {
     "label": "BTC",
-    "value": "83,940",
-    "chg": "-0.18%",
-    "dir": "down",
-    "note": "实时 10:18 ET"
+    "value": "84,520",
+    "chg": "+0.26%",
+    "dir": "up",
+    "note": "实时 22:32 ET"
   },
   {
     "label": "VIX",
     "value": "14.87",
     "chg": "-0.80",
     "dir": "down",
-    "note": "实时 10:18 ET"
+    "note": "实时 22:32 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.18%",
     "chg": "+2.2bp",
     "dir": "up",
-    "note": "实时 10:18 ET"
+    "note": "实时 22:32 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.50%",
     "chg": "+4.3bp",
     "dir": "up",
-    "note": "实时 10:18 ET"
+    "note": "实时 22:32 ET"
   },
   {
     "label": "US 2Y",
@@ -4676,7 +4676,7 @@ export const events = [
     "thesis": "开盘前生效,但被动买盘在上一个收盘就已完成。历史上这天之后常见反向 —— 不许把「被纳入」当成这天的买入理由。",
     "watch": [
       "生效日超额:12 例中位 -0.44%,仅 42% 为正",
-      "⚠️ 反向不在生效日当天,在其后那一周:生效后 5 日中位 -0.67%、只有 33% 为正,尾部到 -13.9%"
+      "⚠️ 反向不在生效日当天,在其后那一周:生效后 5 日超额中位 -0.99%、只有 33% 为正,最差 -10.31%"
     ],
     "expectations": [],
     "pricing": [],
