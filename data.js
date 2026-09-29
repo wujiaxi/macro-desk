@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-29 10:00 ET",
+  "updated": "2026-09-29 10:18 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,80 +13,80 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,678.61",
-    "chg": "-0.08%",
+    "value": "7,683.55",
+    "chg": "-0.01%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "30,333.3",
-    "chg": "+0.19%",
+    "value": "30,375.7",
+    "chg": "+0.33%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "DXY",
-    "value": "101.37",
-    "chg": "+0.09%",
+    "value": "101.39",
+    "chg": "+0.10%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "黄金",
-    "value": "4,191.10",
-    "chg": "+0.65%",
+    "value": "4,198.40",
+    "chg": "+0.82%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "90.96",
-    "chg": "-3.36%",
+    "value": "91.20",
+    "chg": "-3.10%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "BTC",
-    "value": "84,190",
-    "chg": "+0.88%",
+    "value": "83,945",
+    "chg": "+0.59%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "VIX",
-    "value": "15.97",
-    "chg": "-0.10",
+    "value": "15.92",
+    "chg": "-0.15",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.27%",
-    "chg": "+2.6bp",
+    "value": "5.25%",
+    "chg": "+1.3bp",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.59%",
-    "chg": "+2.9bp",
+    "value": "5.58%",
+    "chg": "+2.0bp",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.81%",
     "chg": "-6.0bp",
     "dir": "down",
-    "note": "as-of 2026-09-25 · 2s10s +36bp"
+    "note": "as-of 2026-09-25 · 2s10s +32bp"
   },
   {
     "label": "10月加息概率",
-    "value": "72%",
+    "value": "60%",
     "chg": "一周前 57%",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-09-25 ⚠️"
+    "note": "ZQ 期货自算 · 2026-09-28 ⚠️"
   }
 ];
 
@@ -2557,12 +2557,12 @@ export const events = [
     "pricing": [
       {
         "name": "本次会议隐含变动",
-        "value": "+18bp",
-        "note": "ZQ 自算 · 2026-09-25"
+        "value": "+15bp",
+        "note": "ZQ 自算 · 2026-09-28"
       },
       {
         "name": "P(加息 25bp)",
-        "value": "72%",
+        "value": "60%",
         "note": "月末会议 N-d=3<7,价格噪声放大 10×;改用次月 2026-11 合约当 r_post"
       },
       {
