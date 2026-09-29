@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-29 09:00 ET",
+  "updated": "2026-09-29 09:30 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,683.69",
-    "chg": "-0.77%",
-    "dir": "down",
-    "note": "实时 09:00 ET"
+    "value": "7,697.84",
+    "chg": "+0.17%",
+    "dir": "up",
+    "note": "实时 09:30 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,276.8",
     "chg": "-1.08%",
     "dir": "down",
-    "note": "实时 09:00 ET"
+    "note": "实时 09:30 ET"
   },
   {
     "label": "DXY",
-    "value": "101.35",
-    "chg": "+0.06%",
+    "value": "101.37",
+    "chg": "+0.09%",
     "dir": "up",
-    "note": "实时 09:00 ET"
+    "note": "实时 09:30 ET"
   },
   {
     "label": "黄金",
-    "value": "4,186.50",
-    "chg": "+0.54%",
+    "value": "4,190.40",
+    "chg": "+0.63%",
     "dir": "up",
-    "note": "实时 09:00 ET"
+    "note": "实时 09:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "90.43",
-    "chg": "-3.92%",
+    "value": "90.34",
+    "chg": "-4.02%",
     "dir": "down",
-    "note": "实时 09:00 ET"
+    "note": "实时 09:30 ET"
   },
   {
     "label": "BTC",
-    "value": "84,297",
-    "chg": "+1.01%",
+    "value": "84,317",
+    "chg": "+1.03%",
     "dir": "up",
-    "note": "实时 09:00 ET"
+    "note": "实时 09:30 ET"
   },
   {
     "label": "VIX",
-    "value": "15.84",
-    "chg": "-0.23",
+    "value": "15.81",
+    "chg": "-0.26",
     "dir": "down",
-    "note": "实时 09:00 ET"
+    "note": "实时 09:30 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.22%",
-    "chg": "-2.1bp",
+    "value": "5.23%",
+    "chg": "-1.4bp",
     "dir": "down",
-    "note": "实时 09:00 ET"
+    "note": "实时 09:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.55%",
-    "chg": "-1.6bp",
+    "chg": "-1.1bp",
     "dir": "down",
-    "note": "实时 09:00 ET"
+    "note": "实时 09:30 ET"
   },
   {
     "label": "US 2Y",
