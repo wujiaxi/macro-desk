@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-09-30 16:00 ET",
+  "updated": "2026-09-30 16:04 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,652.71",
+    "value": "7,651.88",
     "chg": "-0.25%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:04 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,408.5",
     "chg": "+0.23%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:04 ET"
   },
   {
     "label": "DXY",
     "value": "101.50",
     "chg": "+0.09%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:04 ET"
   },
   {
     "label": "黄金",
-    "value": "4,184.80",
-    "chg": "-0.49%",
+    "value": "4,187.00",
+    "chg": "-0.44%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:04 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "90.49",
-    "chg": "+0.77%",
+    "value": "90.50",
+    "chg": "+0.78%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:04 ET"
   },
   {
     "label": "BTC",
-    "value": "83,561",
-    "chg": "-0.08%",
+    "value": "83,532",
+    "chg": "-0.11%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:04 ET"
   },
   {
     "label": "VIX",
-    "value": "16.18",
-    "chg": "+0.15",
+    "value": "16.19",
+    "chg": "+0.16",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:04 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.29%",
     "chg": "+3.8bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:04 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.64%",
     "chg": "+4.4bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:04 ET"
   },
   {
     "label": "US 2Y",
@@ -1603,7 +1603,48 @@ export const events = [
       "Cloud Memory BU 收入(AI/HBM 直读) · 预期 19,500(百万美元) · 利好 ≥ 22,000 · 利空 < 17,000",
       "*(定性)* FY2027 capex 与 SCA 天花板措辞 · 预期 见 §3.2 ①② · 利好 见 FQ1-27 收入指引中值(十亿美元) · 利空 见 FQ1-27 收入指引中值(十亿美元)"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "FQ1-27 非GAAP EPS 指引中值",
+        "actual": "38.15",
+        "consensus": "37",
+        "prior": "",
+        "surprise": "中性偏好",
+        "dir": "up"
+      },
+      {
+        "name": "FQ1-27 收入指引中值(十亿美元)",
+        "actual": "61.5",
+        "consensus": "59",
+        "prior": "",
+        "surprise": "中性偏好",
+        "dir": "up"
+      },
+      {
+        "name": "FQ1-27 非GAAP 毛利率指引",
+        "actual": "86.25",
+        "consensus": "87.5",
+        "prior": "",
+        "surprise": "中性偏差",
+        "dir": "flat"
+      },
+      {
+        "name": "FQ4-26 实际收入(百万美元)",
+        "actual": "54,229",
+        "consensus": "57,500",
+        "prior": "",
+        "surprise": "证伪(触及利空阈值)",
+        "dir": "down"
+      },
+      {
+        "name": "FQ4-26 实际非GAAP 毛利率",
+        "actual": "87",
+        "consensus": "88.5",
+        "prior": "",
+        "surprise": "中性偏差",
+        "dir": "flat"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [
@@ -1627,6 +1668,10 @@ export const events = [
       {
         "label": "MU IR",
         "url": "https://investors.micron.com/news-releases"
+      },
+      {
+        "label": "触发本次对账的 SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MU&type=8-K&dateb=&owner=include&count=10"
       }
     ],
     "consensus": {
@@ -1664,9 +1709,9 @@ export const events = [
       }
     ],
     "guidance": {
-      "company": "待公布",
+      "company": "EPS 38.15",
       "street": "下季 EPS 一致 $35.455",
-      "note": "比较期间 FY27Q1"
+      "note": "vs 卖方一致 35.45（+7.60%）"
     },
     "options": {
       "iv": "",
