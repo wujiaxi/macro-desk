@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-01 10:21 ET",
+  "updated": "2026-10-01 10:22 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,636.49",
-    "chg": "-0.22%",
+    "value": "7,632.15",
+    "chg": "-0.28%",
     "dir": "down",
-    "note": "实时 10:21 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "30,372.4",
-    "chg": "-0.12%",
+    "value": "30,349.1",
+    "chg": "-0.20%",
     "dir": "down",
-    "note": "实时 10:21 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "DXY",
-    "value": "101.78",
-    "chg": "+0.23%",
+    "value": "101.79",
+    "chg": "+0.24%",
     "dir": "up",
-    "note": "实时 10:21 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "黄金",
-    "value": "4,187.00",
-    "chg": "-0.44%",
+    "value": "4,184.30",
+    "chg": "-0.50%",
     "dir": "down",
-    "note": "实时 10:21 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "91.66",
-    "chg": "+2.83%",
+    "value": "91.74",
+    "chg": "+2.92%",
     "dir": "up",
-    "note": "实时 10:21 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "BTC",
-    "value": "83,939",
-    "chg": "+0.46%",
+    "value": "83,885",
+    "chg": "+0.39%",
     "dir": "up",
-    "note": "实时 10:21 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "VIX",
-    "value": "17.52",
-    "chg": "+1.20",
+    "value": "17.50",
+    "chg": "+1.18",
     "dir": "up",
-    "note": "实时 10:21 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.33%",
-    "chg": "+3.9bp",
+    "chg": "+3.7bp",
     "dir": "up",
-    "note": "实时 10:21 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.68%",
     "chg": "+4.3bp",
     "dir": "up",
-    "note": "实时 10:21 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "US 2Y",
