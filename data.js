@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-01 10:00 ET",
+  "updated": "2026-10-01 10:21 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,80 +13,80 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,654.57",
-    "chg": "+0.01%",
-    "dir": "up",
-    "note": "实时 10:00 ET"
+    "value": "7,636.49",
+    "chg": "-0.22%",
+    "dir": "down",
+    "note": "实时 10:21 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "30,478.3",
-    "chg": "+0.23%",
-    "dir": "up",
-    "note": "实时 10:00 ET"
+    "value": "30,372.4",
+    "chg": "-0.12%",
+    "dir": "down",
+    "note": "实时 10:21 ET"
   },
   {
     "label": "DXY",
-    "value": "101.74",
-    "chg": "+0.19%",
+    "value": "101.78",
+    "chg": "+0.23%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:21 ET"
   },
   {
     "label": "黄金",
-    "value": "4,191.70",
-    "chg": "-0.33%",
+    "value": "4,187.00",
+    "chg": "-0.44%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:21 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "91.21",
-    "chg": "+2.32%",
+    "value": "91.66",
+    "chg": "+2.83%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:21 ET"
   },
   {
     "label": "BTC",
-    "value": "83,902",
-    "chg": "+0.41%",
+    "value": "83,939",
+    "chg": "+0.46%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:21 ET"
   },
   {
     "label": "VIX",
-    "value": "16.77",
-    "chg": "+0.45",
+    "value": "17.52",
+    "chg": "+1.20",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:21 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.32%",
-    "chg": "+2.6bp",
+    "value": "5.33%",
+    "chg": "+3.9bp",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:21 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.68%",
-    "chg": "+3.8bp",
+    "chg": "+4.3bp",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:21 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.89%",
     "chg": "-3.0bp",
     "dir": "down",
-    "note": "as-of 2026-09-29 · 2s10s +37bp"
+    "note": "as-of 2026-09-29 · 2s10s +41bp"
   },
   {
     "label": "10月加息概率",
-    "value": "100%",
+    "value": "38%",
     "chg": "一周前 55%",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-09-29 ⚠️"
+    "note": "ZQ 期货自算 · 2026-09-30 ⚠️"
   }
 ];
 
@@ -1743,8 +1743,8 @@ export const events = [
       "n": "本站三情景加权 · 卖方一致 $1,507.38"
     },
     "afterHours": {
-      "move": "",
-      "note": ""
+      "move": "-3.26%",
+      "note": "- 实际次日反应 -3.26%(基准收盘 1065.11 → 1030.39) - 隐含区间 ±6.9%(989.85 / 1174.71) → 实际 落在区间内 - 卡片内插预期 -1.66% vs 实际 -3.26%,误差 -1.60%(方向判对)"
     }
   },
   {
@@ -2602,12 +2602,12 @@ export const events = [
     "pricing": [
       {
         "name": "本次会议隐含变动",
-        "value": "+26bp",
-        "note": "ZQ 自算 · 2026-09-29"
+        "value": "+10bp",
+        "note": "ZQ 自算 · 2026-09-30"
       },
       {
         "name": "P(加息 25bp)",
-        "value": "100%",
+        "value": "38%",
         "note": "月末会议 N-d=3<7,价格噪声放大 10×;改用次月 2026-11 合约当 r_post"
       },
       {
@@ -5149,6 +5149,141 @@ export const events = [
         "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
       }
     ]
+  },
+  {
+    "id": "rebal-flow-window-2027-01-29-all",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "月末再平衡窗口",
+    "subtitle": "资金流窗口·2027-01",
+    "org": "全市场",
+    "date": "2027-01-29T16:00:00-05:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "index",
+      "flow_window"
+    ],
+    "thesis": "养老金/目标日期基金按目标权重回补。方向不固定 —— 取决于本季股债相对表现,股票跑赢越多越要卖股买债。",
+    "watch": [
+      "⚠️ 不许默认「季末=买盘」,先看本季股债相对表现",
+      "⚠️ 资金流规模若无一手来源,写「未取到」,不许编"
+    ],
+    "expectations": [],
+    "pricing": [
+      {
+        "name": "本月漂移",
+        "value": "—",
+        "note": "这一月还没开始,上一个月末收盘后才起算"
+      }
+    ],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "n=274",
+        "what": "全部的月末",
+        "outcome": "月末前 3 日:标普 +0.19%(上涨 58%)· 股减债 +0.01pp(t 0.13)· 月初 3 日标普 +0.28%"
+      },
+      {
+        "when": "n=169",
+        "what": "股票超配(应卖股)的月末",
+        "outcome": "月末前 3 日:标普 -0.08%(上涨 50%)· 股减债 -0.23pp(t -2.36)· 月初 3 日标普 +0.35%"
+      },
+      {
+        "when": "n=103",
+        "what": "股票低配(应买股)的月末",
+        "outcome": "月末前 3 日:标普 +0.65%(上涨 70%)· 股减债 +0.45pp(t 2.11)· 月初 3 日标普 +0.19%"
+      },
+      {
+        "when": "n=46",
+        "what": "大幅超配 ≥1.0pp的月末",
+        "outcome": "月末前 3 日:标普 -0.05%(上涨 48%)· 股减债 -0.25pp(t -1.38)· 月初 3 日标普 +0.62%"
+      },
+      {
+        "when": "n=30",
+        "what": "大幅低配 ≤-1.0pp的月末",
+        "outcome": "月末前 3 日:标普 +1.49%(上涨 73%)· 股减债 +1.29pp(t 2.62)· 月初 3 日标普 -0.15%"
+      },
+      {
+        "when": "2026-08-31",
+        "what": "股票超配 +0.40pp(月末前 3 日量)",
+        "outcome": "月末前 3 日标普 +0.13% · 股减债 +0.59pp · 月初 3 日标普 +0.80%"
+      },
+      {
+        "when": "2026-07-31",
+        "what": "股票超配 -0.01pp(月末前 3 日量)",
+        "outcome": "月末前 3 日标普 +0.83% · 股减债 +1.39pp · 月初 3 日标普 +3.05%"
+      },
+      {
+        "when": "2026-06-30",
+        "what": "股票超配 -0.78pp(月末前 3 日量)",
+        "outcome": "月末前 3 日标普 +1.70% · 股减债 +1.97pp · 月初 3 日标普 +0.60%"
+      },
+      {
+        "when": "2026-05-29",
+        "what": "股票超配 +1.05pp(月末前 3 日量)",
+        "outcome": "月末前 3 日标普 +0.79% · 股减债 +0.44pp · 月初 3 日标普 -0.30%"
+      },
+      {
+        "when": "2026-04-30",
+        "what": "股票超配 +2.14pp(月末前 3 日量)",
+        "outcome": "月末前 3 日标普 +0.49% · 股减债 +0.83pp · 月初 3 日标普 +0.71%"
+      },
+      {
+        "when": "2026-03-31",
+        "what": "股票超配 -0.80pp(月末前 3 日量)",
+        "outcome": "月末前 3 日标普 +0.81% · 股减债 +0.08pp · 月初 3 日标普 +1.32%"
+      },
+      {
+        "when": "2026-02-27",
+        "what": "股票超配 -0.47pp(月末前 3 日量)",
+        "outcome": "月末前 3 日标普 -0.20% · 股减债 -0.51pp · 月初 3 日标普 -0.12%"
+      },
+      {
+        "when": "2026-01-30",
+        "what": "股票超配 +0.40pp(月末前 3 日量)",
+        "outcome": "月末前 3 日标普 -0.51% · 股减债 -0.45pp · 月初 3 日标普 -0.83%"
+      }
+    ],
+    "readThrough": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    },
+    "labels": {
+      "noScenarios": true,
+      "programFilled": true,
+      "pricing": "程序数字 · 本月漂移(每日收盘后更新)",
+      "history": "03 — 历史同类回看 · 月末(程序算;|t|<2 视为与零无区别;价格现象,不是资金流测量)",
+      "actCols": {
+        "a": "项目",
+        "b": "实际",
+        "c": "事前方向判断",
+        "d": "—",
+        "e": "方向对不对"
+      }
+    }
   },
   {
     "id": "conf-gtc-sj-2027-03-15",
