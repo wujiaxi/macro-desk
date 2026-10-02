@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-02 00:30 ET",
+  "updated": "2026-10-02 08:32 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,666.45",
     "chg": "+0.19%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:32 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,501.6",
     "chg": "+0.31%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:32 ET"
   },
   {
     "label": "DXY",
-    "value": "101.93",
-    "chg": "-0.15%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "102.07",
+    "chg": "+0.13%",
+    "dir": "up",
+    "note": "实时 08:32 ET"
   },
   {
     "label": "黄金",
-    "value": "4,214.00",
-    "chg": "+1.11%",
+    "value": "4,211.60",
+    "chg": "+0.15%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:32 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "92.53",
-    "chg": "-0.74%",
+    "value": "89.51",
+    "chg": "-3.37%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:32 ET"
   },
   {
     "label": "BTC",
-    "value": "86,768",
-    "chg": "+2.26%",
+    "value": "86,893",
+    "chg": "+2.41%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:32 ET"
   },
   {
     "label": "VIX",
-    "value": "16.39",
-    "chg": "+0.07",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "16.08",
+    "chg": "-0.30",
+    "dir": "down",
+    "note": "实时 08:32 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.24%",
     "chg": "-5.6bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:32 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.60%",
     "chg": "-3.5bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:32 ET"
   },
   {
     "label": "US 2Y",
@@ -84,7 +84,7 @@ export const markets = [
   {
     "label": "10月加息概率",
     "value": "38%",
-    "chg": "一周前 55%",
+    "chg": "一周前 73%",
     "dir": "flat",
     "note": "ZQ 期货自算 · 2026-09-30 ⚠️"
   }
@@ -1827,7 +1827,48 @@ export const events = [
       "劳动参与率(%) · 预期 61.6 · 利好 ≥ 61.9 · 利空 ≤ 61.3",
       "一次性因素/回复率 · 预期 无 · 利好 — · 利空 正文点名罢工/天气 ⇒ 本次就业疲软属一次性因素,「新增不及预期」的利空含义要打折"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "当月非农新增(k)",
+        "actual": "29.0",
+        "consensus": "70.0",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      },
+      {
+        "name": "前两月净修正(k)",
+        "actual": "-60.0",
+        "consensus": "0.0",
+        "prior": "",
+        "surprise": "利空",
+        "dir": "down"
+      },
+      {
+        "name": "失业率(%)",
+        "actual": "4.2",
+        "consensus": "4.1",
+        "prior": "",
+        "surprise": "利空",
+        "dir": "down"
+      },
+      {
+        "name": "时薪环比(%)",
+        "actual": "0.1",
+        "consensus": "0.3",
+        "prior": "",
+        "surprise": "利好",
+        "dir": "up"
+      },
+      {
+        "name": "劳动参与率(%)",
+        "actual": "61.8",
+        "consensus": "61.6",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [
