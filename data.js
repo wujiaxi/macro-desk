@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-02 16:00 ET",
+  "updated": "2026-10-02 16:10 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,722.94",
-    "chg": "+0.71%",
+    "value": "7,722.72",
+    "chg": "+0.73%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:10 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,807.9",
     "chg": "+1.00%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:10 ET"
   },
   {
     "label": "DXY",
-    "value": "101.89",
-    "chg": "-0.04%",
+    "value": "101.88",
+    "chg": "-0.06%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:10 ET"
   },
   {
     "label": "黄金",
-    "value": "4,171.10",
-    "chg": "-0.82%",
+    "value": "4,177.20",
+    "chg": "-0.67%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:10 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "91.44",
-    "chg": "-1.28%",
+    "value": "91.53",
+    "chg": "-1.19%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:10 ET"
   },
   {
     "label": "BTC",
-    "value": "84,315",
-    "chg": "-0.63%",
+    "value": "84,335",
+    "chg": "-0.60%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:10 ET"
   },
   {
     "label": "VIX",
-    "value": "15.42",
-    "chg": "-0.96",
+    "value": "15.45",
+    "chg": "-0.93",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:10 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.28%",
     "chg": "+4.0bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:10 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.63%",
     "chg": "+2.7bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:10 ET"
   },
   {
     "label": "US 2Y",
@@ -1361,7 +1361,33 @@ export const events = [
     "pricing": [],
     "scenarios": [],
     "actual": [],
-    "reaction": [],
+    "reaction": [
+      {
+        "asset": "S&P 500",
+        "d0": "-0.25%",
+        "d1": "+0.19%"
+      },
+      {
+        "asset": "纳斯达克100",
+        "d0": "+0.23%",
+        "d1": "+0.31%"
+      },
+      {
+        "asset": "US 2Y",
+        "d0": "-1bp",
+        "d1": ""
+      },
+      {
+        "asset": "US 10Y",
+        "d0": "+3bp",
+        "d1": ""
+      },
+      {
+        "asset": "DXY",
+        "d0": "+0.08%",
+        "d1": "+0.64%"
+      }
+    ],
     "verdict": "",
     "history": [
       {
@@ -1629,7 +1655,33 @@ export const events = [
         "dir": "flat"
       }
     ],
-    "reaction": [],
+    "reaction": [
+      {
+        "asset": "S&P 500",
+        "d0": "-0.25%",
+        "d1": "+0.19%"
+      },
+      {
+        "asset": "纳斯达克100",
+        "d0": "+0.23%",
+        "d1": "+0.31%"
+      },
+      {
+        "asset": "US 2Y",
+        "d0": "-1bp",
+        "d1": ""
+      },
+      {
+        "asset": "US 10Y",
+        "d0": "+3bp",
+        "d1": ""
+      },
+      {
+        "asset": "DXY",
+        "d0": "+0.08%",
+        "d1": "+0.64%"
+      }
+    ],
     "verdict": "",
     "history": [
       {
@@ -1869,7 +1921,18 @@ export const events = [
         "dir": "flat"
       }
     ],
-    "reaction": [],
+    "reaction": [
+      {
+        "asset": "S&P 500",
+        "d0": "+0.73%",
+        "d1": ""
+      },
+      {
+        "asset": "纳斯达克100",
+        "d0": "+1.00%",
+        "d1": ""
+      }
+    ],
     "verdict": "",
     "history": [
       {
@@ -3300,7 +3363,7 @@ export const events = [
       {
         "when": "2026-10-02",
         "what": "非农就业报告（2026-09）",
-        "outcome": "当日行情数据缺失"
+        "outcome": "SPX +0.73%"
       },
       {
         "when": "2026-09-04",
@@ -3742,7 +3805,7 @@ export const events = [
       {
         "when": "2026-10-02",
         "what": "非农就业报告（2026-09）",
-        "outcome": "当日行情数据缺失"
+        "outcome": "SPX +0.73%"
       },
       {
         "when": "2026-09-04",
