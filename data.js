@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-02 10:00 ET",
+  "updated": "2026-10-02 10:22 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,80 +13,80 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,731.29",
-    "chg": "+0.81%",
+    "value": "7,746.93",
+    "chg": "+1.02%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "30,915.9",
-    "chg": "+1.36%",
+    "value": "30,987.0",
+    "chg": "+1.59%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "DXY",
-    "value": "101.80",
-    "chg": "-0.14%",
+    "value": "101.76",
+    "chg": "-0.17%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "黄金",
-    "value": "4,220.00",
-    "chg": "+0.34%",
+    "value": "4,213.20",
+    "chg": "+0.18%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "89.88",
-    "chg": "-2.97%",
+    "value": "88.55",
+    "chg": "-4.40%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "BTC",
-    "value": "86,550",
-    "chg": "+2.01%",
+    "value": "86,543",
+    "chg": "+2.00%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "VIX",
-    "value": "15.68",
-    "chg": "-0.70",
+    "value": "15.58",
+    "chg": "-0.80",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.20%",
-    "chg": "-3.2bp",
+    "chg": "-3.8bp",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.58%",
-    "chg": "-2.5bp",
+    "value": "5.57%",
+    "chg": "-3.5bp",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:22 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.88%",
     "chg": "-1.0bp",
     "dir": "down",
-    "note": "as-of 2026-09-30 · 2s10s +41bp"
+    "note": "as-of 2026-09-30 · 2s10s +46bp"
   },
   {
     "label": "10月加息概率",
-    "value": "38%",
+    "value": "24%",
     "chg": "一周前 73%",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-09-30 ⚠️"
+    "note": "ZQ 期货自算 · 2026-10-01 ⚠️"
   }
 ];
 
@@ -2627,12 +2627,12 @@ export const events = [
     "pricing": [
       {
         "name": "本次会议隐含变动",
-        "value": "+10bp",
-        "note": "ZQ 自算 · 2026-09-30"
+        "value": "+6bp",
+        "note": "ZQ 自算 · 2026-10-01"
       },
       {
         "name": "P(加息 25bp)",
-        "value": "38%",
+        "value": "24%",
         "note": "月末会议 N-d=3<7,价格噪声放大 10×;改用次月 2026-11 合约当 r_post"
       },
       {
@@ -4092,80 +4092,6 @@ export const events = [
     ]
   },
   {
-    "id": "mu-catalyst-2026-12-09",
-    "kind": "earnings",
-    "ticker": "MU",
-    "company": "MU",
-    "title": "MU 财报",
-    "subtitle": "美光资本回报提升(CHIPS 两周年;FQ1-27 财报紧随其后,日期待确认)",
-    "org": "",
-    "date": "2026-12-09T16:05:00-05:00",
-    "dateNote": "日期取自论点卡催化剂,未经公司确认",
-    "dateConfirmed": false,
-    "importance": 3,
-    "tags": [
-      "催化剂"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-06-24",
-        "what": "EPS 意外 +21.4% · 实际 25.11 vs 预期 20.69",
-        "outcome": "次日 +15.74%（巨 beat >10%）"
-      },
-      {
-        "when": "2026-03-18",
-        "what": "EPS 意外 +33.2% · 实际 12.2 vs 预期 9.16",
-        "outcome": "次日 -3.78%（巨 beat >10%）"
-      },
-      {
-        "when": "2025-12-17",
-        "what": "EPS 意外 +20.6% · 实际 4.78 vs 预期 3.96",
-        "outcome": "次日 +10.21%（巨 beat >10%）"
-      }
-    ],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
-    "valuation": [
-      {
-        "name": "基准收盘价",
-        "value": "$1,065.11"
-      },
-      {
-        "name": "概率加权目标价",
-        "value": "$1,077.59"
-      },
-      {
-        "name": "压力调整底线",
-        "value": "$882.99"
-      },
-      {
-        "name": "安全边际",
-        "value": "-17.10%"
-      }
-    ],
-    "targets": {
-      "low": "$763",
-      "avg": "$1,078",
-      "high": "$1,471",
-      "n": "本站三情景加权 · 卖方一致 $1,545.00"
-    },
-    "afterHours": {
-      "move": "",
-      "note": ""
-    }
-  },
-  {
     "id": "cpi-2026-11-rel2026-12-10",
     "kind": "macro",
     "title": "2026-11 CPI",
@@ -4488,6 +4414,80 @@ export const events = [
         "d": "变化 · 被动资金 · 稳健性"
       },
       "pricing": "程序数字 · 纳指 100(每日收盘后更新)"
+    }
+  },
+  {
+    "id": "mu-earnings-2026-12-16",
+    "kind": "earnings",
+    "ticker": "MU",
+    "company": "MU",
+    "title": "MU 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-12-16T16:05:00-05:00",
+    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-06-24",
+        "what": "EPS 意外 +21.4% · 实际 25.11 vs 预期 20.69",
+        "outcome": "次日 +15.74%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-03-18",
+        "what": "EPS 意外 +33.2% · 实际 12.2 vs 预期 9.16",
+        "outcome": "次日 -3.78%（巨 beat >10%）"
+      },
+      {
+        "when": "2025-12-17",
+        "what": "EPS 意外 +20.6% · 实际 4.78 vs 预期 3.96",
+        "outcome": "次日 +10.21%（巨 beat >10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$1,065.11"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$1,077.59"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$882.99"
+      },
+      {
+        "name": "安全边际",
+        "value": "-17.10%"
+      }
+    ],
+    "targets": {
+      "low": "$763",
+      "avg": "$1,078",
+      "high": "$1,471",
+      "n": "本站三情景加权 · 卖方一致 $1,545.00"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
     }
   },
   {
