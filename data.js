@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-03 00:30 ET",
+  "updated": "2026-10-03 10:18 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,77 +16,77 @@ export const markets = [
     "value": "7,722.72",
     "chg": "+0.73%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,807.9",
     "chg": "+1.00%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "DXY",
     "value": "101.93",
     "chg": "-0.01%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "黄金",
     "value": "4,162.30",
     "chg": "-1.03%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "WTI 原油",
     "value": "91.11",
     "chg": "-1.64%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "BTC",
-    "value": "84,513",
-    "chg": "+0.01%",
+    "value": "84,797",
+    "chg": "+0.35%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "VIX",
     "value": "15.31",
     "chg": "-1.07",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.28%",
     "chg": "+4.0bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.63%",
     "chg": "+2.7bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:18 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.78%",
     "chg": "-10.0bp",
     "dir": "down",
-    "note": "as-of 2026-10-01 · 2s10s +46bp"
+    "note": "as-of 2026-10-01 · 2s10s +45bp"
   },
   {
     "label": "10月加息概率",
-    "value": "24%",
-    "chg": "一周前 73%",
+    "value": "20%",
+    "chg": "一周前 67%",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-10-01 ⚠️"
+    "note": "ZQ 期货自算 · 2026-10-02 ⚠️"
   }
 ];
 
@@ -2690,12 +2690,12 @@ export const events = [
     "pricing": [
       {
         "name": "本次会议隐含变动",
-        "value": "+6bp",
-        "note": "ZQ 自算 · 2026-10-01"
+        "value": "+5bp",
+        "note": "ZQ 自算 · 2026-10-02"
       },
       {
         "name": "P(加息 25bp)",
-        "value": "24%",
+        "value": "20%",
         "note": "月末会议 N-d=3<7,价格噪声放大 10×;改用次月 2026-11 合约当 r_post"
       },
       {
@@ -4480,19 +4480,19 @@ export const events = [
     }
   },
   {
-    "id": "mu-earnings-2026-12-16",
+    "id": "mu-catalyst-2026-12-17",
     "kind": "earnings",
     "ticker": "MU",
     "company": "MU",
     "title": "MU 财报",
-    "subtitle": "盘后",
+    "subtitle": "FQ1-27 财报 + FQ2 指引(v4 裁决日)",
     "org": "",
-    "date": "2026-12-16T16:05:00-05:00",
-    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "date": "2026-12-17T16:05:00-05:00",
+    "dateNote": "日期取自论点卡催化剂,未经公司确认",
     "dateConfirmed": false,
     "importance": 3,
     "tags": [
-      "推算日期"
+      "催化剂"
     ],
     "thesis": "",
     "expectations": [],
