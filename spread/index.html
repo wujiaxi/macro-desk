@@ -75,6 +75,27 @@
   footer li{margin-bottom:4px}
   @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
   @media (max-width:560px){.wrap{padding:16px}.big{font-size:23px}.isp{margin-left:0;width:100%}}
+  .lrgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:12px}
+  .lrcard{background:#0f141a;border:1px solid #1e2630;border-radius:10px;padding:14px 16px 12px;min-width:0}
+  .lrhead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px}
+  .lrgrp{font-size:10px;letter-spacing:.09em;color:#7d8b9c;font-weight:600}
+  .lrt{font-size:14px;font-weight:600;margin-top:2px}
+  .lrsub{font-size:11px;color:#7d8b9c;margin-top:1px}
+  .lrv{font-family:'Roboto Mono',monospace;font-variant-numeric:tabular-nums;font-size:17px;font-weight:600;text-align:right}
+  .lrd{font-size:10.5px;color:#7d8b9c;text-align:right}
+  .lrleg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11px;color:#c6d2e0;margin:8px 0 2px}
+  .lrleg i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:5px;border-radius:1px}
+  .lrcw{position:relative}
+  .lrtip{position:absolute;pointer-events:none;background:#111820;border:1px solid #263140;border-radius:6px;
+         padding:5px 8px;font-size:11px;line-height:1.5;color:#e6edf3;white-space:nowrap;display:none;z-index:2}
+  .lrstats{margin:6px 0 0;padding-left:16px;font-size:11.5px;color:#c6d2e0}
+  .lrstats li{margin-bottom:2px}
+  .lrread{font-size:12px;color:#e6edf3;margin-top:7px;line-height:1.6}
+  .lrcav{font-size:11.5px;color:#7d8b9c;margin-top:4px;line-height:1.6}
+  .lrsrc{font-size:10.5px;color:#7d8b9c;margin-top:6px}
+  .lrsrc a{margin-right:9px}
+  .seqt{min-width:0}.seqt td:first-child,.seqt th:first-child{min-width:0}.seqt th,.seqt td{padding:7px 10px}
+  .badge{font-size:10px;padding:1px 6px;border-radius:4px;border:1px solid #58252a;color:#f87171;margin-left:6px}
 </style>
 </head>
 <body>
@@ -157,6 +178,13 @@
     <div class="sechead"><h2>可转债／可交换债</h2><div class="hint" id="convHint">不计入平均利差</div></div>
     <div id="convs"><div class="issuer"><div style="padding:16px;color:#7d8b9c;font-size:13px">取数中…</div></div></div>
   </section>
+  <section id="lr">
+    <div class="sechead"><h2>长周期宏观 · 拉长时间看</h2><div class="hint" id="lrHint">取数中…</div></div>
+    <div class="rail" id="lrChecks" style="margin-bottom:12px"><div class="cell"><div class="note">核对中…</div></div></div>
+    <div class="lrgrid" id="lrGrid"></div>
+    <div class="lrcard" id="lrSeq" style="margin-top:12px"></div>
+  </section>
+
   <footer>
     <b>口径</b>
     <ul>
@@ -166,6 +194,7 @@
       <li><b>报价来源</b>：<span class="src finra">FINRA</span> 是美国场外市场（TRACE）报价，口径最权威；其余为德国交易所（FWB／SWB／GETTEX／MUN／DUS）挂牌，同一只债在欧洲挂牌、流动性远低于美国场外，只在 FINRA 无报价时作后备。债券与国债曲线为本页实时取数，多数为延迟约 15 分钟的流式报价。</li>
       <li><b>均线广度</b>取 S5TW／NDTW（标普500／纳指100 站上 20 日均线的成分股占比，Barchart 日终）与 S5TH／NDTH（200 日）。这两类符号只存在于 TradingView 的图表通道，而那条通道校验 Origin、浏览器不允许伪造，所以由本机脚本日更抓好推到本站，这里读那份 JSON。<b>恐惧贪婪</b>同理：CNN 校验 Referer，只认 cnn.com 的，前端直取永远是 418。</li>
       <li>持仓 26 张论点卡里，<b>4 家没有在外流通的公司债</b>（TSLA／TSM／BE／DUOL），不在此追踪。<b>可转／可交换债</b>按 TradingView 的 <span class="mono">conversion_option</span> 字段识别，单列一节、<b>不计入平均利差</b>：它的价格主要是转股期权的价值（比如价格是面值的 4 倍多），收益率反映的不是信用定价。<b>转股价</b>不在行情源里，取自 SEC 一手件（点数字可跳原文，悬停看引用原话），由 <span class="mono">convert_terms.py</span> 逐条核对原文后生成；有分红调整的（BABA）取最新一次调整公告，带 * 的是由调整后转股比例反推（1000÷比例）。NBIS 这批债本金会分阶段增值到面值的 120–125%，但<b>转股按原始面值计</b>，所以转股价就是公告值。「正股 vs 转股价」＝正股现价 ÷ 转股价 − 1。CMOC 是可交换债、不在 SEC 备案，转股价暂缺。价格口径（按原始面值还是增值后本金）行情源未说明，所以<b>不给转股溢价</b>。</li>
+      <li><b>长周期宏观</b>：全部是公开数据（美联储、财政部、BEA、BLS、劳工部、世界银行，经 FRED 取；信用利差为穆迪 BAA，FRED 标注可用、需注明出处），由本机 <span class="mono">macro_longrun.py</span> 每个交易日算好推到本站，页面只画图、照抄程序生成的文字。程序每次跑五项核对：收益率曲线用两套原始利率重算、萨姆规则用失业率自算、巴菲特指数分子与标普 500 的季度涨跌比（两个独立来源）、拆分恒等式、净流动性各分量的单位；任何一项不过就不更新，线上保持上一个好版本。巴菲特指数加权版的分母＝美国 GDP 与世界其他地区 GDP 按「美国企业利润里来自海外的比例」混合增长（2001 年前该比例为估算）。灰色竖带＝NBER 衰退期。这些图用来定长期预期，<b>都不是择时信号</b>。</li>
     </ul>
   </footer>
 </div>
@@ -403,6 +432,97 @@ async function loadStocks(syms){
   const d=await scan("america",{symbols:{tickers:syms},columns:["close"]});
   for(const row of (d.data||[])) state.stock[row.s]=row.d[0];
 }
+/* ── 长周期宏观(数据由 ~/macro_longrun.py 算好,这里只画)── */
+async function loadLongrun(){
+  const r=await fetch("../data/macro_longrun.json",{cache:"no-store"});
+  if(!r.ok) throw new Error("HTTP "+r.status);
+  return r.json();
+}
+function lrFmt(v,unit){
+  if(v==null||!isFinite(v)) return "—";
+  const a=Math.abs(v), d=a>=100?0:a>=10?1:2;
+  return v.toFixed(d)+({"%":"%","pp":"pp","x":"x","T":"T","k":"k"}[unit]||"");
+}
+function lrChart(series,unit,rec,refs,clip,H){
+  const W=420,L=40,R=50,T=10,B=22; H=H||170;
+  const all=series.flatMap(s=>s.pts);
+  if(!all.length) return {svg:'<text x="210" y="80" text-anchor="middle" font-size="12" fill="#7d8b9c">无数据</text>',W,H,map:null};
+  const t0=Math.min(...all.map(p=>p[0])), t1=Math.max(...all.map(p=>p[0]));
+  let ys=all.map(p=>p[1]).concat((refs||[]).map(r=>r.v));
+  let y0=Math.min(...ys), y1=Math.max(...ys);
+  if(clip){y0=Math.max(y0,clip[0]); y1=Math.min(y1,clip[1]);}
+  const nonneg=y0>=0, pad=(y1-y0)*0.06||1; y0-=pad; y1+=pad; if(nonneg) y0=Math.max(0,y0);
+  const raw=(y1-y0)/3, mag=Math.pow(10,Math.floor(Math.log10(raw))), step0=[1,2,2.5,5,10].map(m=>m*mag).find(v=>v>=raw)||10*mag;
+  const ticks=[]; for(let v=Math.ceil(y0/step0)*step0; v<=y1+1e-9; v+=step0) ticks.push(+v.toFixed(6));
+  const X=t=>L+(t-t0)/((t1-t0)||1)*(W-L-R), Y=v=>T+(y1-Math.max(y0,Math.min(y1,v)))/(y1-y0)*(H-T-B);
+  let g="";
+  for(const [a,b] of rec||[]){ if(b<t0||a>t1) continue;
+    g+=`<rect x="${X(Math.max(a,t0)).toFixed(1)}" y="${T}" width="${Math.max(1,X(Math.min(b,t1))-X(Math.max(a,t0))).toFixed(1)}" height="${H-T-B}" fill="#ffffff" fill-opacity=".05"/>`; }
+  for(const v of ticks){
+    g+=`<line x1="${L}" y1="${Y(v).toFixed(1)}" x2="${W-R}" y2="${Y(v).toFixed(1)}" stroke="#263140" stroke-opacity=".5"/>`;
+    g+=`<text x="${L-6}" y="${(Y(v)+3.5).toFixed(1)}" text-anchor="end" font-size="9.5" fill="#7d8b9c" font-family="Roboto Mono,monospace">${lrFmt(v,"")}</text>`; }
+  const span=t1-t0, step=span>50?20:span>25?10:span>12?5:2;
+  for(let y=Math.ceil(t0/step)*step;y<=t1;y+=step)
+    g+=`<text x="${X(y).toFixed(1)}" y="${H-7}" text-anchor="middle" font-size="9.5" fill="#7d8b9c" font-family="Roboto Mono,monospace">${y}</text>`;
+  for(const r of refs||[]){ if(r.v<y0||r.v>y1) continue;
+    g+=`<line x1="${L}" y1="${Y(r.v).toFixed(1)}" x2="${W-R}" y2="${Y(r.v).toFixed(1)}" stroke="#8b98a8" stroke-dasharray="4 3" stroke-opacity=".8"/>`;
+    g+=`<text x="${W-R+4}" y="${(Y(r.v)+3.5).toFixed(1)}" font-size="9" fill="#8b98a8">${esc(r.label)}</text>`; }
+  for(const s of [...series].sort((a,b)=>(a.minor?0:1)-(b.minor?0:1))){
+    const d=s.pts.map((p,i)=>(i?"L":"M")+X(p[0]).toFixed(1)+" "+Y(p[1]).toFixed(1)).join(" ");
+    g+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="${s.minor?1.1:1.8}" stroke-opacity="${s.minor?.5:1}" stroke-linejoin="round"/>`;
+    if(!s.minor){ const p=s.pts[s.pts.length-1];
+      g+=`<circle cx="${X(p[0]).toFixed(1)}" cy="${Y(p[1]).toFixed(1)}" r="3" fill="${s.color}" stroke="#0f141a" stroke-width="1.5"/>`; }
+  }
+  g+=`<line class="lrx" x1="0" y1="${T}" x2="0" y2="${H-B}" stroke="#c6d2e0" stroke-opacity=".45" visibility="hidden"/>`;
+  return {svg:g,W,H,X,t0,t1,L,R};
+}
+function lrMount(host,series,unit,rec,refs,clip,H){
+  const c=lrChart(series,unit,rec,refs,clip,H);
+  host.innerHTML=`<div class="lrcw"><svg viewBox="0 0 ${c.W} ${c.H}" width="100%" role="img">${c.svg}</svg><div class="lrtip"></div></div>`;
+  if(!c.X) return;
+  const svg=host.querySelector("svg"), tip=host.querySelector(".lrtip"), vl=svg.querySelector(".lrx");
+  const near=(pts,t)=>{let b=null,bd=1e9;for(const p of pts){const d=Math.abs(p[0]-t);if(d<bd){bd=d;b=p;}}return bd<1.01?b:null;};
+  const move=e=>{
+    const r=svg.getBoundingClientRect(), x=(e.clientX-r.left)/r.width*c.W;
+    if(x<c.L||x>c.W-c.R){tip.style.display="none";vl.setAttribute("visibility","hidden");return;}
+    const t=c.t0+(x-c.L)/(c.W-c.L-c.R)*(c.t1-c.t0);
+    const rows=series.map(s=>({s,p:near(s.pts,t)})).filter(o=>o.p);
+    if(!rows.length) return;
+    const tt=rows[0].p[0], yr=Math.floor(tt+1e-6), mo=Math.round((tt-yr)*12)+1;
+    tip.innerHTML=`<div style="color:#7d8b9c">${yr}-${String(mo).padStart(2,"0")}</div>`+rows.map(o=>`<div><span style="color:${o.s.color}">●</span> ${esc(o.s.label)} <b class="mono">${lrFmt(o.p[1],unit)}</b></div>`).join("");
+    vl.setAttribute("x1",c.X(tt)); vl.setAttribute("x2",c.X(tt)); vl.setAttribute("visibility","visible");
+    tip.style.display="block";
+    const px=(c.X(tt)/c.W)*r.width; tip.style.left=Math.min(Math.max(0,px+10),r.width-tip.offsetWidth)+"px"; tip.style.top="4px";
+  };
+  svg.addEventListener("pointermove",move);
+  svg.addEventListener("pointerleave",()=>{tip.style.display="none";vl.setAttribute("visibility","hidden");});
+}
+function renderLR(j){
+  const ok=j.checks.filter(c=>c.ok).length;
+  document.getElementById("lrChecks").innerHTML=j.checks.map(c=>`<div class="cell"><div class="lab">${esc(c.name)}</div><div class="big" style="font-size:17px;color:${c.ok?"#2dd4bf":"#f87171"}">${c.ok?"通过":"不通过"}</div><div class="note">${esc(c.detail)}</div></div>`).join("");
+  const age=Math.round((Date.now()-new Date(j.generated))/36e5);
+  document.getElementById("lrHint").textContent=`${j.cards.length} 张图 · 核对 ${ok}/${j.checks.length} 通过 · `+(age<24?`${age} 小时前更新`:`${Math.round(age/24)} 天前更新`)+" · 悬停看数值";
+  const grid=document.getElementById("lrGrid");
+  grid.innerHTML=j.cards.map((c,i)=>`<div class="lrcard">
+    <div class="lrhead"><div><div class="lrgrp">${esc(c.group)}</div><div class="lrt">${esc(c.title)}${c.stale?'<span class="badge">数据偏旧</span>':""}</div><div class="lrsub">${esc(c.sub)}</div></div>
+      <div><div class="lrv">${esc(c.latest.text)}</div><div class="lrd">${esc(c.latest.date)} · 历史分位 ${c.pct}%</div></div></div>
+    ${(c.series.length>1||c.series2)?`<div class="lrleg">${[...c.series,...(c.series2?c.series2.series:[])].map(s=>`<span><i style="background:${s.color};opacity:${s.minor?.5:1}"></i>${esc(s.label)}</span>`).join("")}</div>`:""}
+    <div id="lrc${i}"></div>${c.series2?`<div id="lrc${i}b"></div>`:""}
+    <ul class="lrstats">${c.stats.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
+    <div class="lrread">${esc(c.read)}</div><div class="lrcav">局限:${esc(c.caveat)}</div>
+    <div class="lrsrc">来源 ${c.src.map(s=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>`).join("")}</div></div>`).join("");
+  j.cards.forEach((c,i)=>{
+    lrMount(document.getElementById("lrc"+i),c.series,c.unit,j.recessions,c.refs,c.clip,c.series2?130:170);
+    if(c.series2) lrMount(document.getElementById("lrc"+i+"b"),c.series2.series,c.series2.unit,j.recessions,null,null,130);
+  });
+  const q=j.sequence, lag=v=>(v>0?"+":"")+v+" 个月";
+  document.getElementById("lrSeq").innerHTML=`<div class="lrgrp">跨资产顺序</div><div class="lrt">「利率先见顶 → 股票 → 商品」站得住吗</div>
+    <div class="lrcav" style="color:#c6d2e0">${esc(q.note)}</div>
+    <div class="tw" style="margin-top:8px;border-top:0"><table class="seqt"><thead><tr><th>股票见顶</th><th>10 年期美债见顶</th><th>商品见顶</th></tr></thead><tbody>${q.rows.map(r=>`<tr${q.full.includes(r.top)?' style="background:#12251f"':""}><td class="num">${r.top}</td><td class="num ${r.y<0?"up":""}">${lag(r.y)}${r.y_edge?" *":""}</td><td class="num">${lag(r.c)}${r.c_edge?" *":""}</td></tr>`).join("")}</tbody></table></div>
+    <div class="lrcav">负数＝比股票早见顶。* ＝最高点落在前后 12 个月窗口的边上（还在趋势里，没有真正见顶）。绿色底＝完整顺序成立的 ${q.full.length} 次。</div>
+    <div class="lrsrc">来源 ${q.src.map(s=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>`).join("")}</div>`;
+}
+
 async function loadLocal(){
   const r=await fetch("../data/breadth.json",{cache:"no-store"});
   if(!r.ok) throw new Error("HTTP "+r.status);
@@ -580,6 +700,11 @@ async function boot(){
     b.style.width=(p==null?0:Math.max(0,Math.min(100,p)))+"%";
     b.style.background=p==null?"#263140":p<30?"#f87171":p>70?"#2dd4bf":"#f0c454";
   };
+
+  loadLongrun().then(renderLR).catch(e=>{
+    state.errs.push("长周期宏观数据取数失败（"+e.message+"）");
+    document.getElementById("lrHint").textContent="取数失败"; showErr();
+  });
 
   loadLocal().then(j=>{
     if(j.fg&&j.fg.score!=null){
