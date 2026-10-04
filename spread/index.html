@@ -196,7 +196,7 @@
       <li><b>报价来源</b>：<span class="src finra">FINRA</span> 是美国场外市场（TRACE）报价，口径最权威；其余为德国交易所（FWB／SWB／GETTEX／MUN／DUS）挂牌，同一只债在欧洲挂牌、流动性远低于美国场外，只在 FINRA 无报价时作后备。债券与国债曲线为本页实时取数，多数为延迟约 15 分钟的流式报价。</li>
       <li><b>均线广度</b>取 S5TW／NDTW（标普500／纳指100 站上 20 日均线的成分股占比，Barchart 日终）与 S5TH／NDTH（200 日）。这两类符号只存在于 TradingView 的图表通道，而那条通道校验 Origin、浏览器不允许伪造，所以由本机脚本日更抓好推到本站，这里读那份 JSON。<b>恐惧贪婪</b>同理：CNN 校验 Referer，只认 cnn.com 的，前端直取永远是 418。</li>
       <li>持仓 26 张论点卡里，<b>4 家没有在外流通的公司债</b>（TSLA／TSM／BE／DUOL），不在此追踪。<b>可转／可交换债</b>按 TradingView 的 <span class="mono">conversion_option</span> 字段识别，单列一节、<b>不计入平均利差</b>：它的价格主要是转股期权的价值（比如价格是面值的 4 倍多），收益率反映的不是信用定价。<b>转股价</b>不在行情源里，取自 SEC 一手件（点数字可跳原文，悬停看引用原话），由 <span class="mono">convert_terms.py</span> 逐条核对原文后生成；有分红调整的（BABA）取最新一次调整公告，带 * 的是由调整后转股比例反推（1000÷比例）。NBIS 这批债本金会分阶段增值到面值的 120–125%，但<b>转股按原始面值计</b>，所以转股价就是公告值。「正股 vs 转股价」＝正股现价 ÷ 转股价 − 1。CMOC 是可交换债、不在 SEC 备案，转股价暂缺。价格口径（按原始面值还是增值后本金）行情源未说明，所以<b>不给转股溢价</b>。</li>
-      <li><b>长周期宏观</b>：全部是公开数据（美联储、财政部、BEA、BLS、劳工部、世界银行，经 FRED 取；信用利差为穆迪 BAA，FRED 标注可用、需注明出处），由本机 <span class="mono">macro_longrun.py</span> 每个交易日算好推到本站，页面只画图、照抄程序生成的文字。程序每次跑十一项核对：收益率曲线用两套原始利率重算、萨姆规则用失业率自算、巴菲特指数分子与标普 500 的季度涨跌比（两个独立来源）、拆分恒等式、净流动性各分量的单位、Shiller 标普价格与 yfinance 互证、纳指市盈率算法拿标普前 120 大权重股与 Shiller 对照、拆股换算（逐家查股数跳变是否正好等于拆股比例）、纳指个股市盈率与 yfinance 抽样对照、标普前瞻市盈率与 FactSet 公开数对照（按标普其后涨跌换算到同一天，±2.5%）、前瞻预期覆盖 ≥95% 的指数权重；任何一项不过就不更新，线上保持上一个好版本，每项核对都做过「故意喂错数据」的反向测试。<b>市盈率</b>：标普 500 用 Shiller 数据（耶鲁，1871 年起，标普公布的 GAAP 盈利）；纳指 100 没有免费的长历史，用现有成分股的 SEC 财报自算（合计市值 ÷ 合计滚动 12 个月净利润），有幸存者偏差、按全市值加权。<b>前瞻市盈率</b>用分析师一致预期（yfinance，三方），按每家公司的财年把「今年」与「明年」的预期按时间加权成未来 12 个月（直接用 yfinance 自带的 forwardPE 会对刚公布完财年的公司多看一年）；一致预期没有免费的历史，本站从 2026-10-04 起每天记录。巴菲特指数加权版的分母＝美国 GDP 与世界其他地区 GDP 按「美国企业利润里来自海外的比例」混合增长（2001 年前该比例为估算）。灰色竖带＝NBER 衰退期。这些图用来定长期预期，<b>都不是择时信号</b>。</li>
+      <li><b>长周期宏观</b>：全部是公开数据（美联储、财政部、BEA、BLS、劳工部、世界银行，经 FRED 取；信用利差为穆迪 BAA，FRED 标注可用、需注明出处），由本机 <span class="mono">macro_longrun.py</span> 每个交易日算好推到本站，页面只画图、照抄程序生成的文字。程序每次跑十二项核对：收益率曲线用两套原始利率重算、萨姆规则用失业率自算、巴菲特指数分子与标普 500 的季度涨跌比（两个独立来源）、拆分恒等式、净流动性各分量的单位、Shiller 标普价格与 yfinance 互证、纳指市盈率算法拿标普前 120 大权重股与 Shiller 对照、拆股换算（逐家查股数跳变是否正好等于拆股比例）、纳指个股市盈率与 yfinance 抽样对照、标普前瞻市盈率与 FactSet 公开数对照（按标普其后涨跌换算到同一天，±2.5%）、前瞻预期覆盖 ≥95% 的指数权重、前瞻市盈率历史的近 5 年 / 10 年均值与 FactSet 公开数对照（±3%）；任何一项不过就不更新，线上保持上一个好版本，每项核对都做过「故意喂错数据」的反向测试。<b>市盈率</b>：标普 500 用 Shiller 数据（耶鲁，1871 年起，标普公布的 GAAP 盈利）；纳指 100 没有免费的长历史，用现有成分股的 SEC 财报自算（合计市值 ÷ 合计滚动 12 个月净利润），有幸存者偏差、按全市值加权。<b>前瞻市盈率</b>用分析师一致预期（yfinance，三方），按每家公司的财年把「今年」与「明年」的预期按时间加权成未来 12 个月（直接用 yfinance 自带的 forwardPE 会对刚公布完财年的公司多看一年）；前瞻市盈率的历史（标普 1990 年起、纳指 2001 年起，周度）来自 <a href="https://historyofmarket.com/" target="_blank" rel="noopener noreferrer">History of Market</a>（数据按 CC BY 4.0 开放，它标注为终端数据，上游条款归上游），已用 FactSet 公开的 5 年 / 10 年均值核对；本站从 2026-10-04 起每天另算一笔（金色）。巴菲特指数加权版的分母＝美国 GDP 与世界其他地区 GDP 按「美国企业利润里来自海外的比例」混合增长（2001 年前该比例为估算）。灰色竖带＝NBER 衰退期。这些图用来定长期预期，<b>都不是择时信号</b>。</li>
     </ul>
   </footer>
 </div>
@@ -488,6 +488,7 @@ function lrChart(series,unit,rec,refs,clip,H){
   return {svg:g,W,H,X,t0,t1,L,R};
 }
 function lrMount(host,series,unit,rec,refs,clip,H){
+  series=series.filter(s=>s.pts&&s.pts.length);          // 空序列(比如刚开始攒的历史)不画,也不许让整张图报错
   const c=lrChart(series,unit,rec,refs,clip,H);
   host.innerHTML=`<div class="lrcw"><svg viewBox="0 0 ${c.W} ${c.H}" width="100%" role="img">${c.svg}</svg><div class="lrtip"></div></div>`;
   if(!c.X) return;
@@ -526,7 +527,7 @@ function renderLR(j){
     <div class="lrsrc">来源 ${c.src.map(s=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>`).join("")}</div></div>`).join("");
   j.cards.forEach((c,i)=>{
     lrMount(document.getElementById("lrc"+i),c.series,c.unit,j.recessions,c.refs,c.clip,c.series2?130:170);
-    if(c.series2) lrMount(document.getElementById("lrc"+i+"b"),c.series2.series,c.series2.unit,j.recessions,null,null,130);
+    if(c.series2) lrMount(document.getElementById("lrc"+i+"b"),c.series2.series,c.series2.unit,j.recessions,c.series2.refs||null,c.series2.clip||null,130);
   });
 }
 
