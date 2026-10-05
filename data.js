@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-05 16:00 ET",
+  "updated": "2026-10-05 16:30 ET",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,73 +13,73 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,774.20",
+    "value": "7,773.95",
     "chg": "+0.66%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "31,076.4",
     "chg": "+0.87%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "DXY",
-    "value": "102.14",
-    "chg": "-0.35%",
+    "value": "102.15",
+    "chg": "-0.34%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "黄金",
-    "value": "4,168.80",
-    "chg": "-0.08%",
+    "value": "4,166.50",
+    "chg": "-0.13%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "89.13",
-    "chg": "-0.88%",
+    "value": "89.33",
+    "chg": "-0.66%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "BTC",
-    "value": "85,733",
-    "chg": "-0.90%",
+    "value": "85,768",
+    "chg": "-0.86%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "VIX",
-    "value": "15.54",
-    "chg": "+0.23",
+    "value": "15.52",
+    "chg": "+0.21",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.31%",
     "chg": "+3.4bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.66%",
     "chg": "+3.5bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:30 ET"
   },
   {
     "label": "US 2Y",
-    "value": "4.78%",
-    "chg": "-10.0bp",
-    "dir": "down",
-    "note": "as-of 2026-10-01 · 2s10s +45bp"
+    "value": "4.83%",
+    "chg": "+5.0bp",
+    "dir": "up",
+    "note": "as-of 2026-10-02 · 2s10s +45bp"
   },
   {
     "label": "10月加息概率",
