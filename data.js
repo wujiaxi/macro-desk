@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-06 12:00 ET · ⚠️ 1 条告警: NFP 日历只剩 59 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-06 12:30 ET · ⚠️ 1 条告警: NFP 日历只剩 59 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,839.54",
-    "chg": "+0.84%",
+    "value": "7,831.59",
+    "chg": "+0.74%",
     "dir": "up",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "31,317.9",
-    "chg": "+0.78%",
+    "value": "31,278.3",
+    "chg": "+0.65%",
     "dir": "up",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "DXY",
-    "value": "101.80",
-    "chg": "-0.33%",
+    "value": "101.87",
+    "chg": "-0.26%",
     "dir": "down",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "黄金",
-    "value": "4,196.30",
-    "chg": "+1.01%",
+    "value": "4,189.70",
+    "chg": "+0.85%",
     "dir": "up",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "88.73",
-    "chg": "-1.14%",
+    "value": "89.27",
+    "chg": "-0.53%",
     "dir": "down",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "BTC",
-    "value": "85,716",
-    "chg": "-0.04%",
+    "value": "85,701",
+    "chg": "-0.06%",
     "dir": "down",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "VIX",
-    "value": "15.26",
-    "chg": "-0.26",
+    "value": "15.15",
+    "chg": "-0.37",
     "dir": "down",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.26%",
-    "chg": "-5.3bp",
+    "value": "5.28%",
+    "chg": "-3.4bp",
     "dir": "down",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.63%",
-    "chg": "-3.7bp",
+    "value": "5.64%",
+    "chg": "-2.1bp",
     "dir": "down",
-    "note": "实时 12:00 ET"
+    "note": "实时 12:30 ET"
   },
   {
     "label": "US 2Y",
