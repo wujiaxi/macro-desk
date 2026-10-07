@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-07 10:00 ET · ⚠️ 1 条告警: NFP 日历只剩 58 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-07 10:19 ET · ⚠️ 1 条告警: NFP 日历只剩 58 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,80 +13,80 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,774.25",
-    "chg": "-0.58%",
+    "value": "7,774.92",
+    "chg": "-0.57%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:19 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "30,997.5",
-    "chg": "-0.73%",
+    "value": "30,994.4",
+    "chg": "-0.74%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:19 ET"
   },
   {
     "label": "DXY",
-    "value": "102.40",
-    "chg": "+0.36%",
+    "value": "102.39",
+    "chg": "+0.35%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:19 ET"
   },
   {
     "label": "黄金",
-    "value": "4,119.50",
-    "chg": "-1.22%",
+    "value": "4,120.90",
+    "chg": "-1.18%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:19 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "90.73",
-    "chg": "+0.58%",
-    "dir": "up",
-    "note": "实时 10:00 ET"
+    "value": "89.94",
+    "chg": "-0.30%",
+    "dir": "down",
+    "note": "实时 10:19 ET"
   },
   {
     "label": "BTC",
-    "value": "83,162",
-    "chg": "-2.79%",
+    "value": "82,988",
+    "chg": "-2.99%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:19 ET"
   },
   {
     "label": "VIX",
-    "value": "15.81",
-    "chg": "+0.80",
+    "value": "15.74",
+    "chg": "+0.73",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:19 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.35%",
-    "chg": "+7.9bp",
+    "value": "5.32%",
+    "chg": "+5.3bp",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:19 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.72%",
-    "chg": "+7.8bp",
+    "value": "5.70%",
+    "chg": "+6.2bp",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:19 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.84%",
     "chg": "+1.0bp",
     "dir": "up",
-    "note": "as-of 2026-10-05 · 2s10s +47bp"
+    "note": "as-of 2026-10-05 · 2s10s +48bp"
   },
   {
     "label": "10月加息概率",
-    "value": "22%",
+    "value": "20%",
     "chg": "一周前 60%",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-10-05 ⚠️"
+    "note": "ZQ 期货自算 · 2026-10-06 ⚠️"
   }
 ];
 
@@ -2715,12 +2715,12 @@ export const events = [
     "pricing": [
       {
         "name": "本次会议隐含变动",
-        "value": "+6bp",
-        "note": "ZQ 自算 · 2026-10-05"
+        "value": "+5bp",
+        "note": "ZQ 自算 · 2026-10-06"
       },
       {
         "name": "P(加息 25bp)",
-        "value": "22%",
+        "value": "20%",
         "note": "月末会议 N-d=3<7,价格噪声放大 10×;改用次月 2026-11 合约当 r_post"
       },
       {
@@ -4180,70 +4180,19 @@ export const events = [
     ]
   },
   {
-    "id": "cpi-2026-11-rel2026-12-10",
-    "kind": "macro",
-    "title": "2026-11 CPI",
-    "subtitle": "",
-    "org": "BLS",
-    "ticker": "",
-    "company": "",
-    "date": "2026-12-10T08:30:00-05:00",
-    "dateNote": "08:30 ET",
-    "dateConfirmed": true,
-    "importance": 3,
-    "tags": [
-      "CPI"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-11-10",
-        "what": "CPI（2026-10）",
-        "outcome": "当日行情数据缺失"
-      },
-      {
-        "when": "2026-10-14",
-        "what": "CPI（2026-09）",
-        "outcome": "当日行情数据缺失"
-      },
-      {
-        "when": "2026-09-11",
-        "what": "CPI（2026-08）",
-        "outcome": "SPX +0.86% · 2Y +7bp"
-      }
-    ],
-    "links": [
-      {
-        "label": "BLS CPI",
-        "url": "https://www.bls.gov/cpi/"
-      },
-      {
-        "label": "官方日程",
-        "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
-      }
-    ]
-  },
-  {
-    "id": "avgo-earnings-2026-12-10",
+    "id": "avgo-catalyst-2026-12-09",
     "kind": "earnings",
     "ticker": "AVGO",
     "company": "AVGO",
     "title": "AVGO 财报",
-    "subtitle": "盘后",
+    "subtitle": "FQ4 FY26 财报 + FY2027 首次正式指引",
     "org": "",
-    "date": "2026-12-10T16:05:00-05:00",
-    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "date": "2026-12-09T16:05:00-05:00",
+    "dateNote": "日期取自论点卡催化剂,未经公司确认",
     "dateConfirmed": false,
     "importance": 3,
     "tags": [
-      "推算日期"
+      "催化剂"
     ],
     "thesis": "",
     "expectations": [],
@@ -4303,6 +4252,57 @@ export const events = [
       "move": "",
       "note": ""
     }
+  },
+  {
+    "id": "cpi-2026-11-rel2026-12-10",
+    "kind": "macro",
+    "title": "2026-11 CPI",
+    "subtitle": "",
+    "org": "BLS",
+    "ticker": "",
+    "company": "",
+    "date": "2026-12-10T08:30:00-05:00",
+    "dateNote": "08:30 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "CPI"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-11-10",
+        "what": "CPI（2026-10）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-10-14",
+        "what": "CPI（2026-09）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-09-11",
+        "what": "CPI（2026-08）",
+        "outcome": "SPX +0.86% · 2Y +7bp"
+      }
+    ],
+    "links": [
+      {
+        "label": "BLS CPI",
+        "url": "https://www.bls.gov/cpi/"
+      },
+      {
+        "label": "官方日程",
+        "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+      }
+    ]
   },
   {
     "id": "rebal-index-announce-2026-12-11-ndx",
