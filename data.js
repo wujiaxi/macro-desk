@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-11 00:30 ET · ⚠️ 1 条告警: NFP 日历只剩 55 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-11 10:15 ET · ⚠️ 1 条告警: NFP 日历只剩 54 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,811.54",
     "chg": "+0.59%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:15 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,883.2",
     "chg": "+0.51%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:15 ET"
   },
   {
     "label": "DXY",
     "value": "102.23",
     "chg": "+0.20%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:15 ET"
   },
   {
     "label": "黄金",
     "value": "4,216.30",
     "chg": "+0.33%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:15 ET"
   },
   {
     "label": "WTI 原油",
     "value": "91.85",
     "chg": "+1.57%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:15 ET"
   },
   {
     "label": "BTC",
-    "value": "82,824",
-    "chg": "-0.10%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "83,011",
+    "chg": "+0.12%",
+    "dir": "up",
+    "note": "实时 10:15 ET"
   },
   {
     "label": "VIX",
     "value": "14.84",
     "chg": "-0.58",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:15 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.24%",
     "chg": "+1.3bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:15 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.60%",
     "chg": "-0.6bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 10:15 ET"
   },
   {
     "label": "US 2Y",
@@ -84,7 +84,7 @@ export const markets = [
   {
     "label": "10月加息概率",
     "value": "18%",
-    "chg": "一周前 24%",
+    "chg": "一周前 20%",
     "dir": "flat",
     "note": "ZQ 期货自算 · 2026-10-09 ⚠️"
   }
