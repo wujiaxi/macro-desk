@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-13 19:00 ET · ⚠️ 2 条告警: NFP 日历只剩 52 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-13 19:30 ET · ⚠️ 2 条告警: NFP 日历只剩 52 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,805.45",
-    "chg": "-0.02%",
-    "dir": "down",
-    "note": "实时 19:00 ET"
+    "value": "7,807.24",
+    "chg": "+0.00%",
+    "dir": "flat",
+    "note": "实时 19:30 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,569.5",
     "chg": "-0.31%",
     "dir": "down",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "DXY",
     "value": "102.21",
     "chg": "-0.19%",
     "dir": "down",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "黄金",
-    "value": "4,185.00",
-    "chg": "-0.62%",
+    "value": "4,179.90",
+    "chg": "-0.74%",
     "dir": "down",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "94.70",
-    "chg": "+2.22%",
+    "value": "94.64",
+    "chg": "+2.16%",
     "dir": "up",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "BTC",
-    "value": "83,438",
-    "chg": "+2.07%",
+    "value": "83,109",
+    "chg": "+1.67%",
     "dir": "up",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "VIX",
     "value": "15.27",
     "chg": "+0.06",
     "dir": "up",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.22%",
     "chg": "-2.3bp",
     "dir": "down",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.56%",
     "chg": "-3.5bp",
     "dir": "down",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "US 2Y",
