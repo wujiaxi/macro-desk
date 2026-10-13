@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-12 21:30 ET · ⚠️ 2 条告警: CPI 日历只剩 59 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-13 00:30 ET · ⚠️ 2 条告警: CPI 日历只剩 59 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,807.24",
     "chg": "-0.06%",
     "dir": "down",
-    "note": "实时 21:30 ET"
+    "note": "实时 00:30 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,664.7",
     "chg": "-0.71%",
     "dir": "down",
-    "note": "实时 21:30 ET"
+    "note": "实时 00:30 ET"
   },
   {
     "label": "DXY",
-    "value": "102.46",
-    "chg": "+0.29%",
-    "dir": "up",
-    "note": "实时 21:30 ET"
+    "value": "102.43",
+    "chg": "-0.10%",
+    "dir": "down",
+    "note": "实时 00:30 ET"
   },
   {
     "label": "黄金",
-    "value": "4,191.50",
-    "chg": "-0.85%",
-    "dir": "down",
-    "note": "实时 21:30 ET"
+    "value": "4,215.60",
+    "chg": "+0.44%",
+    "dir": "up",
+    "note": "实时 00:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "92.79",
-    "chg": "+2.72%",
-    "dir": "up",
-    "note": "实时 21:30 ET"
+    "value": "92.60",
+    "chg": "-0.61%",
+    "dir": "down",
+    "note": "实时 00:30 ET"
   },
   {
     "label": "BTC",
-    "value": "81,981",
-    "chg": "+0.29%",
+    "value": "83,264",
+    "chg": "+1.86%",
     "dir": "up",
-    "note": "实时 21:30 ET"
+    "note": "实时 00:30 ET"
   },
   {
     "label": "VIX",
     "value": "15.21",
     "chg": "+0.37",
     "dir": "up",
-    "note": "实时 21:30 ET"
+    "note": "实时 00:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.24%",
     "chg": "-0.4bp",
     "dir": "down",
-    "note": "实时 21:30 ET"
+    "note": "实时 00:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.60%",
     "chg": "-0.2bp",
     "dir": "down",
-    "note": "实时 21:30 ET"
+    "note": "实时 00:30 ET"
   },
   {
     "label": "US 2Y",
