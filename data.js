@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-13 10:00 ET · ⚠️ 3 条告警: CPI 日历只剩 58 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-13 10:23 ET · ⚠️ 2 条告警: NFP 日历只剩 52 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,807.05",
-    "chg": "-0.01%",
+    "value": "7,802.63",
+    "chg": "-0.07%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "30,572.2",
-    "chg": "-0.30%",
+    "value": "30,541.1",
+    "chg": "-0.40%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "DXY",
-    "value": "102.25",
-    "chg": "-0.16%",
+    "value": "102.24",
+    "chg": "-0.17%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "黄金",
-    "value": "4,199.40",
-    "chg": "-0.28%",
+    "value": "4,192.10",
+    "chg": "-0.45%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "93.21",
-    "chg": "+0.62%",
+    "value": "93.69",
+    "chg": "+1.13%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "BTC",
-    "value": "83,160",
-    "chg": "+1.73%",
+    "value": "83,505",
+    "chg": "+2.16%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "VIX",
-    "value": "15.18",
-    "chg": "-0.03",
-    "dir": "down",
-    "note": "实时 10:00 ET"
+    "value": "15.31",
+    "chg": "+0.10",
+    "dir": "up",
+    "note": "实时 10:23 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.21%",
-    "chg": "-3.4bp",
+    "value": "5.22%",
+    "chg": "-1.7bp",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.55%",
-    "chg": "-4.4bp",
+    "value": "5.57%",
+    "chg": "-2.6bp",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "US 2Y",
@@ -83,10 +83,10 @@ export const markets = [
   },
   {
     "label": "10月加息概率",
-    "value": "18%",
+    "value": "20%",
     "chg": "一周前 20%",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-10-09 ⚠️"
+    "note": "ZQ 期货自算 · 2026-10-12 ⚠️"
   }
 ];
 
@@ -2715,12 +2715,12 @@ export const events = [
     "pricing": [
       {
         "name": "本次会议隐含变动",
-        "value": "+4bp",
-        "note": "ZQ 自算 · 2026-10-09"
+        "value": "+5bp",
+        "note": "ZQ 自算 · 2026-10-12"
       },
       {
         "name": "P(加息 25bp)",
-        "value": "18%",
+        "value": "20%",
         "note": "月末会议 N-d=3<7,价格噪声放大 10×;改用次月 2026-11 合约当 r_post"
       },
       {
@@ -5233,6 +5233,57 @@ export const events = [
     }
   },
   {
+    "id": "cpi-2026-12-rel2027-01-13",
+    "kind": "macro",
+    "title": "2026-12 CPI",
+    "subtitle": "",
+    "org": "BLS",
+    "ticker": "",
+    "company": "",
+    "date": "2027-01-13T08:30:00-05:00",
+    "dateNote": "08:30 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "CPI"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-12-10",
+        "what": "CPI（2026-11）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-11-10",
+        "what": "CPI（2026-10）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-10-14",
+        "what": "CPI（2026-09）",
+        "outcome": "当日行情数据缺失"
+      }
+    ],
+    "links": [
+      {
+        "label": "BLS CPI",
+        "url": "https://www.bls.gov/cpi/"
+      },
+      {
+        "label": "官方日程",
+        "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+      }
+    ]
+  },
+  {
     "id": "fomc-2027-01-27",
     "kind": "macro",
     "title": "FOMC 议息决议",
@@ -5417,6 +5468,108 @@ export const events = [
         "e": "方向对不对"
       }
     }
+  },
+  {
+    "id": "cpi-2027-01-rel2027-02-11",
+    "kind": "macro",
+    "title": "2027-01 CPI",
+    "subtitle": "",
+    "org": "BLS",
+    "ticker": "",
+    "company": "",
+    "date": "2027-02-11T08:30:00-05:00",
+    "dateNote": "08:30 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "CPI"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-12-10",
+        "what": "CPI（2026-11）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-11-10",
+        "what": "CPI（2026-10）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-10-14",
+        "what": "CPI（2026-09）",
+        "outcome": "当日行情数据缺失"
+      }
+    ],
+    "links": [
+      {
+        "label": "BLS CPI",
+        "url": "https://www.bls.gov/cpi/"
+      },
+      {
+        "label": "官方日程",
+        "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+      }
+    ]
+  },
+  {
+    "id": "cpi-2027-02-rel2027-03-10",
+    "kind": "macro",
+    "title": "2027-02 CPI",
+    "subtitle": "",
+    "org": "BLS",
+    "ticker": "",
+    "company": "",
+    "date": "2027-03-10T08:30:00-05:00",
+    "dateNote": "08:30 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "CPI"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-12-10",
+        "what": "CPI（2026-11）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-11-10",
+        "what": "CPI（2026-10）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-10-14",
+        "what": "CPI（2026-09）",
+        "outcome": "当日行情数据缺失"
+      }
+    ],
+    "links": [
+      {
+        "label": "BLS CPI",
+        "url": "https://www.bls.gov/cpi/"
+      },
+      {
+        "label": "官方日程",
+        "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+      }
+    ]
   },
   {
     "id": "conf-gtc-sj-2027-03-15",
