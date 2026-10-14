@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-14 00:30 ET · ⚠️ 2 条告警: NFP 日历只剩 52 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-14 08:26 ET · ⚠️ 2 条告警: NFP 日历只剩 51 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,805.45",
     "chg": "-0.02%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:26 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "30,569.5",
     "chg": "-0.31%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:26 ET"
   },
   {
     "label": "DXY",
-    "value": "102.09",
-    "chg": "-0.07%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "102.21",
+    "chg": "+0.09%",
+    "dir": "up",
+    "note": "实时 08:26 ET"
   },
   {
     "label": "黄金",
-    "value": "4,179.20",
-    "chg": "-0.05%",
+    "value": "4,174.00",
+    "chg": "-0.27%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:26 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "94.65",
-    "chg": "-0.77%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "95.43",
+    "chg": "+0.68%",
+    "dir": "up",
+    "note": "实时 08:26 ET"
   },
   {
     "label": "BTC",
-    "value": "83,721",
-    "chg": "+0.75%",
+    "value": "83,631",
+    "chg": "+0.64%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:26 ET"
   },
   {
     "label": "VIX",
     "value": "15.27",
-    "chg": "+0.06",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "chg": "+0.00",
+    "dir": "flat",
+    "note": "实时 08:26 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.22%",
     "chg": "-2.3bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:26 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.56%",
     "chg": "-3.5bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:26 ET"
   },
   {
     "label": "US 2Y",
@@ -84,7 +84,7 @@ export const markets = [
   {
     "label": "10月加息概率",
     "value": "20%",
-    "chg": "一周前 20%",
+    "chg": "一周前 22%",
     "dir": "flat",
     "note": "ZQ 期货自算 · 2026-10-12 ⚠️"
   }
@@ -5282,6 +5282,80 @@ export const events = [
         "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
       }
     ]
+  },
+  {
+    "id": "tsm-earnings-2027-01-14",
+    "kind": "earnings",
+    "ticker": "TSM",
+    "company": "TSM",
+    "title": "TSM 财报",
+    "subtitle": "盘前",
+    "org": "",
+    "date": "2027-01-14T07:00:00-05:00",
+    "dateNote": "盘前 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-16",
+        "what": "EPS 意外 +10.9% · 实际 4.31 vs 预期 3.89",
+        "outcome": "次日 -2.32%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-15",
+        "what": "EPS 意外 +4.7% · 实际 3.49 vs 预期 3.33",
+        "outcome": "次日 -3.13%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-01-15",
+        "what": "EPS 意外 +5.5% · 实际 3.14 vs 预期 2.98",
+        "outcome": "次日 +4.44%（大 beat 5–10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$422.49"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$487.10"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$443.20"
+      },
+      {
+        "name": "安全边际",
+        "value": "+4.90%"
+      }
+    ],
+    "targets": {
+      "low": "$332",
+      "avg": "$487",
+      "high": "$602",
+      "n": "本站三情景加权 · 卖方一致 $527.00"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
   },
   {
     "id": "fomc-2027-01-27",
