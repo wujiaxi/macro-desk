@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-16 15:33 ET · ⚠️ 3 条告警: NFP 日历只剩 49 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-16 15:42 ET · ⚠️ 3 条告警: NFP 日历只剩 49 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,648.21",
-    "chg": "-1.24%",
+    "value": "7,649.51",
+    "chg": "-1.22%",
     "dir": "down",
-    "note": "实时 15:33 ET"
+    "note": "实时 15:42 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "29,153.9",
-    "chg": "-2.61%",
+    "value": "29,150.9",
+    "chg": "-2.62%",
     "dir": "down",
-    "note": "实时 15:33 ET"
+    "note": "实时 15:42 ET"
   },
   {
     "label": "DXY",
-    "value": "101.80",
+    "value": "101.79",
     "chg": "-0.05%",
     "dir": "down",
-    "note": "实时 15:33 ET"
+    "note": "实时 15:42 ET"
   },
   {
     "label": "黄金",
-    "value": "4,186.30",
-    "chg": "-0.43%",
+    "value": "4,191.90",
+    "chg": "-0.30%",
     "dir": "down",
-    "note": "实时 15:33 ET"
+    "note": "实时 15:42 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "99.00",
-    "chg": "+3.48%",
+    "value": "98.77",
+    "chg": "+3.24%",
     "dir": "up",
-    "note": "实时 15:33 ET"
+    "note": "实时 15:42 ET"
   },
   {
     "label": "BTC",
-    "value": "81,339",
-    "chg": "-0.96%",
+    "value": "81,286",
+    "chg": "-1.02%",
     "dir": "down",
-    "note": "实时 15:33 ET"
+    "note": "实时 15:42 ET"
   },
   {
     "label": "VIX",
-    "value": "20.75",
-    "chg": "+4.29",
+    "value": "20.25",
+    "chg": "+3.79",
     "dir": "up",
-    "note": "实时 15:33 ET"
+    "note": "实时 15:42 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.10%",
     "chg": "+0.9bp",
     "dir": "up",
-    "note": "实时 15:33 ET"
+    "note": "实时 15:42 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.44%",
     "chg": "+0.7bp",
     "dir": "up",
-    "note": "实时 15:33 ET"
+    "note": "实时 15:42 ET"
   },
   {
     "label": "US 2Y",
@@ -2426,42 +2426,6 @@ export const events = [
     ]
   },
   {
-    "id": "gev-earnings-2026-10-21",
-    "kind": "earnings",
-    "ticker": "GEV",
-    "company": "GEV",
-    "title": "GEV 财报",
-    "subtitle": "盘前",
-    "org": "",
-    "date": "2026-10-21T07:00:00-04:00",
-    "dateNote": "盘前 · 日期按历史排期推算,公司未官宣",
-    "dateConfirmed": false,
-    "importance": 3,
-    "tags": [
-      "推算日期"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
-    "valuation": [],
-    "targets": {},
-    "afterHours": {
-      "move": "",
-      "note": ""
-    }
-  },
-  {
     "id": "tsla-earnings-2026-10-21",
     "kind": "earnings",
     "ticker": "TSLA",
@@ -2604,6 +2568,154 @@ export const events = [
       "high": "$616",
       "n": "本站三情景加权 · 卖方一致 $558.64"
     },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "gev-fy26q3",
+    "kind": "earnings",
+    "ticker": "GEV",
+    "company": "GEV",
+    "title": "GEV FY26Q3 财报",
+    "subtitle": "盘前",
+    "org": "",
+    "date": "2026-10-28T07:00:00-04:00",
+    "dateNote": "盘前 07:00 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "FY26Q3"
+    ],
+    "thesis": "隐含波动:事件跳空 ±5.5%(期限结构反解,区间 5.3–5.7%)/ ±9.50%(10-30 跨式 raw); 反应函数一句:GEV 的 GAAP EPS 被一次性项淹没(Q1'26 含 $4.5B 并购净收益,beat 率只有 50%), 门槛配置:季度 EPS 指引结构性不存在(GEV 只给全年收入/FCF/EBITDA 利润率指引); 动作(四选一): 期望值 = Σ(概率 × 涨跌) = 0.30×(+10.60%) + 0.40×(-1.07%) + 0.30×(-8.19%) = +0.29% vs 隐含 ±5.5% → 赔率近零(块算,earnings_claims.py 硬对账)",
+    "expectations": [
+      {
+        "name": "卖方一致",
+        "consensus": "4.022",
+        "prior": "",
+        "range": "vs 卖方一致 +0.0%",
+        "note": ""
+      },
+      {
+        "name": "卖方最高值",
+        "consensus": "4.89",
+        "prior": "",
+        "range": "vs 卖方一致 +21.6%",
+        "note": ""
+      },
+      {
+        "name": "2026 全年收入指引中值(十亿美元)",
+        "consensus": "46.5",
+        "prior": "",
+        "range": "利好 47.0 / 利空 46.0",
+        "note": "core · 权重 25%"
+      }
+    ],
+    "pricing": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "30%",
+        "trigger": "调整后 EBITDA 利润率 ≥ 14.5% 且全年收入指引中值 ≥ 47.0B(或 EBITDA 利润率指引收窄到上半区); 订单 ≥ 23B; EPS 不论",
+        "reaction": "+10.60% · ≈$1,024.6"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "40%",
+        "trigger": "EBITDA 利润率 12.5-14.5%, 全年收入指引小幅上调(中值 46.0-47.0), 订单 17-23B",
+        "reaction": "-1.07% · ≈$916.5"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "30%",
+        "trigger": "EBITDA 利润率 < 12.5% 或全年指引未上调 / 风电新增亏损 —— 即使 GAAP EPS 与收入 beat(上季正是收入 beat + 上调收入指引仍 -8.69%)",
+        "reaction": "-8.19% · ≈$850.6"
+      }
+    ],
+    "watch": [
+      "风电亏损与 2027 前瞻措辞 — 利好: 风电全年约 $400M EBITDA 亏损指引维持或收窄且无新增海上风电项目费用; 并且 CEO/CFO 书面引语对 2027 给出正面量化或「定价/利润率继续改善」类表述(或上调多年框架目标) — 利空: 风电亏损指引扩大到 $400M 以上, 或出现新的海上风电项目费用/减值; 或引语首次出现燃气订单「客户推迟 / 定价正常化 / 签约放缓」类措辞",
+      "2026 全年收入指引中值(第一条,恒为第一) · 预期 $46.5B · 利好 ≥$47.0B · 利空 ≤$46.0B(维持)",
+      "全年调整后 EBITDA 利润率指引下沿 · 预期 12.25%(现 12%) · 利好 ≥13.0% · 利空 ≤11.5%",
+      "Q3 订单 · 预期 $20.0B · 利好 ≥$23.0B · 利空 ≤$17.0B",
+      "Q3 调整后 EBITDA 利润率 · 预期 13.5% · 利好 ≥14.5% · 利空 ≤12.5%",
+      "燃气积压 + 预留 GW · 预期 122 · 利好 ≥125 · 利空 ≤119"
+    ],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "GEV IR",
+        "url": "https://www.gevernova.com/investors"
+      },
+      {
+        "label": "gevernova.com",
+        "url": "https://www.gevernova.com/news/press-releases/ge-vernova-announce-third-quarter-2026-financial-results-october-28"
+      },
+      {
+        "label": "finance.yahoo.com · heres-expect-ge-vernovas-next-141413937",
+        "url": "https://finance.yahoo.com/energy/articles/heres-expect-ge-vernovas-next-141413937.html"
+      },
+      {
+        "label": "finance.yahoo.com · ge-vernova-stock-more-50-161406724",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-stock-more-50-161406724.html"
+      },
+      {
+        "label": "marketbeat.com",
+        "url": "https://www.marketbeat.com/instant-alerts/price-ge-vernova-nyse-gev-stock-price-down-14-following-analyst-downgrade-2026-10-15/"
+      }
+    ],
+    "consensus": {
+      "eps": "$4.022",
+      "rev": "$12.00B",
+      "epsPrior": "",
+      "revPrior": "",
+      "revYoY": "",
+      "note": ""
+    },
+    "segments": [
+      {
+        "name": "2026 全年调整后 EBITDA 利润率指引下沿(%)",
+        "consensus": "12.25",
+        "prior": "利好 13.0 / 利空 11.5",
+        "note": "权重 10%"
+      },
+      {
+        "name": "Q3 订单(十亿美元)",
+        "consensus": "20.0",
+        "prior": "利好 23.0 / 利空 17.0",
+        "note": "权重 20%"
+      },
+      {
+        "name": "Q3 调整后 EBITDA 利润率(%)",
+        "consensus": "13.5",
+        "prior": "利好 14.5 / 利空 12.5",
+        "note": "core · 权重 25%"
+      },
+      {
+        "name": "燃气设备积压 + 预留协议(GW)",
+        "consensus": "122.0",
+        "prior": "利好 125.0 / 利空 119.0",
+        "note": "权重 10%"
+      }
+    ],
+    "guidance": {
+      "company": "待公布",
+      "street": "",
+      "note": "比较期间 FY26"
+    },
+    "options": {
+      "iv": "",
+      "impliedMove": "±5.50%",
+      "note": "盈亏平衡 $837.25 / $1012.75"
+    },
+    "valuation": [],
+    "targets": {},
     "afterHours": {
       "move": "",
       "note": ""
