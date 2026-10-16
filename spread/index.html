@@ -718,7 +718,10 @@ async function boot(){
     if(j.fg&&j.fg.score!=null){
       const v=j.fg.score, lab={"extreme fear":"极度恐惧",fear:"恐惧",neutral:"中性",greed:"贪婪","extreme greed":"极度贪婪"}[j.fg.rating]||j.fg.rating||"";
       document.getElementById("fgVal").textContent=Math.round(v);
-      document.getElementById("fgNote").textContent=`${lab} · 一月前 ${Math.round(j.fg.prev_month)}`;
+      // 标出 CNN 时点:盘中值与昨收差得可以很大(10-16 盘中 18 vs 昨收 31.5),不标就分不清
+      const t=j.fg.ts?new Date(j.fg.ts):null, old=t&&(Date.now()-t)>20*36e5;
+      const when=t?t.toLocaleString("zh-CN",{timeZone:"America/New_York",month:"numeric",day:"numeric",hour:"2-digit",minute:"2-digit",hour12:false})+" ET":"时点未知";
+      document.getElementById("fgNote").textContent=`${lab} · ${old?"⚠️ ":""}截至 ${when} · 一月前 ${Math.round(j.fg.prev_month)}`;
       const b=document.getElementById("fgBar");
       b.style.width=v+"%"; b.style.background=v<25?"#f87171":v>75?"#2dd4bf":"#f0c454";
     }else{ document.getElementById("fgNote").textContent="未取到"; }
