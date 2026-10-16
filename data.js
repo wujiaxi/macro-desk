@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-16 16:00 ET · ⚠️ 3 条告警: NFP 日历只剩 49 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-16 16:09 ET · ⚠️ 3 条告警: NFP 日历只剩 49 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,659.41",
+    "value": "7,659.44",
     "chg": "-1.09%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:09 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,187.5",
     "chg": "-2.50%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:09 ET"
   },
   {
     "label": "DXY",
-    "value": "101.81",
-    "chg": "-0.04%",
+    "value": "101.79",
+    "chg": "-0.05%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:09 ET"
   },
   {
     "label": "黄金",
-    "value": "4,190.10",
-    "chg": "-0.34%",
+    "value": "4,189.00",
+    "chg": "-0.37%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:09 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "99.00",
-    "chg": "+3.48%",
+    "value": "98.94",
+    "chg": "+3.42%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:09 ET"
   },
   {
     "label": "BTC",
-    "value": "81,475",
-    "chg": "-0.79%",
+    "value": "81,557",
+    "chg": "-0.69%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:09 ET"
   },
   {
     "label": "VIX",
-    "value": "20.45",
-    "chg": "+3.99",
+    "value": "20.08",
+    "chg": "+3.62",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:09 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.10%",
     "chg": "+0.9bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:09 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.44%",
     "chg": "+0.7bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:09 ET"
   },
   {
     "label": "US 2Y",
@@ -2426,25 +2426,70 @@ export const events = [
     ]
   },
   {
-    "id": "tsla-earnings-2026-10-21",
+    "id": "tsla-fy26q3",
     "kind": "earnings",
     "ticker": "TSLA",
     "company": "TSLA",
-    "title": "TSLA 财报",
+    "title": "TSLA FY26Q3 财报",
     "subtitle": "盘后",
     "org": "",
     "date": "2026-10-21T16:05:00-04:00",
-    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
-    "dateConfirmed": false,
+    "dateNote": "盘后 16:05 ET",
+    "dateConfirmed": true,
     "importance": 3,
     "tags": [
-      "推算日期"
+      "FY26Q3"
     ],
-    "thesis": "",
-    "expectations": [],
+    "thesis": "隐含波动:事件跳空 ±6.3%(期限结构反解,区间 6.1–6.8%)/ ±7.62%(10-23 跨式 raw,表 ⑤); 反应函数一句:近 20 季 beat 率只有 50%、beat 却跌 5 次、|r|=0.34 —— EPS 只解释一部分; 门槛配置:公司结构性不给数字指引(Outlook 段只有定性措辞;唯一的数字是电话会口头的 2026 capex「超过 250 亿美元」); 动作(四选一): 期望值 = Σ(概率 × 涨跌) = 0.30×(+9.98%) + 0.40×(-1.22%) + 0.30×(-11.41%) = -0.92% vs 隐含 ±6.3% → 赔率略负(块算,earnings_claims.py 硬对账)",
+    "expectations": [
+      {
+        "name": "卖方一致",
+        "consensus": "0.452",
+        "prior": "",
+        "range": "vs 卖方一致 +0.0%",
+        "note": ""
+      },
+      {
+        "name": "卖方最高值",
+        "consensus": "0.7",
+        "prior": "",
+        "range": "vs 卖方一致 +54.9%",
+        "note": ""
+      }
+    ],
     "pricing": [],
-    "scenarios": [],
-    "watch": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "30%",
+        "trigger": "robotaxi 三条满足任两条(车队 >100 / 付费里程环比 >+30% / 首次披露收入)且 Outlook 保留全部 2026 产能承诺; 剔积分汽车毛利 ≥ 17.3%; EPS 不论",
+        "reaction": "+9.98% · ≈$398.6"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "40%",
+        "trigger": "robotaxi 仍只有里程图、无收入; Outlook 措辞不变; 剔积分汽车毛利 15.3-17.3%; EPS 在 0.40-0.50",
+        "reaction": "-1.22% · ≈$358.0"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "30%",
+        "trigger": "第 6 季零 robotaxi 财务披露且里程增长停滞, 或任一 2026 产能承诺推到 2027, 或剔积分汽车毛利 ≤ 15.3% —— 即使 EPS 与收入 beat(上季正是收入 beat、FCF beat 仍 -14.5%)",
+        "reaction": "-11.41% · ≈$321.1"
+      }
+    ],
+    "watch": [
+      "Outlook 指引段: 2026 产能承诺与 capex 措辞 — 利好: Outlook 原样保留「Tesla Semi 且 Megapack 3 remain on schedule for production starting in 2026」与「Optimus … production in 2026」, 并新增可核对的投放/量产节点(如 Cybercab 进入付费车队的时间、Optimus 产量); 2026 capex 维持「超过 250 亿美元」不上调 — 利空: Semi / Megapack 3 / Optimus 任一项的 2026 年份被改成 2027 或被删去; 或 Outlook 再出现未宣布的措辞降级(参照 Q2 删去 volume 一词); 或 2026 capex 上调而无对应收入指引",
+      "robotaxi 硬数字(车队 / 付费里程环比 / 收入) — 利好: 以下三条满足任意两条(即 thesis v3 写死的证伪撤销条件): ①任一城车队 >100 台 ②付费 robotaxi 里程环比 >+30% ③首次披露 robotaxi 收入 — 利空: 连续第 6 个季度零 robotaxi 财务披露, 且累计付费里程图的本季增量不高于 Q2 增量(无加速), 车队数仍不披露",
+      "Outlook 段:2026 产能承诺与 capex 措辞(第一条,恒为第一;特斯拉无数字指引) · 预期 原样保留 · 利好 保留并给出投放节点 / capex 不上调 · 利空 任一项推到 2027 或删年份 / capex 上调且无对应收入",
+      "robotaxi 硬数字(车队 / 付费里程环比 / 收入) · 预期 只有里程图 · 利好 三条满足任两条 · 利空 第 6 季零财务披露 + 里程停滞",
+      "剔积分汽车毛利率 · 预期 16.3% · 利好 ≥17.3% · 利空 ≤15.3%",
+      "GAAP 营业利润率 · 预期 3.0% · 利好 ≥4.5% · 利空 ≤1.5%",
+      "自由现金流 · 预期 -$3.5B · 利好 ≥ -$2.0B · 利空 ≤ -$5.0B"
+    ],
     "actual": [],
     "reaction": [],
     "verdict": "",
@@ -2465,11 +2510,62 @@ export const events = [
         "outcome": "次日 -3.45%（巨 beat >10%）"
       }
     ],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
+    "links": [
+      {
+        "label": "TSLA IR",
+        "url": "https://ir.tesla.com"
+      },
+      {
+        "label": "tradingview.com",
+        "url": "https://www.tradingview.com/news/zacks:e653bcedb094b:0-tesla-to-post-q3-earnings-will-automotive-margins-play-a-spoilsport/"
+      },
+      {
+        "label": "marketbeat.com · 2026-10-21-tesla-inc-stock",
+        "url": "https://www.marketbeat.com/earnings/reports/2026-10-21-tesla-inc-stock/"
+      },
+      {
+        "label": "notateslaapp.com",
+        "url": "https://www.notateslaapp.com/news/4751/tesla-shares-q3-2026-analyst-delivery-consensus"
+      }
+    ],
+    "consensus": {
+      "eps": "$0.452",
+      "rev": "$28.11B",
+      "epsPrior": "",
+      "revPrior": "",
+      "revYoY": "",
+      "note": ""
+    },
+    "segments": [
+      {
+        "name": "剔积分汽车毛利率(%)",
+        "consensus": "16.3",
+        "prior": "利好 17.3 / 利空 15.3",
+        "note": "权重 20%"
+      },
+      {
+        "name": "GAAP 营业利润率(%)",
+        "consensus": "3.0",
+        "prior": "利好 4.5 / 利空 1.5",
+        "note": "权重 15%"
+      },
+      {
+        "name": "自由现金流(十亿美元)",
+        "consensus": "-3.5",
+        "prior": "利好 -2.0 / 利空 -5.0",
+        "note": "权重 15%"
+      }
+    ],
+    "guidance": {
+      "company": "待公布",
+      "street": "下季 EPS 一致 $0.486",
+      "note": "比较期间 FY26Q4"
+    },
+    "options": {
+      "iv": "",
+      "impliedMove": "±6.30%",
+      "note": "盈亏平衡 $327.82 / $381.9"
+    },
     "valuation": [
       {
         "name": "基准收盘价",
