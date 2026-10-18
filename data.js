@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-18 00:30 ET · ⚠️ 5 条告警: NFP 日历只剩 48 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-18 03:18 ET · ⚠️ 7 条告警: NFP 日历只剩 47 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,659.44",
     "chg": "-1.09%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,187.6",
     "chg": "-2.50%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "DXY",
     "value": "101.78",
     "chg": "-0.06%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "黄金",
     "value": "4,181.10",
     "chg": "-0.55%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "WTI 原油",
     "value": "99.02",
     "chg": "+3.50%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "BTC",
-    "value": "81,812",
-    "chg": "+0.53%",
+    "value": "81,578",
+    "chg": "+0.24%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "VIX",
     "value": "19.99",
     "chg": "+3.53",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.10%",
     "chg": "+0.9bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.44%",
     "chg": "+0.7bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "US 2Y",
@@ -2202,7 +2202,7 @@ export const events = [
         "d1": ""
       }
     ],
-    "verdict": "",
+    "verdict": "读数(§8.1):P1 核心环比 0.3(预期 0.2,bear_at 0.3 踩线)、P2 headline 0.6(预期 0.4)、P5 核心同比 2.6(预期 2.4),三条全部证伪(bear),加权 S = -1.0。P1 相对 bar:prior +0.0、nowcast +0.1。落进 hot。 SPX -1.108%(带 0.47)、NDX -2.024%(带 0.79),双双超带,方向与 f_core_hot 的 SPX:- NDX:- 一致,程序判「赢了 f_core_hot」。NDX 跌幅约为 SPX 的 1.8 倍,与 hot 情景 NDX/SPX 的久期比(1.7/1.2)同向且更陡,NDX 已略越过面板 p10(-1.98%)。[事实] 为什么对:这是 10/28 FOMC 之前最后一份 CPI,事前 ZQ 隐含 10/28 加息概率 0.48 —— 硬币面意味着重定价空间在两个方向都最大(§1「本次的特殊性」)。主席 9/16 把停手标准写成「underlying inflation 确实在朝目标走」,0.3 的核心环比让 f_stop_rule(P1 <= 0.2 and ...)直接失活,股票端失去了基准情形下唯一的托底力量,而 f_core_hot 没有对手。事前写的翻转条件「P1 >= 0.3(strength 3)一条就足以把 + 打成 -」原样兑现。[推断:机制;方向与幅度是事实] 2Y/10Y/DXY:§8.3 方向票三格全是「+ 一致」(主导 f_core_hot,10Y/DXY 加上 f_headline_div),但 §8.4 三格都是「无当日收盘,反应层待次交易日」,至今未回填。按 M-17,缺数据不得渲染为 0,也不得替程序另算一套 —— 利率端本次不可裁、不计命中率。⚠️ 这不是本卡独有:10/02 非农卡 §8.4 的 2Y/10Y/DXY 也是同样三格空着,说明 macro_reconcile --stage close 的「待次交易日」没有消费者去补,是管线缺陷而不是数据偶缺(见 ⑤)。 §8.3:SPX/NDX「- 对冲,agree 0.2,被压制 f_positioning_hot」。也就是程序认为有一股 strength 2 的力量在替股票托底(「热已 price in,残余流向风险偏好修复」),市场完全没有给它面子:股票不是小跌,是跌到 hot 情景量级。 它为什么被点着:activate 是 runup21d.2Y >= 20 and P1 >= 0.3。P1 = 0.3 是当日事实;而 runup21d.2Y = 50.0 的 base_asof.2Y 仍是 2026-09-15(§7.1 块原值)—— 覆盖的是 8/17–9/15、含 9/16 加息前抢跑的那 21 天,不是真正决定 10/14 定价的 9/16–10/13。本卡 §4 与 §7.2 清单第 0 条事前写死「10/13 收盘前必须重盖 run-up」;event_log 里 10/09 入队的 refresh 没有执行,10/16 被「事件已发生」作废。所以 f_positioning_hot=1 是用 4 周前的快照判的,这股力量本次是否真实在场,未经验证。[事实:时间戳与队列记录;推断:它不在场] 股票端的实际走法给了反证:如果前端真在发布前 21 天已经按「热」抢跑 ≥20bp,0.3 的核心环比应当「只是确认」,股票该像上一张卡(8 月 CPI,run-up +34bp,SPX/NDX 当天 +0.86%/+0.91%)那样收回。这次反过来跌到 hot 量级,最可能的解释是进场时热并没有被 price in —— 9/16 加息之后到 10/13 的那段,前端很可能已经从加息前的抢跑回吐(中间夹着 10/02 非农,该卡 SPX +0.734% / NDX +1.004%,带内不裁)。我没有对这一段另算 run-up(遵守「不另算一套」),所以这条只能是 [推断]。 上一张卡的修法是否有效:拆成 hot/cool 两条让 f_positioning_hot 第一次可以被激活了 —— 修的是「符号写反」那个病;但它这次暴露了第二个病:activate 里引用的 runup21d.* 是建卡日盖章值,对账时没有被重算(§4 我事前写的是「对账时由程序重算」,块内 base_asof 证明并没有)。即同一股力量连续两张卡都在股票端判错,原因不同:8 月是符号反、永远点不着;9 月是快照旧、不该点着却点着了。 P3 shelter、P4 supercore 两格 §8.1 均为「缺口」(权重合计 0.25,f_shelter_lag / f_supercore 在 §8.3 为 None)。§7.2 第 4 条要求从 Table 1 手抓后 --actual P3=x --actual P4=y --write,这一步也没做。本节按要求不改程序区、不另算,所以 f_shelter_lag(市场是否看穿)与 f_supercore(粘性)这两股本次是「没测到」,不是「没出现」,§8.4 把它们列进「没出现」栏是缺口被渲染成了否定 —— 记录在此,不据此下结论。 反应函数:H-asym(冷被定价更多)本次只有热侧样本,且利率端无收盘,本次无法检验;regime tightening_bias 不改(M-12),但若 10/28 加息,它会延续而不是到期 —— 这一点留给 FOMC 卡,本卡不跨卡改数。 情景表的 hot move 本次在股票端量级准确,不改;要改的是力量合成:下一张卡 (a) 纳入 ③ 的 f_headline_passthrough(出现 1 次,先登记);(b) f_positioning_* 的 activate 在对账时必须用重算后的 runup21d,做不到就该判 None 而不是用建卡快照判 1。",
     "history": [
       {
         "when": "2026-09-11",
@@ -5821,6 +5821,58 @@ export const events = [
       {
         "name": "传导标的",
         "value": "AVGO、TSM、MRVL、AMKR、ASX、MU、VRT、GEV、光模块"
+      }
+    ]
+  },
+  {
+    "id": "fomc-2027-03-17",
+    "kind": "macro",
+    "title": "FOMC 议息决议",
+    "subtitle": "含 SEP 与点阵图",
+    "org": "Federal Reserve",
+    "ticker": "",
+    "company": "",
+    "date": "2027-03-17T14:00:00-04:00",
+    "dateNote": "14:00 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "FOMC",
+      "点阵图"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-29",
+        "what": "FOMC 议息决议",
+        "outcome": "SPX -1.52% · 2Y -4bp"
+      },
+      {
+        "when": "2026-06-17",
+        "what": "FOMC 议息决议",
+        "outcome": "SPX -1.21% · 2Y +15bp"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "FOMC 议息决议",
+        "outcome": "SPX -0.04% · 2Y +8bp"
+      }
+    ],
+    "links": [
+      {
+        "label": "FOMC 官方日历",
+        "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+      },
+      {
+        "label": "官方日程",
+        "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
       }
     ]
   }
