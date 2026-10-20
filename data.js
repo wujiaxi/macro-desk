@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-20 00:30 ET · ⚠️ 7 条告警: NFP 日历只剩 46 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-20 09:00 ET · ⚠️ 9 条告警: NFP 日历只剩 45 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,690.73",
     "chg": "+0.41%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,529.3",
     "chg": "+1.17%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "DXY",
-    "value": "101.81",
-    "chg": "-0.17%",
+    "value": "101.76",
+    "chg": "-0.05%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "黄金",
-    "value": "4,165.70",
-    "chg": "+0.34%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "4,140.70",
+    "chg": "-0.59%",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "98.56",
-    "chg": "+0.33%",
+    "value": "99.66",
+    "chg": "+1.09%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "BTC",
-    "value": "81,982",
-    "chg": "+0.18%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "81,502",
+    "chg": "-0.41%",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "VIX",
-    "value": "18.44",
-    "chg": "-1.54",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "18.73",
+    "chg": "+0.30",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.14%",
-    "chg": "+3.8bp",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "5.10%",
+    "chg": "-3.8bp",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.47%",
-    "chg": "+3.6bp",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "5.42%",
+    "chg": "-5.0bp",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 2Y",
@@ -2596,80 +2596,6 @@ export const events = [
     }
   },
   {
-    "id": "msft-catalyst-2026-10-27",
-    "kind": "earnings",
-    "ticker": "MSFT",
-    "company": "MSFT",
-    "title": "MSFT 财报",
-    "subtitle": "FQ1'27 财报(新裁决日)",
-    "org": "",
-    "date": "2026-10-27T16:05:00-04:00",
-    "dateNote": "日期取自论点卡催化剂,未经公司确认",
-    "dateConfirmed": false,
-    "importance": 3,
-    "tags": [
-      "催化剂"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-07-29",
-        "what": "EPS 意外 +11.8% · 实际 4.74 vs 预期 4.24",
-        "outcome": "次日 +15.51%（巨 beat >10%）"
-      },
-      {
-        "when": "2026-04-29",
-        "what": "EPS 意外 +4.9% · 实际 4.27 vs 预期 4.07",
-        "outcome": "次日 -3.93%（中 beat 2–5%）"
-      },
-      {
-        "when": "2026-01-28",
-        "what": "EPS 意外 +5.7% · 实际 4.14 vs 预期 3.92",
-        "outcome": "次日 -9.99%（大 beat 5–10%）"
-      }
-    ],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
-    "valuation": [
-      {
-        "name": "基准收盘价",
-        "value": "$464.72"
-      },
-      {
-        "name": "概率加权目标价",
-        "value": "$499.00"
-      },
-      {
-        "name": "压力调整底线",
-        "value": "$440.07"
-      },
-      {
-        "name": "安全边际",
-        "value": "-5.30%"
-      }
-    ],
-    "targets": {
-      "low": "$342",
-      "avg": "$499",
-      "high": "$616",
-      "n": "本站三情景加权 · 卖方一致 $558.64"
-    },
-    "afterHours": {
-      "move": "",
-      "note": ""
-    }
-  },
-  {
     "id": "gev-fy26q3",
     "kind": "earnings",
     "ticker": "GEV",
@@ -2946,6 +2872,183 @@ export const events = [
         "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
       }
     ]
+  },
+  {
+    "id": "msft-fy27q1",
+    "kind": "earnings",
+    "ticker": "MSFT",
+    "company": "MSFT",
+    "title": "MSFT FY27Q1 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-10-28T16:05:00-04:00",
+    "dateNote": "盘后 16:05 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "FY27Q1"
+    ],
+    "thesis": "隐含波动:±4.79%(去时值)/ ±5.63%(raw),盈亏平衡 $503.48 / $563.56(2026-10-30 到期跨式,表 ⑤,2026-10-20 取数) 反应函数一句:近 20 季 beat 率 95%、beat 却跌 10 次,surprise 与次日涨跌 r=0.27;近 8 季 beat 率 100% 却只涨 3/8、次日中位 -3.43% —— EPS beat 是入场费,定价权在 Azure 增速与指引。 门槛配置:MSFT 结构性不给 EPS 指引 → 四条 bar 只有三条。买方 bar(近 8 季校准)$5.04 高于最乐观卖方 $4.86 —— 市场实际交易的 EPS 门槛在卖方区间之外。真正的「打满指引」看 Azure:公司指引约 45%(cc),具名券商上行情景 46–47%(二手)。 动作(四选一):财报前不动(持有者) 期望值 = 0.30×(+10.19%) + 0.40×(-0.93%) + 0.30×(-6.46%) = +0.75% vs 隐含 ±4.79% → 赔率接近零(期望值远小于单边波动),方向性下注无优势 持有者 vs 空仓者:",
+    "expectations": [
+      {
+        "name": "卖方一致",
+        "consensus": "4.718",
+        "prior": "",
+        "range": "vs 卖方一致 +0.0%",
+        "note": ""
+      },
+      {
+        "name": "买方 bar(历史 beat 分布校准)",
+        "consensus": "5.038",
+        "prior": "",
+        "range": "vs 卖方一致 +6.8%",
+        "note": ""
+      },
+      {
+        "name": "卖方最高值",
+        "consensus": "4.86",
+        "prior": "",
+        "range": "vs 卖方一致 +3.0%",
+        "note": ""
+      }
+    ],
+    "pricing": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "30%",
+        "trigger": "本季 Azure ≥47% 且 下季 Azure 指引 ≥48%;收入 ≥$90.95B(指引上沿);EPS 不论",
+        "reaction": "+10.19% · ≈ $588"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "40%",
+        "trigger": "本季 Azure 45–46%, 下季指引 45–47%;收入 $90.4–90.95B;EPS 在 4.72–5.04",
+        "reaction": "-0.93% · ≈ $529"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "30%",
+        "trigger": "本季 Azure ≤44% 或 下季指引 ≤44% 或 FCF ≤$5B 且 capex 再上修 —— 即使 EPS 与收入 beat",
+        "reaction": "-6.46% · ≈ $499"
+      }
+    ],
+    "watch": [
+      "capex 与 ROI 口径 — 利好: 下季 capex 指引增长时, 同段明确把它与可量化的需求/供给缺口挂钩(如 Azure 仍受供给约束、RPO 覆盖), 且 FY27 营业利润率「下降不到 1 个点」的口径维持不变 — 利空: FY27 capex 口径上修, 而 Azure 指引不加速;或撤回/下调「FY27 营业利润率下降不到 1 个点」与「FY27 自由现金流为正」任一口径",
+      "下季(FY27Q2)Azure 增速指引 · 预期 46% · 利好 ≥48% · 利空 ≤44%",
+      "本季 Azure 增速(报告口径) · 预期 45% · 利好 ≥47% · 利空 ≤44%",
+      "商业 RPO 余额 · 预期 $710B · 利好 ≥$740B · 利空 ≤$685B",
+      "本季 Intelligent Cloud 收入 · 预期 $41.4B · 利好 ≥$41.8B · 利空 ≤$41.0B",
+      "本季自由现金流 · 预期 $12B · 利好 ≥$18B · 利空 ≤$5B",
+      "capex / ROI 口径(定性) · 预期 — · 利好 见块 P6 · 利空 见块 P6"
+    ],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-29",
+        "what": "EPS 意外 +11.8% · 实际 4.74 vs 预期 4.24",
+        "outcome": "次日 +15.51%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +4.9% · 实际 4.27 vs 预期 4.07",
+        "outcome": "次日 -3.93%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-01-28",
+        "what": "EPS 意外 +5.7% · 实际 4.14 vs 预期 3.92",
+        "outcome": "次日 -9.99%（大 beat 5–10%）"
+      }
+    ],
+    "links": [
+      {
+        "label": "MSFT IR",
+        "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/press-release-webcast"
+      }
+    ],
+    "consensus": {
+      "eps": "$4.718",
+      "rev": "$90.72B",
+      "epsPrior": "",
+      "revPrior": "",
+      "revYoY": "",
+      "note": "买方 bar $5.038"
+    },
+    "segments": [
+      {
+        "name": "下季(FY27Q2) Azure 增速指引",
+        "consensus": "46.0",
+        "prior": "利好 48.0 / 利空 44.0",
+        "note": "core · 权重 30%"
+      },
+      {
+        "name": "本季 Azure 增速(报告口径)",
+        "consensus": "45.0",
+        "prior": "利好 47.0 / 利空 44.0",
+        "note": "core · 权重 25%"
+      },
+      {
+        "name": "商业 RPO 余额(十亿美元)",
+        "consensus": "710.0",
+        "prior": "利好 740.0 / 利空 685.0",
+        "note": "权重 15%"
+      },
+      {
+        "name": "本季 Intelligent Cloud 收入(十亿美元)",
+        "consensus": "41.4",
+        "prior": "利好 41.8 / 利空 41.0",
+        "note": "权重 10%"
+      },
+      {
+        "name": "本季自由现金流(十亿美元)",
+        "consensus": "12.0",
+        "prior": "利好 18.0 / 利空 5.0",
+        "note": "权重 10%"
+      }
+    ],
+    "guidance": {
+      "company": "待公布",
+      "street": "下季 EPS 一致 $4.821",
+      "note": "比较期间 FY27Q2"
+    },
+    "options": {
+      "iv": "",
+      "impliedMove": "±4.79%",
+      "note": "盈亏平衡 $503.48 / $563.56"
+    },
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$464.72"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$499.00"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$440.07"
+      },
+      {
+        "name": "安全边际",
+        "value": "-5.30%"
+      }
+    ],
+    "targets": {
+      "low": "$342",
+      "avg": "$499",
+      "high": "$616",
+      "n": "本站三情景加权 · 卖方一致 $558.64"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
   },
   {
     "id": "googl-earnings-2026-10-28",
