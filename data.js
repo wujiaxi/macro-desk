@@ -34,22 +34,22 @@ export const markets = [
   },
   {
     "label": "黄金",
-    "value": "4,132.40",
-    "chg": "-0.08%",
+    "value": "4,133.00",
+    "chg": "-0.07%",
     "dir": "down",
     "note": "实时 03:22 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "98.87",
-    "chg": "-0.38%",
+    "value": "98.89",
+    "chg": "-0.36%",
     "dir": "down",
     "note": "实时 03:22 ET"
   },
   {
     "label": "BTC",
-    "value": "82,716",
-    "chg": "-0.27%",
+    "value": "82,732",
+    "chg": "-0.25%",
     "dir": "down",
     "note": "实时 03:22 ET"
   },
