@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-21 16:30 ET · ⚠️ 20 条告警: NFP 日历只剩 44 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-21 16:44 ET · ⚠️ 20 条告警: NFP 日历只剩 44 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,757.17",
     "chg": "+0.58%",
     "dir": "up",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,822.5",
     "chg": "+1.13%",
     "dir": "up",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "DXY",
     "value": "101.70",
     "chg": "-0.07%",
     "dir": "down",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "黄金",
-    "value": "4,151.70",
-    "chg": "+0.38%",
+    "value": "4,151.30",
+    "chg": "+0.37%",
     "dir": "up",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "97.74",
-    "chg": "-1.52%",
+    "value": "97.61",
+    "chg": "-1.65%",
     "dir": "down",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "BTC",
-    "value": "84,466",
-    "chg": "+1.84%",
+    "value": "84,657",
+    "chg": "+2.07%",
     "dir": "up",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "VIX",
     "value": "16.68",
     "chg": "-0.63",
     "dir": "down",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.15%",
     "chg": "+2.9bp",
     "dir": "up",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.44%",
     "chg": "+1.4bp",
     "dir": "up",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:44 ET"
   },
   {
     "label": "US 2Y",
@@ -2759,7 +2759,24 @@ export const events = [
       "GAAP 营业利润率 · 预期 3.0% · 利好 ≥4.5% · 利空 ≤1.5%",
       "自由现金流 · 预期 -$3.5B · 利好 ≥ -$2.0B · 利空 ≤ -$5.0B"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "剔积分汽车毛利率(%)",
+        "actual": "18.1",
+        "consensus": "16.3",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "自由现金流(十亿美元)",
+        "actual": "1.5",
+        "consensus": "-3.5",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [
@@ -2783,6 +2800,10 @@ export const events = [
       {
         "label": "TSLA IR",
         "url": "https://ir.tesla.com"
+      },
+      {
+        "label": "触发本次对账的 SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=TSLA&type=8-K&dateb=&owner=include&count=10"
       },
       {
         "label": "tradingview.com",
@@ -2826,9 +2847,9 @@ export const events = [
       }
     ],
     "guidance": {
-      "company": "待公布",
+      "company": "EPS ⏳ 待法说会",
       "street": "下季 EPS 一致 $0.486",
-      "note": "比较期间 FY26Q4"
+      "note": "vs 卖方一致 0.49（—）"
     },
     "options": {
       "iv": "",
