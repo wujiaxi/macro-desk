@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-21 13:00 ET · ⚠️ 16 条告警: NFP 日历只剩 44 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-21 13:24 ET · ⚠️ 20 条告警: NFP 日历只剩 44 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,759.72",
-    "chg": "+0.62%",
+    "value": "7,765.38",
+    "chg": "+0.70%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:24 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "29,884.4",
-    "chg": "+1.34%",
+    "value": "29,910.6",
+    "chg": "+1.43%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:24 ET"
   },
   {
     "label": "DXY",
-    "value": "101.70",
-    "chg": "-0.07%",
+    "value": "101.68",
+    "chg": "-0.09%",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:24 ET"
   },
   {
     "label": "黄金",
-    "value": "4,151.50",
-    "chg": "+0.38%",
+    "value": "4,150.30",
+    "chg": "+0.35%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:24 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "96.80",
-    "chg": "-2.47%",
+    "value": "96.54",
+    "chg": "-2.73%",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:24 ET"
   },
   {
     "label": "BTC",
-    "value": "84,495",
-    "chg": "+1.88%",
+    "value": "84,463",
+    "chg": "+1.84%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:24 ET"
   },
   {
     "label": "VIX",
-    "value": "16.75",
-    "chg": "-0.56",
+    "value": "16.71",
+    "chg": "-0.60",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:24 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.11%",
-    "chg": "-1.1bp",
+    "value": "5.10%",
+    "chg": "-1.3bp",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:24 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.41%",
-    "chg": "-1.5bp",
+    "chg": "-1.6bp",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:24 ET"
   },
   {
     "label": "US 2Y",
@@ -2338,9 +2338,71 @@ export const events = [
       "「谁说的」 · 预期 —— · 利好 —— · 利空 任何「官方口径」数字先答三问:谁说的(姓名职务)/ 原话是什么 / 新披露还是复述。主持人提问、分析师转述、媒体标题不是公司承诺",
       "单位与口径 · 预期 —— · 利好 —— · 利空 判上修/下修前先核单位(exaflops 训练还是推理?GW 是 IT 还是 gross?),换单位会伪装成指引变化"
     ],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
+    "actual": [
+      {
+        "name": "Rubin 从「满产」走到「欧洲有人在跑」",
+        "actual": "黄仁勋只说 Vera Rubin in full production(复述 CES 2026),没有给欧洲已上线机柜数或算力数。同日 Google Cloud 博客点名伦敦公司 Ineffable Intelligence 是 A5X(Vera Rubin NVL72)首个客户,但没有给规模,而且该客户 2026-07 已见报;Europe 区只是 planned expansion。欧洲云厂(Nscale 五国、Verda、Crusoe)都写 plans to deploy。唯一带日期的欧洲 Rubin 部署是 Mistral 的 planned for delivery in 2027。具名客户有了,规模读数没有,未达 bull_if",
+        "consensus": "重申 in full production 与 2H26 口径,但不给任何已上线的欧洲客户或算力读数",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      },
+      {
+        "name": "欧洲主权算力的口径是否可比(会不会漂移到第三把尺子)",
+        "actual": "全场与官方材料都没有给任何欧洲算力进度数字:既没有 3,000 exaflops,也没有 800 AI exaflops,也没有 GW 或 AI factories 数量。唯一的欧洲总量数字是 NVIDIA 自己对欧洲生态的投资 nearly $10 billion(资金口径,不是算力口径,没有期限)。只给了新增云厂名单。没有回连旧口径,也没有换成第三个算力口径。本条 expect 写在悲观侧,裁 0 的意思是「口径不可比」这件担心的事被确认,不是中性",
+        "consensus": "只给新增国家/电信/云名单,不把 800 AI exaflops 与 3000 exaflops 放到同一口径下",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      },
+      {
+        "name": "Mistral 多站点扩展(上次承诺过,这次不提就是坏消息)",
+        "actual": "keynote 里 Mistral 只被当作欧洲生态的例子一笔带过。NCP 博客写 Mistral 扩建 NVIDIA 基础设施,但没有给站点数量,也没有给 2026 年投运时点;新写进去的 Vera Rubin 一档是 planned for delivery in 2027。原承诺「2026 年扩展到多个站点」没有被重申,按 bear_if「改用更模糊的措辞」裁 -1。口径警告:新稿的 3,800 GPUs 是训练 Mistral Large 4 用的卡数,旧稿的 18,000 是一期平台的 systems,两个单位不可比,不能读成规模缩水。新稿 data centers 用复数,可能说明多站点已经存在,但没有明说。承诺 12-31 才到期,不判静默删除",
+        "consensus": "重申多站点扩展,口径不变",
+        "prior": "",
+        "surprise": "利空",
+        "dir": "down"
+      },
+      {
+        "name": "Rubin 2H26 上市承诺(到期前最后一次公开场合)",
+        "actual": "黄仁勋重申 in full production;同日 Google Cloud 与 NVIDIA 宣布 A5X(Vera Rubin NVL72)GA:General availability ... coming next month,首个客户 Ineffable Intelligence 已在用,WPP 已在 A5X 上做过演示。这是 2H26「经合作伙伴上市」的已发货证据,符合 bull_if「已发货证据」。时点没有提前,仍在 2H26 内",
+        "consensus": "重申 2026 下半年经合作伙伴上市,口径不变",
+        "prior": "",
+        "surprise": "利好",
+        "dir": "up"
+      },
+      {
+        "name": "德国工业 AI 落地是否给出可验证读数",
+        "actual": "2025-06 的德国工业 AI 云(10,000 GPU)在 keynote、工业博客、德国博客里都没有被提到,字面命中 bear_if「德国工业 AI 云整体不提」。但 Siemens 这条不只是 logo:FOX 智能体集成进 Intelligence Center X,估计省成本 20%;Erlangen 工厂检测校准时间降 40%(10-19 Siemens 稿另有虚拟爬坡降低工程量最多 85%)。这些是百分比,不是 bull_if 要的客户数、产线数或工厂数。按事前写死的规则裁 -1,实质偏中性,见 §13",
+        "consensus": "西门子等伙伴出现在名单里,但不给客户数或产线数",
+        "prior": "",
+        "surprise": "利空",
+        "dir": "down"
+      }
+    ],
+    "reaction": [
+      {
+        "asset": "NVDA",
+        "d0": "-0.29%",
+        "d1": ""
+      },
+      {
+        "asset": "ASML",
+        "d0": "-0.99%",
+        "d1": ""
+      },
+      {
+        "asset": "SIE.DE",
+        "d0": "-2.24%",
+        "d1": ""
+      },
+      {
+        "asset": "QQQ",
+        "d0": "-0.10%",
+        "d1": ""
+      }
+    ],
+    "verdict": "判定:没有改变什么,略偏负,但市场没有为这场会单独定价。 英伟达在柏林讲的重点是 AI 工厂怎么建得更快、供应链怎么扩产,而不是欧洲的需求到底有多大。会前我最关心的两件事都没有答案:欧洲到底有多少新一代 Rubin 芯片已经跑起来,欧洲主权算力的进度现在是多少。 凭哪几个数: ① 欧洲算力进度这次一个数都没给。2025 年说的是「3,000 exaflops」,今年 6 月说的是「800 exaflops」,这次两个都没出现,只剩「英伟达对欧洲投资近 100 亿美元」。这是英伟达自己出的钱,不是欧洲建了多少算力。② 新一代 Rubin 芯片的硬证据来自 Google Cloud:相关云服务下个月正式开放,伦敦一家公司已经在用,符合「2026 下半年由合作伙伴上市」的旧承诺。③ 法国 AI 公司 Mistral 去年说「2026 年扩到多个站点」,这次没有重申,只说 Rubin 那一批「计划 2027 年交付」。④ 当天美东 13:15 的盘中价:英伟达比前一天收盘涨 2.45%,半导体 ETF(SMH)涨 2.28%,两者只差 0.18 个百分点。 对市场什么意思: 英伟达当天的上涨基本就是整个半导体板块在涨,看不出这场会的独立影响。会上最硬的新数字其实落在供应链上:封装基板三年扩到 2.5 倍,Amkor 的中介层产能到 2028 年底增加 300% 以上,测试产能明年翻倍,共封装光学(CPO)光引擎产能到 2027 年中扩到 15 倍。黄仁勋的原话是「需求非同寻常,产能才是约束」。当天 Amkor 跑赢板块 2.4 个百分点,是传导链上唯一能对上具体内容的反应。 可信度边界: 所有内容来自英伟达官方博客和新闻稿(证据等级 B,不进 SEC 备案)。黄仁勋的原话来自第三方文字稿,没有官方逐字稿。价格是当天盘中快照,不是收盘价,收盘后可能变。",
     "history": [],
     "links": [
       {
