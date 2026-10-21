@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-21 16:00 ET · ⚠️ 20 条告警: NFP 日历只剩 44 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-21 16:06 ET · ⚠️ 20 条告警: NFP 日历只剩 44 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,757.72",
-    "chg": "+0.60%",
+    "value": "7,757.17",
+    "chg": "+0.58%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,822.5",
     "chg": "+1.13%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "DXY",
     "value": "101.69",
-    "chg": "-0.07%",
+    "chg": "-0.08%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "黄金",
-    "value": "4,150.10",
-    "chg": "+0.34%",
+    "value": "4,150.90",
+    "chg": "+0.36%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "97.59",
-    "chg": "-1.67%",
+    "value": "97.62",
+    "chg": "-1.64%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "BTC",
-    "value": "84,460",
-    "chg": "+1.84%",
+    "value": "84,485",
+    "chg": "+1.87%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "VIX",
-    "value": "16.74",
-    "chg": "-0.57",
+    "value": "16.64",
+    "chg": "-0.67",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.15%",
     "chg": "+2.9bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.44%",
     "chg": "+1.4bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "US 2Y",
@@ -2566,7 +2566,32 @@ export const events = [
       "平均广告单价同比 · 预期 +10% · 利好 ≥ +13% · 利空 ≤ +7%",
       "2027 capex 口径(定性) · 预期 — · 利好 见块 P5 · 利空 见块 P5"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "下季(FY26Q4) 收入指引中值(十亿美元)",
+        "actual": "74.5",
+        "consensus": "73",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "本季收入(十亿美元)",
+        "actual": "64.6",
+        "consensus": "63.6",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "平均广告单价同比(%)",
+        "actual": "14",
+        "consensus": "10",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [
@@ -2592,6 +2617,10 @@ export const events = [
         "url": "https://investor.atmeta.com/"
       },
       {
+        "label": "触发本次对账的 SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=META&type=8-K&dateb=&owner=include&count=10"
+      },
+      {
         "label": "s21.q4cdn.com",
         "url": "https://s21.q4cdn.com/399680738/files/doc_news/Meta-to-Announce-Third-Quarter-2026-Results-2026.pdf"
       },
@@ -2602,10 +2631,6 @@ export const events = [
       {
         "label": "benzinga.com",
         "url": "https://www.benzinga.com/markets/earnings/26/10/62463513/meta-q3-earnings-preview-wall-street-eyes-muse-ai-monetization-as-mark-zuckerbergs-ai-bet-faces-its-next-test"
-      },
-      {
-        "label": "marketbeat.com",
-        "url": "https://www.marketbeat.com/articles/meta-platforms-ai-comeback-faces-an-earnings-testand-a-10-billion-charge/"
       }
     ],
     "consensus": {
@@ -2631,9 +2656,9 @@ export const events = [
       }
     ],
     "guidance": {
-      "company": "待公布",
+      "company": "EPS ⏳ 待法说会",
       "street": "下季 EPS 一致 $8.276",
-      "note": "比较期间 FY26Q4"
+      "note": "vs 卖方一致 8.28（—）"
     },
     "options": {
       "iv": "",
