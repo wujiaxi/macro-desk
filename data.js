@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-21 00:30 ET · ⚠️ 9 条告警: NFP 日历只剩 45 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-21 03:22 ET · ⚠️ 12 条告警: NFP 日历只剩 44 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,712.57",
     "chg": "+0.28%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,490.3",
     "chg": "-0.13%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "DXY",
-    "value": "101.75",
-    "chg": "-0.04%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "101.81",
+    "chg": "+0.03%",
+    "dir": "up",
+    "note": "实时 03:22 ET"
   },
   {
     "label": "黄金",
-    "value": "4,142.20",
-    "chg": "+0.18%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "4,132.40",
+    "chg": "-0.08%",
+    "dir": "down",
+    "note": "实时 03:22 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "99.18",
-    "chg": "+0.43%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "98.87",
+    "chg": "-0.38%",
+    "dir": "down",
+    "note": "实时 03:22 ET"
   },
   {
     "label": "BTC",
     "value": "82,716",
     "chg": "-0.27%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "VIX",
     "value": "17.31",
     "chg": "-1.12",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.12%",
     "chg": "-1.9bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.43%",
     "chg": "-4.7bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "US 2Y",
@@ -84,7 +84,7 @@ export const markets = [
   {
     "label": "10月加息概率",
     "value": "18%",
-    "chg": "一周前 18%",
+    "chg": "一周前 20%",
     "dir": "flat",
     "note": "ZQ 期货自算 · 2026-10-19 ⚠️"
   }
@@ -2874,6 +2874,176 @@ export const events = [
     ]
   },
   {
+    "id": "googl-fy26q3",
+    "kind": "earnings",
+    "ticker": "GOOGL",
+    "company": "GOOGL",
+    "title": "GOOGL FY26Q3 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-10-28T16:05:00-04:00",
+    "dateNote": "盘后 16:05 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "FY26Q3"
+    ],
+    "thesis": "隐含波动:±5.42%(去时值)/ ±6.38%(raw),盈亏平衡 $318.56 / $361.98(2026-10-30 到期 ATM 340 跨式中价 21.70,表 ⑤,yfinance 2026-10-21 取数) 反应函数一句:近 20 季 beat 率 80%、beat 却跌 7 次,surprise 与次日涨跌 r=0.012(EPS 不定价);近 8 季次日绝对波动中位只有 2.7%,但其中有 -7.3%、+10.0%、-7.1% 三次大动 —— 大动都出在 capex 口径和 Cloud 上,不在 EPS 上。 EPS 口径陷阱(本标的最重要的一条):Alphabet 只报 GAAP EPS,里面含权益证券公允价值变动。上季 GAAP EPS $9.11 里有 $6.26 来自 $990 亿权益证券收益(EX-99.1 OI&E 表脚注原文)。近 4 季 surprise 214% / 92% 主要是这个,不是经营超预期。卖方一致 2.998 大体是不含收益的口径 → 本季 EPS 对一致的「beat/miss」须先扣掉 F2(收益每股影响)再判。 门槛配置:没有 EPS 指引 → 四条 bar 只有三条。买方 bar(全样本校准)$3.21;近 8 季口径 $3.62 被投资收益污染,不采用。真正的「bar」在 2027 capex 首次量化与 Cloud 增速。",
+    "expectations": [
+      {
+        "name": "卖方一致",
+        "consensus": "2.998",
+        "prior": "",
+        "range": "vs 卖方一致 +0.0%",
+        "note": ""
+      },
+      {
+        "name": "买方 bar(历史 beat 分布校准)",
+        "consensus": "3.212",
+        "prior": "",
+        "range": "vs 卖方一致 +7.1%",
+        "note": ""
+      },
+      {
+        "name": "卖方最高值",
+        "consensus": "3.63",
+        "prior": "",
+        "range": "vs 卖方一致 +21.1%",
+        "note": ""
+      }
+    ],
+    "pricing": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "30%",
+        "trigger": "Cloud 收入 ≥ $29.5B 且 2027 capex 给出量化区间中值 ≤ $265B(或更高但同段给出 backlog 覆盖口径);Search ≥ +16%;EPS 不论",
+        "reaction": "+10.51% · ≈ $376"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "40%",
+        "trigger": "Cloud $26.5–29.5B;2027 capex 中值 $250–290B 或只说「meaningful step-up」;Search +14–18%",
+        "reaction": "-1.05% · ≈ $337"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "30%",
+        "trigger": "2027 capex 中值 ≥ $290B 而 Cloud ≤ $26.5B, 或 Search ≤ +14%, 或新一轮股权融资 / FCF 继续转负扩大 —— 即使 EPS 与收入 beat",
+        "reaction": "-8.02% · ≈ $313"
+      }
+    ],
+    "watch": [
+      "资本侧口径(FCF / 回购 / 股权融资) — 利好: 本季 FCF 转正(对账表本季列 > 0), 或恢复回购(现金流量表「Repurchases of stock」本季不为 0), 且无新的普通股/优先股发行 — 利空: 本季 FCF 比 Q2 的 -$5,855M 更负, 或 ATM 已动用 / 新发普通股或优先股, 或电话会上给出 2027 capex 时同时提到新的外部融资",
+      "2027 capex 指引(区间中值,$B) · 预期 265 · 利好 ≤250 · 利空 ≥290",
+      "本季 Google Cloud 收入($M) · 预期 28,000(约 +85%) · 利好 ≥29,500 · 利空 ≤26,500",
+      "本季 Google Search & other 收入($M) · 预期 65,600(约 +16%) · 利好 ≥66,800 · 利空 ≤64,500",
+      "本季 Google Cloud 营业利润($M) · 预期 9,000 · 利好 ≥10,000 · 利空 ≤7,800",
+      "资本侧:FCF / 回购 / 融资(定性) · 预期 — · 利好 见块 P5 · 利空 见块 P5"
+    ],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-22",
+        "what": "EPS 意外 +214.2% · 实际 9.11 vs 预期 2.9",
+        "outcome": "次日 -7.13%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +91.6% · 实际 5.11 vs 预期 2.67",
+        "outcome": "次日 +9.96%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-02-04",
+        "what": "EPS 意外 +7.0% · 实际 2.82 vs 预期 2.64",
+        "outcome": "次日 -0.54%（大 beat 5–10%）"
+      }
+    ],
+    "links": [
+      {
+        "label": "GOOGL IR",
+        "url": "https://abc.xyz/investor/"
+      }
+    ],
+    "consensus": {
+      "eps": "$2.998",
+      "rev": "$127.85B",
+      "epsPrior": "",
+      "revPrior": "",
+      "revYoY": "",
+      "note": "买方 bar $3.212"
+    },
+    "segments": [
+      {
+        "name": "2027 capex 首次量化指引(区间中值, 十亿美元)",
+        "consensus": "265.0",
+        "prior": "利好 250.0 / 利空 290.0",
+        "note": "core · 权重 30%"
+      },
+      {
+        "name": "本季 Google Cloud 收入(百万美元)",
+        "consensus": "28000.0",
+        "prior": "利好 29500.0 / 利空 26500.0",
+        "note": "core · 权重 30%"
+      },
+      {
+        "name": "本季 Google Search & other 收入(百万美元)",
+        "consensus": "65600.0",
+        "prior": "利好 66800.0 / 利空 64500.0",
+        "note": "权重 20%"
+      },
+      {
+        "name": "本季 Google Cloud 营业利润(百万美元)",
+        "consensus": "9000.0",
+        "prior": "利好 10000.0 / 利空 7800.0",
+        "note": "权重 10%"
+      }
+    ],
+    "guidance": {
+      "company": "待公布",
+      "street": "下季 EPS 一致 $3.342",
+      "note": "比较期间"
+    },
+    "options": {
+      "iv": "",
+      "impliedMove": "±5.42%",
+      "note": "盈亏平衡 $318.56 / $361.98"
+    },
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$319.74"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$298.45"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$257.79"
+      },
+      {
+        "name": "安全边际",
+        "value": "-19.38%"
+      }
+    ],
+    "targets": {
+      "low": "$201",
+      "avg": "$298",
+      "high": "$390",
+      "n": "本站三情景加权 · 卖方一致 $430.00"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "msft-fy27q1",
     "kind": "earnings",
     "ticker": "MSFT",
@@ -3044,80 +3214,6 @@ export const events = [
       "avg": "$499",
       "high": "$616",
       "n": "本站三情景加权 · 卖方一致 $558.64"
-    },
-    "afterHours": {
-      "move": "",
-      "note": ""
-    }
-  },
-  {
-    "id": "googl-earnings-2026-10-28",
-    "kind": "earnings",
-    "ticker": "GOOGL",
-    "company": "GOOGL",
-    "title": "GOOGL 财报",
-    "subtitle": "盘后",
-    "org": "",
-    "date": "2026-10-28T16:05:00-04:00",
-    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
-    "dateConfirmed": false,
-    "importance": 3,
-    "tags": [
-      "推算日期"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-07-22",
-        "what": "EPS 意外 +214.2% · 实际 9.11 vs 预期 2.9",
-        "outcome": "次日 -7.13%（巨 beat >10%）"
-      },
-      {
-        "when": "2026-04-29",
-        "what": "EPS 意外 +91.6% · 实际 5.11 vs 预期 2.67",
-        "outcome": "次日 +9.96%（巨 beat >10%）"
-      },
-      {
-        "when": "2026-02-04",
-        "what": "EPS 意外 +7.0% · 实际 2.82 vs 预期 2.64",
-        "outcome": "次日 -0.54%（大 beat 5–10%）"
-      }
-    ],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
-    "valuation": [
-      {
-        "name": "基准收盘价",
-        "value": "$319.74"
-      },
-      {
-        "name": "概率加权目标价",
-        "value": "$298.45"
-      },
-      {
-        "name": "压力调整底线",
-        "value": "$257.79"
-      },
-      {
-        "name": "安全边际",
-        "value": "-19.38%"
-      }
-    ],
-    "targets": {
-      "low": "$201",
-      "avg": "$298",
-      "high": "$390",
-      "n": "本站三情景加权 · 卖方一致 $430.00"
     },
     "afterHours": {
       "move": "",
@@ -5598,6 +5694,42 @@ export const events = [
     }
   },
   {
+    "id": "gev-earnings-2027-01-27",
+    "kind": "earnings",
+    "ticker": "GEV",
+    "company": "GEV",
+    "title": "GEV 财报",
+    "subtitle": "盘前",
+    "org": "",
+    "date": "2027-01-27T07:00:00-05:00",
+    "dateNote": "盘前 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "fomc-2027-01-27",
     "kind": "macro",
     "title": "FOMC 议息决议",
@@ -5647,6 +5779,80 @@ export const events = [
         "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
       }
     ]
+  },
+  {
+    "id": "tsla-earnings-2027-01-27",
+    "kind": "earnings",
+    "ticker": "TSLA",
+    "company": "TSLA",
+    "title": "TSLA 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2027-01-27T16:05:00-05:00",
+    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-22",
+        "what": "EPS 意外 -38.4% · 实际 0.33 vs 预期 0.54",
+        "outcome": "次日 -14.52%（miss >2%）"
+      },
+      {
+        "when": "2026-04-22",
+        "what": "EPS 意外 +17.1% · 实际 0.41 vs 预期 0.35",
+        "outcome": "次日 -3.56%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-01-28",
+        "what": "EPS 意外 +11.0% · 实际 0.5 vs 预期 0.45",
+        "outcome": "次日 -3.45%（巨 beat >10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$309.22"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$218.48"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$161.23"
+      },
+      {
+        "name": "安全边际",
+        "value": "-47.86%"
+      }
+    ],
+    "targets": {
+      "low": "$130",
+      "avg": "$218",
+      "high": "$392",
+      "n": "本站三情景加权 · 卖方一致 $399.45"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
   },
   {
     "id": "rebal-flow-window-2027-01-29-all",
