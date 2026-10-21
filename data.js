@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-21 03:48 ET · ⚠️ 12 条告警: NFP 日历只剩 44 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-21 03:52 ET · ⚠️ 14 条告警: NFP 日历只剩 44 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,712.57",
     "chg": "+0.28%",
     "dir": "up",
-    "note": "实时 03:48 ET"
+    "note": "实时 03:52 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,490.3",
     "chg": "-0.13%",
     "dir": "down",
-    "note": "实时 03:48 ET"
+    "note": "实时 03:52 ET"
   },
   {
     "label": "DXY",
-    "value": "101.76",
-    "chg": "-0.01%",
-    "dir": "down",
-    "note": "实时 03:48 ET"
+    "value": "101.77",
+    "chg": "-0.00%",
+    "dir": "flat",
+    "note": "实时 03:52 ET"
   },
   {
     "label": "黄金",
-    "value": "4,139.70",
-    "chg": "+0.09%",
+    "value": "4,139.40",
+    "chg": "+0.08%",
     "dir": "up",
-    "note": "实时 03:48 ET"
+    "note": "实时 03:52 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "98.69",
-    "chg": "-0.56%",
+    "value": "98.75",
+    "chg": "-0.50%",
     "dir": "down",
-    "note": "实时 03:48 ET"
+    "note": "实时 03:52 ET"
   },
   {
     "label": "BTC",
-    "value": "83,044",
-    "chg": "+0.13%",
+    "value": "83,115",
+    "chg": "+0.21%",
     "dir": "up",
-    "note": "实时 03:48 ET"
+    "note": "实时 03:52 ET"
   },
   {
     "label": "VIX",
-    "value": "17.17",
-    "chg": "-0.14",
+    "value": "17.16",
+    "chg": "-0.15",
     "dir": "down",
-    "note": "实时 03:48 ET"
+    "note": "实时 03:52 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.12%",
     "chg": "-1.9bp",
     "dir": "down",
-    "note": "实时 03:48 ET"
+    "note": "实时 03:52 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.43%",
     "chg": "-4.7bp",
     "dir": "down",
-    "note": "实时 03:48 ET"
+    "note": "实时 03:52 ET"
   },
   {
     "label": "US 2Y",
@@ -2426,6 +2426,188 @@ export const events = [
     ]
   },
   {
+    "id": "meta-fy26q3",
+    "kind": "earnings",
+    "ticker": "META",
+    "company": "META",
+    "title": "META FY26Q3 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-10-21T16:05:00-04:00",
+    "dateNote": "盘后 16:05 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "FY26Q3"
+    ],
+    "thesis": "隐含波动:±6.28%(去时值)/ ±7.39%(raw),盈亏平衡 $642.94 / $745.56(2026-10-23 到期 ATM 695 跨式中价 51.32,表 ⑤,yfinance 2026-10-21 取数,报价为 10-20 收盘后快照) 反应函数一句:近 20 季 beat 率 70%、beat 却跌 5 次,surprise 与次日涨跌 r=0.17(EPS 不定价);次日绝对波动中位 9.5%(近 8 季 8.2%),近 8 季有 -11.3% / +11.2% / +10.4% / -8.6% / -8.0% —— 大动全部出在费用/capex 口径与收入指引上。",
+    "expectations": [
+      {
+        "name": "卖方一致",
+        "consensus": "5.465",
+        "prior": "",
+        "range": "vs 卖方一致 +0.0%",
+        "note": ""
+      },
+      {
+        "name": "买方 bar(历史 beat 分布校准)",
+        "consensus": "5.899",
+        "prior": "",
+        "range": "vs 卖方一致 +7.9%",
+        "note": ""
+      },
+      {
+        "name": "卖方最高值",
+        "consensus": "7.64",
+        "prior": "",
+        "range": "vs 卖方一致 +39.8%",
+        "note": ""
+      },
+      {
+        "name": "下季(FY26Q4) 收入指引中值(十亿美元)",
+        "consensus": "73.0",
+        "prior": "",
+        "range": "利好 74.5 / 利空 71.5",
+        "note": "core · 权重 35%"
+      }
+    ],
+    "pricing": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "30%",
+        "trigger": "Q4 收入指引中值 ≥74.5B 且 FY26 营业利润高于 2025 口径保留;Q3 收入 ≥64.3B;2027 capex 无「显著更大」口径;EPS 不论",
+        "reaction": "+10.89% · ≈ $770"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "40%",
+        "trigger": "Q4 指引中值 72–74.5B;Q3 收入 63.0–64.3B;FY26 营业利润口径保留或含糊;EPS 不论",
+        "reaction": "-1.22% · ≈ $686"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "30%",
+        "trigger": "Q4 指引中值 ≤71.5B 或 撤回 FY26 营业利润高于 2025 或 2027 capex 显著更大且无对价 —— 即使 EPS 与收入 beat",
+        "reaction": "-10.39% · ≈ $622"
+      }
+    ],
+    "watch": [
+      "「FY26 营业利润高于 2025」口径是否保留 — 利好: CFO Outlook 段原句「expect to deliver operating income this year that is above 2025 operating income」保留(计入约 100 亿美元法律费用后仍保留) — 利空: 该句被删除, 或改成剔除法律费用的口径(如 excluding legal charges), 或改为「approximately in line」等弱化表述",
+      "2027 capex 口径 — 利好: 给出 2027 capex 口径, 且同段把增量与可量化对价挂钩(Meta Compute 外租收入确认、或明确 2027 capex 美元增幅小于 2026), 同时 2027 费用增速不快于收入 — 利空: 2027 capex 口径为「significantly larger / notably larger」的美元增长且无对价;或 2027 费用增速明确快于收入;或仍拒绝给任何 2027 口径(论点卡 Pillar 2 证伪信号)",
+      "Q4 收入指引中值 · 预期 $73.0B · 利好 ≥ $74.5B · 利空 ≤ $71.5B",
+      "「FY26 营业利润高于 2025」口径(定性) · 预期 保留 · 利好 原句保留 · 利空 删除/改措辞",
+      "本季收入 · 预期 $63.6B · 利好 ≥ $64.3B · 利空 ≤ $63.0B",
+      "平均广告单价同比 · 预期 +10% · 利好 ≥ +13% · 利空 ≤ +7%",
+      "2027 capex 口径(定性) · 预期 — · 利好 见块 P5 · 利空 见块 P5"
+    ],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-29",
+        "what": "EPS 意外 -14.4% · 实际 6.18 vs 预期 7.22",
+        "outcome": "次日 -7.95%（miss >2%）"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +56.8% · 实际 10.44 vs 预期 6.66",
+        "outcome": "次日 -8.55%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-01-28",
+        "what": "EPS 意外 +8.0% · 实际 8.88 vs 预期 8.22",
+        "outcome": "次日 +10.40%（大 beat 5–10%）"
+      }
+    ],
+    "links": [
+      {
+        "label": "META IR",
+        "url": "https://investor.atmeta.com/"
+      },
+      {
+        "label": "s21.q4cdn.com",
+        "url": "https://s21.q4cdn.com/399680738/files/doc_news/Meta-to-Announce-Third-Quarter-2026-Results-2026.pdf"
+      },
+      {
+        "label": "tipranks.com",
+        "url": "https://www.tipranks.com/news/meta-q3-earnings-preview-what-bernstein-expects-from-meta-stock"
+      },
+      {
+        "label": "benzinga.com",
+        "url": "https://www.benzinga.com/markets/earnings/26/10/62463513/meta-q3-earnings-preview-wall-street-eyes-muse-ai-monetization-as-mark-zuckerbergs-ai-bet-faces-its-next-test"
+      },
+      {
+        "label": "marketbeat.com",
+        "url": "https://www.marketbeat.com/articles/meta-platforms-ai-comeback-faces-an-earnings-testand-a-10-billion-charge/"
+      }
+    ],
+    "consensus": {
+      "eps": "$5.465",
+      "rev": "$63.41B",
+      "epsPrior": "",
+      "revPrior": "",
+      "revYoY": "",
+      "note": "买方 bar $5.899"
+    },
+    "segments": [
+      {
+        "name": "本季收入(十亿美元)",
+        "consensus": "63.6",
+        "prior": "利好 64.3 / 利空 63.0",
+        "note": "权重 15%"
+      },
+      {
+        "name": "平均广告单价同比(%)",
+        "consensus": "10.0",
+        "prior": "利好 13.0 / 利空 7.0",
+        "note": "权重 10%"
+      }
+    ],
+    "guidance": {
+      "company": "待公布",
+      "street": "下季 EPS 一致 $8.276",
+      "note": "比较期间 FY26Q4"
+    },
+    "options": {
+      "iv": "",
+      "impliedMove": "±6.28%",
+      "note": "盈亏平衡 $642.94 / $745.56"
+    },
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$578.02"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$647.70"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$535.96"
+      },
+      {
+        "name": "安全边际",
+        "value": "-7.28%"
+      }
+    ],
+    "targets": {
+      "low": "$450",
+      "avg": "$648",
+      "high": "$888",
+      "n": "本站三情景加权 · 卖方一致 $754.84"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "tsla-fy26q3",
     "kind": "earnings",
     "ticker": "TSLA",
@@ -3214,80 +3396,6 @@ export const events = [
       "avg": "$499",
       "high": "$616",
       "n": "本站三情景加权 · 卖方一致 $558.64"
-    },
-    "afterHours": {
-      "move": "",
-      "note": ""
-    }
-  },
-  {
-    "id": "meta-earnings-2026-10-28",
-    "kind": "earnings",
-    "ticker": "META",
-    "company": "META",
-    "title": "META 财报",
-    "subtitle": "盘后",
-    "org": "",
-    "date": "2026-10-28T16:05:00-04:00",
-    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
-    "dateConfirmed": false,
-    "importance": 3,
-    "tags": [
-      "推算日期"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-07-29",
-        "what": "EPS 意外 -14.4% · 实际 6.18 vs 预期 7.22",
-        "outcome": "次日 -7.95%（miss >2%）"
-      },
-      {
-        "when": "2026-04-29",
-        "what": "EPS 意外 +56.8% · 实际 10.44 vs 预期 6.66",
-        "outcome": "次日 -8.55%（巨 beat >10%）"
-      },
-      {
-        "when": "2026-01-28",
-        "what": "EPS 意外 +8.0% · 实际 8.88 vs 预期 8.22",
-        "outcome": "次日 +10.40%（大 beat 5–10%）"
-      }
-    ],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
-    "valuation": [
-      {
-        "name": "基准收盘价",
-        "value": "$578.02"
-      },
-      {
-        "name": "概率加权目标价",
-        "value": "$647.70"
-      },
-      {
-        "name": "压力调整底线",
-        "value": "$535.96"
-      },
-      {
-        "name": "安全边际",
-        "value": "-7.28%"
-      }
-    ],
-    "targets": {
-      "low": "$450",
-      "avg": "$648",
-      "high": "$888",
-      "n": "本站三情景加权 · 卖方一致 $754.84"
     },
     "afterHours": {
       "move": "",
