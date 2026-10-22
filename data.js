@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-22 14:30 ET · ⚠️ 23 条告警: NFP 日历只剩 43 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-22 14:48 ET · ⚠️ 24 条告警: NFP 日历只剩 43 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,647.69",
-    "chg": "-1.41%",
+    "value": "7,647.00",
+    "chg": "-1.42%",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:48 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "28,939.5",
-    "chg": "-2.94%",
+    "value": "28,929.4",
+    "chg": "-2.97%",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:48 ET"
   },
   {
     "label": "DXY",
-    "value": "101.60",
-    "chg": "-0.00%",
-    "dir": "flat",
-    "note": "实时 14:30 ET"
+    "value": "101.58",
+    "chg": "-0.02%",
+    "dir": "down",
+    "note": "实时 14:48 ET"
   },
   {
     "label": "黄金",
-    "value": "4,055.40",
-    "chg": "-1.26%",
+    "value": "4,050.70",
+    "chg": "-1.38%",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:48 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "99.19",
-    "chg": "+0.68%",
+    "value": "99.30",
+    "chg": "+0.79%",
     "dir": "up",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:48 ET"
   },
   {
     "label": "BTC",
-    "value": "81,068",
-    "chg": "-3.52%",
+    "value": "81,251",
+    "chg": "-3.30%",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:48 ET"
   },
   {
     "label": "VIX",
-    "value": "19.38",
-    "chg": "+2.70",
+    "value": "19.78",
+    "chg": "+3.10",
     "dir": "up",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:48 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.96%",
-    "chg": "-18.7bp",
+    "value": "4.95%",
+    "chg": "-20.1bp",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:48 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.29%",
-    "chg": "-14.6bp",
+    "value": "5.28%",
+    "chg": "-16.1bp",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:48 ET"
   },
   {
     "label": "US 2Y",
@@ -2600,7 +2600,7 @@ export const events = [
       }
     ],
     "reaction": [],
-    "verdict": "",
+    "verdict": "名义 beat 但实质 miss? 是(按剔除一次性项口径)。 程序 §8.2 未拿到 EPS(五列一行版式抽不到,见 §7.2),人工读更新信 Financial Summary 第 5 列:non-GAAP 稀释 EPS 0.48(GAAP 0.22)。 我错在哪(整体): 反应函数要不要改:不改。 单季、未落在隐含区间外,也不是尾部事件。原有反应函数(「定价权在 robotaxi / Optimus 的兑现证据,不在交付、收入或 EPS」)本季再次被印证:名义 beat 一串,股价 ±0。要改的是建卡方法(下季 FY26Q4 卡执行): ①加一次性项事实并声明 eps_oneoff_claim,P3/EPS 一律按剔除口径判;②FCF 论点与 capex 指引配对,或改用 OCF;③P4 加表格行兜底 probe(「Income from operations」第 5 列);④事件前一交易日重算基准价、隐含与盈亏平衡;⑤P2 判据写成「公司口径或同口径外部源」;⑥Q4 是年报型更新信,probe 须整体重定(见 §7.2)。 是否同步 thesis 卡:已同步,本卡不再改它。 ~/thesis/TSLA.md 已在 2026-10-22 由深度版重估升到 v4:催化剂归档表「2026-10-21」行已回填;[core] Robotaxi pillar 撤销条件 1/3 → 证伪不撤销,状态「已证伪·复审中」,复审在 Q4 财报。与本卡 P2 = neutral 一致。唯一出入:thesis 卡的股价反应列写的是盘中「约 -1.7% ~ -2%」,而程序区收盘口径约 -0.01% / -0.03%。下次 thesis-tracker 更新时应改为收盘口径。本 skill 不改目标价。 出处:更新信 = EX-99.1(0001628280-26-066738);退款拆解 = 10-Q Note 11,转引自 TSLA_深度研报_2026-10-22.md §4.3",
     "history": [
       {
         "when": "2026-07-22",
