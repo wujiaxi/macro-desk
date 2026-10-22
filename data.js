@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-22 03:20 ET · ⚠️ 18 条告警: NFP 日历只剩 43 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-22 03:22 ET · ⚠️ 20 条告警: NFP 日历只剩 43 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,757.17",
     "chg": "+0.59%",
     "dir": "up",
-    "note": "实时 03:20 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,822.5",
     "chg": "+1.16%",
     "dir": "up",
-    "note": "实时 03:20 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "DXY",
-    "value": "101.46",
-    "chg": "-0.18%",
+    "value": "101.47",
+    "chg": "-0.17%",
     "dir": "down",
-    "note": "实时 03:20 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "黄金",
-    "value": "4,113.90",
-    "chg": "-0.39%",
+    "value": "4,109.90",
+    "chg": "-0.49%",
     "dir": "down",
-    "note": "实时 03:20 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "99.31",
-    "chg": "+1.09%",
+    "value": "99.36",
+    "chg": "+1.14%",
     "dir": "up",
-    "note": "实时 03:20 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "BTC",
-    "value": "82,219",
-    "chg": "-2.15%",
+    "value": "82,209",
+    "chg": "-2.16%",
     "dir": "down",
-    "note": "实时 03:20 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "VIX",
     "value": "16.68",
     "chg": "-0.63",
     "dir": "down",
-    "note": "实时 03:20 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.15%",
     "chg": "+2.9bp",
     "dir": "up",
-    "note": "实时 03:20 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.44%",
     "chg": "+1.4bp",
     "dir": "up",
-    "note": "实时 03:20 ET"
+    "note": "实时 03:22 ET"
   },
   {
     "label": "US 2Y",
@@ -3333,34 +3333,135 @@ export const events = [
     }
   },
   {
-    "id": "lly-earnings-2026-10-29",
+    "id": "lly-fy26q3",
     "kind": "earnings",
     "ticker": "LLY",
     "company": "LLY",
-    "title": "LLY 财报",
+    "title": "LLY FY26Q3 财报",
     "subtitle": "盘前",
     "org": "",
     "date": "2026-10-29T07:00:00-04:00",
-    "dateNote": "盘前 · 日期按历史排期推算,公司未官宣",
-    "dateConfirmed": false,
+    "dateNote": "盘前 07:00 ET",
+    "dateConfirmed": true,
     "importance": 3,
     "tags": [
-      "推算日期"
+      "FY26Q3"
     ],
-    "thesis": "",
-    "expectations": [],
+    "thesis": "隐含波动:事件跳空 ±6.4%(期限结构反解:10-30 到期 ±6.37% / 11-06 到期 ±6.42%,两档交叉印证; 反应函数一句:近 8 季 beat 率 75%、绝对波动中位 8.0%(全样本 4.5%,制度已抬升), 门槛配置:LLY 不给季度指引,季度 EPS 的四条 bar 只剩两条(卖方一致 6.668 / 买方 bar 7.403), 动作(四选一):等财报后再定(空仓者)。 期望值 = 0.35×(+12.88%) + 0.35×(-1.24%) + 0.30×(-9.12%) = +1.34% vs 隐含 ±6.4% → 赔率略正但远小于噪声, 持有者 vs 空仓者动作分列:",
+    "expectations": [
+      {
+        "name": "卖方一致",
+        "consensus": "6.668",
+        "prior": "",
+        "range": "vs 卖方一致 +0.0%",
+        "note": ""
+      },
+      {
+        "name": "买方 bar(历史 beat 分布校准)",
+        "consensus": "7.403",
+        "prior": "",
+        "range": "vs 卖方一致 +11.0%",
+        "note": ""
+      },
+      {
+        "name": "卖方最高值",
+        "consensus": "10.675",
+        "prior": "",
+        "range": "vs 卖方一致 +60.1%",
+        "note": ""
+      },
+      {
+        "name": "2026 全年收入指引中值(十亿美元)",
+        "consensus": "88.5",
+        "prior": "",
+        "range": "利好 89.5 / 利空 87.25",
+        "note": "core · 权重 35%"
+      }
+    ],
     "pricing": [],
-    "scenarios": [],
-    "watch": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "35%",
+        "trigger": "全年收入指引中值 ≥ 89.5B, 且 Q3 收入 ≥ 23.4B、Mounjaro/Zepbound 环比增长; EPS 不论",
+        "reaction": "+12.88% · ≈ $1,434"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "35%",
+        "trigger": "收入指引中值 87.25-89.5B, Q3 收入 22.0-23.4B",
+        "reaction": "-1.24% · ≈ $1,255"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "30%",
+        "trigger": "收入指引中值 ≤ 87.25B 或 Mounjaro/Zepbound 环比下滑 —— 即使 EPS beat 卖方一致(2025-08-07 beat 12.9% 却 -14.1%)",
+        "reaction": "-9.12% · ≈ $1,155"
+      }
+    ],
+    "watch": [
+      "美国价格与 2027 前瞻措辞 — 利好: 美国实现价格降幅(剔除返利估计调整后)较 Q2 的约 -9% 收窄; 且 CEO 引语或电话会对 2027 给出正面量化表述(收入增长 / 产能 / retatrutide 2027Q1 递交 BLA 维持) — 利空: 美国实现价格降幅(剔除调整后)扩大到两位数且量增速放缓; 或 retatrutide 递交时间推迟 / Foundayo 放量低于管理层此前表述; 或首次出现「价格压力超预期 / 库存去化」类措辞",
+      "全年收入指引中值 · 预期 $88.5B · 利好 ≥ $89.5B · 利空 ≤ $87.25B",
+      "Q3 总收入(百万美元) · 预期 22,615 · 利好 ≥ 23,400 · 利空 ≤ 22,000",
+      "Mounjaro 收入(百万美元) · 预期 10,500 · 利好 ≥ 11,200 · 利空 ≤ 9,900",
+      "Zepbound 收入(百万美元) · 预期 5,300 · 利好 ≥ 5,800 · 利空 ≤ 4,900",
+      "价格与 2027 措辞(定性) · 预期 — · 利好 见 P5.bull_if · 利空 见 P5.bear_if"
+    ],
     "actual": [],
     "reaction": [],
     "verdict": "",
     "history": [],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
+    "links": [
+      {
+        "label": "LLY IR",
+        "url": "https://investor.lilly.com/financial-information/quarterly-results"
+      },
+      {
+        "label": "finviz.com",
+        "url": "https://finviz.com/news/403165/lilly-confirms-date-and-conference-call-for-third-quarter-2026-financial-results-announcement"
+      }
+    ],
+    "consensus": {
+      "eps": "$6.668",
+      "rev": "$22.61B",
+      "epsPrior": "",
+      "revPrior": "",
+      "revYoY": "",
+      "note": "买方 bar $7.403"
+    },
+    "segments": [
+      {
+        "name": "Q3 总收入(百万美元)",
+        "consensus": "22615.0",
+        "prior": "利好 23400.0 / 利空 22000.0",
+        "note": "权重 15%"
+      },
+      {
+        "name": "Mounjaro 全球收入(百万美元)",
+        "consensus": "10500.0",
+        "prior": "利好 11200.0 / 利空 9900.0",
+        "note": "core · 权重 15%"
+      },
+      {
+        "name": "Zepbound 美国收入(百万美元)",
+        "consensus": "5300.0",
+        "prior": "利好 5800.0 / 利空 4900.0",
+        "note": "权重 15%"
+      }
+    ],
+    "guidance": {
+      "company": "待公布",
+      "street": "",
+      "note": "比较期间 FY26"
+    },
+    "options": {
+      "iv": "",
+      "impliedMove": "±6.40%",
+      "note": "盈亏平衡 $1178.37 / $1363.13"
+    },
     "valuation": [],
     "targets": {},
     "afterHours": {
