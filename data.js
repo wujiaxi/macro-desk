@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-22 13:00 ET · ⚠️ 22 条告警: NFP 日历只剩 43 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-22 13:30 ET · ⚠️ 22 条告警: NFP 日历只剩 43 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,661.53",
-    "chg": "-1.23%",
+    "value": "7,656.80",
+    "chg": "-1.29%",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "29,056.3",
-    "chg": "-2.55%",
+    "value": "29,027.2",
+    "chg": "-2.65%",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "DXY",
-    "value": "101.59",
-    "chg": "-0.01%",
+    "value": "101.56",
+    "chg": "-0.04%",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "黄金",
-    "value": "4,051.70",
-    "chg": "-1.35%",
+    "value": "4,060.80",
+    "chg": "-1.13%",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "98.98",
-    "chg": "+0.47%",
+    "value": "99.30",
+    "chg": "+0.79%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "BTC",
-    "value": "81,126",
-    "chg": "-3.45%",
+    "value": "81,278",
+    "chg": "-3.27%",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "VIX",
-    "value": "19.00",
-    "chg": "+2.32",
+    "value": "19.17",
+    "chg": "+2.49",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.97%",
-    "chg": "-17.2bp",
+    "chg": "-18.1bp",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.30%",
-    "chg": "-13.4bp",
+    "chg": "-14.1bp",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "US 2Y",
@@ -2490,26 +2490,26 @@ export const events = [
     "valuation": [
       {
         "name": "基准收盘价",
-        "value": "$578.02"
+        "value": "$697.52"
       },
       {
         "name": "概率加权目标价",
-        "value": "$647.70"
+        "value": "$620.51"
       },
       {
         "name": "压力调整底线",
-        "value": "$535.96"
+        "value": "$532.40"
       },
       {
         "name": "安全边际",
-        "value": "-7.28%"
+        "value": "-23.67%"
       }
     ],
     "targets": {
-      "low": "$450",
-      "avg": "$648",
-      "high": "$888",
-      "n": "本站三情景加权 · 卖方一致 $754.84"
+      "low": "$380",
+      "avg": "$621",
+      "high": "$875",
+      "n": "本站三情景加权 · 卖方一致 $833.13"
     },
     "afterHours": {
       "move": "-6.50%",
@@ -2681,26 +2681,26 @@ export const events = [
     "valuation": [
       {
         "name": "基准收盘价",
-        "value": "$309.22"
+        "value": "$386.47"
       },
       {
         "name": "概率加权目标价",
-        "value": "$218.48"
+        "value": "$241.69"
       },
       {
         "name": "压力调整底线",
-        "value": "$161.23"
+        "value": "$196.55"
       },
       {
         "name": "安全边际",
-        "value": "-47.86%"
+        "value": "-49.14%"
       }
     ],
     "targets": {
-      "low": "$130",
-      "avg": "$218",
-      "high": "$392",
-      "n": "本站三情景加权 · 卖方一致 $399.45"
+      "low": "$115",
+      "avg": "$242",
+      "high": "$484",
+      "n": "本站三情景加权 · 卖方一致 $397.83"
     },
     "afterHours": {
       "move": "-0.01%",
@@ -6091,6 +6091,80 @@ export const events = [
     ]
   },
   {
+    "id": "meta-catalyst-2027-01-27",
+    "kind": "earnings",
+    "ticker": "META",
+    "company": "META",
+    "title": "META 财报",
+    "subtitle": "Q4 财报+2027 capex/费用指引",
+    "org": "",
+    "date": "2027-01-27T16:05:00-05:00",
+    "dateNote": "日期取自论点卡催化剂,未经公司确认",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "催化剂"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-29",
+        "what": "EPS 意外 -14.4% · 实际 6.18 vs 预期 7.22",
+        "outcome": "次日 -7.95%（miss >2%）"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +56.8% · 实际 10.44 vs 预期 6.66",
+        "outcome": "次日 -8.55%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-01-28",
+        "what": "EPS 意外 +8.0% · 实际 8.88 vs 预期 8.22",
+        "outcome": "次日 +10.40%（大 beat 5–10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$697.52"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$620.51"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$532.40"
+      },
+      {
+        "name": "安全边际",
+        "value": "-23.67%"
+      }
+    ],
+    "targets": {
+      "low": "$380",
+      "avg": "$621",
+      "high": "$875",
+      "n": "本站三情景加权 · 卖方一致 $833.13"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "tsla-earnings-2027-01-27",
     "kind": "earnings",
     "ticker": "TSLA",
@@ -6138,26 +6212,26 @@ export const events = [
     "valuation": [
       {
         "name": "基准收盘价",
-        "value": "$309.22"
+        "value": "$386.47"
       },
       {
         "name": "概率加权目标价",
-        "value": "$218.48"
+        "value": "$241.69"
       },
       {
         "name": "压力调整底线",
-        "value": "$161.23"
+        "value": "$196.55"
       },
       {
         "name": "安全边际",
-        "value": "-47.86%"
+        "value": "-49.14%"
       }
     ],
     "targets": {
-      "low": "$130",
-      "avg": "$218",
-      "high": "$392",
-      "n": "本站三情景加权 · 卖方一致 $399.45"
+      "low": "$115",
+      "avg": "$242",
+      "high": "$484",
+      "n": "本站三情景加权 · 卖方一致 $397.83"
     },
     "afterHours": {
       "move": "",
