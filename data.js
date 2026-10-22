@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-22 03:52 ET · ⚠️ 20 条告警: NFP 日历只剩 43 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-22 09:00 ET · ⚠️ 22 条告警: NFP 日历只剩 43 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,757.17",
     "chg": "+0.59%",
     "dir": "up",
-    "note": "实时 03:52 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,822.5",
     "chg": "+1.16%",
     "dir": "up",
-    "note": "实时 03:52 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "DXY",
-    "value": "101.54",
-    "chg": "-0.10%",
-    "dir": "down",
-    "note": "实时 03:52 ET"
+    "value": "101.78",
+    "chg": "+0.18%",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "黄金",
-    "value": "4,107.40",
-    "chg": "-0.55%",
+    "value": "4,103.80",
+    "chg": "-0.09%",
     "dir": "down",
-    "note": "实时 03:52 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "99.64",
-    "chg": "+1.43%",
+    "value": "99.39",
+    "chg": "+0.88%",
     "dir": "up",
-    "note": "实时 03:52 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "BTC",
-    "value": "82,084",
-    "chg": "-2.31%",
+    "value": "81,591",
+    "chg": "-2.90%",
     "dir": "down",
-    "note": "实时 03:52 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "VIX",
-    "value": "18.23",
-    "chg": "+1.55",
+    "value": "18.01",
+    "chg": "+1.33",
     "dir": "up",
-    "note": "实时 03:52 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.15%",
-    "chg": "+2.9bp",
-    "dir": "up",
-    "note": "实时 03:52 ET"
+    "value": "5.04%",
+    "chg": "-10.8bp",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.44%",
-    "chg": "+1.4bp",
-    "dir": "up",
-    "note": "实时 03:52 ET"
+    "value": "5.35%",
+    "chg": "-8.9bp",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 2Y",
@@ -2216,7 +2216,7 @@ export const events = [
       {
         "asset": "SIE.DE",
         "d0": "-2.24%",
-        "d1": ""
+        "d1": "+2.50%"
       },
       {
         "asset": "QQQ",
@@ -3760,6 +3760,177 @@ export const events = [
         "d": "—",
         "e": "方向对不对"
       }
+    }
+  },
+  {
+    "id": "aapl-fy26q4",
+    "kind": "earnings",
+    "ticker": "AAPL",
+    "company": "AAPL",
+    "title": "AAPL FY26Q4 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2026-11-02T16:05:00-05:00",
+    "dateNote": "盘后 16:05 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "FY26Q4"
+    ],
+    "thesis": "隐含波动:事件跳空 ±3.45%(期限结构反解,calc/aapl_event_move_term_structure.py),对应事件区间 $332.12 / $355.86。表 ⑤ 的 ±4.99% raw / ±4.24% 去时值不能用:财报后首个到期 11-06 是 15 DTE、含 12 个交易日,×0.85 削不掉 11 天时间价值(memory:事件 IV 不能用 ×0.85)。11-06 到期 ATM 345 跨式中价 17.18 的盈亏平衡 $326.82 / $361.16(yfinance,10-21 收盘后快照) 反应函数一句:近 20 季 beat 率 95%、beat 却跌 11 次,surprise 与次日涨跌 r=-0.10(EPS 不定价);近 8 季 beat 率 100% 却只涨 2/8、次日均值 -1.53% —— beat 是入场费,定价权在下季指引与毛利率指引。上季(7/30)三项全 beat、收入指引 +9~11% 低于一致约 +12%,次日 -7.3%",
+    "expectations": [
+      {
+        "name": "卖方一致",
+        "consensus": "1.978",
+        "prior": "",
+        "range": "vs 卖方一致 +0.0%",
+        "note": ""
+      },
+      {
+        "name": "买方 bar(历史 beat 分布校准)",
+        "consensus": "2.057",
+        "prior": "",
+        "range": "vs 卖方一致 +4.0%",
+        "note": ""
+      },
+      {
+        "name": "卖方最高值",
+        "consensus": "2.06",
+        "prior": "",
+        "range": "vs 卖方一致 +4.1%",
+        "note": ""
+      },
+      {
+        "name": "下季(FY27Q1) 收入指引中值(十亿美元)",
+        "consensus": "152.0",
+        "prior": "",
+        "range": "利好 154.5 / 利空 149.0",
+        "note": "core · 权重 30%"
+      }
+    ],
+    "pricing": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "25%",
+        "trigger": "FY27Q1 收入指引中值 ≥154.5B 且 毛利率指引(剔退款)≥47.5%;Services ≥31.9B;EPS 不论",
+        "reaction": "+6.25% · ≈ $365"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "40%",
+        "trigger": "收入指引中值 149–154.5B;毛利率指引 45.5–47.5%;Services +8~11%;EPS 不论",
+        "reaction": "-0.67% · ≈ $342"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "35%",
+        "trigger": "收入指引中值 ≤149.0B 或 毛利率指引(剔退款)≤45.5% 或 Services <+8% —— 即使 EPS 与收入 beat",
+        "reaction": "-5.47% · ≈ $325"
+      }
+    ],
+    "watch": [
+      "内存成本 / 毛利率走向口径 — 利好: 管理层明确内存成本对毛利率的拖累已见顶或将在 FY27 上半年缓和(给出时间点), 或称已通过长约/定价完全对冲 — 利空: 重复或加重「trends to intensify」口径, 称内存成本压力延续至 FY27 下半年或更久, 或首次量化出更大的毛利率拖累",
+      "FY27Q1 收入指引中值($B) · 预期 152.0(+5.7%) · 利好 ≥ 154.5 · 利空 ≤ 149.0",
+      "FY27Q1 毛利率指引中值(剔除关税退款,%) · 预期 46.5 · 利好 ≥ 47.5 · 利空 ≤ 45.5",
+      "本季 Services 收入($M) · 预期 31,500(+9.6%) · 利好 ≥ 31,900 · 利空 ≤ 31,050",
+      "本季 iPhone 收入($M) · 预期 56,400(+15.0%) · 利好 ≥ 57,600 · 利空 ≤ 55,100",
+      "内存成本 / 毛利率走向口径(定性) · 预期 — · 利好 见块 P5 · 利空 见块 P5"
+    ],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-30",
+        "what": "EPS 意外 +6.7% · 实际 2.02 vs 预期 1.89",
+        "outcome": "次日 -7.35%（大 beat 5–10%）"
+      },
+      {
+        "when": "2026-04-30",
+        "what": "EPS 意外 +3.5% · 实际 2.01 vs 预期 1.94",
+        "outcome": "次日 +3.24%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-01-29",
+        "what": "EPS 意外 +6.3% · 实际 2.84 vs 预期 2.67",
+        "outcome": "次日 +0.46%（大 beat 5–10%）"
+      }
+    ],
+    "links": [
+      {
+        "label": "AAPL IR",
+        "url": "https://investor.apple.com/"
+      }
+    ],
+    "consensus": {
+      "eps": "$1.978",
+      "rev": "$113.36B",
+      "epsPrior": "",
+      "revPrior": "",
+      "revYoY": "",
+      "note": "买方 bar $2.057"
+    },
+    "segments": [
+      {
+        "name": "下季(FY27Q1) 毛利率指引中值(剔除关税退款等公司点明的一次性项, %)",
+        "consensus": "46.5",
+        "prior": "利好 47.5 / 利空 45.5",
+        "note": "core · 权重 25%"
+      },
+      {
+        "name": "本季 Services 收入(百万美元)",
+        "consensus": "31500.0",
+        "prior": "利好 31900.0 / 利空 31050.0",
+        "note": "权重 20%"
+      },
+      {
+        "name": "本季 iPhone 收入(百万美元)",
+        "consensus": "56400.0",
+        "prior": "利好 57600.0 / 利空 55100.0",
+        "note": "权重 15%"
+      }
+    ],
+    "guidance": {
+      "company": "待公布",
+      "street": "下季 EPS 一致 $2.898",
+      "note": "比较期间 FY27Q1"
+    },
+    "options": {
+      "iv": "",
+      "impliedMove": "±3.45%",
+      "note": "盈亏平衡 $332.12 / $355.86"
+    },
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$307.12"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$279.95"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$238.08"
+      },
+      {
+        "name": "安全边际",
+        "value": "-22.48%"
+      }
+    ],
+    "targets": {
+      "low": "$205",
+      "avg": "$280",
+      "high": "$345",
+      "n": "本站三情景加权 · 卖方一致 $321.57"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
     }
   },
   {
