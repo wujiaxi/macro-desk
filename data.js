@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-23 03:19 ET · ⚠️ 24 条告警: NFP 日历只剩 42 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-23 04:18 ET · ⚠️ 24 条告警: NFP 日历只剩 42 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,663.43",
     "chg": "-1.21%",
     "dir": "down",
-    "note": "实时 03:19 ET"
+    "note": "实时 04:18 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "28,958.7",
     "chg": "-2.88%",
     "dir": "down",
-    "note": "实时 03:19 ET"
+    "note": "实时 04:18 ET"
   },
   {
     "label": "DXY",
-    "value": "101.74",
-    "chg": "+0.10%",
+    "value": "101.77",
+    "chg": "+0.12%",
     "dir": "up",
-    "note": "实时 03:19 ET"
+    "note": "实时 04:18 ET"
   },
   {
     "label": "黄金",
-    "value": "4,028.50",
-    "chg": "-0.04%",
+    "value": "4,025.10",
+    "chg": "-0.12%",
     "dir": "down",
-    "note": "实时 03:19 ET"
+    "note": "实时 04:18 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "100.70",
-    "chg": "+0.71%",
+    "value": "100.65",
+    "chg": "+0.66%",
     "dir": "up",
-    "note": "实时 03:19 ET"
+    "note": "实时 04:18 ET"
   },
   {
     "label": "BTC",
-    "value": "81,616",
-    "chg": "+0.39%",
+    "value": "81,732",
+    "chg": "+0.53%",
     "dir": "up",
-    "note": "实时 03:19 ET"
+    "note": "实时 04:18 ET"
   },
   {
     "label": "VIX",
-    "value": "19.03",
-    "chg": "+2.35",
+    "value": "19.13",
+    "chg": "+0.09",
     "dir": "up",
-    "note": "实时 03:19 ET"
+    "note": "实时 04:18 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.95%",
     "chg": "-19.3bp",
     "dir": "down",
-    "note": "实时 03:19 ET"
+    "note": "实时 04:18 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.29%",
     "chg": "-15.2bp",
     "dir": "down",
-    "note": "实时 03:19 ET"
+    "note": "实时 04:18 ET"
   },
   {
     "label": "US 2Y",
@@ -3464,80 +3464,6 @@ export const events = [
     },
     "valuation": [],
     "targets": {},
-    "afterHours": {
-      "move": "",
-      "note": ""
-    }
-  },
-  {
-    "id": "aapl-earnings-2026-10-29",
-    "kind": "earnings",
-    "ticker": "AAPL",
-    "company": "AAPL",
-    "title": "AAPL 财报",
-    "subtitle": "盘后",
-    "org": "",
-    "date": "2026-10-29T16:05:00-04:00",
-    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
-    "dateConfirmed": false,
-    "importance": 3,
-    "tags": [
-      "推算日期"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-07-30",
-        "what": "EPS 意外 +6.7% · 实际 2.02 vs 预期 1.89",
-        "outcome": "次日 -7.35%（大 beat 5–10%）"
-      },
-      {
-        "when": "2026-04-30",
-        "what": "EPS 意外 +3.5% · 实际 2.01 vs 预期 1.94",
-        "outcome": "次日 +3.24%（中 beat 2–5%）"
-      },
-      {
-        "when": "2026-01-29",
-        "what": "EPS 意外 +6.3% · 实际 2.84 vs 预期 2.67",
-        "outcome": "次日 +0.46%（大 beat 5–10%）"
-      }
-    ],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
-    "valuation": [
-      {
-        "name": "基准收盘价",
-        "value": "$307.12"
-      },
-      {
-        "name": "概率加权目标价",
-        "value": "$279.95"
-      },
-      {
-        "name": "压力调整底线",
-        "value": "$238.08"
-      },
-      {
-        "name": "安全边际",
-        "value": "-22.48%"
-      }
-    ],
-    "targets": {
-      "low": "$205",
-      "avg": "$280",
-      "high": "$345",
-      "n": "本站三情景加权 · 卖方一致 $321.57"
-    },
     "afterHours": {
       "move": "",
       "note": ""
