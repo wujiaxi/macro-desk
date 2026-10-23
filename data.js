@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-23 04:46 ET · ⚠️ 24 条告警: NFP 日历只剩 42 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-23 05:20 ET · ⚠️ 26 条告警: NFP 日历只剩 42 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,663.43",
     "chg": "-1.21%",
     "dir": "down",
-    "note": "实时 04:46 ET"
+    "note": "实时 05:20 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "28,958.7",
     "chg": "-2.88%",
     "dir": "down",
-    "note": "实时 04:46 ET"
+    "note": "实时 05:20 ET"
   },
   {
     "label": "DXY",
-    "value": "101.85",
-    "chg": "+0.20%",
+    "value": "101.78",
+    "chg": "+0.14%",
     "dir": "up",
-    "note": "实时 04:46 ET"
+    "note": "实时 05:20 ET"
   },
   {
     "label": "黄金",
-    "value": "4,029.50",
-    "chg": "-0.01%",
-    "dir": "down",
-    "note": "实时 04:46 ET"
+    "value": "4,042.40",
+    "chg": "+0.31%",
+    "dir": "up",
+    "note": "实时 05:20 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "100.29",
-    "chg": "+0.30%",
+    "value": "100.28",
+    "chg": "+0.29%",
     "dir": "up",
-    "note": "实时 04:46 ET"
+    "note": "实时 05:20 ET"
   },
   {
     "label": "BTC",
-    "value": "81,725",
-    "chg": "+0.52%",
+    "value": "81,658",
+    "chg": "+0.44%",
     "dir": "up",
-    "note": "实时 04:46 ET"
+    "note": "实时 05:20 ET"
   },
   {
     "label": "VIX",
-    "value": "18.90",
-    "chg": "-0.14",
-    "dir": "down",
-    "note": "实时 04:46 ET"
+    "value": "19.09",
+    "chg": "+0.05",
+    "dir": "up",
+    "note": "实时 05:20 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.95%",
     "chg": "-19.3bp",
     "dir": "down",
-    "note": "实时 04:46 ET"
+    "note": "实时 05:20 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.29%",
     "chg": "-15.2bp",
     "dir": "down",
-    "note": "实时 04:46 ET"
+    "note": "实时 05:20 ET"
   },
   {
     "label": "US 2Y",
@@ -3470,25 +3470,83 @@ export const events = [
     }
   },
   {
-    "id": "amzn-earnings-2026-10-29",
+    "id": "amzn-fy26q3",
     "kind": "earnings",
     "ticker": "AMZN",
     "company": "AMZN",
-    "title": "AMZN 财报",
+    "title": "AMZN FY26Q3 财报",
     "subtitle": "盘后",
     "org": "",
     "date": "2026-10-29T16:05:00-04:00",
-    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
-    "dateConfirmed": false,
+    "dateNote": "盘后 16:05 ET",
+    "dateConfirmed": true,
     "importance": 3,
     "tags": [
-      "推算日期"
+      "FY26Q3"
     ],
-    "thesis": "",
-    "expectations": [],
+    "thesis": "隐含波动:±6.61%(去时值口径;raw ±7.78%),盈亏平衡 $230.90 / $269.86(10-30 到期 ATM 250 跨式,10-22 收盘挂单中价) 反应函数一句:近 8 季 beat 率 100%,但只涨 4/8 次、绝对波动中位 5.9%;EPS surprise 被 Anthropic 等投资公允价值收益污染(上季 +215%),EPS 不是定价变量。定价权在 AWS 增速 与 下季营业利润/收入指引 门槛配置:EPS 侧没有指引 bar(结构性缺失)。收入侧:本季卖方一致 $202.2B(49 家)已高于公司指引上沿 $202.0B —— 市场按「打满收入指引」定价,只到上沿 = 实质持平。营业利润侧同理:Q3 指引上沿 $26.5B 低于 Q2 实际 $27.46B,AMZN 连续多季超上沿,超上沿是入场费 动作(四选一):财报前不动(持有者);空仓者 等财报后再定 期望值 = +0.60%(由 §7.1 块程序化算出)vs 隐含 ±6.61% → 赔率接近零,不构成事件驱动加仓理由 持有者 vs 空仓者动作分列:",
+    "expectations": [
+      {
+        "name": "卖方一致",
+        "consensus": "1.958",
+        "prior": "",
+        "range": "vs 卖方一致 +0.0%",
+        "note": ""
+      },
+      {
+        "name": "买方 bar(历史 beat 分布校准)",
+        "consensus": "2.453",
+        "prior": "",
+        "range": "vs 卖方一致 +25.3%",
+        "note": ""
+      },
+      {
+        "name": "卖方最高值",
+        "consensus": "2.23",
+        "prior": "",
+        "range": "vs 卖方一致 +13.9%",
+        "note": ""
+      },
+      {
+        "name": "Q4 净销售额指引中值(十亿美元)",
+        "consensus": "242.0",
+        "prior": "",
+        "range": "利好 245.5 / 利空 237.0",
+        "note": "core · 权重 30%"
+      }
+    ],
     "pricing": [],
-    "scenarios": [],
-    "watch": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "30%",
+        "trigger": "AWS 增速 ≥ 40% 且 Q4 收入指引中值 ≥ $245.5B;Q3 营业利润 ≥ $28.5B;EPS 不论",
+        "reaction": "+13.19% · ≈ $283.4"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "40%",
+        "trigger": "AWS 34–40%;Q4 收入指引中值 $237–245.5B;Q3 营业利润 $25–28.5B",
+        "reaction": "-1.28% · ≈ $247.2"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "30%",
+        "trigger": "AWS ≤ 34%, 或 Q4 收入指引中值 ≤ $237B, 或 Q4 营业利润指引中值 ≤ $25.5B —— 即使 EPS 与收入 beat",
+        "reaction": "-9.50% · ≈ $226.6"
+      }
+    ],
+    "watch": [
+      "资本侧口径(capex / FCF / 融资) — 利好: 2026 capex 维持约 $220B 不再上调且 2027 口径给出与 AWS backlog 挂钩的回报说明, 或 TTM FCF 较上季 -$7.6B 收窄 — 利空: 2026 capex 再次上调而 AWS 增速 ≤ 34%, 或 TTM FCF 负值扩大且本季新增长期债/股权融资, 或 2027 capex 只给「significantly higher」不给数",
+      "Q4 收入指引中值($B) · 预期 242.0 · 利好 ≥ 245.5 · 利空 ≤ 237.0",
+      "AWS 收入同比 % · 预期 37 · 利好 ≥ 40 · 利空 ≤ 34",
+      "Q4 营业利润指引中值($B) · 预期 28.0 · 利好 ≥ 30.5 · 利空 ≤ 25.5",
+      "Q3 营业利润($B) · 预期 27.0 · 利好 ≥ 28.5 · 利空 ≤ 25.0",
+      "capex / FCF / 融资口径 · 预期 定性 · 利好 见 P5 · 利空 见 P5"
+    ],
     "actual": [],
     "reaction": [],
     "verdict": "",
@@ -3509,11 +3567,50 @@ export const events = [
         "outcome": "次日 -5.55%（小 beat 0–2%）"
       }
     ],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
+    "links": [
+      {
+        "label": "AMZN IR",
+        "url": "https://ir.aboutamazon.com"
+      }
+    ],
+    "consensus": {
+      "eps": "$1.958",
+      "rev": "$202.20B",
+      "epsPrior": "",
+      "revPrior": "",
+      "revYoY": "",
+      "note": "买方 bar $2.453"
+    },
+    "segments": [
+      {
+        "name": "本季 AWS 收入同比(%)",
+        "consensus": "37.0",
+        "prior": "利好 40.0 / 利空 34.0",
+        "note": "core · 权重 30%"
+      },
+      {
+        "name": "Q4 营业利润指引中值(十亿美元)",
+        "consensus": "28.0",
+        "prior": "利好 30.5 / 利空 25.5",
+        "note": "权重 15%"
+      },
+      {
+        "name": "本季营业利润(十亿美元)",
+        "consensus": "27.0",
+        "prior": "利好 28.5 / 利空 25.0",
+        "note": "权重 10%"
+      }
+    ],
+    "guidance": {
+      "company": "待公布",
+      "street": "下季 EPS 一致 $2.451",
+      "note": "比较期间 FY26Q4"
+    },
+    "options": {
+      "iv": "",
+      "impliedMove": "±6.61%",
+      "note": "盈亏平衡 $230.9 / $269.86"
+    },
     "valuation": [
       {
         "name": "基准收盘价",
