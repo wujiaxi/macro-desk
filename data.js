@@ -27,22 +27,22 @@ export const markets = [
   },
   {
     "label": "DXY",
-    "value": "101.78",
+    "value": "101.79",
     "chg": "+0.14%",
     "dir": "up",
     "note": "实时 05:20 ET"
   },
   {
     "label": "黄金",
-    "value": "4,042.40",
-    "chg": "+0.31%",
+    "value": "4,041.90",
+    "chg": "+0.29%",
     "dir": "up",
     "note": "实时 05:20 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "100.28",
-    "chg": "+0.29%",
+    "value": "100.25",
+    "chg": "+0.26%",
     "dir": "up",
     "note": "实时 05:20 ET"
   },
@@ -55,8 +55,8 @@ export const markets = [
   },
   {
     "label": "VIX",
-    "value": "19.09",
-    "chg": "+0.05",
+    "value": "19.11",
+    "chg": "+0.07",
     "dir": "up",
     "note": "实时 05:20 ET"
   },
