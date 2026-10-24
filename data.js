@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-24 03:19 ET · ⚠️ 26 条告警: NFP 日历只剩 41 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-24 03:50 ET · ⚠️ 26 条告警: NFP 日历只剩 41 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,623.68",
     "chg": "-0.52%",
     "dir": "down",
-    "note": "实时 03:19 ET"
+    "note": "实时 03:50 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "28,957.5",
     "chg": "-0.02%",
     "dir": "down",
-    "note": "实时 03:19 ET"
+    "note": "实时 03:50 ET"
   },
   {
     "label": "DXY",
     "value": "101.81",
     "chg": "+0.16%",
     "dir": "up",
-    "note": "实时 03:19 ET"
+    "note": "实时 03:50 ET"
   },
   {
     "label": "黄金",
     "value": "4,007.90",
     "chg": "-0.55%",
     "dir": "down",
-    "note": "实时 03:19 ET"
+    "note": "实时 03:50 ET"
   },
   {
     "label": "WTI 原油",
     "value": "103.27",
     "chg": "+3.28%",
     "dir": "up",
-    "note": "实时 03:19 ET"
+    "note": "实时 03:50 ET"
   },
   {
     "label": "BTC",
-    "value": "80,802",
-    "chg": "-0.34%",
+    "value": "80,724",
+    "chg": "-0.43%",
     "dir": "down",
-    "note": "实时 03:19 ET"
+    "note": "实时 03:50 ET"
   },
   {
     "label": "VIX",
     "value": "19.45",
     "chg": "+0.41",
     "dir": "up",
-    "note": "实时 03:19 ET"
+    "note": "实时 03:50 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.99%",
     "chg": "+3.5bp",
     "dir": "up",
-    "note": "实时 03:19 ET"
+    "note": "实时 03:50 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.32%",
     "chg": "+2.8bp",
     "dir": "up",
-    "note": "实时 03:19 ET"
+    "note": "实时 03:50 ET"
   },
   {
     "label": "US 2Y",
@@ -2488,11 +2488,11 @@ export const events = [
     "tags": [
       "FY26Q3"
     ],
-    "thesis": "隐含波动:事件跳空 ±5.5%(期限结构反解,区间 5.3–5.7%)/ ±9.50%(10-30 跨式 raw); 反应函数一句:GEV 的 GAAP EPS 被一次性项淹没(Q1'26 含 $4.5B 并购净收益,beat 率只有 50%), 门槛配置:季度 EPS 指引结构性不存在(GEV 只给全年收入/FCF/EBITDA 利润率指引); 动作(四选一): 期望值 = Σ(概率 × 涨跌) = 0.30×(+10.60%) + 0.40×(-1.07%) + 0.30×(-8.19%) = +0.29% vs 隐含 ±5.5% → 赔率近零(块算,earnings_claims.py 硬对账)",
+    "thesis": "隐含波动(2026-10-24 刷新):事件跳空 ±6.4%(期限结构反解,区间 6.3–6.6%)/ ±7.88%(10-30 跨式 raw); 反应函数一句:GEV 的 GAAP EPS 被一次性项淹没(Q1'26 含 $4.5B 并购净收益,beat 率只有 50%), 门槛配置:季度 EPS 指引结构性不存在(GEV 只给全年收入/FCF/EBITDA 利润率指引); 动作(四选一): 期望值 = Σ(概率 × 涨跌) = 0.30×(+12.18%) + 0.40×(+0.09%) + 0.30×(-9.96%) = +0.70% vs 隐含 ±6.4% → 赔率近零(块算,earnings_claims.py 硬对账;建卡时为 +0.29%)",
     "expectations": [
       {
         "name": "卖方一致",
-        "consensus": "4.022",
+        "consensus": "4.013",
         "prior": "",
         "range": "vs 卖方一致 +0.0%",
         "note": ""
@@ -2501,7 +2501,7 @@ export const events = [
         "name": "卖方最高值",
         "consensus": "4.89",
         "prior": "",
-        "range": "vs 卖方一致 +21.6%",
+        "range": "vs 卖方一致 +21.9%",
         "note": ""
       },
       {
@@ -2519,21 +2519,21 @@ export const events = [
         "tone": "dove",
         "prob": "30%",
         "trigger": "调整后 EBITDA 利润率 ≥ 14.5% 且全年收入指引中值 ≥ 47.0B(或 EBITDA 利润率指引收窄到上半区); 订单 ≥ 23B; EPS 不论",
-        "reaction": "+10.60% · ≈$1,024.6"
+        "reaction": "+12.18% · ≈$914.3"
       },
       {
         "tag": "符合预期",
         "tone": "base",
         "prob": "40%",
         "trigger": "EBITDA 利润率 12.5-14.5%, 全年收入指引小幅上调(中值 46.0-47.0), 订单 17-23B",
-        "reaction": "-1.07% · ≈$916.5"
+        "reaction": "+0.09% · ≈$815.7"
       },
       {
         "tag": "低于预期",
         "tone": "hawk",
         "prob": "30%",
         "trigger": "EBITDA 利润率 < 12.5% 或全年指引未上调 / 风电新增亏损 —— 即使 GAAP EPS 与收入 beat(上季正是收入 beat + 上调收入指引仍 -8.69%)",
-        "reaction": "-8.19% · ≈$850.6"
+        "reaction": "-9.96% · ≈$733.8"
       }
     ],
     "watch": [
@@ -2558,21 +2558,21 @@ export const events = [
         "url": "https://www.gevernova.com/news/press-releases/ge-vernova-announce-third-quarter-2026-financial-results-october-28"
       },
       {
-        "label": "finance.yahoo.com · heres-expect-ge-vernovas-next-141413937",
-        "url": "https://finance.yahoo.com/energy/articles/heres-expect-ge-vernovas-next-141413937.html"
+        "label": "tikr.com",
+        "url": "https://www.tikr.com/blog/ge-vernova-fell-nearly-11-in-a-day-after-metas-earnings-heres-where-the-stock-could-go-by-2030"
       },
       {
-        "label": "finance.yahoo.com · ge-vernova-stock-more-50-161406724",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/ge-vernova-stock-more-50-161406724.html"
+        "label": "tradingkey.com · 262232910-market-movers-gev-20261022",
+        "url": "https://www.tradingkey.com/news/market-movers/262232910-market-movers-gev-20261022"
       },
       {
-        "label": "marketbeat.com",
-        "url": "https://www.marketbeat.com/instant-alerts/price-ge-vernova-nyse-gev-stock-price-down-14-following-analyst-downgrade-2026-10-15/"
+        "label": "finance.yahoo.com · seeking-clues-ge-vernova-gev-121506359",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/seeking-clues-ge-vernova-gev-121506359.html"
       }
     ],
     "consensus": {
-      "eps": "$4.022",
-      "rev": "$12.00B",
+      "eps": "$4.013",
+      "rev": "$12.01B",
       "epsPrior": "",
       "revPrior": "",
       "revYoY": "",
@@ -2611,8 +2611,8 @@ export const events = [
     },
     "options": {
       "iv": "",
-      "impliedMove": "±5.50%",
-      "note": "盈亏平衡 $837.25 / $1012.75"
+      "impliedMove": "±6.40%",
+      "note": "盈亏平衡 $750.78 / $879.22"
     },
     "valuation": [],
     "targets": {},
