@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-24 03:18 ET · ⚠️ 26 条告警: NFP 日历只剩 41 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-24 03:19 ET · ⚠️ 26 条告警: NFP 日历只剩 41 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,623.68",
     "chg": "-0.52%",
     "dir": "down",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "28,957.5",
     "chg": "-0.02%",
     "dir": "down",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "DXY",
     "value": "101.81",
     "chg": "+0.16%",
     "dir": "up",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "黄金",
     "value": "4,007.90",
     "chg": "-0.55%",
     "dir": "down",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "WTI 原油",
     "value": "103.27",
     "chg": "+3.28%",
     "dir": "up",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "BTC",
-    "value": "80,778",
-    "chg": "-0.37%",
+    "value": "80,802",
+    "chg": "-0.34%",
     "dir": "down",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "VIX",
     "value": "19.45",
     "chg": "+0.41",
     "dir": "up",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.99%",
     "chg": "+3.5bp",
     "dir": "up",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.32%",
     "chg": "+2.8bp",
     "dir": "up",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "US 2Y",
@@ -2770,14 +2770,14 @@ export const events = [
     "expectations": [
       {
         "name": "卖方一致",
-        "consensus": "3.004",
+        "consensus": "3.003",
         "prior": "",
         "range": "vs 卖方一致 +0.0%",
         "note": ""
       },
       {
         "name": "买方 bar(历史 beat 分布校准)",
-        "consensus": "3.218",
+        "consensus": "3.217",
         "prior": "",
         "range": "vs 卖方一致 +7.1%",
         "note": ""
@@ -2786,7 +2786,7 @@ export const events = [
         "name": "卖方最高值",
         "consensus": "3.63",
         "prior": "",
-        "range": "vs 卖方一致 +20.8%",
+        "range": "vs 卖方一致 +20.9%",
         "note": ""
       }
     ],
@@ -2849,12 +2849,12 @@ export const events = [
       }
     ],
     "consensus": {
-      "eps": "$3.004",
-      "rev": "$127.85B",
+      "eps": "$3.003",
+      "rev": "$127.83B",
       "epsPrior": "",
       "revPrior": "",
       "revYoY": "",
-      "note": "买方 bar $3.218"
+      "note": "买方 bar $3.217"
     },
     "segments": [
       {
@@ -2889,8 +2889,8 @@ export const events = [
     },
     "options": {
       "iv": "",
-      "impliedMove": "±5.26%",
-      "note": "盈亏平衡 $304.15 / $344.29"
+      "impliedMove": "±5.14%",
+      "note": "盈亏平衡 $300.84 / $339.58"
     },
     "valuation": [
       {
