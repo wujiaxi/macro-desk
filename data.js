@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-24 04:18 ET · ⚠️ 26 条告警: NFP 日历只剩 41 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-24 04:20 ET · ⚠️ 26 条告警: NFP 日历只剩 41 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,623.68",
     "chg": "-0.52%",
     "dir": "down",
-    "note": "实时 04:18 ET"
+    "note": "实时 04:20 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "28,957.5",
     "chg": "-0.02%",
     "dir": "down",
-    "note": "实时 04:18 ET"
+    "note": "实时 04:20 ET"
   },
   {
     "label": "DXY",
     "value": "101.81",
     "chg": "+0.16%",
     "dir": "up",
-    "note": "实时 04:18 ET"
+    "note": "实时 04:20 ET"
   },
   {
     "label": "黄金",
     "value": "4,007.90",
     "chg": "-0.55%",
     "dir": "down",
-    "note": "实时 04:18 ET"
+    "note": "实时 04:20 ET"
   },
   {
     "label": "WTI 原油",
     "value": "103.27",
     "chg": "+3.28%",
     "dir": "up",
-    "note": "实时 04:18 ET"
+    "note": "实时 04:20 ET"
   },
   {
     "label": "BTC",
-    "value": "80,718",
-    "chg": "-0.44%",
+    "value": "80,655",
+    "chg": "-0.52%",
     "dir": "down",
-    "note": "实时 04:18 ET"
+    "note": "实时 04:20 ET"
   },
   {
     "label": "VIX",
     "value": "19.45",
     "chg": "+0.41",
     "dir": "up",
-    "note": "实时 04:18 ET"
+    "note": "实时 04:20 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.99%",
     "chg": "+3.5bp",
     "dir": "up",
-    "note": "实时 04:18 ET"
+    "note": "实时 04:20 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.32%",
     "chg": "+2.8bp",
     "dir": "up",
-    "note": "实时 04:18 ET"
+    "note": "实时 04:20 ET"
   },
   {
     "label": "US 2Y",
@@ -2748,8 +2748,8 @@ export const events = [
       },
       {
         "name": "期货已定价(bp)",
-        "value": "11",
-        "note": "2026-09-16"
+        "value": "2.5",
+        "note": "2026-10-23"
       },
       {
         "name": "SPX 事前 21 日 run-up",
@@ -2766,30 +2766,30 @@ export const events = [
       {
         "tag": "按兵+鹰",
         "tone": "hawk",
-        "prob": "40%",
+        "prob": "60%",
         "trigger": "决议(bp,相对 3.75-4.00 区间) ≤ 0 且 (声明措辞 diff(vs 2026-09-16) 判为利空 或 发布会基调(第二段,14:30) 判为利空)",
-        "reaction": "2Y -3bp · 10Y -2bp · DXY -0.10% · SPX +0.10% · NDX +0.20%"
+        "reaction": "2Y +1bp · 10Y +1bp · DXY +0.10% · SPX -0.20% · NDX -0.30%"
       },
       {
         "tag": "行动+鹰",
         "tone": "hawk",
-        "prob": "26%",
+        "prob": "7%",
         "trigger": "决议(bp,相对 3.75-4.00 区间) ≥ 25 且 (声明措辞 diff(vs 2026-09-16) 判为利空 或 发布会基调(第二段,14:30) 判为利空)",
-        "reaction": "2Y +12bp · 10Y +7bp · DXY +0.50% · SPX -1.00% · NDX -1.40%"
+        "reaction": "2Y +16bp · 10Y +10bp · DXY +0.70% · SPX -1.30% · NDX -1.90%"
       },
       {
         "tag": "按兵+鸽",
         "tone": "dove",
-        "prob": "20%",
+        "prob": "30%",
         "trigger": "决议(bp,相对 3.75-4.00 区间) ≤ 0 且 声明措辞 diff(vs 2026-09-16) ≠ 'bear' 且 发布会基调(第二段,14:30) ≠ 'bear'",
-        "reaction": "2Y -15bp · 10Y -10bp · DXY -0.60% · SPX +1.20% · NDX +1.70%"
+        "reaction": "2Y -11bp · 10Y -7bp · DXY -0.40% · SPX +0.90% · NDX +1.20%"
       },
       {
         "tag": "行动+鸽",
         "tone": "dove",
-        "prob": "14%",
+        "prob": "3%",
         "trigger": "决议(bp,相对 3.75-4.00 区间) ≥ 25 且 声明措辞 diff(vs 2026-09-16) ≠ 'bear' 且 发布会基调(第二段,14:30) ≠ 'bear'",
-        "reaction": "2Y -2bp · 10Y -3bp · DXY -0.20% · SPX +0.50% · NDX +0.70%"
+        "reaction": "2Y +2bp · 10Y +0bp · DXY +0.00% · SPX +0.20% · NDX +0.20%"
       }
     ],
     "watch": [
