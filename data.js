@@ -48,7 +48,7 @@ export const markets = [
   },
   {
     "label": "BTC",
-    "value": "80,515",
+    "value": "80,523",
     "chg": "-0.31%",
     "dir": "down",
     "note": "实时 03:18 ET"
