@@ -13,15 +13,15 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,671.20",
-    "chg": "+0.63%",
+    "value": "7,670.61",
+    "chg": "+0.62%",
     "dir": "up",
     "note": "实时 13:48 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "29,282.0",
-    "chg": "+1.13%",
+    "value": "29,281.6",
+    "chg": "+1.12%",
     "dir": "up",
     "note": "实时 13:48 ET"
   },
@@ -34,36 +34,36 @@ export const markets = [
   },
   {
     "label": "黄金",
-    "value": "4,035.30",
+    "value": "4,035.20",
     "chg": "+0.34%",
     "dir": "up",
     "note": "实时 13:48 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "102.12",
-    "chg": "+1.15%",
+    "value": "102.10",
+    "chg": "+1.13%",
     "dir": "up",
     "note": "实时 13:48 ET"
   },
   {
     "label": "BTC",
-    "value": "80,042",
-    "chg": "-0.00%",
-    "dir": "flat",
+    "value": "80,049",
+    "chg": "+0.01%",
+    "dir": "up",
     "note": "实时 13:48 ET"
   },
   {
     "label": "VIX",
-    "value": "18.31",
-    "chg": "-1.14",
+    "value": "18.30",
+    "chg": "-1.15",
     "dir": "down",
     "note": "实时 13:48 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.98%",
-    "chg": "-1.0bp",
+    "chg": "-0.8bp",
     "dir": "down",
     "note": "实时 13:48 ET"
   },
