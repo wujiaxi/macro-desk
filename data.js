@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-26 14:16 ET · ⚠️ 26 条告警: NFP 日历只剩 39 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-26 14:19 ET · ⚠️ 26 条告警: NFP 日历只剩 39 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,681.95",
-    "chg": "+0.77%",
+    "value": "7,682.32",
+    "chg": "+0.78%",
     "dir": "up",
-    "note": "实时 14:16 ET"
+    "note": "实时 14:19 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "29,346.3",
+    "value": "29,346.7",
     "chg": "+1.35%",
     "dir": "up",
-    "note": "实时 14:16 ET"
+    "note": "实时 14:19 ET"
   },
   {
     "label": "DXY",
     "value": "101.90",
     "chg": "+0.26%",
     "dir": "up",
-    "note": "实时 14:16 ET"
+    "note": "实时 14:19 ET"
   },
   {
     "label": "黄金",
-    "value": "4,034.70",
-    "chg": "+0.33%",
+    "value": "4,034.40",
+    "chg": "+0.32%",
     "dir": "up",
-    "note": "实时 14:16 ET"
+    "note": "实时 14:19 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "101.92",
-    "chg": "+0.95%",
+    "value": "101.97",
+    "chg": "+1.00%",
     "dir": "up",
-    "note": "实时 14:16 ET"
+    "note": "实时 14:19 ET"
   },
   {
     "label": "BTC",
-    "value": "80,129",
-    "chg": "+0.11%",
+    "value": "80,139",
+    "chg": "+0.12%",
     "dir": "up",
-    "note": "实时 14:16 ET"
+    "note": "实时 14:19 ET"
   },
   {
     "label": "VIX",
-    "value": "18.32",
-    "chg": "-1.13",
+    "value": "18.34",
+    "chg": "-1.11",
     "dir": "down",
-    "note": "实时 14:16 ET"
+    "note": "实时 14:19 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.98%",
     "chg": "-0.6bp",
     "dir": "down",
-    "note": "实时 14:16 ET"
+    "note": "实时 14:19 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.30%",
-    "chg": "-2.0bp",
+    "chg": "-1.9bp",
     "dir": "down",
-    "note": "实时 14:16 ET"
+    "note": "实时 14:19 ET"
   },
   {
     "label": "US 2Y",
@@ -3667,18 +3667,18 @@ export const events = [
     "tags": [
       "FY26Q4"
     ],
-    "thesis": "隐含波动:事件跳空 ±3.45%(期限结构反解,calc/aapl_event_move_term_structure.py),对应事件区间 $332.12 / $355.86。表 ⑤ 的 ±4.99% raw / ±4.24% 去时值不能用:财报后首个到期 11-06 是 15 DTE、含 12 个交易日,×0.85 削不掉 11 天时间价值(memory:事件 IV 不能用 ×0.85)。11-06 到期 ATM 345 跨式中价 17.18 的盈亏平衡 $326.82 / $361.16(yfinance,10-21 收盘后快照) 反应函数一句:近 20 季 beat 率 95%、beat 却跌 11 次,surprise 与次日涨跌 r=-0.10(EPS 不定价);近 8 季 beat 率 100% 却只涨 2/8、次日均值 -1.53% —— beat 是入场费,定价权在下季指引与毛利率指引。上季(7/30)三项全 beat、收入指引 +9~11% 低于一致约 +12%,次日 -7.3%",
+    "thesis": "隐含波动(10-26 刷新):事件跳空 ±3.62%(期限结构反解,calc/aapl_event_move_term_structure.py 2026-10-27 0.27;11-04 与 11-06 两个到期各自反解得 ±3.62% / ±3.63%,互相印证),对应事件区间 $335.14 / $360.32(按基准收盘 347.73)。表 ⑤ 现取财报后首个到期 11-04(9 DTE,10-22 时尚未挂牌),raw ±4.51% / 去时值 ±3.83%,仍含约 6 个普通交易日时间价值,不直接用。11-04 到期 ATM 342.5 跨式中价 15.50 的盈亏平衡 $328.08 / $359.08(yfinance,10-26 14:15 ET 盘中快照,现价 343.59) 反应函数一句:近 20 季 beat 率 95%、beat 却跌 11 次,surprise 与次日涨跌 r=-0.10(EPS 不定价);近 8 季 beat 率 100% 却只涨 2/8、次日均值 -1.53% —— beat 是入场费,定价权在下季指引与毛利率指引。上季(7/30)三项全 beat、收入指引 +9~11% 低于一致约 +12%,次日 -7.3%",
     "expectations": [
       {
         "name": "卖方一致",
-        "consensus": "1.978",
+        "consensus": "1.98",
         "prior": "",
         "range": "vs 卖方一致 +0.0%",
         "note": ""
       },
       {
         "name": "买方 bar(历史 beat 分布校准)",
-        "consensus": "2.057",
+        "consensus": "2.059",
         "prior": "",
         "range": "vs 卖方一致 +4.0%",
         "note": ""
@@ -3687,7 +3687,7 @@ export const events = [
         "name": "卖方最高值",
         "consensus": "2.06",
         "prior": "",
-        "range": "vs 卖方一致 +4.1%",
+        "range": "vs 卖方一致 +4.0%",
         "note": ""
       },
       {
@@ -3705,21 +3705,21 @@ export const events = [
         "tone": "dove",
         "prob": "25%",
         "trigger": "FY27Q1 收入指引中值 ≥154.5B 且 毛利率指引(剔退款)≥47.5%;Services ≥31.9B;EPS 不论",
-        "reaction": "+6.25% · ≈ $365"
+        "reaction": "+6.68% · ≈ $371"
       },
       {
         "tag": "符合预期",
         "tone": "base",
         "prob": "40%",
         "trigger": "收入指引中值 149–154.5B;毛利率指引 45.5–47.5%;Services +8~11%;EPS 不论",
-        "reaction": "-0.67% · ≈ $342"
+        "reaction": "-0.70% · ≈ $345"
       },
       {
         "tag": "低于预期",
         "tone": "hawk",
         "prob": "35%",
         "trigger": "收入指引中值 ≤149.0B 或 毛利率指引(剔退款)≤45.5% 或 Services <+8% —— 即使 EPS 与收入 beat",
-        "reaction": "-5.47% · ≈ $325"
+        "reaction": "-5.63% · ≈ $328"
       }
     ],
     "watch": [
@@ -3757,12 +3757,12 @@ export const events = [
       }
     ],
     "consensus": {
-      "eps": "$1.978",
-      "rev": "$113.36B",
+      "eps": "$1.98",
+      "rev": "$113.38B",
       "epsPrior": "",
       "revPrior": "",
       "revYoY": "",
-      "note": "买方 bar $2.057"
+      "note": "买方 bar $2.059"
     },
     "segments": [
       {
@@ -3786,13 +3786,13 @@ export const events = [
     ],
     "guidance": {
       "company": "待公布",
-      "street": "下季 EPS 一致 $2.898",
+      "street": "下季 EPS 一致 $2.895",
       "note": "比较期间 FY27Q1"
     },
     "options": {
       "iv": "",
-      "impliedMove": "±3.45%",
-      "note": "盈亏平衡 $332.12 / $355.86"
+      "impliedMove": "±3.62%",
+      "note": "盈亏平衡 $335.14 / $360.32"
     },
     "valuation": [
       {
