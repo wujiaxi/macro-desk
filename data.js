@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-26 13:30 ET · ⚠️ 26 条告警: NFP 日历只剩 39 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-26 13:48 ET · ⚠️ 26 条告警: NFP 日历只剩 39 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,682.41",
-    "chg": "+0.78%",
+    "value": "7,671.20",
+    "chg": "+0.63%",
     "dir": "up",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:48 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "29,341.9",
-    "chg": "+1.33%",
+    "value": "29,282.0",
+    "chg": "+1.13%",
     "dir": "up",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:48 ET"
   },
   {
     "label": "DXY",
     "value": "101.88",
     "chg": "+0.24%",
     "dir": "up",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:48 ET"
   },
   {
     "label": "黄金",
-    "value": "4,043.20",
-    "chg": "+0.54%",
+    "value": "4,035.30",
+    "chg": "+0.34%",
     "dir": "up",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:48 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "102.23",
-    "chg": "+1.26%",
+    "value": "102.12",
+    "chg": "+1.15%",
     "dir": "up",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:48 ET"
   },
   {
     "label": "BTC",
-    "value": "80,191",
-    "chg": "+0.18%",
-    "dir": "up",
-    "note": "实时 13:30 ET"
+    "value": "80,042",
+    "chg": "-0.00%",
+    "dir": "flat",
+    "note": "实时 13:48 ET"
   },
   {
     "label": "VIX",
-    "value": "18.18",
-    "chg": "-1.27",
+    "value": "18.31",
+    "chg": "-1.14",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:48 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.98%",
-    "chg": "-0.4bp",
+    "chg": "-1.0bp",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:48 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.30%",
-    "chg": "-1.7bp",
+    "chg": "-1.9bp",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:48 ET"
   },
   {
     "label": "US 2Y",
@@ -2848,7 +2848,7 @@ export const events = [
     "tags": [
       "FY26Q3"
     ],
-    "thesis": "隐含波动:±5.14%(去时值)/ ±6.05%(raw),盈亏平衡 $300.84 / $339.58(2026-10-30 到期 ATM 320 跨式中价 19.38,表 ⑤,yfinance 2026-10-26 03:15 ET 周一盘前取数(与 10-24、10-25 相同),即 10-23 收盘挂单,现价 320.21;刷新记录见「更新日志」) 反应函数一句:近 20 季 beat 率 80%、beat 却跌 7 次,surprise 与次日涨跌 r=0.012(EPS 不定价);近 8 季次日绝对波动中位只有 2.7%,但其中有 -7.3%、+10.0%、-7.1% 三次大动 —— 大动都出在 capex 口径和 Cloud 上,不在 EPS 上。 EPS 口径陷阱(本标的最重要的一条):Alphabet 只报 GAAP EPS,里面含权益证券公允价值变动。上季 GAAP EPS $9.11 里有 $6.26 来自 $990 亿权益证券收益(EX-99.1 OI&E 表脚注原文)。近 4 季 surprise 214% / 92% 主要是这个,不是经营超预期。卖方一致 3.003 大体是不含收益的口径 → 本季 EPS 对一致的「beat/miss」须先扣掉 F2(收益每股影响)再判。",
+    "thesis": "隐含波动:±4.99%(去时值)/ ±5.87%(raw),盈亏平衡 $299.56 / $336.92(2026-10-30 到期 ATM 317.5 跨式中价 18.67,表 ⑤,yfinance 2026-10-26 13:45 ET 盘中取数,中心为盘中价 318.24;基准收盘仍是 10-23 的 320.21;刷新记录见「更新日志」) 反应函数一句:近 20 季 beat 率 80%、beat 却跌 7 次,surprise 与次日涨跌 r=0.012(EPS 不定价);近 8 季次日绝对波动中位只有 2.7%,但其中有 -7.3%、+10.0%、-7.1% 三次大动 —— 大动都出在 capex 口径和 Cloud 上,不在 EPS 上。 EPS 口径陷阱(本标的最重要的一条):Alphabet 只报 GAAP EPS,里面含权益证券公允价值变动。上季 GAAP EPS $9.11 里有 $6.26 来自 $990 亿权益证券收益(EX-99.1 OI&E 表脚注原文)。近 4 季 surprise 214% / 92% 主要是这个,不是经营超预期。卖方一致 3.003 大体是不含收益的口径 → 本季 EPS 对一致的「beat/miss」须先扣掉 F2(收益每股影响)再判。",
     "expectations": [
       {
         "name": "卖方一致",
@@ -2879,21 +2879,21 @@ export const events = [
         "tone": "dove",
         "prob": "30%",
         "trigger": "Cloud 收入 ≥ $29.5B 且 2027 capex 给出量化区间中值 ≤ $265B(或更高但同段给出 backlog 覆盖口径);Search ≥ +16%;EPS 不论",
-        "reaction": "+10.20% · ≈ $353"
+        "reaction": "+11.23% · ≈ $356"
       },
       {
         "tag": "符合预期",
         "tone": "base",
         "prob": "40%",
         "trigger": "Cloud $26.5–29.5B;2027 capex 中值 $250–290B 或只说「meaningful step-up」;Search +14–18%",
-        "reaction": "-1.00% · ≈ $317"
+        "reaction": "-0.97% · ≈ $317"
       },
       {
         "tag": "低于预期",
         "tone": "hawk",
         "prob": "30%",
         "trigger": "2027 capex 中值 ≥ $290B 而 Cloud ≤ $26.5B, 或 Search ≤ +14%, 或新一轮股权融资 / FCF 继续转负扩大 —— 即使 EPS 与收入 beat",
-        "reaction": "-7.43% · ≈ $296"
+        "reaction": "-6.36% · ≈ $300"
       }
     ],
     "watch": [
@@ -2971,8 +2971,8 @@ export const events = [
     },
     "options": {
       "iv": "",
-      "impliedMove": "±5.14%",
-      "note": "盈亏平衡 $300.84 / $339.58"
+      "impliedMove": "±4.99%",
+      "note": "盈亏平衡 $299.56 / $336.92"
     },
     "valuation": [
       {
