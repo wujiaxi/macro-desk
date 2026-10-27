@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-27 00:30 ET · ⚠️ 26 条告警: NFP 日历只剩 39 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-27 03:18 ET · ⚠️ 27 条告警: NFP 日历只剩 38 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,676.77",
     "chg": "+0.71%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,273.4",
     "chg": "+1.10%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "DXY",
-    "value": "102.04",
-    "chg": "+0.39%",
+    "value": "102.20",
+    "chg": "+0.16%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "黄金",
-    "value": "4,038.40",
-    "chg": "+0.42%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "4,012.20",
+    "chg": "-0.44%",
+    "dir": "down",
+    "note": "实时 03:18 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "100.84",
-    "chg": "-0.12%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "102.14",
+    "chg": "+1.34%",
+    "dir": "up",
+    "note": "实时 03:18 ET"
   },
   {
     "label": "BTC",
-    "value": "79,593",
-    "chg": "-0.51%",
+    "value": "79,546",
+    "chg": "-0.58%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "VIX",
     "value": "18.39",
     "chg": "-1.06",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.99%",
     "chg": "-0.2bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.30%",
     "chg": "-1.4bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:18 ET"
   },
   {
     "label": "US 2Y",
@@ -538,193 +538,6 @@ export const events = [
       "move": "+8.74%",
       "note": "- 实际次日反应 +8.74%(基准收盘 209.66 → 227.98) - 卡片内插预期 +4.05% vs 实际 +8.74%,误差 +4.69%(方向判对) - ⚠️ 实际反应落在同类历史 10–90 分位之外 —— 属尾部事件,不要用它去改反应函数(单次尾部 ≠ 制度变化)"
     }
-  },
-  {
-    "id": "fomc-2026-09-16",
-    "kind": "macro",
-    "title": "FOMC 议息决议",
-    "subtitle": "含 SEP 与点阵图",
-    "org": "Federal Reserve",
-    "ticker": "",
-    "company": "",
-    "date": "2026-09-16T14:00:00-04:00",
-    "dateNote": "14:00 ET · 回放卡(事后重建,非事前预测)",
-    "dateConfirmed": true,
-    "importance": 3,
-    "tags": [
-      "回放",
-      "FOMC",
-      "点阵图"
-    ],
-    "thesis": "加息本身已被 92% 定价,真正决定行情的是点阵图(委员们对未来利率的预测)与发布会措辞,不是「加不加」这个决定本身",
-    "expectations": [
-      {
-        "name": "决议(bp,相对上次区间)",
-        "consensus": "25.0bp",
-        "prior": "0bp",
-        "range": "0.0bp ~ 50.0bp",
-        "note": "core · 权重 35%"
-      },
-      {
-        "name": "2026 末点阵中位(%)",
-        "consensus": "4.1%",
-        "prior": "",
-        "range": "3.8% ~ 4.4%",
-        "note": "core · 权重 25%"
-      },
-      {
-        "name": "异议票数",
-        "consensus": "1.0 票",
-        "prior": "",
-        "range": "0.0 票 ~ 3.0 票",
-        "note": "权重 10%"
-      }
-    ],
-    "pricing": [
-      {
-        "name": "期货已定价(bp)",
-        "value": "23",
-        "note": "2026-09-15"
-      },
-      {
-        "name": "SPX 事前 21 日 run-up",
-        "value": "-2.57%",
-        "note": "噪声带 ±0.75"
-      },
-      {
-        "name": "2Y 事前 21 日 run-up",
-        "value": "+50bp",
-        "note": "噪声带 ±5.0"
-      }
-    ],
-    "scenarios": [
-      {
-        "tag": "行动+鹰",
-        "tone": "hawk",
-        "prob": "45%",
-        "trigger": "决议(bp,相对上次区间) > 0 且 (2026 末点阵中位(%) ≥ 4.2 或 声明措辞 diff(vs 7/29) 判为利空 或 发布会基调(第二段) 判为利空)",
-        "reaction": "2Y +8bp · 10Y +6bp · DXY +0.40% · SPX -0.80% · NDX -1.20%"
-      },
-      {
-        "tag": "行动+鸽",
-        "tone": "dove",
-        "prob": "40%",
-        "trigger": "决议(bp,相对上次区间) > 0 且 2026 末点阵中位(%) < 4.2 且 声明措辞 diff(vs 7/29) ≠ 'bear' 且 发布会基调(第二段) ≠ 'bear'",
-        "reaction": "2Y -4bp · 10Y -3bp · DXY -0.20% · SPX +0.60% · NDX +0.90%"
-      },
-      {
-        "tag": "按兵+鹰",
-        "tone": "hawk",
-        "prob": "5%",
-        "trigger": "决议(bp,相对上次区间) ≤ 0 且 (声明措辞 diff(vs 7/29) 判为利空 或 发布会基调(第二段) 判为利空)",
-        "reaction": "2Y -6bp · 10Y -4bp · DXY -0.20% · SPX -0.30% · NDX -0.50%"
-      },
-      {
-        "tag": "按兵+鸽",
-        "tone": "dove",
-        "prob": "10%",
-        "trigger": "决议(bp,相对上次区间) ≤ 0 且 声明措辞 diff(vs 7/29) ≠ 'bear' 且 发布会基调(第二段) ≠ 'bear'",
-        "reaction": "2Y -12bp · 10Y -8bp · DXY -0.50% · SPX +1.00% · NDX +1.40%"
-      }
-    ],
-    "watch": [
-      "声明措辞 diff(vs 7/29) — 利好: 删去「通胀风险偏上行/供给冲击推高价格」类表述,或新增「本次行动足以」类 — 利空: 新增「进一步收紧可能是适当的」「通胀进展停滞」类表述",
-      "发布会基调(第二段) — 利好: 主席称本次加息后政策「处于良好位置/可以观望」,不预设下一步 — 利空: 主席明示「后续会议仍可能加息」或上调 2026 通胀判断",
-      "决议(bp) · 预期 +25 · 利好 0(维持) · 利空 +50",
-      "2026 末点阵中位 · 预期 4.1 · 利好 ≤3.8 · 利空 ≥4.4",
-      "异议票数 · 预期 1 · 利好 0 · 利空 ≥3",
-      "声明措辞 diff · 预期 定性 · 利好 删「通胀风险上行」类 · 利空 增「进一步收紧」类",
-      "[14:30] 发布会基调 · 预期 定性 · 利好 「本次加息足够/观望」 · 利空 「后续仍需加息」"
-    ],
-    "actual": [
-      {
-        "name": "决议(bp,相对上次区间)",
-        "actual": "25.0",
-        "consensus": "25.0",
-        "prior": "",
-        "surprise": "中性",
-        "dir": "flat"
-      },
-      {
-        "name": "2026 末点阵中位(%)",
-        "actual": "4.1",
-        "consensus": "4.1",
-        "prior": "",
-        "surprise": "中性",
-        "dir": "flat"
-      },
-      {
-        "name": "异议票数",
-        "actual": "0.0",
-        "consensus": "1.0",
-        "prior": "",
-        "surprise": "中性",
-        "dir": "flat"
-      }
-    ],
-    "reaction": [
-      {
-        "asset": "S&P 500",
-        "d0": "-0.45%",
-        "d1": "+1.14%"
-      },
-      {
-        "asset": "纳斯达克100",
-        "d0": "+0.02%",
-        "d1": "+1.73%"
-      },
-      {
-        "asset": "US 2Y",
-        "d0": "+7bp",
-        "d1": "-7bp"
-      },
-      {
-        "asset": "US 10Y",
-        "d0": "+1bp",
-        "d1": "-7bp"
-      },
-      {
-        "asset": "DXY",
-        "d0": "+0.66%",
-        "d1": "-0.09%"
-      }
-    ],
-    "verdict": "判定:鹰派 —— 但鹰在「终点更高」,不在「这一次加得更多」。以下三条都可以自己核对。 ① 点阵把未来两年的利率路径整体抬高了 50 个基点。 委员们对 2027 年底政策利率的中位预测从 3.6% 升到 4.1%,2028 年从 3.4% 升到 3.9%,长期中枢从 3.1% 微升到 3.2%。而 2026 年底那一格没动(4.1%,与会前预期一致)——意思是委员会没有加快眼前的节奏,而是认为这轮紧缩要走得更远、停得更高。(「点阵」= 每位委员匿名标出自己预计的未来利率,取中位数看全局倾向。) ② 主席亲口说「现在还不算限制性」。 原话:\"I would be hard-pressed to describe broad financial conditions as restrictive … So we removed a dose of accommodation\"(很难说当前整体金融条件是限制性的……我们只是拿掉了一剂宽松)。含义:今天这 25bp 只是把油门松了一点,离踩刹车还有距离——后面还有。 ③ 声明删掉了给通胀找的那个借口。 被删的原句是「部分反映了能源等特定行业的供给冲击推动的价格上涨」。供给冲击是不需要加息的理由(货币政策管不了油价);把这句话拿掉,等于货币政策认领了这轮通胀。这是最容易被忽略、但方向最明确的一条。 为什么「加息本身」不是重点: 这 25bp 会前已被市场定价 92%,2 年期美债收益率在会前 21 个交易日已经上行 50bp。按常理靴子落地后短端该回吐一部分;但点阵把终点抬高 50bp 之后,那 50bp 的含义从「提前定价了这一次」变成「对后面几次还定价不足」,回吐的理由就没了。 对市场什么意思: 短端(2 年期)利率的上行压力没有解除;贴现率抬升对长久期资产(高估值成长股)的伤害大于对盈利型价值股。 ⚠️ 两个口径问题(影响这份判断的可信度,不影响方向): 其一,点阵中位系统性低估了委员会的鹰派程度——SEP 脚注写明只有 18 位参与者提交预测,主席明确表示自己没交(\"as in June—I have not offered a projection of my own\"),全场最鹰的那一票不在分布里。其二,12–0 全票通过不等于转鸽:7 月 29 日那次的 3 张异议票全部是要求加息的,这次归零是因为中心向鹰派靠拢、异议方消失,而非委员会变温和;主席自己把全票定义为决心(\"The committee's unanimous vote shows our resolve\")。",
-    "history": [
-      {
-        "when": "2026-07-29",
-        "what": "FOMC 议息决议",
-        "outcome": "SPX -1.52% · 2Y -4bp"
-      },
-      {
-        "when": "2026-06-17",
-        "what": "FOMC 议息决议",
-        "outcome": "SPX -1.21% · 2Y +15bp"
-      },
-      {
-        "when": "2026-04-29",
-        "what": "FOMC 议息决议",
-        "outcome": "SPX -0.04% · 2Y +8bp"
-      }
-    ],
-    "links": [
-      {
-        "label": "FOMC 官方日历",
-        "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
-      },
-      {
-        "label": "官方日程",
-        "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
-      },
-      {
-        "label": "美联储 · fomc",
-        "url": "https://www.federalreserve.gov/monetarypolicy/fomc.htm"
-      },
-      {
-        "label": "美联储 · FOMCpresconf20260916",
-        "url": "https://www.federalreserve.gov/mediacenter/files/FOMCpresconf20260916.pdf"
-      }
-    ]
   },
   {
     "id": "rebal-flow-window-2026-09-30-all",
