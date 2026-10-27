@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-27 03:18 ET · ⚠️ 27 条告警: NFP 日历只剩 38 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-27 03:21 ET · ⚠️ 27 条告警: NFP 日历只剩 38 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,676.77",
     "chg": "+0.71%",
     "dir": "up",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:20 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,273.4",
     "chg": "+1.10%",
     "dir": "up",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:20 ET"
   },
   {
     "label": "DXY",
-    "value": "102.20",
-    "chg": "+0.16%",
+    "value": "102.17",
+    "chg": "+0.13%",
     "dir": "up",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:20 ET"
   },
   {
     "label": "黄金",
-    "value": "4,012.20",
-    "chg": "-0.44%",
+    "value": "4,014.00",
+    "chg": "-0.39%",
     "dir": "down",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:20 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "102.14",
-    "chg": "+1.34%",
+    "value": "101.91",
+    "chg": "+1.11%",
     "dir": "up",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:20 ET"
   },
   {
     "label": "BTC",
-    "value": "79,546",
-    "chg": "-0.58%",
+    "value": "79,553",
+    "chg": "-0.57%",
     "dir": "down",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "VIX",
     "value": "18.39",
     "chg": "-1.06",
     "dir": "down",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.99%",
     "chg": "-0.2bp",
     "dir": "down",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.30%",
     "chg": "-1.4bp",
     "dir": "down",
-    "note": "实时 03:18 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "US 2Y",
@@ -3637,25 +3637,83 @@ export const events = [
     }
   },
   {
-    "id": "amd-catalyst-2026-11-03",
+    "id": "amd-fy26q3",
     "kind": "earnings",
     "ticker": "AMD",
     "company": "AMD",
-    "title": "AMD 财报",
-    "subtitle": "Q3'26 财报 —— 本轮裁决点",
+    "title": "AMD FY26Q3 财报",
+    "subtitle": "盘后",
     "org": "",
     "date": "2026-11-03T16:05:00-05:00",
-    "dateNote": "日期取自论点卡催化剂,未经公司确认",
-    "dateConfirmed": false,
+    "dateNote": "盘后 16:05 ET",
+    "dateConfirmed": true,
     "importance": 3,
     "tags": [
-      "催化剂"
+      "FY26Q3"
     ],
-    "thesis": "",
-    "expectations": [],
+    "thesis": "隐含波动:±8.22%(去时值 ×0.85)/ ±9.67%(raw),盈亏平衡 $479.91 / $582.65(2026-11-04 到期 ATM 530 跨式中价 51.37 = call 27.00 + put 24.37,表 ⑤,yfinance 2026-10-27 取数,报价为 10-26 收盘后快照) 反应函数一句:近 20 季 beat 率 85%,却beat 后下跌 9 次;近 8 季 beat 率 88%、上涨仅 3/8、次日均值 -3.10%;surprise 与次日涨跌相关 r=0.17 —— EPS 不定价,定价权在下季收入指引与 MI450/Helios 爬坡口径(表 ④) 门槛配置:AMD 不给 EPS 指引 → 四条 bar 只剩三条:卖方一致 1.935(40 家)< 买方 bar 1.982(近 8 季校准)< 卖方最高 2.10。收入侧:公司指引 13.0B ± 0.3B,卖方一致 13.078B(38 家)几乎贴中值、最高值 14.019B 远在指引上沿 13.3B 之上。真正的 bar 在 Q4 指引:卖方对 Q4 收入一致 16.136B(38 家),即环比 +23% —— 市场已经把 MI450 的 Q4 起量写进模型 动作(四选一):财报前不动(已持有、权重 <1%)",
+    "expectations": [
+      {
+        "name": "卖方一致",
+        "consensus": "1.935",
+        "prior": "",
+        "range": "vs 卖方一致 +0.0%",
+        "note": ""
+      },
+      {
+        "name": "买方 bar(历史 beat 分布校准)",
+        "consensus": "1.982",
+        "prior": "",
+        "range": "vs 卖方一致 +2.4%",
+        "note": ""
+      },
+      {
+        "name": "卖方最高值",
+        "consensus": "2.1",
+        "prior": "",
+        "range": "vs 卖方一致 +8.5%",
+        "note": ""
+      },
+      {
+        "name": "下季(FY26Q4) 收入指引中值(十亿美元)",
+        "consensus": "16.1",
+        "prior": "",
+        "range": "利好 16.8 / 利空 15.4",
+        "note": "core · 权重 35%"
+      }
+    ],
     "pricing": [],
-    "scenarios": [],
-    "watch": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "30%",
+        "trigger": "Q4 收入指引中值 ≥16.8B 且 Q4 毛利率指引 ≥56%;重申 2027 数据中心翻倍;EPS 不论",
+        "reaction": "+17.02% · ≈ $621.7"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "35%",
+        "trigger": "Q4 指引中值 15.4–16.8B;毛利率 54–56%;2027 口径维持或含糊;EPS 不论",
+        "reaction": "-1.60% · ≈ $522.8"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "35%",
+        "trigger": "Q4 指引中值 ≤15.4B 或 毛利率 ≤54% 或 不重申 2027 翻倍 —— 即使 EPS 与 Q3 收入 beat",
+        "reaction": "-11.39% · ≈ $470.8"
+      }
+    ],
+    "watch": [
+      "「2027 数据中心翻倍」口径是否重申 — 利好: 书面件或电话会重申 2027 数据中心收入约翻倍(或更强), 并给出 MI450/Helios 出货节奏(Q4 显著放量、2027 再上台阶) — 利空: 不再提 2027 翻倍, 或改为弱化表述(如「strong growth」不给倍数), 或 MI450/Helios 交付推迟 ≥1 季(论点卡 Pillar 1 证伪信号 ①④)",
+      "Q4 收入指引中值 · 预期 16.1B · 利好 ≥16.8B · 利空 ≤15.4B",
+      "Q4 非 GAAP 毛利率指引 · 预期 55% · 利好 ≥56% · 利空 ≤54%",
+      "Q3 收入 · 预期 13.35B · 利好 ≥13.6B · 利空 ≤13.1B",
+      "Q3 数据中心收入 · 预期 7.9B · 利好 ≥8.3B · 利空 ≤7.5B",
+      "2027 数据中心翻倍口径(定性) · 预期 重申 · 利好 重申 + Helios 节奏 · 利空 不提 / 改口"
+    ],
     "actual": [],
     "reaction": [],
     "verdict": "",
@@ -3676,11 +3734,50 @@ export const events = [
         "outcome": "次日 -17.31%（巨 beat >10%）"
       }
     ],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
+    "links": [
+      {
+        "label": "AMD IR",
+        "url": "https://ir.amd.com/"
+      }
+    ],
+    "consensus": {
+      "eps": "$1.935",
+      "rev": "$13.08B",
+      "epsPrior": "",
+      "revPrior": "",
+      "revYoY": "",
+      "note": "买方 bar $1.982"
+    },
+    "segments": [
+      {
+        "name": "下季(FY26Q4) 非 GAAP 毛利率指引(%)",
+        "consensus": "55.0",
+        "prior": "利好 56.0 / 利空 54.0",
+        "note": "权重 15%"
+      },
+      {
+        "name": "本季收入(十亿美元)",
+        "consensus": "13.35",
+        "prior": "利好 13.6 / 利空 13.1",
+        "note": "权重 15%"
+      },
+      {
+        "name": "本季数据中心收入(十亿美元)",
+        "consensus": "7.9",
+        "prior": "利好 8.3 / 利空 7.5",
+        "note": "权重 15%"
+      }
+    ],
+    "guidance": {
+      "company": "待公布",
+      "street": "下季 EPS 一致 $2.647",
+      "note": "比较期间 FY26Q4"
+    },
+    "options": {
+      "iv": "",
+      "impliedMove": "±8.22%",
+      "note": "盈亏平衡 $479.91 / $582.65"
+    },
     "valuation": [
       {
         "name": "基准收盘价",
