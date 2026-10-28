@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-28 00:30 ET · ⚠️ 27 条告警: NFP 日历只剩 38 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-28 06:18 ET · ⚠️ 27 条告警: NFP 日历只剩 37 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,722.60",
     "chg": "+0.60%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 06:18 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,651.4",
     "chg": "+1.29%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 06:18 ET"
   },
   {
     "label": "DXY",
-    "value": "102.43",
-    "chg": "+0.05%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "102.40",
+    "chg": "-0.00%",
+    "dir": "flat",
+    "note": "实时 06:18 ET"
   },
   {
     "label": "黄金",
-    "value": "4,056.20",
-    "chg": "-0.40%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "4,065.40",
+    "chg": "+0.22%",
+    "dir": "up",
+    "note": "实时 06:18 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "101.33",
-    "chg": "+0.98%",
+    "value": "101.61",
+    "chg": "+0.27%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 06:18 ET"
   },
   {
     "label": "BTC",
-    "value": "80,844",
-    "chg": "+0.06%",
+    "value": "81,383",
+    "chg": "+0.72%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 06:18 ET"
   },
   {
     "label": "VIX",
-    "value": "17.52",
-    "chg": "-0.87",
+    "value": "17.49",
+    "chg": "-0.02",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 06:18 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.99%",
     "chg": "+0.7bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 06:18 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.30%",
     "chg": "+0.4bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 06:18 ET"
   },
   {
     "label": "US 2Y",
@@ -84,7 +84,7 @@ export const markets = [
   {
     "label": "10月加息概率",
     "value": "12%",
-    "chg": "一周前 16%",
+    "chg": "一周前 18%",
     "dir": "flat",
     "note": "ZQ 期货自算 · 2026-10-26 ⚠️"
   }
@@ -2439,7 +2439,48 @@ export const events = [
       "Q3 调整后 EBITDA 利润率 · 预期 13.5% · 利好 ≥14.5% · 利空 ≤12.5%",
       "燃气积压 + 预留 GW · 预期 122 · 利好 ≥125 · 利空 ≤119"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "2026 全年收入指引中值(十亿美元)",
+        "actual": "47",
+        "consensus": "46.5",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "2026 全年调整后 EBITDA 利润率指引下沿(%)",
+        "actual": "13.5",
+        "consensus": "12.25",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "Q3 订单(十亿美元)",
+        "actual": "29",
+        "consensus": "20",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "Q3 调整后 EBITDA 利润率(%)",
+        "actual": "15.4",
+        "consensus": "13.5",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "燃气设备积压 + 预留协议(GW)",
+        "actual": "122",
+        "consensus": "122",
+        "prior": "",
+        "surprise": "中性(落在预期附近)",
+        "dir": "flat"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [],
@@ -2447,6 +2488,10 @@ export const events = [
       {
         "label": "GEV IR",
         "url": "https://www.gevernova.com/investors"
+      },
+      {
+        "label": "触发本次对账的 SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GEV&type=8-K&dateb=&owner=include&count=10"
       },
       {
         "label": "gevernova.com",
@@ -2459,10 +2504,6 @@ export const events = [
       {
         "label": "tradingkey.com · 262232910-market-movers-gev-20261022",
         "url": "https://www.tradingkey.com/news/market-movers/262232910-market-movers-gev-20261022"
-      },
-      {
-        "label": "finance.yahoo.com · seeking-clues-ge-vernova-gev-121506359",
-        "url": "https://finance.yahoo.com/markets/stocks/articles/seeking-clues-ge-vernova-gev-121506359.html"
       }
     ],
     "consensus": {
@@ -5965,6 +6006,80 @@ export const events = [
     }
   },
   {
+    "id": "msft-earnings-2027-01-27",
+    "kind": "earnings",
+    "ticker": "MSFT",
+    "company": "MSFT",
+    "title": "MSFT 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2027-01-27T16:05:00-05:00",
+    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-29",
+        "what": "EPS 意外 +11.8% · 实际 4.74 vs 预期 4.24",
+        "outcome": "次日 +15.51%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +4.9% · 实际 4.27 vs 预期 4.07",
+        "outcome": "次日 -3.93%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-01-28",
+        "what": "EPS 意外 +5.7% · 实际 4.14 vs 预期 3.92",
+        "outcome": "次日 -9.99%（大 beat 5–10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$464.72"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$499.00"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$440.07"
+      },
+      {
+        "name": "安全边际",
+        "value": "-5.30%"
+      }
+    ],
+    "targets": {
+      "low": "$342",
+      "avg": "$499",
+      "high": "$616",
+      "n": "本站三情景加权 · 卖方一致 $558.64"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "tsla-earnings-2027-01-27",
     "kind": "earnings",
     "ticker": "TSLA",
@@ -6171,6 +6286,80 @@ export const events = [
         "d": "—",
         "e": "方向对不对"
       }
+    }
+  },
+  {
+    "id": "googl-earnings-2027-02-03",
+    "kind": "earnings",
+    "ticker": "GOOGL",
+    "company": "GOOGL",
+    "title": "GOOGL 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2027-02-03T16:05:00-05:00",
+    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-22",
+        "what": "EPS 意外 +214.2% · 实际 9.11 vs 预期 2.9",
+        "outcome": "次日 -7.13%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +91.6% · 实际 5.11 vs 预期 2.67",
+        "outcome": "次日 +9.96%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-02-04",
+        "what": "EPS 意外 +7.0% · 实际 2.82 vs 预期 2.64",
+        "outcome": "次日 -0.54%（大 beat 5–10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$319.74"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$298.45"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$257.79"
+      },
+      {
+        "name": "安全边际",
+        "value": "-19.38%"
+      }
+    ],
+    "targets": {
+      "low": "$201",
+      "avg": "$298",
+      "high": "$390",
+      "n": "本站三情景加权 · 卖方一致 $430.00"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
     }
   },
   {
