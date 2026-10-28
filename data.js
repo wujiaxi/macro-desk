@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-28 16:00 ET · ⚠️ 27 条告警: NFP 日历只剩 37 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-28 16:02 ET · ⚠️ 27 条告警: NFP 日历只剩 37 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,745.66",
-    "chg": "+0.29%",
+    "value": "7,744.34",
+    "chg": "+0.28%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:02 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,813.2",
     "chg": "+0.55%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:02 ET"
   },
   {
     "label": "DXY",
-    "value": "102.13",
-    "chg": "-0.26%",
+    "value": "102.15",
+    "chg": "-0.25%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:02 ET"
   },
   {
     "label": "黄金",
-    "value": "4,076.50",
-    "chg": "+0.50%",
+    "value": "4,078.90",
+    "chg": "+0.56%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:02 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "102.55",
-    "chg": "+1.19%",
+    "value": "102.53",
+    "chg": "+1.17%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:02 ET"
   },
   {
     "label": "BTC",
-    "value": "81,518",
-    "chg": "+0.89%",
+    "value": "81,699",
+    "chg": "+1.11%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:02 ET"
   },
   {
     "label": "VIX",
-    "value": "16.93",
-    "chg": "-0.58",
+    "value": "16.89",
+    "chg": "-0.62",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:02 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.05%",
     "chg": "+5.2bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:02 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.36%",
     "chg": "+5.6bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:02 ET"
   },
   {
     "label": "US 2Y",
@@ -2775,7 +2775,32 @@ export const events = [
       "本季 Google Cloud 营业利润($M) · 预期 9,000 · 利好 ≥10,000 · 利空 ≤7,800",
       "资本侧:FCF / 回购 / 融资(定性) · 预期 — · 利好 见块 P5 · 利空 见块 P5"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "本季 Google Cloud 收入(百万美元)",
+        "actual": "30,709",
+        "consensus": "28,000",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "本季 Google Search & other 收入(百万美元)",
+        "actual": "63,350",
+        "consensus": "65,600",
+        "prior": "",
+        "surprise": "证伪(触及利空阈值)",
+        "dir": "down"
+      },
+      {
+        "name": "本季 Google Cloud 营业利润(百万美元)",
+        "actual": "11,121",
+        "consensus": "9,000",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [
@@ -2799,6 +2824,10 @@ export const events = [
       {
         "label": "GOOGL IR",
         "url": "https://abc.xyz/investor/"
+      },
+      {
+        "label": "触发本次对账的 SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=GOOGL&type=8-K&dateb=&owner=include&count=10"
       }
     ],
     "consensus": {
@@ -2836,9 +2865,9 @@ export const events = [
       }
     ],
     "guidance": {
-      "company": "待公布",
+      "company": "EPS ⏳ 待法说会",
       "street": "下季 EPS 一致 $3.343",
-      "note": "比较期间"
+      "note": "vs 卖方一致 3.34（—）"
     },
     "options": {
       "iv": "",
