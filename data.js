@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-28 14:00 ET · ⚠️ 27 条告警: NFP 日历只剩 37 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-28 14:02 ET · ⚠️ 27 条告警: NFP 日历只剩 37 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,740.32",
-    "chg": "+0.22%",
+    "value": "7,733.95",
+    "chg": "+0.14%",
     "dir": "up",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:02 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "29,725.0",
-    "chg": "+0.25%",
+    "value": "29,691.2",
+    "chg": "+0.14%",
     "dir": "up",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:02 ET"
   },
   {
     "label": "DXY",
-    "value": "102.31",
-    "chg": "-0.09%",
+    "value": "102.32",
+    "chg": "-0.08%",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:02 ET"
   },
   {
     "label": "黄金",
-    "value": "4,052.70",
-    "chg": "-0.09%",
+    "value": "4,053.30",
+    "chg": "-0.07%",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:02 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "102.85",
-    "chg": "+1.49%",
+    "value": "102.68",
+    "chg": "+1.32%",
     "dir": "up",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:02 ET"
   },
   {
     "label": "BTC",
-    "value": "80,739",
-    "chg": "-0.07%",
+    "value": "80,770",
+    "chg": "-0.04%",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:02 ET"
   },
   {
     "label": "VIX",
-    "value": "17.35",
-    "chg": "-0.16",
+    "value": "17.30",
+    "chg": "-0.21",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:02 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.02%",
     "chg": "+2.9bp",
     "dir": "up",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:02 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.32%",
     "chg": "+1.3bp",
     "dir": "up",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:02 ET"
   },
   {
     "label": "US 2Y",
@@ -2656,9 +2656,18 @@ export const events = [
       "(无 SEP)点阵/实体经济栏 · 预期 本次不发 · 利好 — · 利空 —",
       "资产负债表措辞 · 预期 无变化 · 利好 放缓/停止缩表 · 利空 加速"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "决议(bp,相对 3.75-4.00 区间)",
+        "actual": "0.0",
+        "consensus": "0.0",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      }
+    ],
     "reaction": [],
-    "verdict": "",
+    "verdict": "_(待 10/28 事后填:主导为何赢 / 被压制为何没赢 / 我没列到的。现在写任何字都是预测冒充复盘。)_ 事前已知的三处缺口,落地后必须回头查: 1. 4/12 票无一手表态(Barr / Cook / Jefferson / Powell)。若真出现异议且异议者来自这四人,本卡的票委层等于完全没预测到 —— 那是档案的问题,不是运气。 2. ~~本卡不给期权隐含 move~~ → 10-24 已补:SPY 10/28 当日 σ 1.16% / QQQ 1.90%(10-23 收盘,§2)。落地后用这两个数对账实际波动,不许拿事后波动反推。 3. bar_priced as-of 2026-09-17 建卡时是 2026-09-16 收盘,距会议 42 天。10/28 当天必须用当日 fedfunds_path.py --block 重取一次再对账,否则是拿 6 周前的定价判今天的意外。10-24 已刷新到 10-23 收盘(+2.5bp / P=0.10);10/27 收盘后仍需再取一次。",
     "history": [
       {
         "when": "2026-07-29",
@@ -2684,6 +2693,14 @@ export const events = [
       {
         "label": "官方日程",
         "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+      },
+      {
+        "label": "美联储 · fomcprojtabl20260916",
+        "url": "https://www.federalreserve.gov/monetarypolicy/files/fomcprojtabl20260916.pdf"
+      },
+      {
+        "label": "美联储 · fomc",
+        "url": "https://www.federalreserve.gov/monetarypolicy/fomc.htm"
       }
     ]
   },
