@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-28 16:02 ET · ⚠️ 27 条告警: NFP 日历只剩 37 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-28 16:06 ET · ⚠️ 27 条告警: NFP 日历只剩 37 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,744.34",
-    "chg": "+0.28%",
+    "value": "7,743.98",
+    "chg": "+0.27%",
     "dir": "up",
-    "note": "实时 16:02 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,813.2",
     "chg": "+0.55%",
     "dir": "up",
-    "note": "实时 16:02 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "DXY",
     "value": "102.15",
-    "chg": "-0.25%",
+    "chg": "-0.24%",
     "dir": "down",
-    "note": "实时 16:02 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "黄金",
-    "value": "4,078.90",
-    "chg": "+0.56%",
+    "value": "4,077.90",
+    "chg": "+0.53%",
     "dir": "up",
-    "note": "实时 16:02 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "102.53",
-    "chg": "+1.17%",
+    "value": "102.48",
+    "chg": "+1.12%",
     "dir": "up",
-    "note": "实时 16:02 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "BTC",
-    "value": "81,699",
-    "chg": "+1.11%",
+    "value": "81,461",
+    "chg": "+0.82%",
     "dir": "up",
-    "note": "实时 16:02 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "VIX",
-    "value": "16.89",
-    "chg": "-0.62",
+    "value": "16.82",
+    "chg": "-0.69",
     "dir": "down",
-    "note": "实时 16:02 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.05%",
     "chg": "+5.2bp",
     "dir": "up",
-    "note": "实时 16:02 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.36%",
     "chg": "+5.6bp",
     "dir": "up",
-    "note": "实时 16:02 ET"
+    "note": "实时 16:06 ET"
   },
   {
     "label": "US 2Y",
@@ -2975,7 +2975,16 @@ export const events = [
       "本季自由现金流 · 预期 $12B · 利好 ≥$18B · 利空 ≤$5B",
       "capex / ROI 口径(定性) · 预期 — · 利好 见块 P6 · 利空 见块 P6"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "商业 RPO 余额(十亿美元)",
+        "actual": "677",
+        "consensus": "710",
+        "prior": "",
+        "surprise": "证伪(触及利空阈值)",
+        "dir": "down"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [
@@ -2999,6 +3008,10 @@ export const events = [
       {
         "label": "MSFT IR",
         "url": "https://www.microsoft.com/en-us/investor/earnings/FY-2027-Q1/press-release-webcast"
+      },
+      {
+        "label": "触发本次对账的 SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=MSFT&type=8-K&dateb=&owner=include&count=10"
       }
     ],
     "consensus": {
@@ -3042,9 +3055,9 @@ export const events = [
       }
     ],
     "guidance": {
-      "company": "待公布",
+      "company": "EPS ⏳ 待法说会",
       "street": "下季 EPS 一致 $4.815",
-      "note": "比较期间 FY27Q2"
+      "note": "vs 卖方一致 4.82（—）"
     },
     "options": {
       "iv": "",
