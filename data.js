@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-29 07:00 ET · ⚠️ 28 条告警: NFP 日历只剩 36 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-29 07:06 ET · ⚠️ 28 条告警: NFP 日历只剩 36 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,743.98",
     "chg": "+0.27%",
     "dir": "up",
-    "note": "实时 07:00 ET"
+    "note": "实时 07:06 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,813.2",
     "chg": "+0.55%",
     "dir": "up",
-    "note": "实时 07:00 ET"
+    "note": "实时 07:06 ET"
   },
   {
     "label": "DXY",
     "value": "102.17",
     "chg": "+0.00%",
     "dir": "flat",
-    "note": "实时 07:00 ET"
+    "note": "实时 07:06 ET"
   },
   {
     "label": "黄金",
-    "value": "4,039.30",
-    "chg": "-0.29%",
+    "value": "4,041.80",
+    "chg": "-0.23%",
     "dir": "down",
-    "note": "实时 07:00 ET"
+    "note": "实时 07:06 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "101.48",
-    "chg": "+0.06%",
-    "dir": "up",
-    "note": "实时 07:00 ET"
+    "value": "101.32",
+    "chg": "-0.10%",
+    "dir": "down",
+    "note": "实时 07:06 ET"
   },
   {
     "label": "BTC",
-    "value": "80,186",
-    "chg": "-1.31%",
+    "value": "80,080",
+    "chg": "-1.44%",
     "dir": "down",
-    "note": "实时 07:00 ET"
+    "note": "实时 07:06 ET"
   },
   {
     "label": "VIX",
-    "value": "17.14",
-    "chg": "+0.25",
+    "value": "17.00",
+    "chg": "+0.11",
     "dir": "up",
-    "note": "实时 07:00 ET"
+    "note": "实时 07:06 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.05%",
     "chg": "+5.2bp",
     "dir": "up",
-    "note": "实时 07:00 ET"
+    "note": "实时 07:06 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.36%",
     "chg": "+5.6bp",
     "dir": "up",
-    "note": "实时 07:00 ET"
+    "note": "实时 07:06 ET"
   },
   {
     "label": "US 2Y",
@@ -3235,7 +3235,40 @@ export const events = [
       "Zepbound 收入(百万美元) · 预期 5,300 · 利好 ≥ 5,800 · 利空 ≤ 4,900",
       "价格与 2027 措辞(定性) · 预期 — · 利好 见 P5.bull_if · 利空 见 P5.bear_if"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "2026 全年收入指引中值(十亿美元)",
+        "actual": "48.25",
+        "consensus": "88.5",
+        "prior": "",
+        "surprise": "证伪(触及利空阈值)",
+        "dir": "down"
+      },
+      {
+        "name": "Q3 总收入(百万美元)",
+        "actual": "24,397",
+        "consensus": "22,615",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "Mounjaro 全球收入(百万美元)",
+        "actual": "10,723",
+        "consensus": "10,500",
+        "prior": "",
+        "surprise": "中性偏好",
+        "dir": "up"
+      },
+      {
+        "name": "Zepbound 美国收入(百万美元)",
+        "actual": "5,352",
+        "consensus": "5,300",
+        "prior": "",
+        "surprise": "中性(落在预期附近)",
+        "dir": "flat"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [],
@@ -3243,6 +3276,10 @@ export const events = [
       {
         "label": "LLY IR",
         "url": "https://investor.lilly.com/financial-information/quarterly-results"
+      },
+      {
+        "label": "触发本次对账的 SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=LLY&type=8-K&dateb=&owner=include&count=10"
       },
       {
         "label": "finviz.com",
