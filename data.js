@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-29 16:00 ET · ⚠️ 30 条告警: NFP 日历只剩 36 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-29 16:08 ET · ⚠️ 30 条告警: NFP 日历只剩 36 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,721.04",
-    "chg": "-0.35%",
+    "value": "7,720.39",
+    "chg": "-0.36%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:08 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "29,407.0",
-    "chg": "-1.41%",
+    "value": "29,402.5",
+    "chg": "-1.43%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:08 ET"
   },
   {
     "label": "DXY",
-    "value": "102.01",
-    "chg": "-0.16%",
+    "value": "102.04",
+    "chg": "-0.12%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:08 ET"
   },
   {
     "label": "黄金",
-    "value": "4,031.50",
-    "chg": "-0.48%",
+    "value": "4,033.40",
+    "chg": "-0.44%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:08 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "102.41",
-    "chg": "+0.98%",
+    "value": "102.72",
+    "chg": "+1.28%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:08 ET"
   },
   {
     "label": "BTC",
-    "value": "80,750",
-    "chg": "-0.61%",
+    "value": "80,213",
+    "chg": "-1.27%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:08 ET"
   },
   {
     "label": "VIX",
-    "value": "16.62",
-    "chg": "-0.27",
+    "value": "16.50",
+    "chg": "-0.39",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:08 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.99%",
     "chg": "-5.6bp",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:08 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.33%",
     "chg": "-3.2bp",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:08 ET"
   },
   {
     "label": "US 2Y",
@@ -3399,7 +3399,40 @@ export const events = [
       "Q3 营业利润($B) · 预期 27.0 · 利好 ≥ 28.5 · 利空 ≤ 25.0",
       "capex / FCF / 融资口径 · 预期 定性 · 利好 见 P5 · 利空 见 P5"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "Q4 净销售额指引中值(十亿美元)",
+        "actual": "243.5",
+        "consensus": "242",
+        "prior": "",
+        "surprise": "中性偏好",
+        "dir": "up"
+      },
+      {
+        "name": "本季 AWS 收入同比(%)",
+        "actual": "39",
+        "consensus": "37",
+        "prior": "",
+        "surprise": "中性偏好",
+        "dir": "up"
+      },
+      {
+        "name": "Q4 营业利润指引中值(十亿美元)",
+        "actual": "31",
+        "consensus": "28",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "本季营业利润(十亿美元)",
+        "actual": "28.1",
+        "consensus": "27",
+        "prior": "",
+        "surprise": "中性偏好",
+        "dir": "up"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [
@@ -3423,6 +3456,10 @@ export const events = [
       {
         "label": "AMZN IR",
         "url": "https://ir.aboutamazon.com"
+      },
+      {
+        "label": "触发本次对账的 SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AMZN&type=8-K&dateb=&owner=include&count=10"
       }
     ],
     "consensus": {
@@ -3454,9 +3491,9 @@ export const events = [
       }
     ],
     "guidance": {
-      "company": "待公布",
+      "company": "EPS ⏳ 待法说会",
       "street": "下季 EPS 一致 $2.451",
-      "note": "比较期间 FY26Q4"
+      "note": "vs 卖方一致 2.45（—）"
     },
     "options": {
       "iv": "",
