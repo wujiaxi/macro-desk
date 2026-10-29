@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-29 14:30 ET · ⚠️ 30 条告警: NFP 日历只剩 36 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-29 14:47 ET · ⚠️ 30 条告警: NFP 日历只剩 36 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,698.43",
-    "chg": "-0.64%",
+    "value": "7,695.08",
+    "chg": "-0.68%",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:47 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "29,314.5",
-    "chg": "-1.72%",
+    "value": "29,284.3",
+    "chg": "-1.82%",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:47 ET"
   },
   {
     "label": "DXY",
-    "value": "101.97",
-    "chg": "-0.19%",
+    "value": "102.02",
+    "chg": "-0.14%",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:47 ET"
   },
   {
     "label": "黄金",
-    "value": "4,020.10",
-    "chg": "-0.77%",
+    "value": "4,019.60",
+    "chg": "-0.78%",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:47 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "101.99",
-    "chg": "+0.56%",
+    "value": "102.11",
+    "chg": "+0.68%",
     "dir": "up",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:47 ET"
   },
   {
     "label": "BTC",
-    "value": "80,686",
-    "chg": "-0.69%",
+    "value": "80,556",
+    "chg": "-0.85%",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:47 ET"
   },
   {
     "label": "VIX",
-    "value": "16.82",
-    "chg": "-0.07",
-    "dir": "down",
-    "note": "实时 14:30 ET"
+    "value": "17.03",
+    "chg": "+0.14",
+    "dir": "up",
+    "note": "实时 14:47 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.99%",
-    "chg": "-5.8bp",
+    "chg": "-5.6bp",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:47 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.33%",
-    "chg": "-3.5bp",
+    "chg": "-3.4bp",
     "dir": "down",
-    "note": "实时 14:30 ET"
+    "note": "实时 14:47 ET"
   },
   {
     "label": "US 2Y",
@@ -3260,7 +3260,7 @@ export const events = [
       }
     ],
     "reaction": [],
-    "verdict": "",
+    "verdict": "我错在哪(整体): 反应函数要不要改:不改。这季证实了既有的反应函数(EPS 不定价、全年收入指引定价、波动制度约 ±8%),不是反例。另外只有一季,反应日也还没收盘,不满足「连续两季同向偏差」。下一季要观察一个候选变量:「新收入指引中值 - 卖方全年一致」的差是不是比 EPS surprise 更能解释次日涨跌(本季约 +2.8B)。连续两季成立再写进反应函数。情景锚点也不改:§8.5 提示 Bear -9.12% 比面板同桶 10 分位还极端,但本票近 8 季有过 -14.1% 和 -11%,面板里也没有 LLY,保留 是否同步 thesis 卡:目前无卡可同步(~/thesis/LLY.md 不存在,已核),所以没有催化剂归档表或 pillar 可更新。按 §9 事前约定「收入指引中值 ≥ 89.5B → 建议立卡」,本季实际约 91.5B,已满足条件,建议用 /equity-research LLY 立卡。立卡时把本季的三条事实写进催化剂归档:指引中值 +5.5B、量 +53% / 价 -15%、IPR&D 4.57 美元把全年 EPS 指引压低 0.50。本 skill 不改目标价,本次也不替你自动立卡",
     "history": [],
     "links": [
       {
