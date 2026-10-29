@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-29 00:30 ET · ⚠️ 28 条告警: NFP 日历只剩 37 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-29 07:00 ET · ⚠️ 28 条告警: NFP 日历只剩 36 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,743.98",
     "chg": "+0.27%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 07:00 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "29,813.2",
     "chg": "+0.55%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 07:00 ET"
   },
   {
     "label": "DXY",
-    "value": "102.16",
-    "chg": "+0.08%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "102.17",
+    "chg": "+0.00%",
+    "dir": "flat",
+    "note": "实时 07:00 ET"
   },
   {
     "label": "黄金",
-    "value": "4,049.80",
-    "chg": "-0.36%",
+    "value": "4,039.30",
+    "chg": "-0.29%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 07:00 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "101.46",
-    "chg": "-0.13%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "101.48",
+    "chg": "+0.06%",
+    "dir": "up",
+    "note": "实时 07:00 ET"
   },
   {
     "label": "BTC",
-    "value": "79,802",
-    "chg": "-1.78%",
+    "value": "80,186",
+    "chg": "-1.31%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 07:00 ET"
   },
   {
     "label": "VIX",
-    "value": "16.91",
-    "chg": "-0.60",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "17.14",
+    "chg": "+0.25",
+    "dir": "up",
+    "note": "实时 07:00 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.05%",
     "chg": "+5.2bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 07:00 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.36%",
     "chg": "+5.6bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 07:00 ET"
   },
   {
     "label": "US 2Y",
@@ -2481,7 +2481,23 @@ export const events = [
         "dir": "flat"
       }
     ],
-    "reaction": [],
+    "reaction": [
+      {
+        "asset": "S&P 500",
+        "d0": "+0.28%",
+        "d1": ""
+      },
+      {
+        "asset": "纳斯达克100",
+        "d0": "+0.55%",
+        "d1": ""
+      },
+      {
+        "asset": "DXY",
+        "d0": "-0.13%",
+        "d1": ""
+      }
+    ],
     "verdict": "我错在哪(整体): 反应函数要不要改:反应函数本身不改:-1.91% 在隐含区间内,不是尾部事件;上季 -8.69% 是真 EBITDA miss,本季是 beat 后下跌,两季下跌的原因不同,不算「连续两季同向偏差」。改的是建卡流程,不是反应函数:① BMO 财报的 base_close / runup_21d 必须在 T-1 收盘后再刷新一次,并在一屏结论里写「刷新后至今涨了多少、Bull 价位还剩多少空间」—— 若 T-1 收盘已接近 Bull 价位,Bull 的概率或幅度必须下调;② 订单类与「积压 + 预留」类论点要声明是否共享同一批 GW,共享则合并或改追「季度新签 GW」;③ 定性 bear_if 要写幅度门槛(如「风电亏损指引上沿扩大 ≥ 150M」),不写「> X」。暂把 GEV 反应函数补一句:「全面 beat + 全年上调」在财报前已反弹约 10% 时不保证上涨 —— 待下一季验证再决定是否写成规律 是否同步 thesis 卡:不同步,不新建。GEV 无 ~/thesis/GEV.md 论点卡(~/watchlist.txt 状态 watch,本账户空仓),没有可回写的催化剂归档表或 pillar。本次结论留在本卡;若要立卡,走 /thesis-tracker,目标价走 /equity-research。§1 空仓者的条件按事前写死的执行:EBITDA 利润率 15.4% ≥14.5% 且收入指引中值 47.0 ≥47.0 两条都满足,但事前附加的价格条件(收盘站上 SMA200 / 回补 10-22 缺口 925.92)未满足 —— 10-28 收 878.03,自算 SMA200 941.50 → 不建仓,继续观望",
     "history": [],
     "links": [
@@ -2666,7 +2682,23 @@ export const events = [
         "dir": "flat"
       }
     ],
-    "reaction": [],
+    "reaction": [
+      {
+        "asset": "S&P 500",
+        "d0": "+0.28%",
+        "d1": ""
+      },
+      {
+        "asset": "纳斯达克100",
+        "d0": "+0.55%",
+        "d1": ""
+      },
+      {
+        "asset": "DXY",
+        "d0": "-0.13%",
+        "d1": ""
+      }
+    ],
     "verdict": "_(待 10/28 事后填:主导为何赢 / 被压制为何没赢 / 我没列到的。现在写任何字都是预测冒充复盘。)_ 事前已知的三处缺口,落地后必须回头查: 1. 4/12 票无一手表态(Barr / Cook / Jefferson / Powell)。若真出现异议且异议者来自这四人,本卡的票委层等于完全没预测到 —— 那是档案的问题,不是运气。 2. ~~本卡不给期权隐含 move~~ → 10-24 已补:SPY 10/28 当日 σ 1.16% / QQQ 1.90%(10-23 收盘,§2)。落地后用这两个数对账实际波动,不许拿事后波动反推。 3. bar_priced as-of 2026-09-17 建卡时是 2026-09-16 收盘,距会议 42 天。10/28 当天必须用当日 fedfunds_path.py --block 重取一次再对账,否则是拿 6 周前的定价判今天的意外。10-24 已刷新到 10-23 收盘(+2.5bp / P=0.10);10/27 收盘后仍需再取一次。",
     "history": [
       {
@@ -2801,7 +2833,23 @@ export const events = [
         "dir": "up"
       }
     ],
-    "reaction": [],
+    "reaction": [
+      {
+        "asset": "S&P 500",
+        "d0": "+0.28%",
+        "d1": ""
+      },
+      {
+        "asset": "纳斯达克100",
+        "d0": "+0.55%",
+        "d1": ""
+      },
+      {
+        "asset": "DXY",
+        "d0": "-0.13%",
+        "d1": ""
+      }
+    ],
     "verdict": "",
     "history": [
       {
@@ -2985,7 +3033,23 @@ export const events = [
         "dir": "down"
       }
     ],
-    "reaction": [],
+    "reaction": [
+      {
+        "asset": "S&P 500",
+        "d0": "+0.28%",
+        "d1": ""
+      },
+      {
+        "asset": "纳斯达克100",
+        "d0": "+0.55%",
+        "d1": ""
+      },
+      {
+        "asset": "DXY",
+        "d0": "-0.13%",
+        "d1": ""
+      }
+    ],
     "verdict": "",
     "history": [
       {
@@ -6213,6 +6277,80 @@ export const events = [
     }
   },
   {
+    "id": "aapl-earnings-2027-01-28",
+    "kind": "earnings",
+    "ticker": "AAPL",
+    "company": "AAPL",
+    "title": "AAPL 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2027-01-28T16:05:00-05:00",
+    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-30",
+        "what": "EPS 意外 +6.7% · 实际 2.02 vs 预期 1.89",
+        "outcome": "次日 -7.35%（大 beat 5–10%）"
+      },
+      {
+        "when": "2026-04-30",
+        "what": "EPS 意外 +3.5% · 实际 2.01 vs 预期 1.94",
+        "outcome": "次日 +3.24%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-01-29",
+        "what": "EPS 意外 +6.3% · 实际 2.84 vs 预期 2.67",
+        "outcome": "次日 +0.46%（大 beat 5–10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$307.12"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$279.95"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$238.08"
+      },
+      {
+        "name": "安全边际",
+        "value": "-22.48%"
+      }
+    ],
+    "targets": {
+      "low": "$205",
+      "avg": "$280",
+      "high": "$345",
+      "n": "本站三情景加权 · 卖方一致 $321.57"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "rebal-flow-window-2027-01-29-all",
     "kind": "macro",
     "ticker": "",
@@ -6348,6 +6486,42 @@ export const events = [
     }
   },
   {
+    "id": "lly-earnings-2027-02-03",
+    "kind": "earnings",
+    "ticker": "LLY",
+    "company": "LLY",
+    "title": "LLY 财报",
+    "subtitle": "盘前",
+    "org": "",
+    "date": "2027-02-03T07:00:00-05:00",
+    "dateNote": "盘前 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
     "id": "googl-earnings-2027-02-03",
     "kind": "earnings",
     "ticker": "GOOGL",
@@ -6415,6 +6589,80 @@ export const events = [
       "avg": "$298",
       "high": "$390",
       "n": "本站三情景加权 · 卖方一致 $430.00"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "amzn-earnings-2027-02-04",
+    "kind": "earnings",
+    "ticker": "AMZN",
+    "company": "AMZN",
+    "title": "AMZN 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2027-02-04T16:05:00-05:00",
+    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-30",
+        "what": "EPS 意外 +215.0% · 实际 5.75 vs 预期 1.83",
+        "outcome": "次日 +15.32%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +68.2% · 实际 2.78 vs 预期 1.65",
+        "outcome": "次日 +0.77%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-02-05",
+        "what": "EPS 意外 +0.2% · 实际 1.95 vs 预期 1.95",
+        "outcome": "次日 -5.55%（小 beat 0–2%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$271.58"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$273.97"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$208.21"
+      },
+      {
+        "name": "安全边际",
+        "value": "-23.33%"
+      }
+    ],
+    "targets": {
+      "low": "$175",
+      "avg": "$274",
+      "high": "$353",
+      "n": "本站三情景加权 · 卖方一致 $330.00"
     },
     "afterHours": {
       "move": "",
