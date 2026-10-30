@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-10-30 10:00 ET · ⚠️ 30 条告警: NFP 日历只剩 35 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-10-30 10:23 ET · ⚠️ 30 条告警: NFP 日历只剩 35 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,80 +13,80 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,634.55",
-    "chg": "-1.12%",
+    "value": "7,602.10",
+    "chg": "-1.54%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "28,699.5",
-    "chg": "-2.41%",
+    "value": "28,509.4",
+    "chg": "-3.05%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "DXY",
-    "value": "101.98",
-    "chg": "+0.21%",
+    "value": "102.04",
+    "chg": "+0.27%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "黄金",
-    "value": "3,932.70",
-    "chg": "-1.78%",
+    "value": "3,914.60",
+    "chg": "-2.23%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "103.95",
-    "chg": "+0.76%",
+    "value": "104.49",
+    "chg": "+1.28%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "BTC",
-    "value": "76,966",
-    "chg": "-1.06%",
+    "value": "76,699",
+    "chg": "-1.41%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "VIX",
-    "value": "18.99",
-    "chg": "+1.78",
+    "value": "18.85",
+    "chg": "+1.64",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.93%",
-    "chg": "-5.8bp",
+    "value": "4.94%",
+    "chg": "-4.8bp",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.30%",
-    "chg": "-3.3bp",
+    "value": "5.31%",
+    "chg": "-2.2bp",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.67%",
     "chg": "-3.0bp",
     "dir": "down",
-    "note": "as-of 2026-10-28 · 2s10s +38bp"
+    "note": "as-of 2026-10-28 · 2s10s +37bp"
   },
   {
     "label": "12月加息概率",
-    "value": "85%",
+    "value": "79%",
     "chg": "",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-10-28"
+    "note": "ZQ 期货自算 · 2026-10-29"
   }
 ];
 
@@ -3260,7 +3260,7 @@ export const events = [
       }
     ],
     "reaction": [],
-    "verdict": "我错在哪(整体): 反应函数要不要改:不改。这季证实了既有的反应函数(EPS 不定价、全年收入指引定价、波动制度约 ±8%),不是反例。另外只有一季,反应日也还没收盘,不满足「连续两季同向偏差」。下一季要观察一个候选变量:「新收入指引中值 - 卖方全年一致」的差是不是比 EPS surprise 更能解释次日涨跌(本季约 +2.8B)。连续两季成立再写进反应函数。情景锚点也不改:§8.5 提示 Bear -9.12% 比面板同桶 10 分位还极端,但本票近 8 季有过 -14.1% 和 -11%,面板里也没有 LLY,保留 是否同步 thesis 卡:目前无卡可同步(~/thesis/LLY.md 不存在,已核),所以没有催化剂归档表或 pillar 可更新。按 §9 事前约定「收入指引中值 ≥ 89.5B → 建议立卡」,本季实际约 91.5B,已满足条件,建议用 /equity-research LLY 立卡。立卡时把本季的三条事实写进催化剂归档:指引中值 +5.5B、量 +53% / 价 -15%、IPR&D 4.57 美元把全年 EPS 指引压低 0.50。本 skill 不改目标价,本次也不替你自动立卡",
+    "verdict": "",
     "history": [],
     "links": [
       {
@@ -3317,8 +3317,8 @@ export const events = [
     "valuation": [],
     "targets": {},
     "afterHours": {
-      "move": "",
-      "note": ""
+      "move": "+6.63%",
+      "note": "- 实际次日反应 +6.63%(基准收盘 1288.3 → 1373.71) - 隐含区间 ±6.4%(1178.37 / 1363.13) → 实际 落在区间外 → 🔴 事件定价失败,必须追问是哪个变量没被 price in - 卡片内插预期 -2.59% vs 实际 +6.63%,误差 +9.22% → 方向判错"
     }
   },
   {
@@ -3525,8 +3525,8 @@ export const events = [
       "n": "本站三情景加权 · 卖方一致 $330.00"
     },
     "afterHours": {
-      "move": "",
-      "note": ""
+      "move": "-3.31%",
+      "note": "- 实际次日反应 -3.31%(基准收盘 243.79 → 235.72) - 隐含区间 ±6.6%(230.9 / 269.86) → 实际 落在区间内 - 卡片内插预期 +8.12% vs 实际 -3.31%,误差 -11.43% → 方向判错"
     }
   },
   {
@@ -6193,19 +6193,19 @@ export const events = [
     }
   },
   {
-    "id": "msft-earnings-2027-01-27",
+    "id": "msft-catalyst-2027-01-27",
     "kind": "earnings",
     "ticker": "MSFT",
     "company": "MSFT",
     "title": "MSFT 财报",
-    "subtitle": "盘后",
+    "subtitle": "FQ2'27 财报(下一个裁决日)",
     "org": "",
     "date": "2027-01-27T16:05:00-05:00",
-    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "dateNote": "日期取自论点卡催化剂,未经公司确认",
     "dateConfirmed": false,
     "importance": 3,
     "tags": [
-      "推算日期"
+      "催化剂"
     ],
     "thesis": "",
     "expectations": [],
