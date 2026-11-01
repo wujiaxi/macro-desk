@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-01 02:23 ET · ⚠️ 32 条告警: NFP 日历只剩 33 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-11-01 10:20 ET · ⚠️ 32 条告警: NFP 日历只剩 33 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,580.07",
     "chg": "-1.83%",
     "dir": "down",
-    "note": "实时 02:23 ET"
+    "note": "实时 10:19 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "28,384.8",
     "chg": "-3.48%",
     "dir": "down",
-    "note": "实时 02:23 ET"
+    "note": "实时 10:19 ET"
   },
   {
     "label": "DXY",
     "value": "101.96",
     "chg": "+0.19%",
     "dir": "up",
-    "note": "实时 02:23 ET"
+    "note": "实时 10:19 ET"
   },
   {
     "label": "黄金",
     "value": "3,898.90",
     "chg": "-2.62%",
     "dir": "down",
-    "note": "实时 02:23 ET"
+    "note": "实时 10:19 ET"
   },
   {
     "label": "WTI 原油",
     "value": "104.12",
     "chg": "+0.92%",
     "dir": "up",
-    "note": "实时 02:23 ET"
+    "note": "实时 10:20 ET"
   },
   {
     "label": "BTC",
-    "value": "77,695",
-    "chg": "+0.35%",
+    "value": "77,939",
+    "chg": "+0.67%",
     "dir": "up",
-    "note": "实时 02:23 ET"
+    "note": "实时 10:20 ET"
   },
   {
     "label": "VIX",
     "value": "19.42",
     "chg": "+2.21",
     "dir": "up",
-    "note": "实时 02:23 ET"
+    "note": "实时 10:20 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.93%",
     "chg": "-6.0bp",
     "dir": "down",
-    "note": "实时 02:23 ET"
+    "note": "实时 10:20 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.31%",
     "chg": "-2.0bp",
     "dir": "down",
-    "note": "实时 02:23 ET"
+    "note": "实时 10:20 ET"
   },
   {
     "label": "US 2Y",
@@ -3704,6 +3704,80 @@ export const events = [
       "avg": "$280",
       "high": "$345",
       "n": "本站三情景加权 · 卖方一致 $321.57"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "amzn-catalyst-2026-11-02",
+    "kind": "earnings",
+    "ticker": "AMZN",
+    "company": "AMZN",
+    "title": "AMZN 财报",
+    "subtitle": "财报 T+2(反应窗口第二天)",
+    "org": "",
+    "date": "2026-11-02T16:05:00-05:00",
+    "dateNote": "日期取自论点卡催化剂,未经公司确认",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "催化剂"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-30",
+        "what": "EPS 意外 +215.0% · 实际 5.75 vs 预期 1.83",
+        "outcome": "次日 +15.32%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-04-29",
+        "what": "EPS 意外 +68.2% · 实际 2.78 vs 预期 1.65",
+        "outcome": "次日 +0.77%（巨 beat >10%）"
+      },
+      {
+        "when": "2026-02-05",
+        "what": "EPS 意外 +0.2% · 实际 1.95 vs 预期 1.95",
+        "outcome": "次日 -5.55%（小 beat 0–2%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$240.35"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$260.88"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$218.79"
+      },
+      {
+        "name": "安全边际",
+        "value": "-8.97%"
+      }
+    ],
+    "targets": {
+      "low": "$163",
+      "avg": "$261",
+      "high": "$348",
+      "n": "本站三情景加权 · 卖方一致 $330.00"
     },
     "afterHours": {
       "move": "",
