@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-02 16:30 ET · ⚠️ 32 条告警: NFP 日历只剩 32 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-11-02 16:34 ET · ⚠️ 32 条告警: NFP 日历只剩 32 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,541.40",
     "chg": "-0.52%",
     "dir": "down",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:34 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "27,989.8",
     "chg": "-1.39%",
     "dir": "down",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:34 ET"
   },
   {
     "label": "DXY",
     "value": "101.77",
-    "chg": "-0.13%",
+    "chg": "-0.12%",
     "dir": "down",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:34 ET"
   },
   {
     "label": "黄金",
-    "value": "3,954.50",
-    "chg": "+1.14%",
+    "value": "3,955.10",
+    "chg": "+1.15%",
     "dir": "up",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:34 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "96.10",
-    "chg": "-4.64%",
+    "value": "96.01",
+    "chg": "-4.73%",
     "dir": "down",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:34 ET"
   },
   {
     "label": "BTC",
-    "value": "76,660",
-    "chg": "-2.00%",
+    "value": "76,688",
+    "chg": "-1.97%",
     "dir": "down",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:34 ET"
   },
   {
     "label": "VIX",
     "value": "21.15",
     "chg": "+1.71",
     "dir": "up",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:34 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.89%",
     "chg": "-3.5bp",
     "dir": "down",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:34 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.27%",
     "chg": "-4.0bp",
     "dir": "down",
-    "note": "实时 16:30 ET"
+    "note": "实时 16:34 ET"
   },
   {
     "label": "US 2Y",
@@ -3617,7 +3617,24 @@ export const events = [
       "本季 iPhone 收入($M) · 预期 56,400(+15.0%) · 利好 ≥ 57,600 · 利空 ≤ 55,100",
       "内存成本 / 毛利率走向口径(定性) · 预期 — · 利好 见块 P5 · 利空 见块 P5"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "本季 Services 收入(百万美元)",
+        "actual": "31,573",
+        "consensus": "31,500",
+        "prior": "",
+        "surprise": "中性偏好",
+        "dir": "up"
+      },
+      {
+        "name": "本季 iPhone 收入(百万美元)",
+        "actual": "57,583",
+        "consensus": "56,400",
+        "prior": "",
+        "surprise": "中性偏好",
+        "dir": "up"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [
@@ -3641,6 +3658,10 @@ export const events = [
       {
         "label": "AAPL IR",
         "url": "https://investor.apple.com/"
+      },
+      {
+        "label": "触发本次对账的 SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AAPL&type=8-K&dateb=&owner=include&count=10"
       }
     ],
     "consensus": {
@@ -3672,9 +3693,9 @@ export const events = [
       }
     ],
     "guidance": {
-      "company": "待公布",
+      "company": "EPS ⏳ 待法说会",
       "street": "下季 EPS 一致 $2.895",
-      "note": "比较期间 FY27Q1"
+      "note": "vs 卖方一致 2.9（—）"
     },
     "options": {
       "iv": "",
