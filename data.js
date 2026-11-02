@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-02 17:00 ET · ⚠️ 32 条告警: NFP 日历只剩 32 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-11-02 17:30 ET · ⚠️ 32 条告警: NFP 日历只剩 32 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,541.40",
     "chg": "-0.52%",
     "dir": "down",
-    "note": "实时 17:00 ET"
+    "note": "实时 17:30 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "27,989.8",
     "chg": "-1.39%",
     "dir": "down",
-    "note": "实时 17:00 ET"
+    "note": "实时 17:30 ET"
   },
   {
     "label": "DXY",
     "value": "101.78",
     "chg": "-0.12%",
     "dir": "down",
-    "note": "实时 17:00 ET"
+    "note": "实时 17:30 ET"
   },
   {
     "label": "黄金",
-    "value": "3,957.00",
-    "chg": "+1.20%",
+    "value": "3,956.60",
+    "chg": "+1.19%",
     "dir": "up",
-    "note": "实时 17:00 ET"
+    "note": "实时 17:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "96.21",
-    "chg": "-4.53%",
+    "value": "96.26",
+    "chg": "-4.49%",
     "dir": "down",
-    "note": "实时 17:00 ET"
+    "note": "实时 17:30 ET"
   },
   {
     "label": "BTC",
-    "value": "76,703",
-    "chg": "-1.95%",
+    "value": "76,706",
+    "chg": "-1.94%",
     "dir": "down",
-    "note": "实时 17:00 ET"
+    "note": "实时 17:30 ET"
   },
   {
     "label": "VIX",
     "value": "21.15",
     "chg": "+1.71",
     "dir": "up",
-    "note": "实时 17:00 ET"
+    "note": "实时 17:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.89%",
     "chg": "-3.5bp",
     "dir": "down",
-    "note": "实时 17:00 ET"
+    "note": "实时 17:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.27%",
     "chg": "-4.0bp",
     "dir": "down",
-    "note": "实时 17:00 ET"
+    "note": "实时 17:30 ET"
   },
   {
     "label": "US 2Y",
@@ -3386,23 +3386,7 @@ export const events = [
       "⚠️ 资金流规模若无一手来源,写「未取到」,不许编"
     ],
     "expectations": [],
-    "pricing": [
-      {
-        "name": "本月至今 · 标普 500 ETF(含息)",
-        "value": "-0.91%",
-        "note": "2026-09-30 → 2026-10-30 收盘"
-      },
-      {
-        "name": "本月至今 · 美国综合债 ETF",
-        "value": "+2.29%",
-        "note": "2026-09-30 → 2026-10-30 收盘"
-      },
-      {
-        "name": "60/40 组合股票超配",
-        "value": "-0.76pp",
-        "note": "期初调回 60/40 的示意口径 → 偏「卖债买股」"
-      }
-    ],
+    "pricing": [],
     "scenarios": [],
     "actual": [],
     "reaction": [
@@ -4262,9 +4246,19 @@ export const events = [
     "expectations": [],
     "pricing": [
       {
-        "name": "本月漂移",
-        "value": "—",
-        "note": "这一月还没开始,上一个月末收盘后才起算"
+        "name": "本月至今 · 标普 500 ETF(含息)",
+        "value": "-0.48%",
+        "note": "2026-10-30 → 2026-11-02 收盘"
+      },
+      {
+        "name": "本月至今 · 美国综合债 ETF",
+        "value": "-0.21%",
+        "note": "2026-10-30 → 2026-11-02 收盘"
+      },
+      {
+        "name": "60/40 组合股票超配",
+        "value": "-0.07pp",
+        "note": "期初调回 60/40 的示意口径 → 偏「卖债买股」"
       }
     ],
     "scenarios": [],
@@ -4515,8 +4509,8 @@ export const events = [
       {
         "name": "FIG",
         "consensus": "不够格",
-        "prior": "$11.5B",
-        "range": "自由流通 $5.8B · 流动性 16.39",
+        "prior": "$11.8B",
+        "range": "自由流通 $5.9B · 流动性 15.97",
         "note": "已核门槛不过:公司市值 ≥ $22.7B、自由流通市值 ≥ $11.35B"
       },
       {
@@ -4529,8 +4523,8 @@ export const events = [
       {
         "name": "AMKR",
         "consensus": "不够格",
-        "prior": "$9.8B",
-        "range": "自由流通 $4.5B · 流动性 14.46",
+        "prior": "$9.2B",
+        "range": "自由流通 $4.2B · 流动性 15.48",
         "note": "已核门槛不过:公司市值 ≥ $22.7B、自由流通市值 ≥ $11.35B"
       },
       {
@@ -4543,8 +4537,8 @@ export const events = [
       {
         "name": "DUOL",
         "consensus": "不够格",
-        "prior": "$6.2B",
-        "range": "自由流通 $4.3B · 流动性 14.51",
+        "prior": "$6.3B",
+        "range": "自由流通 $4.4B · 流动性 14.08",
         "note": "已核门槛不过:公司市值 ≥ $22.7B、自由流通市值 ≥ $11.35B"
       },
       {
@@ -5729,17 +5723,17 @@ export const events = [
     "pricing": [
       {
         "name": "本季至今 · 标普 500 ETF(含息)",
-        "value": "-0.91%",
-        "note": "2026-09-30 → 2026-10-30 收盘"
+        "value": "-1.38%",
+        "note": "2026-09-30 → 2026-11-02 收盘"
       },
       {
         "name": "本季至今 · 美国综合债 ETF",
-        "value": "+2.29%",
-        "note": "2026-09-30 → 2026-10-30 收盘"
+        "value": "+2.07%",
+        "note": "2026-09-30 → 2026-11-02 收盘"
       },
       {
         "name": "60/40 组合股票超配",
-        "value": "-0.76pp",
+        "value": "-0.83pp",
         "note": "期初调回 60/40 的示意口径 → 偏「卖债买股」"
       }
     ],
