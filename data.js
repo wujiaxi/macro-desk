@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-03 00:30 ET · ⚠️ 32 条告警: NFP 日历只剩 32 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-11-03 09:00 ET · ⚠️ 32 条告警: NFP 日历只剩 31 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,541.40",
     "chg": "-0.52%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "27,989.8",
     "chg": "-1.39%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "DXY",
-    "value": "101.76",
-    "chg": "+0.02%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "101.78",
+    "chg": "+0.00%",
+    "dir": "flat",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "黄金",
-    "value": "3,936.40",
-    "chg": "-0.09%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "3,978.70",
+    "chg": "+1.16%",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "97.02",
-    "chg": "+0.25%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "94.35",
+    "chg": "-2.81%",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "BTC",
-    "value": "76,569",
-    "chg": "-0.14%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "77,253",
+    "chg": "+0.76%",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "VIX",
-    "value": "21.15",
-    "chg": "+1.71",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "20.85",
+    "chg": "-0.32",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.89%",
-    "chg": "-3.5bp",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "4.90%",
+    "chg": "+0.8bp",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.27%",
-    "chg": "-4.0bp",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "5.28%",
+    "chg": "+1.5bp",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 2Y",
@@ -6484,6 +6484,80 @@ export const events = [
         "d": "—",
         "e": "方向对不对"
       }
+    }
+  },
+  {
+    "id": "amd-earnings-2027-02-02",
+    "kind": "earnings",
+    "ticker": "AMD",
+    "company": "AMD",
+    "title": "AMD 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2027-02-02T16:05:00-05:00",
+    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-08-04",
+        "what": "EPS 意外 +3.2% · 实际 1.66 vs 预期 1.61",
+        "outcome": "次日 -7.04%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-05-05",
+        "what": "EPS 意外 +5.8% · 实际 1.37 vs 预期 1.29",
+        "outcome": "次日 +18.61%（大 beat 5–10%）"
+      },
+      {
+        "when": "2026-02-03",
+        "what": "EPS 意外 +16.0% · 实际 1.53 vs 预期 1.32",
+        "outcome": "次日 -17.31%（巨 beat >10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$505.74"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$461.01"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$326.36"
+      },
+      {
+        "name": "安全边际",
+        "value": "-35.47%"
+      }
+    ],
+    "targets": {
+      "low": "$235",
+      "avg": "$461",
+      "high": "$646",
+      "n": "本站三情景加权 · 卖方一致 $613.84"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
     }
   },
   {
