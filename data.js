@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-03 16:00 ET · ⚠️ 32 条告警: NFP 日历只剩 31 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-11-03 16:20 ET · ⚠️ 32 条告警: NFP 日历只剩 31 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,568.85",
+    "value": "7,568.92",
     "chg": "+0.35%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:20 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "28,180.3",
     "chg": "+0.66%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:20 ET"
   },
   {
     "label": "DXY",
     "value": "101.86",
     "chg": "+0.08%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:20 ET"
   },
   {
     "label": "黄金",
-    "value": "3,931.70",
-    "chg": "-0.03%",
+    "value": "3,932.10",
+    "chg": "-0.02%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:20 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "96.54",
-    "chg": "-0.56%",
+    "value": "96.71",
+    "chg": "-0.38%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:20 ET"
   },
   {
     "label": "BTC",
-    "value": "77,793",
-    "chg": "+1.46%",
+    "value": "77,813",
+    "chg": "+1.49%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:20 ET"
   },
   {
     "label": "VIX",
-    "value": "20.82",
-    "chg": "-0.35",
+    "value": "20.86",
+    "chg": "-0.31",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:20 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.95%",
     "chg": "+5.8bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:20 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.32%",
     "chg": "+5.5bp",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:20 ET"
   },
   {
     "label": "US 2Y",
@@ -3793,7 +3793,40 @@ export const events = [
       "Q3 数据中心收入 · 预期 7.9B · 利好 ≥8.3B · 利空 ≤7.5B",
       "2027 数据中心翻倍口径(定性) · 预期 重申 · 利好 重申 + Helios 节奏 · 利空 不提 / 改口"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "下季(FY26Q4) 收入指引中值(十亿美元)",
+        "actual": "17",
+        "consensus": "16.1",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "下季(FY26Q4) 非 GAAP 毛利率指引(%)",
+        "actual": "55",
+        "consensus": "55",
+        "prior": "",
+        "surprise": "中性(落在预期附近)",
+        "dir": "flat"
+      },
+      {
+        "name": "本季收入(十亿美元)",
+        "actual": "13.4",
+        "consensus": "13.35",
+        "prior": "",
+        "surprise": "中性偏好",
+        "dir": "up"
+      },
+      {
+        "name": "本季数据中心收入(十亿美元)",
+        "actual": "8.5",
+        "consensus": "7.9",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [
@@ -3817,6 +3850,10 @@ export const events = [
       {
         "label": "AMD IR",
         "url": "https://ir.amd.com/"
+      },
+      {
+        "label": "触发本次对账的 SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=AMD&type=8-K&dateb=&owner=include&count=10"
       }
     ],
     "consensus": {
@@ -3848,9 +3885,9 @@ export const events = [
       }
     ],
     "guidance": {
-      "company": "待公布",
+      "company": "EPS ⏳ 待法说会",
       "street": "下季 EPS 一致 $2.647",
-      "note": "比较期间 FY26Q4"
+      "note": "vs 卖方一致 2.65（—）"
     },
     "options": {
       "iv": "",
