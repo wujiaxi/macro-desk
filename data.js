@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-03 10:23 ET · ⚠️ 32 条告警: NFP 日历只剩 31 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-11-03 10:24 ET · ⚠️ 32 条告警: NFP 日历只剩 31 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,568.46",
-    "chg": "+0.35%",
+    "value": "7,563.94",
+    "chg": "+0.29%",
     "dir": "up",
-    "note": "实时 10:23 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "28,199.9",
-    "chg": "+0.73%",
+    "value": "28,169.1",
+    "chg": "+0.62%",
     "dir": "up",
-    "note": "实时 10:23 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "DXY",
     "value": "101.86",
     "chg": "+0.09%",
     "dir": "up",
-    "note": "实时 10:23 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "黄金",
     "value": "3,948.70",
     "chg": "+0.40%",
     "dir": "up",
-    "note": "实时 10:23 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "WTI 原油",
     "value": "96.01",
     "chg": "-1.10%",
     "dir": "down",
-    "note": "实时 10:23 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "BTC",
-    "value": "77,232",
-    "chg": "+0.73%",
+    "value": "77,172",
+    "chg": "+0.65%",
     "dir": "up",
-    "note": "实时 10:23 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "VIX",
-    "value": "20.86",
-    "chg": "-0.31",
+    "value": "20.79",
+    "chg": "-0.38",
     "dir": "down",
-    "note": "实时 10:23 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.97%",
     "chg": "+7.2bp",
     "dir": "up",
-    "note": "实时 10:23 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.34%",
-    "chg": "+6.8bp",
+    "value": "5.33%",
+    "chg": "+6.5bp",
     "dir": "up",
-    "note": "实时 10:23 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "US 2Y",
