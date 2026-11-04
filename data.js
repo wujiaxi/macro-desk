@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-04 10:00 ET · ⚠️ 32 条告警: NFP 日历只剩 30 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-11-04 10:23 ET · ⚠️ 32 条告警: NFP 日历只剩 30 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,80 +13,80 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,694.78",
-    "chg": "+1.67%",
+    "value": "7,689.63",
+    "chg": "+1.60%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "28,670.1",
-    "chg": "+1.74%",
+    "value": "28,700.9",
+    "chg": "+1.85%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "DXY",
-    "value": "101.41",
-    "chg": "-0.05%",
-    "dir": "down",
-    "note": "实时 10:00 ET"
+    "value": "101.48",
+    "chg": "+0.02%",
+    "dir": "up",
+    "note": "实时 10:23 ET"
   },
   {
     "label": "黄金",
-    "value": "4,053.80",
-    "chg": "+2.20%",
+    "value": "4,047.70",
+    "chg": "+2.04%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "93.42",
-    "chg": "-2.48%",
+    "value": "93.98",
+    "chg": "-1.90%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "BTC",
-    "value": "79,225",
-    "chg": "+2.45%",
+    "value": "80,669",
+    "chg": "+4.31%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "VIX",
-    "value": "17.20",
-    "chg": "-3.61",
+    "value": "17.03",
+    "chg": "-3.78",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.93%",
-    "chg": "-1.9bp",
+    "value": "4.94%",
+    "chg": "-1.1bp",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.31%",
-    "chg": "-1.4bp",
+    "value": "5.32%",
+    "chg": "-0.2bp",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:23 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.59%",
     "chg": "+3.0bp",
     "dir": "up",
-    "note": "as-of 2026-11-02 · 2s10s +32bp"
+    "note": "as-of 2026-11-02 · 2s10s +34bp"
   },
   {
     "label": "12月加息概率",
-    "value": "73%",
+    "value": "77%",
     "chg": "一周前 85%",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-11-02"
+    "note": "ZQ 期货自算 · 2026-11-03"
   }
 ];
 
@@ -3919,8 +3919,8 @@ export const events = [
       "n": "本站三情景加权 · 卖方一致 $613.84"
     },
     "afterHours": {
-      "move": "",
-      "note": ""
+      "move": "+2.41%",
+      "note": "- 实际次日反应 +2.41%(基准收盘 483.9 → 495.56) - 隐含区间 ±8.2%(479.91 / 582.65) → 实际 落在区间内 - 卡片内插预期 +10.74% vs 实际 +2.41%,误差 -8.33%(方向判对)"
     }
   },
   {
@@ -5881,80 +5881,6 @@ export const events = [
     }
   },
   {
-    "id": "aapl-catalyst-2027-01-11",
-    "kind": "earnings",
-    "ticker": "AAPL",
-    "company": "AAPL",
-    "title": "AAPL 财报",
-    "subtitle": "Epic v. Apple 最高法院口头辩论;2027-01 底 FQ1'27 财报",
-    "org": "",
-    "date": "2027-01-11T16:05:00-05:00",
-    "dateNote": "日期取自论点卡催化剂,未经公司确认",
-    "dateConfirmed": false,
-    "importance": 3,
-    "tags": [
-      "催化剂"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [
-      {
-        "when": "2026-07-30",
-        "what": "EPS 意外 +6.7% · 实际 2.02 vs 预期 1.89",
-        "outcome": "次日 -7.35%（大 beat 5–10%）"
-      },
-      {
-        "when": "2026-04-30",
-        "what": "EPS 意外 +3.5% · 实际 2.01 vs 预期 1.94",
-        "outcome": "次日 +3.24%（中 beat 2–5%）"
-      },
-      {
-        "when": "2026-01-29",
-        "what": "EPS 意外 +6.3% · 实际 2.84 vs 预期 2.67",
-        "outcome": "次日 +0.46%（大 beat 5–10%）"
-      }
-    ],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
-    "valuation": [
-      {
-        "name": "基准收盘价",
-        "value": "$338.32"
-      },
-      {
-        "name": "概率加权目标价",
-        "value": "$275.81"
-      },
-      {
-        "name": "压力调整底线",
-        "value": "$240.19"
-      },
-      {
-        "name": "安全边际",
-        "value": "-29.01%"
-      }
-    ],
-    "targets": {
-      "low": "$199",
-      "avg": "$276",
-      "high": "$355",
-      "n": "本站三情景加权 · 卖方一致 $332.39"
-    },
-    "afterHours": {
-      "move": "",
-      "note": ""
-    }
-  },
-  {
     "id": "cpi-2026-12-rel2027-01-13",
     "kind": "macro",
     "title": "2026-12 CPI",
@@ -6382,6 +6308,80 @@ export const events = [
       "avg": "$242",
       "high": "$484",
       "n": "本站三情景加权 · 卖方一致 $397.83"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
+  },
+  {
+    "id": "aapl-earnings-2027-01-28",
+    "kind": "earnings",
+    "ticker": "AAPL",
+    "company": "AAPL",
+    "title": "AAPL 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2027-01-28T16:05:00-05:00",
+    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-07-30",
+        "what": "EPS 意外 +6.7% · 实际 2.02 vs 预期 1.89",
+        "outcome": "次日 -7.35%（大 beat 5–10%）"
+      },
+      {
+        "when": "2026-04-30",
+        "what": "EPS 意外 +3.5% · 实际 2.01 vs 预期 1.94",
+        "outcome": "次日 +3.24%（中 beat 2–5%）"
+      },
+      {
+        "when": "2026-01-29",
+        "what": "EPS 意外 +6.3% · 实际 2.84 vs 预期 2.67",
+        "outcome": "次日 +0.46%（大 beat 5–10%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$338.32"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$275.81"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$240.19"
+      },
+      {
+        "name": "安全边际",
+        "value": "-29.01%"
+      }
+    ],
+    "targets": {
+      "low": "$199",
+      "avg": "$276",
+      "high": "$355",
+      "n": "本站三情景加权 · 卖方一致 $332.39"
     },
     "afterHours": {
       "move": "",
