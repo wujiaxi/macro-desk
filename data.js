@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-03 19:00 ET · ⚠️ 32 条告警: NFP 日历只剩 31 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-11-03 19:30 ET · ⚠️ 32 条告警: NFP 日历只剩 31 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,568.92",
     "chg": "+0.35%",
     "dir": "up",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "28,180.3",
     "chg": "+0.66%",
     "dir": "up",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "DXY",
     "value": "101.89",
     "chg": "+0.11%",
     "dir": "up",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "黄金",
-    "value": "3,941.70",
-    "chg": "+0.22%",
+    "value": "3,945.90",
+    "chg": "+0.33%",
     "dir": "up",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "96.57",
-    "chg": "-0.53%",
+    "value": "96.53",
+    "chg": "-0.57%",
     "dir": "down",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "BTC",
-    "value": "77,342",
-    "chg": "-0.15%",
+    "value": "77,121",
+    "chg": "-0.43%",
     "dir": "down",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "VIX",
     "value": "20.83",
     "chg": "-0.34",
     "dir": "down",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.95%",
     "chg": "+5.8bp",
     "dir": "up",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.32%",
     "chg": "+5.5bp",
     "dir": "up",
-    "note": "实时 19:00 ET"
+    "note": "实时 19:30 ET"
   },
   {
     "label": "US 2Y",
