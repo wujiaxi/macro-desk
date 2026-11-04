@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-04 13:00 ET · ⚠️ 32 条告警: NFP 日历只剩 30 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-11-04 13:30 ET · ⚠️ 32 条告警: NFP 日历只剩 30 天(<60),跑 macro_calendar.py -…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,712.52",
-    "chg": "+1.90%",
+    "value": "7,706.68",
+    "chg": "+1.82%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "28,630.2",
-    "chg": "+1.60%",
+    "value": "28,570.6",
+    "chg": "+1.39%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "DXY",
-    "value": "101.45",
-    "chg": "-0.01%",
-    "dir": "down",
-    "note": "实时 13:00 ET"
+    "value": "101.46",
+    "chg": "+0.01%",
+    "dir": "up",
+    "note": "实时 13:30 ET"
   },
   {
     "label": "黄金",
-    "value": "4,079.70",
-    "chg": "+2.85%",
+    "value": "4,076.40",
+    "chg": "+2.77%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "87.92",
-    "chg": "-8.23%",
+    "value": "88.56",
+    "chg": "-7.56%",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "BTC",
-    "value": "80,350",
-    "chg": "+3.90%",
+    "value": "80,542",
+    "chg": "+4.15%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "VIX",
-    "value": "16.95",
-    "chg": "-3.86",
+    "value": "16.83",
+    "chg": "-3.98",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.90%",
-    "chg": "-5.6bp",
+    "chg": "-5.0bp",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.29%",
-    "chg": "-3.6bp",
+    "value": "5.30%",
+    "chg": "-2.9bp",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "US 2Y",
@@ -3897,26 +3897,26 @@ export const events = [
     "valuation": [
       {
         "name": "基准收盘价",
-        "value": "$505.74"
+        "value": "$483.90"
       },
       {
         "name": "概率加权目标价",
-        "value": "$461.01"
+        "value": "$495.86"
       },
       {
         "name": "压力调整底线",
-        "value": "$326.36"
+        "value": "$384.87"
       },
       {
         "name": "安全边际",
-        "value": "-35.47%"
+        "value": "-20.46%"
       }
     ],
     "targets": {
-      "low": "$235",
-      "avg": "$461",
-      "high": "$646",
-      "n": "本站三情景加权 · 卖方一致 $613.84"
+      "low": "$299",
+      "avg": "$496",
+      "high": "$686",
+      "n": "本站三情景加权 · 卖方一致 $648.24"
     },
     "afterHours": {
       "move": "+2.41%",
@@ -6571,26 +6571,26 @@ export const events = [
     "valuation": [
       {
         "name": "基准收盘价",
-        "value": "$505.74"
+        "value": "$483.90"
       },
       {
         "name": "概率加权目标价",
-        "value": "$461.01"
+        "value": "$495.86"
       },
       {
         "name": "压力调整底线",
-        "value": "$326.36"
+        "value": "$384.87"
       },
       {
         "name": "安全边际",
-        "value": "-35.47%"
+        "value": "-20.46%"
       }
     ],
     "targets": {
-      "low": "$235",
-      "avg": "$461",
-      "high": "$646",
-      "n": "本站三情景加权 · 卖方一致 $613.84"
+      "low": "$299",
+      "avg": "$496",
+      "high": "$686",
+      "n": "本站三情景加权 · 卖方一致 $648.24"
     },
     "afterHours": {
       "move": "",
