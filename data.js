@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-05 10:00 ET · ⚠️ 33 条告警: NFP 日历只剩 29 天(<60),跑 macro_calendar.py -…",
+  "updated": "2026-11-05 10:25 ET · ⚠️ 32 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,80 +13,80 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,565.29",
-    "chg": "-1.61%",
+    "value": "7,492.90",
+    "chg": "-2.55%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "27,404.1",
-    "chg": "-3.63%",
+    "value": "27,088.0",
+    "chg": "-4.75%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "DXY",
-    "value": "101.62",
-    "chg": "+0.38%",
+    "value": "101.58",
+    "chg": "+0.33%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "黄金",
-    "value": "4,110.10",
-    "chg": "-0.96%",
+    "value": "4,118.90",
+    "chg": "-0.74%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "89.61",
-    "chg": "+3.40%",
+    "value": "90.02",
+    "chg": "+3.88%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "BTC",
-    "value": "78,156",
-    "chg": "-2.82%",
+    "value": "76,466",
+    "chg": "-4.93%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "VIX",
-    "value": "19.06",
-    "chg": "+2.49",
+    "value": "21.40",
+    "chg": "+4.83",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.89%",
-    "chg": "-0.2bp",
+    "value": "4.86%",
+    "chg": "-3.1bp",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.28%",
-    "chg": "+0.0bp",
-    "dir": "flat",
-    "note": "实时 10:00 ET"
+    "value": "5.26%",
+    "chg": "-1.8bp",
+    "dir": "down",
+    "note": "实时 10:25 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.61%",
     "chg": "+2.0bp",
     "dir": "up",
-    "note": "as-of 2026-11-03 · 2s10s +34bp"
+    "note": "as-of 2026-11-03 · 2s10s +32bp"
   },
   {
     "label": "12月加息概率",
-    "value": "77%",
+    "value": "82%",
     "chg": "一周前 85%",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-11-03"
+    "note": "ZQ 期货自算 · 2026-11-04"
   }
 ];
 
@@ -6103,6 +6103,57 @@ export const events = [
     }
   },
   {
+    "id": "nfp-2026-12-rel2027-01-08",
+    "kind": "macro",
+    "title": "2026-12 非农就业报告",
+    "subtitle": "",
+    "org": "BLS",
+    "ticker": "",
+    "company": "",
+    "date": "2027-01-08T08:30:00-05:00",
+    "dateNote": "08:30 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "NFP"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-12-04",
+        "what": "非农就业报告（2026-11）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-11-06",
+        "what": "非农就业报告（2026-10）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-10-02",
+        "what": "非农就业报告（2026-09）",
+        "outcome": "SPX +0.73% · 2Y +5bp"
+      }
+    ],
+    "links": [
+      {
+        "label": "BLS Employment Situation",
+        "url": "https://www.bls.gov/ces/"
+      },
+      {
+        "label": "官方日程",
+        "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+      }
+    ]
+  },
+  {
     "id": "cpi-2026-12-rel2027-01-13",
     "kind": "macro",
     "title": "2026-12 CPI",
@@ -6746,19 +6797,19 @@ export const events = [
     }
   },
   {
-    "id": "amd-earnings-2027-02-02",
+    "id": "amd-catalyst-2027-02-02",
     "kind": "earnings",
     "ticker": "AMD",
     "company": "AMD",
     "title": "AMD 财报",
-    "subtitle": "盘后",
+    "subtitle": "Q4'26 财报 + FY2026 10-K —— v5",
     "org": "",
     "date": "2027-02-02T16:05:00-05:00",
-    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "dateNote": "日期取自论点卡催化剂,未经公司确认",
     "dateConfirmed": false,
     "importance": 3,
     "tags": [
-      "推算日期"
+      "催化剂"
     ],
     "thesis": "",
     "expectations": [],
@@ -7004,6 +7055,57 @@ export const events = [
     }
   },
   {
+    "id": "nfp-2027-01-rel2027-02-05",
+    "kind": "macro",
+    "title": "2027-01 非农就业报告",
+    "subtitle": "",
+    "org": "BLS",
+    "ticker": "",
+    "company": "",
+    "date": "2027-02-05T08:30:00-05:00",
+    "dateNote": "08:30 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "NFP"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-12-04",
+        "what": "非农就业报告（2026-11）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-11-06",
+        "what": "非农就业报告（2026-10）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-10-02",
+        "what": "非农就业报告（2026-09）",
+        "outcome": "SPX +0.73% · 2Y +5bp"
+      }
+    ],
+    "links": [
+      {
+        "label": "BLS Employment Situation",
+        "url": "https://www.bls.gov/ces/"
+      },
+      {
+        "label": "官方日程",
+        "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+      }
+    ]
+  },
+  {
     "id": "cpi-2027-01-rel2027-02-11",
     "kind": "macro",
     "title": "2027-01 CPI",
@@ -7190,6 +7292,185 @@ export const events = [
     }
   },
   {
+    "id": "nfp-2027-02-rel2027-03-05",
+    "kind": "macro",
+    "title": "2027-02 非农就业报告",
+    "subtitle": "",
+    "org": "BLS",
+    "ticker": "",
+    "company": "",
+    "date": "2027-03-05T08:30:00-05:00",
+    "dateNote": "08:30 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "NFP"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-12-04",
+        "what": "非农就业报告（2026-11）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-11-06",
+        "what": "非农就业报告（2026-10）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-10-02",
+        "what": "非农就业报告（2026-09）",
+        "outcome": "SPX +0.73% · 2Y +5bp"
+      }
+    ],
+    "links": [
+      {
+        "label": "BLS Employment Situation",
+        "url": "https://www.bls.gov/ces/"
+      },
+      {
+        "label": "官方日程",
+        "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
+      }
+    ]
+  },
+  {
+    "id": "rebal-index-announce-2027-03-05-spx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "标普季度调仓·成分变更公告",
+    "subtitle": "成分名单公布·2027Q1",
+    "org": "SPX",
+    "date": "2027-03-05T16:00:00-05:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "index",
+      "index_announce",
+      "SPX"
+    ],
+    "thesis": "名单在盘后公布,被纳入的票当晚就跳;但被动基金还没进场,这一跳是主动资金抢跑。",
+    "watch": [
+      "纳入/剔除名单(盘后,S&P DJI 官网)",
+      "⚠️ 冲击发生在公告当晚盘后:12 例实测拉升中位 +8.21%,11/12 为正",
+      "⚠️ 次日开盘几乎从不超过盘后最高(10/12 低于) —— 以盘后最高为基准,一周收益中位仅 +0.01%、5/11 为负。影响力 ≠ 可获取收益",
+      "⚠️ 成分变更不止这一天:并购/破产引发的增删是临时公告,约提前 5 个交易日"
+    ],
+    "expectations": [
+      {
+        "name": "NOK",
+        "consensus": "外国发行人",
+        "prior": "—",
+        "range": "",
+        "note": "外国发行人:标普 500 注册地规则多半不符,不再往下算(ADR 市值口径与美国公司不同)"
+      },
+      {
+        "name": "TSM",
+        "consensus": "外国发行人",
+        "prior": "—",
+        "range": "",
+        "note": "外国发行人:标普 500 注册地规则多半不符,不再往下算(ADR 市值口径与美国公司不同)"
+      },
+      {
+        "name": "SKHY",
+        "consensus": "外国发行人",
+        "prior": "—",
+        "range": "",
+        "note": "外国发行人:标普 500 注册地规则多半不符,不再往下算(ADR 市值口径与美国公司不同)"
+      },
+      {
+        "name": "FIG",
+        "consensus": "不够格",
+        "prior": "$11.8B",
+        "range": "自由流通 $5.9B · 流动性 15.99",
+        "note": "已核门槛不过:公司市值 ≥ $22.7B、自由流通市值 ≥ $11.35B"
+      },
+      {
+        "name": "ASX",
+        "consensus": "外国发行人",
+        "prior": "—",
+        "range": "",
+        "note": "外国发行人:标普 500 注册地规则多半不符,不再往下算(ADR 市值口径与美国公司不同)"
+      },
+      {
+        "name": "AMKR",
+        "consensus": "不够格",
+        "prior": "$8.8B",
+        "range": "自由流通 $4.1B · 流动性 16.00",
+        "note": "已核门槛不过:公司市值 ≥ $22.7B、自由流通市值 ≥ $11.35B"
+      },
+      {
+        "name": "NBIS",
+        "consensus": "外国发行人",
+        "prior": "—",
+        "range": "",
+        "note": "外国发行人:标普 500 注册地规则多半不符,不再往下算(ADR 市值口径与美国公司不同)"
+      },
+      {
+        "name": "DUOL",
+        "consensus": "不够格",
+        "prior": "$7.5B",
+        "range": "自由流通 $5.2B · 流动性 12.02",
+        "note": "已核门槛不过:公司市值 ≥ $22.7B、自由流通市值 ≥ $11.35B"
+      },
+      {
+        "name": "BABA",
+        "consensus": "外国发行人",
+        "prior": "—",
+        "range": "",
+        "note": "外国发行人:标普 500 注册地规则多半不符,不再往下算(ADR 市值口径与美国公司不同)"
+      }
+    ],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "readThrough": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    },
+    "labels": {
+      "noScenarios": true,
+      "programFilled": true,
+      "expectations": "标普 500 纳入门槛 · 关注名单里的非成分股(sp500_screen.py;满足门槛 ≠ 会被纳入)",
+      "expCols": {
+        "a": "代码",
+        "b": "结论",
+        "c": "公司市值",
+        "d": "依据(门槛 $22.7B / 自由流通 $11.35B / 流动性 0.75)"
+      }
+    }
+  },
+  {
     "id": "cpi-2027-02-rel2027-03-10",
     "kind": "macro",
     "title": "2027-02 CPI",
@@ -7331,6 +7612,57 @@ export const events = [
       {
         "label": "官方日程",
         "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+      }
+    ]
+  },
+  {
+    "id": "nfp-2027-03-rel2027-04-02",
+    "kind": "macro",
+    "title": "2027-03 非农就业报告",
+    "subtitle": "",
+    "org": "BLS",
+    "ticker": "",
+    "company": "",
+    "date": "2027-04-02T08:30:00-04:00",
+    "dateNote": "08:30 ET",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "NFP"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-12-04",
+        "what": "非农就业报告（2026-11）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-11-06",
+        "what": "非农就业报告（2026-10）",
+        "outcome": "当日行情数据缺失"
+      },
+      {
+        "when": "2026-10-02",
+        "what": "非农就业报告（2026-09）",
+        "outcome": "SPX +0.73% · 2Y +5bp"
+      }
+    ],
+    "links": [
+      {
+        "label": "BLS Employment Situation",
+        "url": "https://www.bls.gov/ces/"
+      },
+      {
+        "label": "官方日程",
+        "url": "https://www.bls.gov/schedule/news_release/empsit.htm"
       }
     ]
   }
