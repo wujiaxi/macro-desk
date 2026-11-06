@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-06 10:00 ET · ⚠️ 32 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
+  "updated": "2026-11-06 10:24 ET · ⚠️ 32 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,80 +13,80 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,427.59",
+    "value": "7,427.42",
     "chg": "+0.96%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "27,238.0",
-    "chg": "+2.21%",
+    "value": "27,144.3",
+    "chg": "+1.86%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "DXY",
-    "value": "102.23",
-    "chg": "+0.46%",
+    "value": "102.13",
+    "chg": "+0.37%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "黄金",
-    "value": "4,057.00",
-    "chg": "+0.08%",
+    "value": "4,065.90",
+    "chg": "+0.30%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "90.73",
-    "chg": "-0.79%",
+    "value": "90.59",
+    "chg": "-0.94%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "BTC",
-    "value": "75,464",
-    "chg": "-0.66%",
+    "value": "75,532",
+    "chg": "-0.57%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "VIX",
-    "value": "24.75",
-    "chg": "-3.40",
+    "value": "24.56",
+    "chg": "-3.59",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.88%",
-    "chg": "+3.9bp",
+    "value": "4.87%",
+    "chg": "+3.1bp",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.27%",
-    "chg": "+2.1bp",
+    "chg": "+1.6bp",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:24 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.58%",
     "chg": "-3.0bp",
     "dir": "down",
-    "note": "as-of 2026-11-04 · 2s10s +32bp"
+    "note": "as-of 2026-11-04 · 2s10s +38bp"
   },
   {
     "label": "12月加息概率",
-    "value": "82%",
+    "value": "67%",
     "chg": "一周前 85%",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-11-04"
+    "note": "ZQ 期货自算 · 2026-11-05"
   }
 ];
 
