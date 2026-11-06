@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-06 00:30 ET · ⚠️ 32 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
+  "updated": "2026-11-06 08:38 ET · ⚠️ 32 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,353.73",
     "chg": "-4.36%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:38 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "26,629.8",
     "chg": "-6.36%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:38 ET"
   },
   {
     "label": "DXY",
-    "value": "101.77",
-    "chg": "+0.08%",
+    "value": "102.07",
+    "chg": "+0.30%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:38 ET"
   },
   {
     "label": "黄金",
-    "value": "4,052.70",
-    "chg": "-0.25%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "4,071.60",
+    "chg": "+0.44%",
+    "dir": "up",
+    "note": "实时 08:38 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "91.32",
-    "chg": "-0.03%",
+    "value": "90.80",
+    "chg": "-0.71%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:38 ET"
   },
   {
     "label": "BTC",
-    "value": "75,375",
-    "chg": "-0.78%",
+    "value": "75,681",
+    "chg": "-0.37%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 08:38 ET"
   },
   {
     "label": "VIX",
-    "value": "28.18",
-    "chg": "+11.61",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "27.07",
+    "chg": "-1.08",
+    "dir": "down",
+    "note": "实时 08:38 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.84%",
-    "chg": "-5.7bp",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "4.87%",
+    "chg": "+3.7bp",
+    "dir": "up",
+    "note": "实时 08:38 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.25%",
-    "chg": "-3.1bp",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "5.29%",
+    "chg": "+3.7bp",
+    "dir": "up",
+    "note": "实时 08:38 ET"
   },
   {
     "label": "US 2Y",
@@ -4166,7 +4166,40 @@ export const events = [
       "劳动参与率(%) · 预期 61.8 · 利好 ≥ 62.0 · 利空 ≤ 61.5",
       "一次性因素 / 回复率 · 预期 无 · 利好 — · 利空 正文点名罢工/天气 ⇒ 弱读数的增长含义打折"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "当月非农新增(k)",
+        "actual": "165.0",
+        "consensus": "72.5",
+        "prior": "",
+        "surprise": "利好",
+        "dir": "up"
+      },
+      {
+        "name": "失业率(%)",
+        "actual": "4.1",
+        "consensus": "4.2",
+        "prior": "",
+        "surprise": "利好",
+        "dir": "up"
+      },
+      {
+        "name": "时薪环比(%)",
+        "actual": "0.4",
+        "consensus": "0.3",
+        "prior": "",
+        "surprise": "利空",
+        "dir": "down"
+      },
+      {
+        "name": "劳动参与率(%)",
+        "actual": "61.9",
+        "consensus": "61.8",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [
