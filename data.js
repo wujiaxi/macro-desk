@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-06 13:30 ET · ⚠️ 32 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
+  "updated": "2026-11-06 13:46 ET · ⚠️ 32 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,395.93",
-    "chg": "+0.53%",
+    "value": "7,405.36",
+    "chg": "+0.66%",
     "dir": "up",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:46 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "26,999.7",
-    "chg": "+1.32%",
+    "value": "27,051.0",
+    "chg": "+1.51%",
     "dir": "up",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:46 ET"
   },
   {
     "label": "DXY",
-    "value": "102.25",
-    "chg": "+0.48%",
+    "value": "102.24",
+    "chg": "+0.47%",
     "dir": "up",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:46 ET"
   },
   {
     "label": "黄金",
-    "value": "4,072.70",
-    "chg": "+0.47%",
+    "value": "4,076.00",
+    "chg": "+0.55%",
     "dir": "up",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:46 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "89.89",
-    "chg": "-1.71%",
+    "value": "89.95",
+    "chg": "-1.64%",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:46 ET"
   },
   {
     "label": "BTC",
-    "value": "75,749",
-    "chg": "-0.29%",
+    "value": "75,739",
+    "chg": "-0.30%",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:46 ET"
   },
   {
     "label": "VIX",
-    "value": "25.20",
-    "chg": "-2.95",
+    "value": "25.21",
+    "chg": "-2.94",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:46 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.84%",
     "chg": "+0.6bp",
     "dir": "up",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:46 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.24%",
     "chg": "-0.9bp",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:46 ET"
   },
   {
     "label": "US 2Y",
@@ -4171,6 +4171,14 @@ export const events = [
         "name": "当月非农新增(k)",
         "actual": "165.0",
         "consensus": "72.5",
+        "prior": "",
+        "surprise": "利好",
+        "dir": "up"
+      },
+      {
+        "name": "前两月净修正(k)",
+        "actual": "84.0",
+        "consensus": "0.0",
         "prior": "",
         "surprise": "利好",
         "dir": "up"
