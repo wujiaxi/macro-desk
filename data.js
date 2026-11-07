@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-07 03:21 ET · ⚠️ 34 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
+  "updated": "2026-11-07 10:25 ET · ⚠️ 34 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,77 +16,77 @@ export const markets = [
     "value": "7,376.86",
     "chg": "+0.27%",
     "dir": "up",
-    "note": "实时 03:21 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "26,990.0",
     "chg": "+1.28%",
     "dir": "up",
-    "note": "实时 03:21 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "DXY",
     "value": "102.30",
     "chg": "+0.53%",
     "dir": "up",
-    "note": "实时 03:21 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "黄金",
     "value": "4,074.90",
     "chg": "+0.52%",
     "dir": "up",
-    "note": "实时 03:21 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "WTI 原油",
     "value": "90.83",
     "chg": "-0.68%",
     "dir": "down",
-    "note": "实时 03:21 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "BTC",
-    "value": "76,034",
-    "chg": "+0.40%",
+    "value": "75,772",
+    "chg": "+0.05%",
     "dir": "up",
-    "note": "实时 03:21 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "VIX",
     "value": "25.64",
     "chg": "-2.51",
     "dir": "down",
-    "note": "实时 03:21 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.86%",
     "chg": "+2.2bp",
     "dir": "up",
-    "note": "实时 03:21 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.26%",
     "chg": "+0.9bp",
     "dir": "up",
-    "note": "实时 03:21 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.46%",
     "chg": "-12.0bp",
     "dir": "down",
-    "note": "as-of 2026-11-05 · 2s10s +38bp"
+    "note": "as-of 2026-11-05 · 2s10s +35bp"
   },
   {
     "label": "12月加息概率",
-    "value": "67%",
+    "value": "78%",
     "chg": "一周前 70%",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-11-05"
+    "note": "ZQ 期货自算 · 2026-11-06"
   }
 ];
 
