@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-07 00:30 ET · ⚠️ 34 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
+  "updated": "2026-11-07 03:21 ET · ⚠️ 34 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,376.86",
     "chg": "+0.27%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "26,990.0",
     "chg": "+1.28%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "DXY",
     "value": "102.30",
     "chg": "+0.53%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "黄金",
     "value": "4,074.90",
     "chg": "+0.52%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "WTI 原油",
     "value": "90.83",
     "chg": "-0.68%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "BTC",
-    "value": "75,915",
-    "chg": "+0.24%",
+    "value": "76,034",
+    "chg": "+0.40%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "VIX",
     "value": "25.64",
     "chg": "-2.51",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.86%",
     "chg": "+2.2bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.26%",
     "chg": "+0.9bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:21 ET"
   },
   {
     "label": "US 2Y",
@@ -84,7 +84,7 @@ export const markets = [
   {
     "label": "12月加息概率",
     "value": "67%",
-    "chg": "一周前 85%",
+    "chg": "一周前 70%",
     "dir": "flat",
     "note": "ZQ 期货自算 · 2026-11-05"
   }
@@ -4394,11 +4394,83 @@ export const events = [
       "AVGO",
       "MRVL"
     ],
-    "thesis": "",
-    "expectations": [],
+    "thesis": "这场会对我意味着什么:这是 MSFT 第一次进承诺台账的会议,本场为基线场次,没有可比的历史会议记录,结论以观察为主。唯一事先写死的锚是 10-12 官博(Scott Guthrie 署名)里那句 \"Next month at Microsoft Ignite 2026 … we're looking forward to sharing more information\" —— 公司自己把 Maia 300 的下一次披露指向了这场会。所以这场会的信息量集中在一件事:Maia 300 讲到多细、点不点名伙伴。 主办方(MSFT):会前不动。现价 $530.61(2026-11-06 收盘,fetch_prices.py),MSFT 卡安全边际仍为负(压力调整底线 $474.88),卡上规则是「安全边际为负期间不加」。期权对 keynote 当天的隐含波动约 ±2.2%,低于 ATR% 2.99% —— 这场会没有被定价成事件,也不值得为它择时。⚠️ 另:11-04 收盘 $555.80 已越过 MSFT 卡减仓位 $551.15,11-06 回落到 $530.61。这不归本卡管,交 /thesis-tracker 核对触发器是否已经处理。",
+    "expectations": [
+      {
+        "name": "Maia 300 更多细节(上线时间、地区、规模)",
+        "consensus": "② 管理层别处预告:10-12 官博原话 \"Next month at Microsoft Ignite 2026 … we're looking forward to sharing more information\"",
+        "prior": "B",
+        "range": "",
+        "note": "已知会讲,不知道讲多细。规格(N2P、8 颗 HBM4、96 卡/167kW 机架)10-12 已公开 = 复述零信息量"
+      },
+      {
+        "name": "Maia 设计伙伴是否点名",
+        "consensus": "——",
+        "prior": "——",
+        "range": "",
+        "note": "⛔ 无法建立预期。官博未点名;Marvell 为既有伙伴、Broadcom 在谈的说法出自 The Information 报道(经二手转述,原文本轮未取得)。不给概率"
+      },
+      {
+        "name": "Agent 平台续作(Agent 365 / Foundry 进展、GA 时间表)",
+        "consensus": "① 上代节奏外推:Ignite 2025 的主线是 Agent 365(Frontier 早期访问)与 Azure AI Foundry 更名 Microsoft Foundry(Ignite 2025 Book of News)",
+        "prior": "B",
+        "range": "",
+        "note": "已知方向,属基本盘"
+      },
+      {
+        "name": "Copilot 付费席位数",
+        "consensus": "② 反向证据:公司 10-28 明说本季不更新",
+        "prior": "B",
+        "range": "",
+        "note": "⛔ 默认不会给。给了就是新增"
+      },
+      {
+        "name": "Copilot / Agent 定价变动",
+        "consensus": "② 已知 Copilot Business $18 促销价 2026-12-31 到期(转引自 MSFT 深度研报 §催化剂)",
+        "prior": "B(二手转引)",
+        "range": "",
+        "note": "已知到期日,不知道到期后怎么定价"
+      },
+      {
+        "name": "capex / Azure 增速数字",
+        "consensus": "——",
+        "prior": "——",
+        "range": "",
+        "note": "⛔ 无法建立预期。Ignite 不是财务场合,不许假设会给"
+      }
+    ],
     "pricing": [],
-    "scenarios": [],
-    "watch": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "25%",
+        "trigger": "Maia 300 给出 2027 具体部署规模,或首次披露 Copilot 付费席位",
+        "reaction": "MSFT 小幅偏多,量级在隐含波动 ±2.2% 之内;NVDA 份额叙事偏空;被点名的 ASIC 伙伴明显波动"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "55%",
+        "trigger": "Agent/Foundry/Copilot 产品迭代为主,Maia 重申 2027 节奏、不给新数字、不点名伙伴",
+        "reaction": "主办方无显著反应;传导标的当天走势由 NVDA 盘后财报决定"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "20%",
+        "trigger": "Maia 在 keynote 主线缺席或语焉不详,或 GW 口径换单位且不回连",
+        "reaction": "MSFT 小幅偏空;NVDA 份额担忧缓和;MRVL 的 Maia 期权价值继续打折"
+      }
+    ],
+    "watch": [
+      "Maia 300 有没有新信息 · 预期 重申 2027,补少量部署细节 · 利好 给出 GW / 机架 / 地区 / 首批上线时间 · 利空 keynote 不提,只在分论坛或博客一笔带过",
+      "Maia 伙伴有没有被一手点名 · 预期 不点名 · 利好 点名(对 MRVL 看点名谁) · 利空 ——",
+      "「multi-gigawatt starting 2027」口径 · 预期 原样重申 · 利好 给出具体 GW 数 · 利空 换成芯片数 / 机架数且不回连 GW,或时间改成「2027 年起逐步」之类更模糊的说法",
+      "Copilot 付费席位 · 预期 不给 · 利好 给绝对数 · 利空 继续不给(中性,符合预期)",
+      "Agent 365 / Foundry GA 与定价 · 预期 宣布若干 GA · 利好 GA + 明确的按 Agent 计价 · 利空 只给愿景、不给 GA 时间",
+      "11-17 13:00–16:00 美东的分时 · 预期 波幅 < ±2.2% · 利好 —— · 利空 ——"
+    ],
     "actual": [],
     "reaction": [],
     "verdict": "",
@@ -4407,13 +4479,70 @@ export const events = [
       {
         "label": "官方页面",
         "url": "https://www.moscone.com/events/microsoft-ignite-2026"
+      },
+      {
+        "label": "ignite.microsoft.com · home",
+        "url": "https://ignite.microsoft.com/en-US/home"
+      },
+      {
+        "label": "blogs.microsoft.com",
+        "url": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/"
+      },
+      {
+        "label": "news.microsoft.com · ignite-2025-book-of-news",
+        "url": "https://news.microsoft.com/ignite-2025-book-of-news/"
+      },
+      {
+        "label": "trefis.com · 2026-11-03",
+        "url": "https://www.trefis.com/stock/mrvl/articles/622181/what-just-happened-to-marvell-stock-2/2026-11-03"
+      },
+      {
+        "label": "nvidianews.nvidia.com",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873"
       }
     ],
-    "agenda": [],
+    "agenda": [
+      {
+        "when": "11-16(一) 13:00–17:00 PT",
+        "what": "Pre-day sessions & labs(选修)"
+      },
+      {
+        "when": "11-17(二) 10:00–12:00 PT = 13:00–15:00 美东",
+        "what": "Opening keynote —— 官方页写 \"Satya Nadella’s opening keynote\",地点 Chase Center"
+      },
+      {
+        "when": "11-17(二) 18:15–19:30 PT",
+        "what": "Partner keynote"
+      },
+      {
+        "when": "11-17(二) 17:00 美东(14:00 PT)",
+        "what": "⚠️ 非 Ignite 环节:NVDA FQ3 FY27 财报电话会(NVIDIA IR 公告)"
+      },
+      {
+        "when": "11-18~20",
+        "what": "分论坛、动手实验、认证"
+      }
+    ],
     "readThrough": [
       {
-        "name": "传导标的",
-        "value": "NVDA、AVGO、MRVL"
+        "name": "MRVL",
+        "value": "[core] Maia 300 更多细节(上线时间、地区、规模) 定制硅 socket 守得住(证伪信号原文:「Maia 300 确认非 Marvell」) · 双向,本卡最实的一条 · 微软管理层一手点名 Maia 300 设计伙伴。点名 Marvell → Maia 300 更多细节(上线时间、地区、规模) 加强;点名他家或说「in-house + 他家」 → 触发 MRVL 卡的写死证伪信号。媒体解读、分析师转述都不算。不点名 = 维持悬空(大概率)"
+      },
+      {
+        "name": "AVGO",
+        "value": "Maia 300 更多细节(上线时间、地区、规模) AI XPU 放量 · 条件性偏多 · 仅当一手确认 Broadcom 参与 Maia(当前只有 The Information 的「在谈」报道,二手)。不点名 = 零信息量"
+      },
+      {
+        "name": "NVDA",
+        "value": "Maia 设计伙伴是否点名 份额 · 偏空但量级小 · 若给出 Maia 2027 部署的具体 GW / 芯片数,并重申「primary inference system」→ 微软推理侧对 GPU 的替代进一步坐实。只复述 10-12 的口径 = 零信息量。⚠️ NVDA 当天盘后有财报,会后 NVDA 的价格反应不许用来裁决本条"
+      },
+      {
+        "name": "TSM",
+        "value": "Maia 300 更多细节(上线时间、地区、规模) 先进制程 · 中性偏多 · Maia 300 用 N2P 已于 10-12 公开 = 复述。不论 GPU 还是 Maia,用的都是台积电产能(量不变,客户换人)"
+      },
+      {
+        "name": "MSFT(主办方)",
+        "value": "Maia 设计伙伴是否点名 capex→FCF 是时序问题 · Copilot / Agent 定价变动 OpenAI 集中度 · 受影响最小 · Maia 成本优势要到 2027 才进利润表;Copilot 席位若意外披露才动 Maia 300 更多细节(上线时间、地区、规模) 之外的叙事。主办方是这张表里最不该动的"
       }
     ]
   },
