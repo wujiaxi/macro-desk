@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-10 00:30 ET · ⚠️ 34 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
+  "updated": "2026-11-10 03:19 ET · ⚠️ 34 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,549.94",
     "chg": "+2.37%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "27,907.6",
     "chg": "+3.45%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "DXY",
-    "value": "101.65",
-    "chg": "-0.02%",
+    "value": "101.57",
+    "chg": "-0.10%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "黄金",
-    "value": "4,125.70",
-    "chg": "+0.13%",
+    "value": "4,125.80",
+    "chg": "+0.14%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "85.72",
-    "chg": "-0.10%",
+    "value": "85.26",
+    "chg": "-0.64%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "BTC",
-    "value": "74,710",
-    "chg": "-0.73%",
+    "value": "74,638",
+    "chg": "-0.82%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "VIX",
     "value": "19.92",
     "chg": "-5.71",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.86%",
     "chg": "+0.5bp",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.26%",
     "chg": "-0.4bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 03:19 ET"
   },
   {
     "label": "US 2Y",
@@ -4547,25 +4547,86 @@ export const events = [
     ]
   },
   {
-    "id": "nvda-catalyst-2026-11-17",
+    "id": "nvda-fy27q3",
     "kind": "earnings",
     "ticker": "NVDA",
     "company": "NVDA",
-    "title": "NVDA 财报",
-    "subtitle": "NVDA FQ3 FY27 财报（本卡最硬裁决点）",
+    "title": "NVDA FY27Q3 财报",
+    "subtitle": "盘后",
     "org": "",
     "date": "2026-11-17T16:05:00-05:00",
-    "dateNote": "日期取自论点卡催化剂,未经公司确认",
-    "dateConfirmed": false,
+    "dateNote": "盘后 16:05 ET · 回放卡(事后重建,非事前预测)",
+    "dateConfirmed": true,
     "importance": 3,
     "tags": [
-      "催化剂"
+      "回放",
+      "FY27Q3"
     ],
-    "thesis": "",
-    "expectations": [],
+    "thesis": "隐含波动:raw ±9.69% / 去时值 ±8.24%(2026-11-18 到期 ATM 177.5 跨式中价 17.32,yfinance 2026-11-10 bid/ask 中价反推);盈亏平衡 161.36 / 195.98;put/call 中价比 0.848 反应函数一句:近 8 季 beat 率 100%、却只涨 3/8 次、次日均值 -0.89% —— beat 是入场费不是彩票;surprise 与涨跌 r=0.264,EPS 不定价,定价权在下季收入指引与 FY28 口径 门槛配置:EPS 无公司指引(结构性),四条 bar 只剩三条:卖方一致 2.475 < 买方 bar 2.609 ≈ 卖方最高 2.700 区间。收入侧:指引中值 108.0B、上沿 110.16B,卖方一致 109.007B 落在中值与上沿之间 → 正常配置,定价权在 FQ4 指引而非本季 期权贵不贵:去时值 ±8.24% vs 近 8 季实际中位 ±3.20% = 2.58×,期权显著偏贵(但财报前 21 日已跌 22%,波动制度正在切换,近 8 季基准可能低估本次 —— 见 §4) 动作(四选一):等财报后再定",
+    "expectations": [
+      {
+        "name": "卖方一致",
+        "consensus": "2.475",
+        "prior": "",
+        "range": "vs 卖方一致 +0.0%",
+        "note": ""
+      },
+      {
+        "name": "买方 bar(历史 beat 分布校准)",
+        "consensus": "2.609",
+        "prior": "",
+        "range": "vs 卖方一致 +5.4%",
+        "note": ""
+      },
+      {
+        "name": "卖方最高值",
+        "consensus": "2.7",
+        "prior": "",
+        "range": "vs 卖方一致 +9.1%",
+        "note": ""
+      },
+      {
+        "name": "FY27Q4 收入指引(第一定价变量)",
+        "consensus": "124.7",
+        "prior": "",
+        "range": "利好 128.5 / 利空 121.0",
+        "note": "core · 权重 30%"
+      }
+    ],
     "pricing": [],
-    "scenarios": [],
-    "watch": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "30%",
+        "trigger": "本季收入 ≥ 110.2B(打满上沿)且 FQ4 收入指引 ≥ 128.5B 且 FY28 +70% 重申或上修",
+        "reaction": "+18.22% · ≈211.2"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "40%",
+        "trigger": "EPS 在 2.475–2.609;收入 108–110B;FQ4 指引 121–128.5B;FY28 口径不变",
+        "reaction": "-4.63% · ≈170.4"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "30%",
+        "trigger": "FQ4 指引 < 121.0B 或 FY28 +70% 被软化/不提 或 毛利率指引 < 73.5% —— 即使 EPS beat",
+        "reaction": "-9.91% · ≈161.0"
+      }
+    ],
+    "watch": [
+      "FY28「约 +70%」收入口径是否重申 — 利好: 逐字重申「approximately 70%」或上修(给出 >70% 的数字、或称供给约束放松) — 利空: 改为更软措辞(如去掉数字、只说 strong growth)、附加新条件,或全文与电话会均不提 FY28 增速",
+      "中国数据中心收入口径是否松动 — 利好: 指引中恢复中国数据中心算力收入假设,或明确提及出口许可松动 — 利空: 继续整段排除中国,且新增出口管制/份额流失的负面表述",
+      "FQ4 收入指引 · 预期 124.7B(=一致,41 家) · 利好 ≥128.5B · 利空 <121.0B",
+      "FY28「约 +70%」口径 · 预期 逐字重申 · 利好 上修或给出 >70% · 利空 软化/不提/附加新条件",
+      "FQ4 非 GAAP 毛利率指引 · 预期 74.0% · 利好 ≥74.5% · 利空 <73.5%",
+      "本季收入 vs 指引上沿 · 预期 110.16B · 利好 ≥113.0B · 利空 <108.0B(没到中值)",
+      "数据中心收入 · 预期 100.0B · 利好 ≥103.0B · 利空 <97.0B",
+      "中国口径 · 预期 继续排除 · 利好 恢复计入/许可松动 · 利空 排除 + 新增管制表述"
+    ],
     "actual": [],
     "reaction": [],
     "verdict": "",
@@ -4586,11 +4647,50 @@ export const events = [
         "outcome": "次日 -3.15%（中 beat 2–5%）"
       }
     ],
-    "links": [],
-    "consensus": {},
-    "segments": [],
-    "guidance": {},
-    "options": {},
+    "links": [
+      {
+        "label": "NVDA IR",
+        "url": "https://nvidianews.nvidia.com/"
+      }
+    ],
+    "consensus": {
+      "eps": "$2.475",
+      "rev": "$109.01B",
+      "epsPrior": "",
+      "revPrior": "",
+      "revYoY": "",
+      "note": "买方 bar $2.609"
+    },
+    "segments": [
+      {
+        "name": "FY27Q4 非GAAP 毛利率指引",
+        "consensus": "74.0",
+        "prior": "利好 74.5 / 利空 73.5",
+        "note": "权重 15%"
+      },
+      {
+        "name": "本季收入 vs 公司自家指引上沿(「打满指引」检验)",
+        "consensus": "110160.0",
+        "prior": "利好 113000.0 / 利空 108000.0",
+        "note": "权重 15%"
+      },
+      {
+        "name": "数据中心收入",
+        "consensus": "100.0",
+        "prior": "利好 103.0 / 利空 97.0",
+        "note": "权重 10%"
+      }
+    ],
+    "guidance": {
+      "company": "待公布",
+      "street": "下季 EPS 一致 $2.75",
+      "note": "比较期间 FY27Q4"
+    },
+    "options": {
+      "iv": "",
+      "impliedMove": "±8.24%",
+      "note": "盈亏平衡 $161.36 / $195.98"
+    },
     "valuation": [
       {
         "name": "基准收盘价",
