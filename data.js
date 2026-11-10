@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-10 03:19 ET · ⚠️ 34 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
+  "updated": "2026-11-10 08:55 ET · ⚠️ 34 条告警: 2026-10-02 结论层含内部代号 ['M-12', 'M-16', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,549.94",
     "chg": "+2.37%",
     "dir": "up",
-    "note": "实时 03:19 ET"
+    "note": "实时 08:55 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "27,907.6",
     "chg": "+3.45%",
     "dir": "up",
-    "note": "实时 03:19 ET"
+    "note": "实时 08:55 ET"
   },
   {
     "label": "DXY",
-    "value": "101.57",
-    "chg": "-0.10%",
-    "dir": "down",
-    "note": "实时 03:19 ET"
+    "value": "102.00",
+    "chg": "+0.36%",
+    "dir": "up",
+    "note": "实时 08:55 ET"
   },
   {
     "label": "黄金",
-    "value": "4,125.80",
-    "chg": "+0.14%",
-    "dir": "up",
-    "note": "实时 03:19 ET"
+    "value": "4,064.70",
+    "chg": "-1.46%",
+    "dir": "down",
+    "note": "实时 08:55 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "85.26",
-    "chg": "-0.64%",
+    "value": "84.39",
+    "chg": "-1.49%",
     "dir": "down",
-    "note": "实时 03:19 ET"
+    "note": "实时 08:55 ET"
   },
   {
     "label": "BTC",
-    "value": "74,638",
-    "chg": "-0.82%",
+    "value": "73,753",
+    "chg": "-2.00%",
     "dir": "down",
-    "note": "实时 03:19 ET"
+    "note": "实时 08:55 ET"
   },
   {
     "label": "VIX",
-    "value": "19.92",
-    "chg": "-5.71",
-    "dir": "down",
-    "note": "实时 03:19 ET"
+    "value": "20.99",
+    "chg": "+1.07",
+    "dir": "up",
+    "note": "实时 08:55 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.86%",
-    "chg": "+0.5bp",
+    "value": "4.93%",
+    "chg": "+7.0bp",
     "dir": "up",
-    "note": "实时 03:19 ET"
+    "note": "实时 08:55 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.26%",
-    "chg": "-0.4bp",
-    "dir": "down",
-    "note": "实时 03:19 ET"
+    "value": "5.29%",
+    "chg": "+3.6bp",
+    "dir": "up",
+    "note": "实时 08:55 ET"
   },
   {
     "label": "US 2Y",
@@ -4344,9 +4344,26 @@ export const events = [
       "supercore(派生,§2.2 公式) · 预期 0.2 · 利好 ≤0.1 · 利空 ≥0.4",
       "核心同比(NSA) · 预期 2.5 · 利好 ≤2.3 · 利空 ≥2.7"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "核心 CPI 环比(%)",
+        "actual": "0.3",
+        "consensus": "0.2",
+        "prior": "",
+        "surprise": "利空",
+        "dir": "down"
+      },
+      {
+        "name": "headline CPI 环比(%)",
+        "actual": "0.3",
+        "consensus": "0.2",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      }
+    ],
     "reaction": [],
-    "verdict": "",
+    "verdict": "_(待 2026-11-10 事后填:主导为何赢 / 被压制为何没赢 / 我没列到的。现在写任何字都是预测冒充复盘。)_",
     "history": [
       {
         "when": "2026-10-14",
@@ -4372,6 +4389,22 @@ export const events = [
       {
         "label": "官方日程",
         "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
+      },
+      {
+        "label": "Cleveland Fed · inflation-nowcasting",
+        "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting"
+      },
+      {
+        "label": "BLS · cpi.nr0",
+        "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
+      },
+      {
+        "label": "BLS · cpi.t01",
+        "url": "https://www.bls.gov/news.release/cpi.t01.htm"
+      },
+      {
+        "label": "continuumeconomics.com",
+        "url": "https://continuumeconomics.com/a/c299b396/preview-due-november-10-us-october-cpi-a-more-moderate-month"
       }
     ]
   },
