@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-12 10:00 ET · ⚠️ 32 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
+  "updated": "2026-11-12 10:25 ET · ⚠️ 32 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,599.18",
-    "chg": "-0.24%",
+    "value": "7,595.27",
+    "chg": "-0.30%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "28,258.4",
-    "chg": "-0.41%",
+    "value": "28,234.4",
+    "chg": "-0.49%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "DXY",
-    "value": "103.01",
-    "chg": "+0.02%",
+    "value": "103.14",
+    "chg": "+0.14%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "黄金",
-    "value": "3,888.60",
-    "chg": "-2.31%",
+    "value": "3,859.50",
+    "chg": "-3.04%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "86.49",
-    "chg": "+1.43%",
+    "value": "86.93",
+    "chg": "+1.95%",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "BTC",
-    "value": "71,536",
-    "chg": "-3.24%",
+    "value": "71,414",
+    "chg": "-3.40%",
     "dir": "down",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "VIX",
-    "value": "18.33",
-    "chg": "+0.85",
+    "value": "18.63",
+    "chg": "+1.15",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.05%",
-    "chg": "+5.0bp",
+    "value": "5.07%",
+    "chg": "+7.4bp",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.38%",
-    "chg": "+2.5bp",
+    "value": "5.40%",
+    "chg": "+4.7bp",
     "dir": "up",
-    "note": "实时 10:00 ET"
+    "note": "实时 10:25 ET"
   },
   {
     "label": "US 2Y",
@@ -86,7 +86,7 @@ export const markets = [
     "value": "100%",
     "chg": "一周前 77%",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-11-10"
+    "note": "ZQ 期货自算 · 2026-11-11"
   }
 ];
 
@@ -7666,6 +7666,79 @@ export const events = [
         "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
       }
     ]
+  },
+  {
+    "id": "rebal-index-announce-2027-03-12-ndx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "纳指100·季度调仓公告",
+    "subtitle": "成分名单公布·2027Q1",
+    "org": "NDX",
+    "date": "2027-03-12T16:00:00-05:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "index",
+      "index_announce",
+      "NDX"
+    ],
+    "thesis": "生效前第 6 个交易日盘后公布名单与新权重。12 月那次最要紧:沿用一年的旧压权系数整体重置,升降集中在前 15 名;被动资金的买卖落在交易日收盘。",
+    "watch": [
+      "名单与新权重:Nasdaq 盘后公告(GlobeNewswire / Nasdaq 官网)",
+      "⚠️ 标普那 12 例纳入样本不适用于纳指:纳指新进的多是本来就很大的公司,公告当晚未必跳",
+      "⚠️ 下方模拟用今天的价格,真参考日是 11 月最后一个交易日 —— 看扫描区间,别看单点"
+    ],
+    "expectations": [],
+    "pricing": [
+      {
+        "name": "特别再平衡触线距离",
+        "value": "28.2% / 48%",
+        "note": ">4.5% 的公司合计;最大 8.1%(线 24%)"
+      },
+      {
+        "name": "跟踪资金(下限)",
+        "value": "$475B",
+        "note": "只算 QQQ + QQQM(QQQM 本轮取不到)"
+      },
+      {
+        "name": "算法回放自检",
+        "value": "9 只 · 最大误差 2.4%",
+        "note": "复现 2025-11-28 重构的压权系数"
+      }
+    ],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "readThrough": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    },
+    "labels": {
+      "noScenarios": true,
+      "programFilled": true,
+      "pricing": "程序数字 · 纳指 100(每日收盘后更新)"
+    }
   },
   {
     "id": "conf-gtc-sj-2027-03-15",
