@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-17 16:00 ET · ⚠️ 32 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
+  "updated": "2026-11-17 16:22 ET · ⚠️ 32 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,340.90",
+    "value": "7,340.53",
     "chg": "-1.07%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:22 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "27,001.8",
     "chg": "-0.75%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:22 ET"
   },
   {
     "label": "DXY",
-    "value": "103.49",
-    "chg": "-0.03%",
+    "value": "103.51",
+    "chg": "-0.02%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:22 ET"
   },
   {
     "label": "黄金",
-    "value": "3,849.10",
-    "chg": "-0.72%",
+    "value": "3,852.30",
+    "chg": "-0.64%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:22 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "85.63",
-    "chg": "+0.73%",
+    "value": "85.67",
+    "chg": "+0.78%",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:22 ET"
   },
   {
     "label": "BTC",
-    "value": "63,880",
-    "chg": "-1.45%",
+    "value": "64,105",
+    "chg": "-1.10%",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:22 ET"
   },
   {
     "label": "VIX",
-    "value": "25.70",
-    "chg": "+2.82",
+    "value": "25.52",
+    "chg": "+2.64",
     "dir": "up",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:22 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.10%",
     "chg": "-1.8bp",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:22 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.46%",
     "chg": "-0.9bp",
     "dir": "down",
-    "note": "实时 16:00 ET"
+    "note": "实时 16:22 ET"
   },
   {
     "label": "US 2Y",
@@ -4492,7 +4492,40 @@ export const events = [
       "数据中心收入 · 预期 100.0B · 利好 ≥103.0B · 利空 <97.0B",
       "中国口径 · 预期 继续排除 · 利好 恢复计入/许可松动 · 利空 排除 + 新增管制表述"
     ],
-    "actual": [],
+    "actual": [
+      {
+        "name": "FY27Q4 收入指引(第一定价变量)",
+        "actual": "130",
+        "consensus": "124.7",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "FY27Q4 非GAAP 毛利率指引",
+        "actual": "71",
+        "consensus": "74",
+        "prior": "",
+        "surprise": "证伪(触及利空阈值)",
+        "dir": "down"
+      },
+      {
+        "name": "本季收入 vs 公司自家指引上沿(「打满指引」检验)",
+        "actual": "115,844",
+        "consensus": "110,160",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      },
+      {
+        "name": "数据中心收入",
+        "actual": "107.6",
+        "consensus": "100",
+        "prior": "",
+        "surprise": "证实(触及利好阈值)",
+        "dir": "up"
+      }
+    ],
     "reaction": [],
     "verdict": "",
     "history": [
@@ -4516,6 +4549,10 @@ export const events = [
       {
         "label": "NVDA IR",
         "url": "https://nvidianews.nvidia.com/"
+      },
+      {
+        "label": "触发本次对账的 SEC 备案",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=NVDA&type=8-K&dateb=&owner=include&count=10"
       }
     ],
     "consensus": {
@@ -4547,9 +4584,9 @@ export const events = [
       }
     ],
     "guidance": {
-      "company": "待公布",
+      "company": "EPS ⏳ 待法说会",
       "street": "下季 EPS 一致 $2.75",
-      "note": "比较期间 FY27Q4"
+      "note": "vs 卖方一致 2.75（—）"
     },
     "options": {
       "iv": "",
