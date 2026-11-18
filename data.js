@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-18 00:30 ET · ⚠️ 32 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
+  "updated": "2026-11-18 09:00 ET · ⚠️ 32 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,340.53",
     "chg": "-1.07%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "27,001.8",
     "chg": "-0.75%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "DXY",
-    "value": "103.62",
-    "chg": "+0.02%",
+    "value": "103.74",
+    "chg": "+0.12%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "黄金",
-    "value": "3,795.20",
-    "chg": "-1.23%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "3,787.40",
+    "chg": "+0.02%",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "84.99",
-    "chg": "-0.67%",
+    "value": "83.74",
+    "chg": "-1.18%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "BTC",
-    "value": "64,663",
-    "chg": "-0.32%",
+    "value": "63,848",
+    "chg": "-1.58%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "VIX",
-    "value": "25.46",
-    "chg": "+2.58",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "23.99",
+    "chg": "-1.46",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.10%",
-    "chg": "-1.8bp",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "5.11%",
+    "chg": "+0.4bp",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.46%",
+    "value": "5.45%",
     "chg": "-0.9bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 2Y",
@@ -84,7 +84,7 @@ export const markets = [
   {
     "label": "12月加息概率",
     "value": "100%",
-    "chg": "一周前 78%",
+    "chg": "一周前 84%",
     "dir": "flat",
     "note": "ZQ 期货自算 · 2026-11-16"
   }
@@ -7338,6 +7338,80 @@ export const events = [
         "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
       }
     ]
+  },
+  {
+    "id": "nvda-earnings-2027-02-24",
+    "kind": "earnings",
+    "ticker": "NVDA",
+    "company": "NVDA",
+    "title": "NVDA 财报",
+    "subtitle": "盘后",
+    "org": "",
+    "date": "2027-02-24T16:05:00-05:00",
+    "dateNote": "盘后 · 日期按历史排期推算,公司未官宣",
+    "dateConfirmed": false,
+    "importance": 3,
+    "tags": [
+      "推算日期"
+    ],
+    "thesis": "",
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "watch": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [
+      {
+        "when": "2026-05-20",
+        "what": "EPS 意外 +5.5% · 实际 1.87 vs 预期 1.77",
+        "outcome": "次日 -1.77%（大 beat 5–10%）"
+      },
+      {
+        "when": "2026-02-25",
+        "what": "EPS 意外 +5.3% · 实际 1.62 vs 预期 1.54",
+        "outcome": "次日 -5.46%（大 beat 5–10%）"
+      },
+      {
+        "when": "2025-11-19",
+        "what": "EPS 意外 +3.5% · 实际 1.3 vs 预期 1.26",
+        "outcome": "次日 -3.15%（中 beat 2–5%）"
+      }
+    ],
+    "links": [],
+    "consensus": {},
+    "segments": [],
+    "guidance": {},
+    "options": {},
+    "valuation": [
+      {
+        "name": "基准收盘价",
+        "value": "$173.73"
+      },
+      {
+        "name": "概率加权目标价",
+        "value": "$206.31"
+      },
+      {
+        "name": "压力调整底线",
+        "value": "$159.93"
+      },
+      {
+        "name": "安全边际",
+        "value": "-7.94%"
+      }
+    ],
+    "targets": {
+      "low": "$132",
+      "avg": "$206",
+      "high": "$290",
+      "n": "本站三情景加权 · 卖方一致 $202.50"
+    },
+    "afterHours": {
+      "move": "",
+      "note": ""
+    }
   },
   {
     "id": "rebal-flow-window-2027-02-26-all",
