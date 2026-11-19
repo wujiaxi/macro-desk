@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-19 15:00 ET · ⚠️ 32 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
+  "updated": "2026-11-19 15:30 ET · ⚠️ 32 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,80 +13,80 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,192.98",
-    "chg": "-1.77%",
+    "value": "7,181.19",
+    "chg": "-1.93%",
     "dir": "down",
-    "note": "实时 15:00 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "26,575.0",
-    "chg": "-1.97%",
+    "value": "26,514.4",
+    "chg": "-2.19%",
     "dir": "down",
-    "note": "实时 15:00 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "DXY",
-    "value": "103.91",
-    "chg": "+0.00%",
-    "dir": "flat",
-    "note": "实时 15:00 ET"
+    "value": "103.87",
+    "chg": "-0.04%",
+    "dir": "down",
+    "note": "实时 15:30 ET"
   },
   {
     "label": "黄金",
-    "value": "3,671.60",
-    "chg": "-1.41%",
+    "value": "3,672.60",
+    "chg": "-1.39%",
     "dir": "down",
-    "note": "实时 15:00 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "82.74",
-    "chg": "+0.63%",
+    "value": "82.96",
+    "chg": "+0.90%",
     "dir": "up",
-    "note": "实时 15:00 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "BTC",
-    "value": "62,271",
-    "chg": "-1.13%",
+    "value": "61,762",
+    "chg": "-1.94%",
     "dir": "down",
-    "note": "实时 15:00 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "VIX",
-    "value": "27.00",
-    "chg": "+2.44",
+    "value": "28.33",
+    "chg": "+3.77",
     "dir": "up",
-    "note": "实时 15:00 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "US 10Y",
-    "value": "5.06%",
-    "chg": "-0.6bp",
+    "value": "5.05%",
+    "chg": "-1.4bp",
     "dir": "down",
-    "note": "实时 15:00 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.41%",
-    "chg": "-0.4bp",
+    "value": "5.40%",
+    "chg": "-1.1bp",
     "dir": "down",
-    "note": "实时 15:00 ET"
+    "note": "实时 15:30 ET"
   },
   {
     "label": "US 2Y",
     "value": "4.80%",
     "chg": "-3.0bp",
     "dir": "down",
-    "note": "as-of 2026-11-17 · 2s10s +30bp"
+    "note": "as-of 2026-11-17 · 2s10s +27bp"
   },
   {
     "label": "12月加息概率",
     "value": "100%",
     "chg": "一周前 100%",
     "dir": "flat",
-    "note": "ZQ 期货自算 · 2026-11-17"
+    "note": "ZQ 期货自算 · 2026-11-18"
   }
 ];
 
@@ -7943,6 +7943,135 @@ export const events = [
         "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
       }
     ]
+  },
+  {
+    "id": "rebal-index-trade-2027-03-19-spx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "标普季度调仓·再平衡交易日(三巫日)",
+    "subtitle": "被动盘落地·2027Q1",
+    "org": "SPX",
+    "date": "2027-03-19T16:00:00-04:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "index",
+      "index_trade",
+      "SPX"
+    ],
+    "thesis": "指数基金在收盘集合竞价一次性成交 —— 这才是被动买盘真正落地的那一刻,全年成交量最大的几个收盘之一。",
+    "watch": [
+      "收盘集合竞价成交量(量比中位 7.14x)",
+      "⚠️ 纳指100:3/6/9 月这天只做股本更新与增删,压权只在现权重触线时才重做;12 月这天是年度重构,从头重算、重新压权",
+      "⚠️ 标普与纳指100 是两套规则,不许混着说"
+    ],
+    "expectations": [],
+    "pricing": [],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "readThrough": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    },
+    "labels": {
+      "noScenarios": true,
+      "programFilled": true
+    }
+  },
+  {
+    "id": "rebal-index-trade-2027-03-19-ndx",
+    "kind": "macro",
+    "ticker": "",
+    "company": "",
+    "title": "纳指100·季度再平衡",
+    "subtitle": "被动盘落地·2027Q1",
+    "org": "NDX",
+    "date": "2027-03-19T16:00:00-04:00",
+    "dateNote": "规则算出的日期,非估计值",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "index",
+      "index_trade",
+      "NDX"
+    ],
+    "thesis": "指数基金在收盘集合竞价一次性成交 —— 这才是被动买盘真正落地的那一刻,全年成交量最大的几个收盘之一。",
+    "watch": [
+      "收盘集合竞价成交量(量比中位 7.14x)",
+      "⚠️ 纳指100:3/6/9 月这天只做股本更新与增删,压权只在现权重触线时才重做;12 月这天是年度重构,从头重算、重新压权",
+      "⚠️ 标普与纳指100 是两套规则,不许混着说"
+    ],
+    "expectations": [],
+    "pricing": [
+      {
+        "name": "特别再平衡触线距离",
+        "value": "28.2% / 48%",
+        "note": ">4.5% 的公司合计;最大 8.1%(线 24%)"
+      },
+      {
+        "name": "跟踪资金(下限)",
+        "value": "$475B",
+        "note": "只算 QQQ + QQQM(QQQM 本轮取不到)"
+      },
+      {
+        "name": "算法回放自检",
+        "value": "9 只 · 最大误差 2.4%",
+        "note": "复现 2025-11-28 重构的压权系数"
+      }
+    ],
+    "scenarios": [],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "readThrough": [],
+    "links": [
+      {
+        "label": "标普指数方法论",
+        "url": "https://www.spglobal.com/spdji/en/documents/methodologies/methodology-sp-us-indices.pdf"
+      },
+      {
+        "label": "纳斯达克100 方法论",
+        "url": "https://indexes.nasdaqomx.com/docs/methodology_NDX.pdf"
+      }
+    ],
+    "consensus": {},
+    "segments": {},
+    "guidance": {},
+    "options": {},
+    "valuation": [],
+    "targets": {},
+    "afterHours": {
+      "move": "",
+      "note": ""
+    },
+    "labels": {
+      "noScenarios": true,
+      "programFilled": true,
+      "pricing": "程序数字 · 纳指 100(每日收盘后更新)"
+    }
   },
   {
     "id": "nfp-2027-03-rel2027-04-02",
