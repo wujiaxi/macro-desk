@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-20 05:26 ET · ⚠️ 23 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
+  "updated": "2026-11-20 05:53 ET · ⚠️ 23 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,175.83",
     "chg": "-2.00%",
     "dir": "down",
-    "note": "实时 05:26 ET"
+    "note": "实时 05:53 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "26,517.1",
     "chg": "-2.18%",
     "dir": "down",
-    "note": "实时 05:26 ET"
+    "note": "实时 05:53 ET"
   },
   {
     "label": "DXY",
-    "value": "103.83",
-    "chg": "+0.04%",
+    "value": "103.87",
+    "chg": "+0.08%",
     "dir": "up",
-    "note": "实时 05:26 ET"
+    "note": "实时 05:53 ET"
   },
   {
     "label": "黄金",
-    "value": "3,578.00",
-    "chg": "+1.27%",
+    "value": "3,595.50",
+    "chg": "+1.77%",
     "dir": "up",
-    "note": "实时 05:26 ET"
+    "note": "实时 05:53 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "81.02",
-    "chg": "-2.37%",
+    "value": "81.56",
+    "chg": "-1.72%",
     "dir": "down",
-    "note": "实时 05:26 ET"
+    "note": "实时 05:53 ET"
   },
   {
     "label": "BTC",
-    "value": "61,829",
-    "chg": "-0.13%",
-    "dir": "down",
-    "note": "实时 05:26 ET"
+    "value": "62,025",
+    "chg": "+0.18%",
+    "dir": "up",
+    "note": "实时 05:53 ET"
   },
   {
     "label": "VIX",
-    "value": "29.56",
-    "chg": "+1.09",
+    "value": "28.77",
+    "chg": "+0.30",
     "dir": "up",
-    "note": "实时 05:26 ET"
+    "note": "实时 05:53 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.05%",
     "chg": "-1.4bp",
     "dir": "down",
-    "note": "实时 05:26 ET"
+    "note": "实时 05:53 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.40%",
     "chg": "-1.1bp",
     "dir": "down",
-    "note": "实时 05:26 ET"
+    "note": "实时 05:53 ET"
   },
   {
     "label": "US 2Y",
@@ -4584,11 +4584,99 @@ export const events = [
       "TSM",
       "INTC"
     ],
-    "thesis": "",
-    "expectations": [],
+    "thesis": "这场会对我意味着什么:这是黄仁勋辞任后英伟达第一次大型公开亮相,但官网上已经没有 CEO 主题演讲,12 月 1 日下午 2 点那个时段换成了副总裁 Ian Buck 的 40 分钟专场。这场会该看的不是发布了什么新产品,而是:没有了创始人,公司还敢不敢在台上给出能核对的日期和数字。 同一天上午 9:35(美东),英伟达还要在 UBS 科技会上给投资者讲话(11-19 官方公告),真正可能改变股价的话更可能出现在那里,而不是 GTC 现场。 主办方(NVDA):会前不动(这场会不构成动作理由)。11-19 收盘 $145.98(fetch_prices.py),已经低于 NVDA 卡的止损位 $163.90 和论点否定位 $150.79 —— 按卡片规则早该走重估流程,这件事与 GTC 无关,交棒 /thesis-tracker,不要等这场会给理由,也不要把会后的涨跌记到 GTC 头上。RSI 16.6、ATR% 8.15%、距 52 周高 -40.0%,同期 SMH 只跌 -14.4%(10-30→11-19,NVDA -28.7%)—— 跌幅里一大半是公司自己的事,不是板块。",
+    "expectations": [
+      {
+        "name": "平台与生态总览(Buck 专场)",
+        "consensus": "② 管理层别处预告:官网 Spotlight 页标题 \"Inside the NVIDIA AI Platform and Ecosystem\",介绍写 \"NVIDIA leaders … share exciting announcements for infrastructure, security, physical AI, open models, and agents\"",
+        "prior": "B(官网)",
+        "range": "",
+        "note": "已知有这场,不知道有没有新东西"
+      },
+      {
+        "name": "安全/智能体、开源模型、物理 AI 三场 Spotlight",
+        "consensus": "② 同上(Boitano / Briski+Catanzaro / Lebaredian)",
+        "prior": "B",
+        "range": "",
+        "note": "已知。11-16 已发 Nemotron for Science、Vera CPU 扩展两稿,很可能是复述"
+      },
+      {
+        "name": "DOE / 政府科研口径",
+        "consensus": "① 上代节奏:GTC DC 2025 主轴就是 DOE 七套超算;② 官网讲者名单含 DOE 科学副部长 Darío Gil、FDA 数字健康中心主任",
+        "prior": "B(官网讲者名单)",
+        "range": "",
+        "note": "部分已知"
+      },
+      {
+        "name": "出口管制/国家安全表态",
+        "consensus": "① conferences.yaml what_moves;② 11-17 董事会新设监督委员会",
+        "prior": "B",
+        "range": "",
+        "note": "已知有委员会,不知道会不会在台上谈"
+      },
+      {
+        "name": "FY28 增速与订单口径(UBS 场,非 GTC)",
+        "consensus": "② 11-17 电话会(据报约 75%,C 级)",
+        "prior": "C",
+        "range": "",
+        "note": "已知"
+      },
+      {
+        "name": "新硅片、下一代架构日期",
+        "consensus": "——",
+        "prior": "——",
+        "range": "",
+        "note": "⛔ 无法建立预期。GTC DC 2025 有 CEO 讲路线图;本场是 VP 专场,不许因为「这是 GTC」就假设有新芯片或新日期"
+      },
+      {
+        "name": "新订单金额 / GW 数",
+        "consensus": "——",
+        "prior": "——",
+        "range": "",
+        "note": "⛔ 无法建立预期。③ 具名供应链报道:本轮一条都没找到"
+      },
+      {
+        "name": "谁在 UBS 场发言",
+        "consensus": "11-19 公告只写 \"NVIDIA will present\",没写人名",
+        "prior": "——",
+        "range": "",
+        "note": "⛔ 取不到。会后先核"
+      }
+    ],
     "pricing": [],
-    "scenarios": [],
-    "watch": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "15%",
+        "trigger": "具名高管给出下一代产品具体年份,且 UBS 场逐字重申 FY28 约 75%",
+        "reaction": "NVDA 从超卖位反弹,幅度可能超过期权给的约 3.5%/日,多为不确定性折价回吐;AVGO 承压,TSM 中性"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "55%",
+        "trigger": "平台与智能体复述,roadmap on track 无日期;UBS 场复述 11-17 电话会",
+        "reaction": "零信息量,跟着板块与同周 re:Invent 走;全线不动"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "30%",
+        "trigger": "UBS 场不给 FY28 数字或措辞变软,或路线图换成泛称,或出现出口管制/调查相关新披露",
+        "reaction": "NVDA 继续下跌且这一档期权没有定价;AVGO 是唯一的正向受益者"
+      }
+    ],
+    "watch": [
+      "UBS 场谁在说 · 预期 Kress 或 IR 负责人 · 利好 具名高管(临时 CEO / 某位 EVP)出席并回答路线图 · 利空 只有 IR、或改成「仅 Q&A 不讲 FY28」",
+      "FY28 增速口径 · 预期 复述 11-17 的约 75% · 利好 逐字重申并补 \"supply constrained\" 等原有限定语 · 利空 不给数字 / 加新条件 / 改成 \"strong growth\"",
+      "下一代路线图的日期 · 预期 只说 \"on track\",不给日期 · 利好 给出具体产品与年份(与 GTC SJ 2026 口径对照) · 利空 产品名换成 \"future generations\",或年份往后挪",
+      "DOE / Equinox · 预期 提 DOE 合作,不给上线读数 · 利好 Equinox 已上线 + Solstice 给时间 · 利空 DOE 超算全场不提(Gil 在讲者名单上却不提 = 更强信号)",
+      "订单 / 可见度口径 · 预期 不再提 $5,000 亿 · 利好 给出新的累计可见度数字,并说明与旧口径(Blackwell+Rubin、到 2026 年底)的关系 · 利空 明确下调,或换一把尺子而不回连旧口径",
+      "出口管制 / 国家安全 · 预期 泛泛谈 \"American AI\" · 利好 点名新的美国政府/主权客户 + GPU 数或 MW · 利空 新披露出口许可受限、调查进展,或政府场次临时撤下",
+      "「谁说的」 · 预期 —— · 利好 —— · 利空 任何「官方口径」数字先答三问:谁说的(姓名职务)/ 原话是什么 / 新披露还是复述。主持人(UBS 分析师)的提问里的数字不是公司承诺",
+      "单位与口径 · 预期 —— · 利好 —— · 利空 判上修/下修前先核单位(收入增速 vs 订单额;FY 还是 CY;exaflops 训练还是推理)"
+    ],
     "actual": [],
     "reaction": [],
     "verdict": "",
@@ -4597,13 +4685,74 @@ export const events = [
       {
         "label": "官方页面",
         "url": "https://www.nvidia.com/gtc/dc/"
+      },
+      {
+        "label": "nvidia.com · keynote",
+        "url": "https://www.nvidia.com/gtc/dc/keynote/"
+      },
+      {
+        "label": "nvidia.com · spotlight-sessions",
+        "url": "https://www.nvidia.com/gtc/dc/spotlight-sessions/"
+      },
+      {
+        "label": "nvidianews.nvidia.com",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-oracle-us-department-of-energy-ai-supercomputer-scientific-discovery"
+      },
+      {
+        "label": "nvidianews.nvidia.com",
+        "url": "https://nvidianews.nvidia.com/news/nvidia-partners-ai-infrastructure-america"
+      },
+      {
+        "label": "blogs.nvidia.com · nvidia-gtc-washington-dc-2025-news",
+        "url": "https://blogs.nvidia.com/blog/nvidia-gtc-washington-dc-2025-news/"
       }
     ],
-    "agenda": [],
+    "agenda": [
+      {
+        "when": "11-30(一)全天",
+        "what": "Workshops(注册 / 全天动手培训 / 午餐)。无主题演讲"
+      },
+      {
+        "when": "12-01(二)09:35 ET(06:35 PT)",
+        "what": "UBS Global Technology and AI Conference:NVIDIA 投资者发言(非 GTC 场内;11-19 官方公告,未写发言人),webcast 在 investor.nvidia.com"
+      },
+      {
+        "when": "12-01(二)14:00–14:40 ET",
+        "what": "Spotlight:Inside the NVIDIA AI Platform and Ecosystem —— Ian Buck(VP & GM, Hyperscale & HPC)。原 CEO keynote 时段"
+      },
+      {
+        "when": "12-01(二)14:50–15:30 ET",
+        "what": "Spotlight:Building Trust in the Age of Agents —— Justin Boitano(VP, Enterprise AI Products)"
+      },
+      {
+        "when": "12-01(二)15:40–16:20 ET",
+        "what": "Spotlight:Own Your Intelligence: From Open Models to Agents —— Kari Briski、Bryan Catanzaro"
+      },
+      {
+        "when": "12-01(二)16:30–17:10 ET",
+        "what": "Spotlight:Reindustrializing America With Physical AI —— Rev Lebaredian"
+      },
+      {
+        "when": "12-01 ~ 12-03",
+        "what": "分论坛、培训认证、展区(Ronald Reagan Building)。讲者名单含 DOE 科学副部长 Darío Gil、FDA 数字健康中心主任 Rick Abramson、Lilly 首席 AI 官 Thomas Fuchs(场次时点未公布)"
+      }
+    ],
     "readThrough": [
       {
-        "name": "传导标的",
-        "value": "AVGO、TSM、INTC"
+        "name": "AVGO",
+        "value": "平台与生态总览(Buck 专场)(AI 定制芯片 XPU 放量)· 安全/智能体、开源模型、物理 AI 三场 Spotlight(大客户 backlog 锁定) · 与 NVDA 反向,本卡传导最实的一条 · Buck 专场或 UBS 场把下一代路线说软(只讲 \"roadmap on track\" 不给日期,或把具体产品换成 \"future generations\")= 客户把第二供应商写进 2027 合同的理由变多,利好 AVGO 平台与生态总览(Buck 专场)。反之给出具体日期 = AVGO 的份额故事要打折。⚠️ 同周 re:Invent 的 Trainium 消息会叠在同一根 K 线上,会后归因必须分开"
+      },
+      {
+        "name": "TSM",
+        "value": "平台与生态总览(Buck 专场)(先进制程垄断 + 定价权) · 中性 · NVDA 份额流向 ASIC 时,用的仍是台积电制程与 CoWoS → 量不变、客户换人。只有出现「NVDA 下一代产品延期」这种总量变化才算触发。现价 $352.09 已跌破卡片止损 $385.71(与本会无关,交棒 thesis-tracker)"
+      },
+      {
+        "name": "INTC",
+        "value": "出口管制/国家安全表态(DCAI/Xeon 承接 AI host CPU)· 安全/智能体、开源模型、物理 AI 三场 Spotlight(外部代工) · 偏多,但先验低 · 台上点名 NVIDIA 定制 x86 CPU 进入 NVDA 某个机架/产品的时点,或 RTX x86 SoC 的出货时点(2025-09-18 合作稿只有方向、无时点)。只说「合作进展顺利」= 零信息量。政府/安全主题若提到「美国本土制造」,不算 INTC 代工触发(没点名就不算)"
+      },
+      {
+        "name": "NVDA(主办方)",
+        "value": "安全/智能体、开源模型、物理 AI 三场 Spotlight(份额)· 新硅片、下一代架构日期(关键人与治理) · 受影响最小,但这次不是零 · 平常的 GTC 对 NVDA 估值几乎没信息量;这次 新硅片、下一代架构日期 是开着的,说话人和措辞本身就是证据。触发:Buck 给出下一代产品日期 = 新硅片、下一代架构日期「路线图被改」这一条证伪信号往远处推;全场无日期、UBS 也不重申 FY28 = 安全/智能体、开源模型、物理 AI 三场 Spotlight×新硅片、下一代架构日期 组合继续恶化"
       }
     ]
   },
