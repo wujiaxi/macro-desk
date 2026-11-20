@@ -517,7 +517,7 @@ function renderLR(j){
   const grid=document.getElementById("lrGrid");
   grid.innerHTML=j.cards.map((c,i)=>`<div class="lrcard">
     <div class="lrhead"><div><div class="lrgrp">${esc(c.group)}</div><div class="lrt">${esc(c.title)}${c.stale?'<span class="badge">数据偏旧</span>':""}</div><div class="lrsub">${esc(c.sub)}</div></div>
-      <div><div class="lrv">${esc(c.latest.text)}</div><div class="lrd">${esc(c.latest.date)} · 历史分位 ${c.pct}%</div></div></div>
+      <div><div class="lrv">${esc(c.latest.text)}</div><div class="lrd">${esc(c.latest.date)}${c.pct!=null?` · 历史分位 ${c.pct}%`:""}</div></div></div>
     ${(c.series.length>1||c.series2)?`<div class="lrleg">${[...c.series,...(c.series2?c.series2.series:[])].map(s=>`<span><i style="background:${s.color};opacity:${s.minor?.5:1}"></i>${esc(s.label)}</span>`).join("")}</div>`:""}
     ${c.kpis?`<div class="lrkpi">${c.kpis.map(k=>`<div><div class="lrgrp">${esc(k.label)}</div><div class="mono" style="font-size:15px;font-weight:600;margin-top:2px">${esc(k.value)}</div><div class="lrd" style="text-align:left">${esc(k.note)}</div></div>`).join("")}</div>`:""}
     <div id="lrc${i}"></div>${c.series2?`<div id="lrc${i}b"></div>`:""}
