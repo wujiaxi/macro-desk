@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-20 13:30 ET · ⚠️ 23 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
+  "updated": "2026-11-20 13:50 ET · ⚠️ 25 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,016.13",
+    "value": "7,015.91",
     "chg": "-2.25%",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:50 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "25,492.6",
-    "chg": "-3.89%",
+    "value": "25,480.1",
+    "chg": "-3.93%",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:50 ET"
   },
   {
     "label": "DXY",
-    "value": "103.83",
-    "chg": "+0.04%",
+    "value": "103.85",
+    "chg": "+0.05%",
     "dir": "up",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:50 ET"
   },
   {
     "label": "黄金",
-    "value": "3,525.20",
-    "chg": "-0.22%",
+    "value": "3,512.20",
+    "chg": "-0.59%",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:50 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "83.12",
-    "chg": "+0.16%",
-    "dir": "up",
-    "note": "实时 13:30 ET"
+    "value": "82.90",
+    "chg": "-0.11%",
+    "dir": "down",
+    "note": "实时 13:50 ET"
   },
   {
     "label": "BTC",
-    "value": "58,915",
-    "chg": "-4.84%",
+    "value": "58,202",
+    "chg": "-5.99%",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:50 ET"
   },
   {
     "label": "VIX",
-    "value": "32.39",
-    "chg": "+3.92",
+    "value": "31.37",
+    "chg": "+2.90",
     "dir": "up",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:50 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.93%",
-    "chg": "-11.8bp",
+    "value": "4.95%",
+    "chg": "-10.4bp",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:50 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.32%",
-    "chg": "-8.4bp",
+    "value": "5.33%",
+    "chg": "-7.5bp",
     "dir": "down",
-    "note": "实时 13:30 ET"
+    "note": "实时 13:50 ET"
   },
   {
     "label": "US 2Y",
@@ -4092,9 +4092,63 @@ export const events = [
       "Agent 365 / Foundry GA 与定价 · 预期 宣布若干 GA · 利好 GA + 明确的按 Agent 计价 · 利空 只给愿景、不给 GA 时间",
       "11-17 13:00–16:00 美东的分时 · 预期 波幅 < ±2.2% · 利好 —— · 利空 ——"
     ],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
+    "actual": [
+      {
+        "name": "Maia 300 在 Ignite 补充披露(官博预告「Ignite 分享更多」)",
+        "actual": "keynote 里 Maia 300 只有一句话,只复述了 10-12 官博的 40% 能效对比(10-12 写 per megawatt,keynote 写 per watt,两者是同一个比值,不是口径变化);没有部署规模、地区、上线时间,连 2027 都没有重申。Book of News 全文 0 次提到 Maia。官博预告的「Ignite 分享更多」没有兑现。按字面 bear_if 要求「keynote 不提」,这里提了一句;但 expect 的两个条件(重申 2027、补部署细节)都没出现,实际落在 expect 之下,按 bear 裁 -1(判断,见 §13)",
+        "consensus": "重申 2027 开始生产部署,补少量部署细节,不给具体 GW 或芯片数",
+        "prior": "",
+        "surprise": "利空",
+        "dir": "down"
+      },
+      {
+        "name": "multi-gigawatt starting 2027 口径是否原样重申",
+        "actual": "multi-gigawatt / 2027 部署口径在本场完全没有出现,也没有换成芯片数或机架数。只在本场范围内判静默删除;台账承诺 2027-12-31 才到期,本场不核销,理由见 §11",
+        "consensus": "重申,口径不变",
+        "prior": "",
+        "surprise": "利空",
+        "dir": "down"
+      },
+      {
+        "name": "Maia 300 设计伙伴是否被管理层一手点名",
+        "actual": "keynote、Book of News、Azure 博客都没有点名 Maia 设计伙伴,Marvell、Broadcom 均 0 次出现。与 10-12 官博一样不点名",
+        "consensus": "不点名",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      },
+      {
+        "name": "Copilot / Agent 变现数字",
+        "actual": "没有 Copilot 付费席位数。新出现的数字:Nadella 称 Agent 365 里已有 5,000 万以上个 agent(数的是 agent,不是付费);Agent 365 已有独立许可证(Book of News 写 insights for non-Microsoft services require an Agent 365 license),不再是 bear_if 说的仅早期访问;新增 Agent 365 Cost Management(预览)与 Business Analytics(Frontier 计划),把 Copilot Cowork / Code / Autopilot / Work IQ API 列为按用量计费的服务;Copilot Code 12 月 GA。没有按 agent 的明确定价,未达 bull_if",
+        "consensus": "不披露 Copilot 付费席位绝对数,只宣布 Agent 365 / Foundry 产品 GA",
+        "prior": "",
+        "surprise": "中性",
+        "dir": "flat"
+      }
+    ],
+    "reaction": [
+      {
+        "asset": "MSFT",
+        "d0": "-2.27%",
+        "d1": "+0.40%"
+      },
+      {
+        "asset": "NVDA",
+        "d0": "-0.44%",
+        "d1": "-2.89%"
+      },
+      {
+        "asset": "AVGO",
+        "d0": "+2.46%",
+        "d1": "+3.64%"
+      },
+      {
+        "asset": "QQQ",
+        "d0": "-0.73%",
+        "d1": "+0.39%"
+      }
+    ],
+    "verdict": "判定:这场会对微软股价基本是中性;我事先押注的「Maia 自研芯片会讲更多」完全落空,所以对芯片链的传导是零。 微软把整场会用在软件上:Copilot 被定位成「工作的操作系统」,Office 全部装进 Copilot,和 Salesforce 合作,推出自研模型并开放模型权重授权,AI 收费在从「按人头」转向「按用量」。自研 AI 芯片 Maia 300 只出现了一句话。 凭哪几个数: ① Maia 300 在 keynote 里只有一句「能效比领先 GPU 系统高 40%」,和 10 月 12 日官博说法相同;当日官方新闻汇编(Book of News)里 Maia 一次都没出现,10 月说的「2027 年起扩展到数个吉瓦(GW)」也完全没提。② 微软当天跌 2.27%,但全部跌在 keynote 开始之前,同一天软件板块 ETF(IGV)跌 3.29%;keynote 那 3 个小时里微软反而涨了 1.06%,纳指 100 ETF 涨 0.45%。③ CEO 纳德拉说 Agent 365 里已经有 5,000 万以上个 AI 代理,但这数的是代理的个数,不是付费数;Copilot 付费人数仍然没有公布。④ 自研 Arm 服务器 CPU(Cobalt 200)正式开卖,微软说它「2027 年起会占新增 Azure 计算容量的显著份额」。 对市场什么意思: 想靠这场会判断 Marvell 或博通有没有拿到 Maia 订单的人,什么也没拿到,这个问题还是悬着。真正出乎意料的是 Cobalt 200 那句话:它说的是微软自己的 CPU 会抢走一部分新增服务器份额,对 AMD 和英特尔的服务器 CPU 是一个小的负面信号。不过「显著份额」没有给数字,量级判断不了。 可信度边界: 全部来自微软官方博客和 Book of News(公司材料,不进 SEC 备案)。keynote 讲稿是官方编辑版,不是逐字稿;分论坛没有核。软件板块当天为什么大跌,我没有查到可信原因。",
     "history": [],
     "links": [
       {
