@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-20 05:53 ET · ⚠️ 23 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
+  "updated": "2026-11-20 06:20 ET · ⚠️ 23 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,175.83",
     "chg": "-2.00%",
     "dir": "down",
-    "note": "实时 05:53 ET"
+    "note": "实时 06:20 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "26,517.1",
     "chg": "-2.18%",
     "dir": "down",
-    "note": "实时 05:53 ET"
+    "note": "实时 06:20 ET"
   },
   {
     "label": "DXY",
-    "value": "103.87",
-    "chg": "+0.08%",
+    "value": "103.86",
+    "chg": "+0.06%",
     "dir": "up",
-    "note": "实时 05:53 ET"
+    "note": "实时 06:20 ET"
   },
   {
     "label": "黄金",
-    "value": "3,595.50",
-    "chg": "+1.77%",
+    "value": "3,591.30",
+    "chg": "+1.65%",
     "dir": "up",
-    "note": "实时 05:53 ET"
+    "note": "实时 06:20 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "81.56",
-    "chg": "-1.72%",
+    "value": "81.82",
+    "chg": "-1.41%",
     "dir": "down",
-    "note": "实时 05:53 ET"
+    "note": "实时 06:20 ET"
   },
   {
     "label": "BTC",
-    "value": "62,025",
-    "chg": "+0.18%",
-    "dir": "up",
-    "note": "实时 05:53 ET"
+    "value": "61,688",
+    "chg": "-0.36%",
+    "dir": "down",
+    "note": "实时 06:20 ET"
   },
   {
     "label": "VIX",
-    "value": "28.77",
-    "chg": "+0.30",
+    "value": "28.98",
+    "chg": "+0.51",
     "dir": "up",
-    "note": "实时 05:53 ET"
+    "note": "实时 06:20 ET"
   },
   {
     "label": "US 10Y",
     "value": "5.05%",
     "chg": "-1.4bp",
     "dir": "down",
-    "note": "实时 05:53 ET"
+    "note": "实时 06:20 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.40%",
     "chg": "-1.1bp",
     "dir": "down",
-    "note": "实时 05:53 ET"
+    "note": "实时 06:20 ET"
   },
   {
     "label": "US 2Y",
@@ -4379,48 +4379,6 @@ export const events = [
     }
   },
   {
-    "id": "conf-aws-reinvent-2026-11-30",
-    "kind": "event",
-    "title": "AWS re:Invent",
-    "subtitle": "Trainium/Graviton 自研进度与客户、容量与区域扩张、自研 vs 外购口径",
-    "org": "AMZN",
-    "ticker": "AMZN",
-    "company": "",
-    "date": "2026-11-30T09:00:00-05:00",
-    "dateEnd": null,
-    "dateNote": "keynote 时间未公布,暂按开幕日 09:00 ET 显示 · 不进 SEC 备案,证据等级上限 B",
-    "dateConfirmed": true,
-    "importance": 3,
-    "tags": [
-      "product",
-      "NVDA",
-      "AVGO",
-      "MRVL"
-    ],
-    "thesis": "",
-    "expectations": [],
-    "pricing": [],
-    "scenarios": [],
-    "watch": [],
-    "actual": [],
-    "reaction": [],
-    "verdict": "",
-    "history": [],
-    "links": [
-      {
-        "label": "官方页面",
-        "url": "https://registration.awsevents.com/flow/awsevents/reinvent2026/eventcatalog/page/eventcatalog"
-      }
-    ],
-    "agenda": [],
-    "readThrough": [
-      {
-        "name": "传导标的",
-        "value": "NVDA、AVGO、MRVL、TSM"
-      }
-    ]
-  },
-  {
     "id": "rebal-flow-window-2026-11-30-all",
     "kind": "macro",
     "ticker": "",
@@ -4564,6 +4522,181 @@ export const events = [
         "e": "方向对不对"
       }
     }
+  },
+  {
+    "id": "conf-aws-reinvent-2026-11-30",
+    "kind": "event",
+    "title": "AWS re:Invent",
+    "subtitle": "Trainium/Graviton 自研进度与客户、容量与区域扩张、自研 vs 外购口径",
+    "org": "AMZN",
+    "ticker": "AMZN",
+    "company": "",
+    "date": "2026-12-01T11:30:00-05:00",
+    "dateEnd": "2026-12-01T13:30:00-05:00",
+    "dateNote": "不进 SEC 备案,证据等级上限 B",
+    "dateConfirmed": true,
+    "importance": 3,
+    "tags": [
+      "product",
+      "NVDA",
+      "AVGO",
+      "MRVL"
+    ],
+    "thesis": "这场会对我意味着什么:AMZN 第一次进承诺台账,本场为基线场次,没有可比的历史会议记录,结论以观察为主。会前唯一能写死的公司口径是 Q3 财报会上那句 \"We intend to do so late in 2027\"(Trainium 对 AWS 以外提供)。官方预告的主线是 Agent、Bedrock、Kiro,官方没有任何关于新芯片的预告。但 Trainium 首席架构师 Ron Diamant 列在 12-03 的技术 keynote 嘉宾里,所以芯片的信息量大概率在周四,而不是周二的 CEO keynote。 主办方(AMZN):会前不动。这是 AMZN 卡已经写好的「持有不加」,本卡不改它。现价 $257.37(2026-11-19 收盘,fetch_prices.py)。AMZN 卡的减仓位 $267.07 只高出现价 3.8%,不到 1 个 ATR($11.20),所以会上的利好就有可能把股价推过那条线。到时候按 AMZN 卡的规则执行,不因为这场会改价位。期权没有把这场会定价成事件(见 §4)。",
+    "expectations": [
+      {
+        "name": "Agent / Bedrock / Kiro 产品更新",
+        "consensus": "② 官方预告原话:\"AI agents ... will dominate the agenda for the second consecutive year\";\"expect news across Amazon Bedrock and developer tools like Kiro\"(aboutamazon,2026-11-13)",
+        "prior": "B",
+        "range": "",
+        "note": "已知会讲,属于基本盘"
+      },
+      {
+        "name": "Trainium4 更新(规格、时间表、NVLink Fusion)",
+        "consensus": "① 上代节奏外推:Trainium3 在 re:Invent 2025(2025-12-02)宣布 GA,同场预告 Trainium4;本届 Trainium 首席架构师 Ron Diamant 列在 12-03 技术 keynote",
+        "prior": "B(节奏外推)",
+        "range": "",
+        "note": "规格 2025-12 已公开,重复就是复述。⛔ GA 时间表无法建立预期:官方从没给过日期,「约 18 个月」只有二手转述"
+      },
+      {
+        "name": "Trainium 外部销售形态",
+        "consensus": "② 管理层别处预告:Q3 会 \"late in 2027\"",
+        "prior": "B",
+        "range": "",
+        "note": "已知时间,不知道形态和客户"
+      },
+      {
+        "name": "Trainium4 设计伙伴是否点名",
+        "consensus": "——",
+        "prior": "——",
+        "range": "",
+        "note": "⛔ 无法建立预期。AWS 官方从没点名过 Trainium 的 ASIC 后端伙伴;Alchip/Marvell 归属只来自机构报道(见 MRVL 卡)"
+      },
+      {
+        "name": "非 AI 实验室的规模化 Trainium 客户",
+        "consensus": "① 上届 GA 稿点名过 Ricoh、Karakuri、Splashmusic 等早期客户,都没有规模数字",
+        "prior": "B",
+        "range": "",
+        "note": "⛔ 有没有带规模的披露,无法建立预期"
+      },
+      {
+        "name": "OpenAI 相关内容",
+        "consensus": "② 官方 keynote 页嘉宾名单有 \"Sam Altman, Co-Founder and CEO, OpenAI\"",
+        "prior": "B",
+        "range": "",
+        "note": "已知会出场,不知道讲什么。⛔ 不给「会宣布 Trainium 合作」的概率"
+      },
+      {
+        "name": "新增 GW / capex / AWS 增速数字",
+        "consensus": "——",
+        "prior": "——",
+        "range": "",
+        "note": "⛔ 无法建立预期。re:Invent 不是财务场合"
+      }
+    ],
+    "pricing": [],
+    "scenarios": [
+      {
+        "tag": "超预期",
+        "tone": "dove",
+        "prob": "25%",
+        "trigger": "Trainium4 给出时间与客户,或点名带规模的非 AI 实验室 Trainium 客户,或 OpenAI 一手确认使用 Trainium",
+        "reaction": "AMZN 偏多,量级在日常波幅之内;NVDA 计算层份额叙事偏空;被点名的 ASIC 伙伴明显波动"
+      },
+      {
+        "tag": "符合预期",
+        "tone": "base",
+        "prob": "55%",
+        "trigger": "Agent/Bedrock/Kiro 为主线,Trainium4 复述规格、不给日期、不点名伙伴,Altman 环节泛泛复述",
+        "reaction": "主办方无显著反应;传导标的当天走势由 GTC DC 与板块决定"
+      },
+      {
+        "tag": "低于预期",
+        "tone": "hawk",
+        "prob": "20%",
+        "trigger": "Trainium4 两场 keynote 均缺席或语焉不详,或 NVLink Fusion 口径消失,或外部销售改口推迟",
+        "reaction": "AMZN 小幅偏空;NVDA 份额担忧缓和;MRVL 维持悬空"
+      }
+    ],
+    "watch": [
+      "Trainium4 有没有新信息 · 预期 复述规格,不给 GA 日期 · 利好 给出 GA 或预览时间、首批客户 · 利空 两场 keynote 都不提,或规格下修",
+      "NVLink Fusion / MGX 口径 · 预期 原样重申 · 利好 给出出货时间或首个混合机架客户 · 利空 不再提及",
+      "Trainium4 设计伙伴有没有被一手点名 · 预期 不点名 · 利好 (对 MRVL)点名 Marvell · 利空 (对 MRVL)点名他家或说完全自研",
+      "非 AI 实验室的规模化 Trainium 客户 · 预期 点名若干客户,但不给规模 · 利好 点名并给出 GW、芯片数或金额 · 利空 案例只有 Anthropic、OpenAI 等实验室",
+      "Sam Altman 环节 · 预期 合作复述,无新数字 · 利好 OpenAI 一手确认 Trainium 用量或新增承诺金额 · 利空 明确只用 GPU",
+      "Trainium 外部销售(\"late in 2027\") · 预期 不主动提,或原样重申 · 利好 提前,或给出形态与首批外部客户 · 利空 推迟,或换成更模糊的措辞",
+      "12-01、12-03 11:30–16:00 美东的分时 · 预期 AMZN 波幅在 ATR 之内 · 利好 —— · 利空 ——"
+    ],
+    "actual": [],
+    "reaction": [],
+    "verdict": "",
+    "history": [],
+    "links": [
+      {
+        "label": "官方页面",
+        "url": "https://registration.awsevents.com/flow/awsevents/reinvent2026/eventcatalog/page/eventcatalog"
+      },
+      {
+        "label": "aws.amazon.com · reinvent",
+        "url": "https://aws.amazon.com/events/reinvent"
+      },
+      {
+        "label": "aboutamazon.com · what-is-aws-reinvent",
+        "url": "https://www.aboutamazon.com/news/aws/what-is-aws-reinvent"
+      },
+      {
+        "label": "aws.amazon.com · keynotes",
+        "url": "https://aws.amazon.com/events/reinvent/sessions/keynotes/"
+      }
+    ],
+    "agenda": [
+      {
+        "when": "11-30(一) 19:30–20:45 PT = 22:30–23:45 美东(盘后)",
+        "what": "Developer Keynote:Marc Brooker、Clare Liguori 等"
+      },
+      {
+        "when": "12-01(二) 08:30–10:30 PT = 11:30–13:30 美东(盘中)",
+        "what": "CEO Keynote:Matt Garman(CEO, AWS);嘉宾 Allianz、DoorDash、Sam Altman(OpenAI)"
+      },
+      {
+        "when": "12-02(三) 08:30–10:00 PT = 11:30–13:00 美东",
+        "what": "Data & AI Keynote:Dr. Swami Sivasubramanian"
+      },
+      {
+        "when": "12-02(三) 15:00–16:00 PT = 18:00–19:00 美东(盘后)",
+        "what": "Partner Keynote:Dr. Ruba Borno、Matt Garman"
+      },
+      {
+        "when": "12-03(四) 08:30–10:00 PT = 11:30–13:00 美东(盘中)",
+        "what": "Technical Innovations Keynote:Matt Wood;嘉宾含 Ron Diamant(VP and Chief Trainium Architect)。芯片信息大概率在这一场"
+      },
+      {
+        "when": "12-01(二) 全天",
+        "what": "⚠️ 非 re:Invent 环节:NVIDIA GTC D.C. 主会日(会期 12-01~03)、UBS Global Technology Conference(12-01~02)。见 NVDA_gtc-dc_2026-11-30.md"
+      }
+    ],
+    "readThrough": [
+      {
+        "name": "MRVL",
+        "value": "[core] Agent / Bedrock / Kiro 产品更新 定制硅 socket 守得住(证伪信号原文含「Trainium4 归属确认失守」) · 双向,本卡最实的一条 · AWS 管理层一手点名 Trainium4 的设计伙伴。点名 Marvell,Agent / Bedrock / Kiro 产品更新 加强;点名他家或说「完全自研」,触发 MRVL 卡写死的证伪信号。媒体与卖方解读都不算。不点名 = 维持悬空(默认)"
+      },
+      {
+        "name": "NVDA",
+        "value": "Trainium4 更新(规格、时间表、NVLink Fusion) ASIC 分流 / 份额 · 方向取决于是哪一层 · ① Trainium4 给出更早的 GA 时间或更大的部署规模:份额叙事偏空;② 重申 NVLink Fusion 与 MGX 机架:偏多,因为 ASIC 机架也在用 NVDA 的互连和机架标准;③ Altman 一手说出 OpenAI 在 AWS 上用 Trainium:偏空。只复述 2025-12 的口径 = 零信息量。⚠️ 12-01 有 GTC DC,NVDA 当天的价格反应不许用来裁决本条"
+      },
+      {
+        "name": "AVGO",
+        "value": "Agent / Bedrock / Kiro 产品更新 AI XPU 放量 · 低,间接 · AWS 不是公开的 AVGO XPU 客户。只有 Trainium 一手拿下原来在 TPU 上的大客户工作负载(如 Anthropic 用量迁移的具体数字),才算对 AVGO 份额的间接利空。默认零信息量"
+      },
+      {
+        "name": "TSM",
+        "value": "Agent / Bedrock / Kiro 产品更新 先进制程 · Trainium4 更新(规格、时间表、NVLink Fusion) AI 需求 · 中性偏多 · Trainium3 走 3nm 是已知信息。Trainium4 如果公布更先进的节点或更大的量,对 TSM 是「量不变、客户换人」,GPU 和 Trainium 都在台积电下单"
+      },
+      {
+        "name": "AMZN(主办方)",
+        "value": "非 AI 实验室的规模化 Trainium 客户 关联方循环需求 · Agent / Bedrock / Kiro 产品更新 产能受限 · 受影响最小 · 非 AI 实验室的规模化 Trainium 客户 的证伪信号是「2027 Q1 前仍无已披露规模的非 AI 实验室生产级 Trainium 客户」。re:Invent 是 2027 Q1 前最后一个大窗口。会上点名带规模的非实验室客户,非 AI 实验室的规模化 Trainium 客户 缓和;只有 Anthropic、OpenAI 这类实验室,非 AI 实验室的规模化 Trainium 客户 的担忧不变。估值锚是 2027 capex,这场会不碰"
+      }
+    ]
   },
   {
     "id": "conf-gtc-dc-2026-11-30",
