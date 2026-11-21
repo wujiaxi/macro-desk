@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-21 10:30 ET · ⚠️ 26 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
+  "updated": "2026-11-21 13:19 ET · ⚠️ 26 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "6,910.39",
     "chg": "-3.72%",
     "dir": "down",
-    "note": "实时 10:29 ET"
+    "note": "实时 13:19 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "25,029.0",
     "chg": "-5.63%",
     "dir": "down",
-    "note": "实时 10:29 ET"
+    "note": "实时 13:19 ET"
   },
   {
     "label": "DXY",
     "value": "103.81",
     "chg": "+0.02%",
     "dir": "up",
-    "note": "实时 10:29 ET"
+    "note": "实时 13:19 ET"
   },
   {
     "label": "黄金",
     "value": "3,515.40",
     "chg": "-0.50%",
     "dir": "down",
-    "note": "实时 10:29 ET"
+    "note": "实时 13:19 ET"
   },
   {
     "label": "WTI 原油",
     "value": "83.98",
     "chg": "+1.19%",
     "dir": "up",
-    "note": "实时 10:29 ET"
+    "note": "实时 13:19 ET"
   },
   {
     "label": "BTC",
-    "value": "59,892",
-    "chg": "+1.84%",
+    "value": "60,058",
+    "chg": "+2.12%",
     "dir": "up",
-    "note": "实时 10:30 ET"
+    "note": "实时 13:19 ET"
   },
   {
     "label": "VIX",
     "value": "35.89",
     "chg": "+7.42",
     "dir": "up",
-    "note": "实时 10:30 ET"
+    "note": "实时 13:19 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.91%",
     "chg": "-14.0bp",
     "dir": "down",
-    "note": "实时 10:30 ET"
+    "note": "实时 13:19 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.30%",
     "chg": "-9.8bp",
     "dir": "down",
-    "note": "实时 10:30 ET"
+    "note": "实时 13:19 ET"
   },
   {
     "label": "US 2Y",
@@ -4596,7 +4596,7 @@ export const events = [
       "AVGO",
       "MRVL"
     ],
-    "thesis": "这场会对我意味着什么:AMZN 第一次进承诺台账,本场为基线场次,没有可比的历史会议记录,结论以观察为主。会前唯一能写死的公司口径是 Q3 财报会上那句 \"We intend to do so late in 2027\"(Trainium 对 AWS 以外提供)。官方预告的主线是 Agent、Bedrock、Kiro,官方没有任何关于新芯片的预告。但 Trainium 首席架构师 Ron Diamant 列在 12-03 的技术 keynote 嘉宾里,所以芯片的信息量大概率在周四,而不是周二的 CEO keynote。 主办方(AMZN):会前不动。这是 AMZN 卡已经写好的「持有不加」,本卡不改它。现价 $257.37(2026-11-19 收盘,fetch_prices.py)。AMZN 卡的减仓位 $267.07 只高出现价 3.8%,不到 1 个 ATR($11.20),所以会上的利好就有可能把股价推过那条线。到时候按 AMZN 卡的规则执行,不因为这场会改价位。期权没有把这场会定价成事件(见 §4)。",
+    "thesis": "这场会对我意味着什么:AMZN 第一次进承诺台账,本场为基线场次,没有可比的历史会议记录,结论以观察为主。会前唯一能写死的公司口径是 Q3 财报会上那句 \"We intend to do so late in 2027\"(Trainium 对 AWS 以外提供)。官方预告的主线是 Agent、Bedrock、Kiro,官方没有任何关于新芯片的预告。但 Trainium 首席架构师 Ron Diamant 列在 12-03 的技术 keynote 嘉宾里,而 11-21 复读官方页发现定制芯片负责人 Peter DeSantis(SVP, Custom Silicon)也上了 12-01 的 CEO keynote,所以芯片信息周二、周四都可能出(11-20 版写的是「大概率在周四」,已改)。",
     "expectations": [
       {
         "name": "Agent / Bedrock / Kiro 产品更新",
@@ -4679,7 +4679,7 @@ export const events = [
       "非 AI 实验室的规模化 Trainium 客户 · 预期 点名若干客户,但不给规模 · 利好 点名并给出 GW、芯片数或金额 · 利空 案例只有 Anthropic、OpenAI 等实验室",
       "Sam Altman 环节 · 预期 合作复述,无新数字 · 利好 OpenAI 一手确认 Trainium 用量或新增承诺金额 · 利空 明确只用 GPU",
       "Trainium 外部销售(\"late in 2027\") · 预期 不主动提,或原样重申 · 利好 提前,或给出形态与首批外部客户 · 利空 推迟,或换成更模糊的措辞",
-      "12-01、12-03 11:30–16:00 美东的分时 · 预期 AMZN 波幅在 ATR 之内 · 利好 —— · 利空 ——"
+      "12-01、12-03 11:30–16:00 美东的分时 · 预期 AMZN 波幅在 ATR($11.29)之内;期权给的 12-01+12-02 两日约 ±4.2% · 利好 —— · 利空 收盘破 $237.22(AMZN 卡止损,距 11-20 收盘 -3.9%)"
     ],
     "actual": [],
     "reaction": [],
@@ -4710,7 +4710,7 @@ export const events = [
       },
       {
         "when": "12-01(二) 08:30–10:30 PT = 11:30–13:30 美东(盘中)",
-        "what": "CEO Keynote:Matt Garman(CEO, AWS);嘉宾 Allianz、DoorDash、Sam Altman(OpenAI)"
+        "what": "CEO Keynote:Matt Garman(CEO, AWS);嘉宾 Barbara Karuth-Zelle(COO, Allianz SE)、Tony Xu(CEO, DoorDash)、Sam Altman(OpenAI)、Peter DeSantis(SVP, Foundational AI, Custom Silicon, and Quantum Computing, AWS)。DeSantis 为 11-21 刷新新增,芯片信息也可能在这一场"
       },
       {
         "when": "12-02(三) 08:30–10:00 PT = 11:30–13:00 美东",
@@ -4722,17 +4722,17 @@ export const events = [
       },
       {
         "when": "12-03(四) 08:30–10:00 PT = 11:30–13:00 美东(盘中)",
-        "what": "Technical Innovations Keynote:Matt Wood;嘉宾含 Ron Diamant(VP and Chief Trainium Architect)。芯片信息大概率在这一场"
+        "what": "Technical Innovations Keynote:Matt Wood;嘉宾含 Ron Diamant(VP and Chief Trainium Architect)。芯片细节(规格、架构)更可能在这一场"
       },
       {
         "when": "12-01(二) 全天",
-        "what": "⚠️ 非 re:Invent 环节:NVIDIA GTC D.C. 主会日(会期 12-01~03)、UBS Global Technology Conference(12-01~02)。见 NVDA_gtc-dc_2026-11-30.md"
+        "what": "⚠️ 非 re:Invent 环节:NVIDIA GTC D.C. 主会日(会期 12-01~03)、UBS Global Technology Conference(12-01~02)、MRVL FQ3 财报(12-01 盘后,电话会 13:30 PT = 16:30 美东)。见 NVDA_gtc-dc_2026-11-30.md"
       }
     ],
     "readThrough": [
       {
         "name": "MRVL",
-        "value": "[core] Agent / Bedrock / Kiro 产品更新 定制硅 socket 守得住(证伪信号原文含「Trainium4 归属确认失守」) · 双向,本卡最实的一条 · AWS 管理层一手点名 Trainium4 的设计伙伴。点名 Marvell,Agent / Bedrock / Kiro 产品更新 加强;点名他家或说「完全自研」,触发 MRVL 卡写死的证伪信号。媒体与卖方解读都不算。不点名 = 维持悬空(默认)"
+        "value": "[core] Agent / Bedrock / Kiro 产品更新 定制硅 socket 守得住(证伪信号原文含「Trainium4 归属确认失守」) · 双向,本卡最实的一条 · AWS 管理层一手点名 Trainium4 的设计伙伴。点名 Marvell,Agent / Bedrock / Kiro 产品更新 加强;点名他家或说「完全自研」,触发 MRVL 卡写死的证伪信号。媒体与卖方解读都不算。不点名 = 维持悬空(默认)。⚠️ MRVL 12-01 盘后自家财报:电话会上 MRVL 管理层谈 Trainium 归属只算 MRVL 口径,不算本条触发;12-02 MRVL 股价不许用来裁决本条"
       },
       {
         "name": "NVDA",
