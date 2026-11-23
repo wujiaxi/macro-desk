@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-23 13:00 ET · ⚠️ 25 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
+  "updated": "2026-11-23 13:30 ET · ⚠️ 25 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,243.38",
-    "chg": "+4.70%",
+    "value": "7,254.12",
+    "chg": "+4.85%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "26,755.3",
-    "chg": "+6.74%",
+    "value": "26,783.5",
+    "chg": "+6.85%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "DXY",
-    "value": "104.52",
-    "chg": "+0.72%",
+    "value": "104.46",
+    "chg": "+0.67%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "黄金",
-    "value": "3,650.90",
-    "chg": "+1.19%",
+    "value": "3,655.00",
+    "chg": "+1.31%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "81.07",
-    "chg": "-2.88%",
+    "value": "81.08",
+    "chg": "-2.86%",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "BTC",
-    "value": "61,633",
-    "chg": "+0.77%",
+    "value": "61,488",
+    "chg": "+0.53%",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "VIX",
-    "value": "27.96",
-    "chg": "-7.93",
+    "value": "26.74",
+    "chg": "-9.15",
     "dir": "down",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.94%",
     "chg": "+2.6bp",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.31%",
-    "chg": "+0.6bp",
+    "chg": "+0.3bp",
     "dir": "up",
-    "note": "实时 13:00 ET"
+    "note": "实时 13:30 ET"
   },
   {
     "label": "US 2Y",
@@ -513,25 +513,25 @@ export const events = [
     "valuation": [
       {
         "name": "基准收盘价",
-        "value": "$145.98"
+        "value": "$125.53"
       },
       {
         "name": "概率加权目标价",
-        "value": "$197.63"
+        "value": "$217.35"
       },
       {
         "name": "压力调整底线",
-        "value": "$136.20"
+        "value": "$152.86"
       },
       {
         "name": "安全边际",
-        "value": "-6.70%"
+        "value": "+21.77%"
       }
     ],
     "targets": {
-      "low": "$120",
-      "avg": "$198",
-      "high": "$287",
+      "low": "$127",
+      "avg": "$217",
+      "high": "$314",
       "n": "本站三情景加权 · 卖方一致 $230.00"
     },
     "afterHours": {
@@ -4406,25 +4406,25 @@ export const events = [
     "valuation": [
       {
         "name": "基准收盘价",
-        "value": "$145.98"
+        "value": "$125.53"
       },
       {
         "name": "概率加权目标价",
-        "value": "$197.63"
+        "value": "$217.35"
       },
       {
         "name": "压力调整底线",
-        "value": "$136.20"
+        "value": "$152.86"
       },
       {
         "name": "安全边际",
-        "value": "-6.70%"
+        "value": "+21.77%"
       }
     ],
     "targets": {
-      "low": "$120",
-      "avg": "$198",
-      "high": "$287",
+      "low": "$127",
+      "avg": "$217",
+      "high": "$314",
       "n": "本站三情景加权 · 卖方一致 $230.00"
     },
     "afterHours": {
@@ -7462,25 +7462,25 @@ export const events = [
     "valuation": [
       {
         "name": "基准收盘价",
-        "value": "$145.98"
+        "value": "$125.53"
       },
       {
         "name": "概率加权目标价",
-        "value": "$197.63"
+        "value": "$217.35"
       },
       {
         "name": "压力调整底线",
-        "value": "$136.20"
+        "value": "$152.86"
       },
       {
         "name": "安全边际",
-        "value": "-6.70%"
+        "value": "+21.77%"
       }
     ],
     "targets": {
-      "low": "$120",
-      "avg": "$198",
-      "high": "$287",
+      "low": "$127",
+      "avg": "$217",
+      "high": "$314",
       "n": "本站三情景加权 · 卖方一致 $230.00"
     },
     "afterHours": {
