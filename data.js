@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-24 14:00 ET · ⚠️ 23 条告警: 2026-11-06 结论层含内部代号 ['M-12', 'P1', 'P2',…",
+  "updated": "2026-11-24 14:30 ET · ⚠️ 23 条告警: 2026-11-06 结论层含内部代号 ['M-12', 'P1', 'P2',…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -13,66 +13,66 @@ export const meta = {
 export const markets = [
   {
     "label": "S&P 500",
-    "value": "7,185.84",
-    "chg": "-0.70%",
+    "value": "7,201.71",
+    "chg": "-0.49%",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "纳斯达克100",
-    "value": "26,179.7",
-    "chg": "-2.12%",
+    "value": "26,250.1",
+    "chg": "-1.85%",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "DXY",
-    "value": "103.80",
+    "value": "103.81",
     "chg": "-0.45%",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "黄金",
-    "value": "3,556.10",
-    "chg": "-2.05%",
+    "value": "3,561.60",
+    "chg": "-1.90%",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "81.86",
-    "chg": "+2.85%",
+    "value": "81.79",
+    "chg": "+2.76%",
     "dir": "up",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "BTC",
-    "value": "59,783",
-    "chg": "-2.31%",
+    "value": "59,805",
+    "chg": "-2.27%",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "VIX",
-    "value": "26.45",
-    "chg": "-0.16",
-    "dir": "down",
-    "note": "实时 14:00 ET"
+    "value": "26.66",
+    "chg": "+0.05",
+    "dir": "up",
+    "note": "实时 14:30 ET"
   },
   {
     "label": "US 10Y",
     "value": "4.91%",
     "chg": "-1.2bp",
     "dir": "down",
-    "note": "实时 14:00 ET"
+    "note": "实时 14:30 ET"
   },
   {
     "label": "US 30Y",
     "value": "5.29%",
-    "chg": "+0.0bp",
-    "dir": "flat",
-    "note": "实时 14:00 ET"
+    "chg": "-0.4bp",
+    "dir": "down",
+    "note": "实时 14:30 ET"
   },
   {
     "label": "US 2Y",
