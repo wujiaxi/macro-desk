@@ -5,7 +5,7 @@
 export const meta = {
   "title": "宏观 & 财报事件台",
   "subtitle": "前瞻 · 靴子落地 · 倒计时",
-  "updated": "2026-11-24 00:30 ET · ⚠️ 25 条告警: 2026-10-14 结论层含内部代号 ['M-12', 'M-17', 'P1…",
+  "updated": "2026-11-24 09:00 ET · ⚠️ 23 条告警: 2026-11-06 结论层含内部代号 ['M-12', 'P1', 'P2',…",
   "owner": "内部社群版",
   "disclaimer": "本站内容为个人研究记录，不构成投资建议。数据由 skill 卡片的机器可读块自动生成。"
 };
@@ -16,63 +16,63 @@ export const markets = [
     "value": "7,237.17",
     "chg": "+4.61%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "纳斯达克100",
     "value": "26,746.1",
     "chg": "+6.71%",
     "dir": "up",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "DXY",
-    "value": "104.31",
-    "chg": "+0.04%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "103.89",
+    "chg": "-0.37%",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "黄金",
-    "value": "3,632.30",
-    "chg": "+0.07%",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "3,620.10",
+    "chg": "-0.29%",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "WTI 原油",
-    "value": "79.41",
-    "chg": "-0.45%",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "80.73",
+    "chg": "+1.43%",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "BTC",
-    "value": "60,572",
-    "chg": "-1.02%",
+    "value": "59,922",
+    "chg": "-2.08%",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "VIX",
-    "value": "26.62",
-    "chg": "-9.27",
-    "dir": "down",
-    "note": "实时 00:30 ET"
+    "value": "29.58",
+    "chg": "+2.97",
+    "dir": "up",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 10Y",
-    "value": "4.92%",
-    "chg": "+0.6bp",
-    "dir": "up",
-    "note": "实时 00:30 ET"
+    "value": "4.89%",
+    "chg": "-2.4bp",
+    "dir": "down",
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 30Y",
-    "value": "5.29%",
-    "chg": "-0.9bp",
+    "value": "5.28%",
+    "chg": "-1.4bp",
     "dir": "down",
-    "note": "实时 00:30 ET"
+    "note": "实时 09:00 ET"
   },
   {
     "label": "US 2Y",
@@ -1088,195 +1088,6 @@ export const events = [
       "move": "-3.40%",
       "note": "- 实际次日反应 -3.40%(基准收盘 445.12 → 430.0) - 隐含区间 ±3.0%(405.06 / 430.38) → 实际 落在区间外 → 🔴 事件定价失败,必须追问是哪个变量没被 price in - 卡片内插预期 -1.13% vs 实际 -3.40%,误差 -2.27%(方向判对)"
     }
-  },
-  {
-    "id": "cpi-2026-09-rel2026-10-14",
-    "kind": "macro",
-    "title": "2026-09 CPI",
-    "subtitle": "",
-    "org": "BLS",
-    "ticker": "",
-    "company": "",
-    "date": "2026-10-14T08:30:00-04:00",
-    "dateNote": "08:30 ET",
-    "dateConfirmed": true,
-    "importance": 3,
-    "tags": [
-      "CPI"
-    ],
-    "thesis": "这一次通胀数据的看点不是「涨没涨」,而是汽油把总指数推高的同时,剔除能源和食品的那部分到底有没有继续降温 —— 因为美联储九月刚加了一次息,并且亲口把「停手」的条件定成「底层通胀确实在朝目标走」;十月底那场会议目前是五五开,这份数据就是最后一块拼图。总指数大概率难看,真正定胜负的是里子。",
-    "expectations": [
-      {
-        "name": "核心 CPI 环比(%)",
-        "consensus": "0.2%",
-        "prior": "0.3%",
-        "range": "0.1% ~ 0.3%",
-        "note": "core · 权重 45%"
-      },
-      {
-        "name": "headline CPI 环比(%)",
-        "consensus": "0.4%",
-        "prior": "",
-        "range": "0.2% ~ 0.6%",
-        "note": "权重 15%"
-      },
-      {
-        "name": "shelter 环比(%)",
-        "consensus": "0.2%",
-        "prior": "",
-        "range": "0.1% ~ 0.4%",
-        "note": "权重 15%"
-      },
-      {
-        "name": "supercore 环比(核心服务 ex 住房,派生)(%)",
-        "consensus": "0.2%",
-        "prior": "",
-        "range": "0.1% ~ 0.4%",
-        "note": "权重 10%"
-      },
-      {
-        "name": "核心 CPI 同比 NSA(%)",
-        "consensus": "2.4%",
-        "prior": "",
-        "range": "2.2% ~ 2.6%",
-        "note": "权重 15%"
-      }
-    ],
-    "pricing": [
-      {
-        "name": "SPX 事前 21 日 run-up",
-        "value": "-2.50%",
-        "note": "噪声带 ±0.47"
-      },
-      {
-        "name": "2Y 事前 21 日 run-up",
-        "value": "+50bp",
-        "note": "噪声带 ±4.0"
-      }
-    ],
-    "scenarios": [
-      {
-        "tag": "偏热",
-        "tone": "hawk",
-        "prob": "30%",
-        "trigger": "核心 CPI 环比(%) ≥ 0.3 或 (核心 CPI 环比(%) > 0.1 且 supercore 环比(核心服务 ex 住房,派生)(%) ≥ 0.4)",
-        "reaction": "2Y +10bp · 10Y +7bp · DXY +0.45% · SPX -1.20% · NDX -1.70%"
-      },
-      {
-        "tag": "符合预期",
-        "tone": "base",
-        "prob": "45%",
-        "trigger": "0.1 < 核心 CPI 环比(%) < 0.3 且 supercore 环比(核心服务 ex 住房,派生)(%) < 0.4",
-        "reaction": "2Y -3bp · 10Y -2bp · DXY -0.10% · SPX +0.40% · NDX +0.60%"
-      },
-      {
-        "tag": "偏冷",
-        "tone": "dove",
-        "prob": "25%",
-        "trigger": "核心 CPI 环比(%) ≤ 0.1",
-        "reaction": "2Y -11bp · 10Y -8bp · DXY -0.50% · SPX +1.10% · NDX +1.60%"
-      }
-    ],
-    "watch": [
-      "核心 CPI 环比(公布一位小数) · 预期 0.2 · 利好 ≤0.1 · 利空 ≥0.3",
-      "headline 环比 · 预期 0.4 · 利好 ≤0.2 · 利空 ≥0.6",
-      "shelter 环比 · 预期 0.2 · 利好 ≤0.2 · 利空 ≥0.4",
-      "supercore(派生,§2.2 公式) · 预期 0.2 · 利好 ≤0.2 · 利空 ≥0.4",
-      "核心同比(NSA) · 预期 2.4 · 利好 ≤2.2 · 利空 ≥2.6"
-    ],
-    "actual": [
-      {
-        "name": "核心 CPI 环比(%)",
-        "actual": "0.3",
-        "consensus": "0.2",
-        "prior": "",
-        "surprise": "利空",
-        "dir": "down"
-      },
-      {
-        "name": "headline CPI 环比(%)",
-        "actual": "0.6",
-        "consensus": "0.4",
-        "prior": "",
-        "surprise": "利空",
-        "dir": "down"
-      },
-      {
-        "name": "核心 CPI 同比 NSA(%)",
-        "actual": "2.6",
-        "consensus": "2.4",
-        "prior": "",
-        "surprise": "利空",
-        "dir": "down"
-      }
-    ],
-    "reaction": [
-      {
-        "asset": "S&P 500",
-        "d0": "-1.11%",
-        "d1": "+0.33%"
-      },
-      {
-        "asset": "纳斯达克100",
-        "d0": "-2.02%",
-        "d1": "-0.05%"
-      },
-      {
-        "asset": "US 2Y",
-        "d0": "+3bp",
-        "d1": "-5bp"
-      },
-      {
-        "asset": "US 10Y",
-        "d0": "-2bp",
-        "d1": "-9bp"
-      },
-      {
-        "asset": "DXY",
-        "d0": "+0.36%",
-        "d1": "-0.54%"
-      }
-    ],
-    "verdict": "读数(§8.1):P1 核心环比 0.3(预期 0.2,bear_at 0.3 踩线)、P2 headline 0.6(预期 0.4)、P5 核心同比 2.6(预期 2.4),三条全部证伪(bear),加权 S = -1.0。P1 相对 bar:prior +0.0、nowcast +0.1。落进 hot。 SPX -1.108%(带 0.47)、NDX -2.024%(带 0.79),双双超带,方向与 f_core_hot 的 SPX:- NDX:- 一致,程序判「赢了 f_core_hot」。NDX 跌幅约为 SPX 的 1.8 倍,与 hot 情景 NDX/SPX 的久期比(1.7/1.2)同向且更陡,NDX 已略越过面板 p10(-1.98%)。[事实] 为什么对:这是 10/28 FOMC 之前最后一份 CPI,事前 ZQ 隐含 10/28 加息概率 0.48 —— 硬币面意味着重定价空间在两个方向都最大(§1「本次的特殊性」)。主席 9/16 把停手标准写成「underlying inflation 确实在朝目标走」,0.3 的核心环比让 f_stop_rule(P1 <= 0.2 and ...)直接失活,股票端失去了基准情形下唯一的托底力量,而 f_core_hot 没有对手。事前写的翻转条件「P1 >= 0.3(strength 3)一条就足以把 + 打成 -」原样兑现。[推断:机制;方向与幅度是事实] 2Y/10Y/DXY:§8.3 方向票三格全是「+ 一致」(主导 f_core_hot,10Y/DXY 加上 f_headline_div),但 §8.4 三格都是「无当日收盘,反应层待次交易日」,至今未回填。按 M-17,缺数据不得渲染为 0,也不得替程序另算一套 —— 利率端本次不可裁、不计命中率。⚠️ 这不是本卡独有:10/02 非农卡 §8.4 的 2Y/10Y/DXY 也是同样三格空着,说明 macro_reconcile --stage close 的「待次交易日」没有消费者去补,是管线缺陷而不是数据偶缺(见 ⑤)。 §8.3:SPX/NDX「- 对冲,agree 0.2,被压制 f_positioning_hot」。也就是程序认为有一股 strength 2 的力量在替股票托底(「热已 price in,残余流向风险偏好修复」),市场完全没有给它面子:股票不是小跌,是跌到 hot 情景量级。 它为什么被点着:activate 是 runup21d.2Y >= 20 and P1 >= 0.3。P1 = 0.3 是当日事实;而 runup21d.2Y = 50.0 的 base_asof.2Y 仍是 2026-09-15(§7.1 块原值)—— 覆盖的是 8/17–9/15、含 9/16 加息前抢跑的那 21 天,不是真正决定 10/14 定价的 9/16–10/13。本卡 §4 与 §7.2 清单第 0 条事前写死「10/13 收盘前必须重盖 run-up」;event_log 里 10/09 入队的 refresh 没有执行,10/16 被「事件已发生」作废。所以 f_positioning_hot=1 是用 4 周前的快照判的,这股力量本次是否真实在场,未经验证。[事实:时间戳与队列记录;推断:它不在场] 股票端的实际走法给了反证:如果前端真在发布前 21 天已经按「热」抢跑 ≥20bp,0.3 的核心环比应当「只是确认」,股票该像上一张卡(8 月 CPI,run-up +34bp,SPX/NDX 当天 +0.86%/+0.91%)那样收回。这次反过来跌到 hot 量级,最可能的解释是进场时热并没有被 price in —— 9/16 加息之后到 10/13 的那段,前端很可能已经从加息前的抢跑回吐(中间夹着 10/02 非农,该卡 SPX +0.734% / NDX +1.004%,带内不裁)。我没有对这一段另算 run-up(遵守「不另算一套」),所以这条只能是 [推断]。 上一张卡的修法是否有效:拆成 hot/cool 两条让 f_positioning_hot 第一次可以被激活了 —— 修的是「符号写反」那个病;但它这次暴露了第二个病:activate 里引用的 runup21d.* 是建卡日盖章值,对账时没有被重算(§4 我事前写的是「对账时由程序重算」,块内 base_asof 证明并没有)。即同一股力量连续两张卡都在股票端判错,原因不同:8 月是符号反、永远点不着;9 月是快照旧、不该点着却点着了。 P3 shelter、P4 supercore 两格 §8.1 均为「缺口」(权重合计 0.25,f_shelter_lag / f_supercore 在 §8.3 为 None)。§7.2 第 4 条要求从 Table 1 手抓后 --actual P3=x --actual P4=y --write,这一步也没做。本节按要求不改程序区、不另算,所以 f_shelter_lag(市场是否看穿)与 f_supercore(粘性)这两股本次是「没测到」,不是「没出现」,§8.4 把它们列进「没出现」栏是缺口被渲染成了否定 —— 记录在此,不据此下结论。 反应函数:H-asym(冷被定价更多)本次只有热侧样本,且利率端无收盘,本次无法检验;regime tightening_bias 不改(M-12),但若 10/28 加息,它会延续而不是到期 —— 这一点留给 FOMC 卡,本卡不跨卡改数。 情景表的 hot move 本次在股票端量级准确,不改;要改的是力量合成:下一张卡 (a) 纳入 ③ 的 f_headline_passthrough(出现 1 次,先登记);(b) f_positioning_* 的 activate 在对账时必须用重算后的 runup21d,做不到就该判 None 而不是用建卡快照判 1。",
-    "history": [
-      {
-        "when": "2026-09-11",
-        "what": "CPI（2026-08）",
-        "outcome": "SPX +0.86% · 2Y +7bp"
-      },
-      {
-        "when": "2026-08-12",
-        "what": "CPI（2026-07）",
-        "outcome": "SPX +0.26% · 2Y -2bp"
-      },
-      {
-        "when": "2026-07-14",
-        "what": "CPI（2026-06）",
-        "outcome": "SPX +0.38% · 2Y -8bp"
-      }
-    ],
-    "links": [
-      {
-        "label": "BLS CPI",
-        "url": "https://www.bls.gov/cpi/"
-      },
-      {
-        "label": "官方日程",
-        "url": "https://www.bls.gov/schedule/news_release/cpi.htm"
-      },
-      {
-        "label": "Cleveland Fed · inflation-nowcasting",
-        "url": "https://www.clevelandfed.org/indicators-and-data/inflation-nowcasting"
-      },
-      {
-        "label": "BLS · cpi.nr0",
-        "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
-      },
-      {
-        "label": "BLS · cpi.t01",
-        "url": "https://www.bls.gov/news.release/cpi.t01.htm"
-      }
-    ]
   },
   {
     "id": "meta-fy26q3",
