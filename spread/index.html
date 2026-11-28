@@ -102,6 +102,20 @@
   .lrkpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:9px 0 4px}
   .lrkpi>div{background:#0c1117;border:1px solid #1e2630;border-radius:8px;padding:7px 9px;min-width:0}
   .badge{font-size:10px;padding:1px 6px;border-radius:4px;border:1px solid #58252a;color:#f87171;margin-left:6px}
+  .imbody{font-size:12.5px;line-height:1.65;color:#c6d2e0;padding-bottom:14px}
+  .imbody ul{margin:6px 0 4px;padding-left:18px}
+  .imbody li{margin-bottom:4px}
+  .imbody b{color:#e6edf3;font-weight:600}
+  .imh{margin:16px 0 7px;font-size:12px;color:#7d8b9c}
+  .imh b{font-size:13px}
+  .imp{margin:7px 0;font-size:12px;color:#7d8b9c}
+  .imt{overflow-x:auto;border:1px solid #1e2630;border-radius:8px}
+  .imt table{min-width:640px}
+  .imt td,.imt th{white-space:normal;text-align:left;padding:6px 11px;vertical-align:top}
+  .imt td.num{white-space:nowrap;text-align:right}
+  .imt th.num{text-align:right}
+  .imt td:not(.num),.imt th:not(.num){min-width:168px}   /* 手机上文字列不被数字列挤成一字一行,表格在框内横滑 */
+  .imt td:first-child,.imt th:first-child{min-width:120px}
 </style>
 </head>
 <body>
@@ -163,6 +177,15 @@
       font-size="13" fill="#7d8b9c" font-family="Archivo,sans-serif">正在取广度历史…</text></svg></div></div>
   </section>
 
+  <section id="im">
+    <div class="sechead"><h2>指数涨跌模型 · 标普 500 / 纳指 100</h2><div class="hint" id="imHint">取数中…</div></div>
+    <div class="rail" id="imChecks" style="display:none;margin-bottom:12px"></div>
+    <div class="lrgrid" id="imCards"></div>
+    <div class="tools" id="imTabs" style="margin:12px 0 10px"></div>
+    <div class="panel imbody" id="imBody"></div>
+    <div class="lrcav" id="imNote"></div>
+  </section>
+
   <section>
     <div class="sechead"><h2>美国国债收益率曲线</h2><div class="hint" id="curveHint">利差的基准线</div></div>
     <div class="panel"><div class="cw"><svg id="curve" viewBox="0 0 900 220" width="100%" height="220"
@@ -199,6 +222,7 @@
       <li><b>报价来源</b>：<span class="src finra">FINRA</span> 是美国场外市场（TRACE）报价，口径最权威；其余为德国交易所（FWB／SWB／GETTEX／MUN／DUS）挂牌，同一只债在欧洲挂牌、流动性远低于美国场外，只在 FINRA 无报价时作后备。债券与国债曲线为本页实时取数，多数为延迟约 15 分钟的流式报价。</li>
       <li><b>均线广度</b>取 S5TW／NDTW（标普500／纳指100 站上 20 日均线的成分股占比，Barchart 日终）与 S5TH／NDTH（200 日）。这两类符号只存在于 TradingView 的图表通道，而那条通道校验 Origin、浏览器不允许伪造，所以由本机脚本日更抓好推到本站，这里读那份 JSON。<b>恐惧贪婪</b>同理：CNN 校验 Referer，只认 cnn.com 的，前端直取永远是 418。</li>
       <li>持仓 26 张论点卡里，<b>4 家没有在外流通的公司债</b>（TSLA／TSM／BE／DUOL），不在此追踪。<b>可转／可交换债</b>按 TradingView 的 <span class="mono">conversion_option</span> 字段识别，单列一节、<b>不计入平均利差</b>：它的价格主要是转股期权的价值（比如价格是面值的 4 倍多），收益率反映的不是信用定价。<b>转股价</b>不在行情源里，取自 SEC 一手件（点数字可跳原文，悬停看引用原话），由 <span class="mono">convert_terms.py</span> 逐条核对原文后生成；有分红调整的（BABA）取最新一次调整公告，带 * 的是由调整后转股比例反推（1000÷比例）。NBIS 这批债本金会分阶段增值到面值的 120–125%，但<b>转股按原始面值计</b>，所以转股价就是公告值。「正股 vs 转股价」＝正股现价 ÷ 转股价 − 1。CMOC 是可交换债、不在 SEC 备案，转股价暂缺。价格口径（按原始面值还是增值后本金）行情源未说明，所以<b>不给转股溢价</b>。</li>
+      <li><b>指数涨跌模型</b>：标普 500（1950 年起）与纳指 100（1985 年 10 月起）的每日收盘价（yfinance），由本机 <span class="mono">index_move_model.py</span> 每个交易日收盘后算好推到本站，页面只排版、照抄程序生成的文字。只用已收盘的完整日线，最高点与回本都按收盘算。「触发」和「历史同类之后」说的是历史上发生过什么，旁边并列「任意一天」的基准，<b>不是预测</b>；「独立 N 次」＝彼此相隔 20 个交易日以上最多能挑出 N 次，不到 10 次的只列日期、不出统计。「回到历史高点要多久」按这一轮已经跌到过的最深处找历史同类。程序每次跑五类核对：手算小序列自检、数据完整、公开历史记录（1987-10-19 单日跌幅，2007–2013 与 2000–2002 两段回撤的谷底、深度、回本日）、与 FRED 逐日对照、最新一根与 TradingView 的指数收盘（差 ≤0.02%）及 SPY／QQQ 当日涨跌对照；任何一项不过就不更新，线上保持上一个好版本，每项都做过「故意喂错数据」的反向测试。</li>
       <li><b>长周期宏观</b>：全部是公开数据（美联储、财政部、BEA、BLS、劳工部、世界银行，经 FRED 取；信用利差为穆迪 BAA，FRED 标注可用、需注明出处），由本机 <span class="mono">macro_longrun.py</span> 每个交易日算好推到本站，页面只画图、照抄程序生成的文字。程序每次跑十二项核对：收益率曲线用两套原始利率重算、萨姆规则用失业率自算、巴菲特指数分子与标普 500 的季度涨跌比（两个独立来源）、拆分恒等式、净流动性各分量的单位、Shiller 标普价格与 yfinance 互证、纳指市盈率算法拿标普前 120 大权重股与 Shiller 对照、拆股换算（逐家查股数跳变是否正好等于拆股比例）、纳指个股市盈率与 yfinance 抽样对照、标普前瞻市盈率与 FactSet 公开数对照（按标普其后涨跌换算到同一天，±2.5%）、前瞻预期覆盖 ≥95% 的指数权重、前瞻市盈率历史的近 5 年 / 10 年均值与 FactSet 公开数对照（±3%）；任何一项不过就不更新，线上保持上一个好版本，每项核对都做过「故意喂错数据」的反向测试。<b>市盈率</b>：标普 500 用 Shiller 数据（耶鲁，1871 年起，标普公布的 GAAP 盈利）；纳指 100 没有免费的长历史，用现有成分股的 SEC 财报自算（合计市值 ÷ 合计滚动 12 个月净利润），有幸存者偏差、按全市值加权。<b>前瞻市盈率</b>用分析师一致预期（yfinance，三方），按每家公司的财年把「今年」与「明年」的预期按时间加权成未来 12 个月（直接用 yfinance 自带的 forwardPE 会对刚公布完财年的公司多看一年）；前瞻市盈率的历史（标普 1990 年起、纳指 2001 年起，周度）来自 <a href="https://historyofmarket.com/" target="_blank" rel="noopener noreferrer">History of Market</a>（数据按 CC BY 4.0 开放，它标注为终端数据，上游条款归上游），已用 FactSet 公开的 5 年 / 10 年均值核对；本站从 2026-10-04 起每天另算一笔（金色）。巴菲特指数加权版的分母＝美国 GDP 与世界其他地区 GDP 按「美国企业利润里来自海外的比例」混合增长（2001 年前该比例为估算）。灰色竖带＝NBER 衰退期。这些图用来定长期预期，<b>都不是择时信号</b>。</li>
     </ul>
   </footer>
@@ -571,6 +595,62 @@ function renderLR(j){
   });
 }
 
+async function loadIM(){
+  const r=await fetch("../data/index_moves.json",{cache:"no-store"});
+  if(!r.ok) throw new Error("HTTP "+r.status);
+  return r.json();
+}
+// 程序正文只用四种写法:「### 标题」「- 列表」「| 表格 |」「**加粗**」。页面只排版,不重算、不改写。
+function imMd(md){
+  const inl=s=>esc(s).replace(/\*\*(.+?)\*\*/g,"<b>$1</b>");
+  const L=md.split("\n"), out=[]; let i=0;
+  while(i<L.length){
+    const s=L[i];
+    if(!s.trim()||s.startsWith("### ")){i++;continue;}        // 标题已在上面的卡片里
+    if(s.startsWith("|")){
+      const rows=[];
+      while(i<L.length&&L[i].startsWith("|")){rows.push(L[i].replace(/^\||\|\s*$/g,"").split("|").map(c=>c.trim()));i++;}
+      const [head,,...body]=rows;                              // 第二行是 |---| 分隔行
+      const isNum=c=>/^[+\-—\d]/.test(c)&&c.length<=34;        // 短的数字格右对齐不折行;长文字格左对齐可折行
+      const num=head.map((_,k)=>k>0&&body.length>0&&body.every(r=>isNum(r[k]||"")));
+      const cls=k=>num[k]?' class="num"':"";
+      out.push(`<div class="imt"><table><thead><tr>${head.map((c,k)=>`<th${cls(k)}>${inl(c)}</th>`).join("")}</tr></thead><tbody>${
+        body.map(r=>`<tr>${r.map((c,k)=>`<td${cls(k)}>${inl(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`);
+      continue;
+    }
+    if(s.startsWith("- ")){
+      const li=[];
+      while(i<L.length&&L[i].startsWith("- ")){li.push(`<li>${inl(L[i].slice(2))}</li>`);i++;}
+      out.push(`<ul>${li.join("")}</ul>`); continue;
+    }
+    out.push(`<div class="${s.startsWith("**")?"imh":"imp"}">${inl(s)}</div>`); i++;
+  }
+  return out.join("");
+}
+function renderIM(j){
+  // 硬核对不过时程序根本不写文件,所以这里只可能出现「今天没核成」的软项(对照源取不到)
+  const soft=j.checks.filter(c=>c.ok!==true), rail=document.getElementById("imChecks");
+  rail.style.display=soft.length?"":"none";
+  rail.innerHTML=soft.map(c=>`<div class="cell"><div class="lab">${esc(c.name)}</div><div class="big" style="font-size:17px;color:#f0c454">今天没核成</div><div class="note">${esc(c.detail)}</div></div>`).join("");
+  const age=Math.round((Date.now()-new Date(j.generated))/36e5);
+  const old=(Date.now()-new Date(j.as_of+"T21:00:00Z"))/864e5>4.5;   // 周五收盘到下周一傍晚约 3 天;超过 4.5 天说明没在更新
+  document.getElementById("imHint").textContent=`${j.as_of} 收盘 · 核对 ${j.checks.length-soft.length}/${j.checks.length} 通过 · `
+    +(age<24?`${age} 小时前更新`:`${Math.round(age/24)} 天前更新`)+(old?" · ⚠ 数据偏旧":"")+" · 历史统计，不是预测";
+  document.getElementById("imCards").innerHTML=j.indices.map(x=>`<div class="lrcard">
+    <div class="lrhead"><div><div class="lrt">${esc(x.name)}</div><div class="lrsub">${esc(x.date)} · ${esc(x.since)} 年起</div></div>
+      <div><div class="lrv">${esc(x.close)}</div></div></div>
+    <div class="lrkpi">${x.kpis.map(k=>`<div><div class="lrgrp">${esc(k.label)}</div><div class="mono ${k.tone}" style="font-size:15px;font-weight:600;margin-top:2px">${esc(k.value)}</div><div class="lrd" style="text-align:left">${esc(k.note)}</div></div>`).join("")}</div></div>`).join("");
+  let cur=j.indices[0].key;
+  const draw=()=>{
+    const tabs=document.getElementById("imTabs");
+    tabs.innerHTML=j.indices.map(x=>`<button class="chip" type="button" data-k="${x.key}" aria-pressed="${x.key===cur}">${esc(x.name)} 明细</button>`).join("");
+    tabs.querySelectorAll("button").forEach(b=>b.onclick=()=>{cur=b.dataset.k;draw();});
+    document.getElementById("imBody").innerHTML=imMd(j.indices.find(x=>x.key===cur).md);
+  };
+  draw();
+  document.getElementById("imNote").textContent=j.note;
+}
+
 async function loadLocal(){
   const r=await fetch("../data/breadth.json",{cache:"no-store"});
   if(!r.ok) throw new Error("HTTP "+r.status);
@@ -754,6 +834,11 @@ async function boot(){
     b.style.width=(p==null?0:Math.max(0,Math.min(100,p)))+"%";
     b.style.background=p==null?"#263140":p<30?"#f87171":p>70?"#2dd4bf":"#f0c454";
   };
+
+  loadIM().then(renderIM).catch(e=>{
+    state.errs.push("指数涨跌模型数据取数失败（"+e.message+"）");
+    document.getElementById("imHint").textContent="取数失败"; showErr();
+  });
 
   loadLongrun().then(renderLR).catch(e=>{
     state.errs.push("长周期宏观数据取数失败（"+e.message+"）");
