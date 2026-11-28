@@ -367,7 +367,6 @@ function checkCurve(){
   const ageDays=(Date.now()-new Date(o.date+"T21:00:00Z"))/864e5;
   state.ustChk={date:o.date,n:ok.length,worst:Math.max(...shape.map(Math.abs)),level:med,rows,ageDays,
                 fail:ageDays>3.5||Math.abs(med)>40};
-  document.getElementById("curveHint").textContent+=` · 利差基准＝财政部官方曲线（${o.date} 日终）${med>=0?"+":""}${med.toFixed(0)}bp 今日平移`;
 }
 async function loadOfficial(){
   const r=await fetch("../data/ust_official.json",{cache:"no-store"});
@@ -511,7 +510,10 @@ function lrMount(host,series,unit,rec,refs,clip,H){
 }
 function renderLR(j){
   const ok=j.checks.filter(c=>c.ok).length;
-  document.getElementById("lrChecks").innerHTML=j.checks.map(c=>`<div class="cell"><div class="lab">${esc(c.name)}</div><div class="big" style="font-size:17px;color:${c.ok?"#2dd4bf":"#f87171"}">${c.ok?"通过":"不通过"}</div><div class="note">${esc(c.detail)}</div></div>`).join("");
+  // 2026-11-27 老师:一排「通过」不需要 —— 只列没过的,全过时整排隐藏(标题行仍写「核对 n/n 通过」)
+  const bad=j.checks.filter(c=>!c.ok), rail=document.getElementById("lrChecks");
+  rail.style.display=bad.length?"":"none";
+  rail.innerHTML=bad.map(c=>`<div class="cell"><div class="lab">${esc(c.name)}</div><div class="big" style="font-size:17px;color:#f87171">不通过</div><div class="note">${esc(c.detail)}</div></div>`).join("");
   const age=Math.round((Date.now()-new Date(j.generated))/36e5);
   document.getElementById("lrHint").textContent=`${j.cards.length} 张图 · 核对 ${ok}/${j.checks.length} 通过 · `+(age<24?`${age} 小时前更新`:`${Math.round(age/24)} 天前更新`)+" · 悬停看数值";
   const grid=document.getElementById("lrGrid");
@@ -573,7 +575,10 @@ function drawBreadth(series){
   el.innerHTML=g+paths; return true;
 }
 function drawCurve(){
-  const el=document.getElementById("curve"),pts=state.curve;
+  // 2026-11-27 老师「曲线不对吧」:原来画的是 TradingView 上欧洲交易所老券报价按季度分箱的中位数(坏点多、
+  // 被限流时整条取不到)。改为画财政部官方曲线(利差基准本来就是它);官方取不到才退回盘中报价。
+  const el=document.getElementById("curve"),o=state.official;
+  const pts=o?o.points:state.curve;
   if(!pts.length){el.innerHTML='<text x="450" y="112" text-anchor="middle" font-size="13" fill="#7d8b9c" font-family="Archivo,sans-serif">国债曲线取数失败</text>';return;}
   const W=900,H=220,L=48,R=20,T=16,B=30;
   const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]);
@@ -587,17 +592,20 @@ function drawCurve(){
   }
   for(const tk of [1,2,3,5,7,10,20,30]) if(tk<=xmax)
     g+=`<text x="${X(tk).toFixed(1)}" y="${H-9}" text-anchor="middle" font-size="10.5" fill="#7d8b9c" font-family="Roboto Mono,monospace">${tk}y</text>`;
-  const bins=new Map();
-  for(const [t,y] of pts){const k=Math.round(t*4)/4;(bins.get(k)||bins.set(k,[]).get(k)).push(y);}
-  const sm=[...bins.entries()].map(([k,a])=>{a.sort((x,y)=>x-y);return [k,a[Math.floor(a.length/2)]];}).sort((a,b)=>a[0]-b[0]);
+  const sm=o?pts:state.curveBin;
   const line=sm.map((p,i)=>(i?"L":"M")+X(p[0]).toFixed(1)+" "+Y(p[1]).toFixed(1)).join(" ");
   const area=line+` L ${X(sm[sm.length-1][0]).toFixed(1)} ${Y(ymin).toFixed(1)} L ${X(sm[0][0]).toFixed(1)} ${Y(ymin).toFixed(1)} Z`;
   const last=sm[sm.length-1];
   el.innerHTML=`${g}<path d="${area}" fill="#2dd4bf" fill-opacity=".08"/>
     <path d="${line}" fill="none" stroke="#2dd4bf" stroke-width="2" stroke-linejoin="round"/>
+    ${o?sm.map(p=>`<circle cx="${X(p[0]).toFixed(1)}" cy="${Y(p[1]).toFixed(1)}" r="2.4" fill="#2dd4bf"/>`).join(""):""}
     <circle cx="${X(last[0]).toFixed(1)}" cy="${Y(last[1]).toFixed(1)}" r="3.4" fill="#2dd4bf"/>
     <text x="${(X(last[0])-7).toFixed(1)}" y="${(Y(last[1])-9).toFixed(1)}" text-anchor="end" font-size="11.5" fill="#2dd4bf" font-family="Roboto Mono,monospace">${last[1].toFixed(2)}%</text>`;
-  document.getElementById("curveHint").textContent=`${sm.length} 个期限点 · 短端 ${sm[0][1].toFixed(2)}% · 长端 ${last[1].toFixed(2)}%`;
+  const u=state.ustChk, at=t=>(sm.find(p=>Math.abs(p[0]-t)<1e-6)||[,null])[1];
+  document.getElementById("curveHint").textContent=o
+    ?`财政部官方 ${o.date} 日终 · 3 个月 ${fmt(at(.25))}% · 2 年 ${fmt(at(2))}% · 10 年 ${fmt(at(10))}% · 30 年 ${fmt(at(30))}%`
+      +(u?` · 盘中较官方 ${u.level>=0?"+":""}${u.level.toFixed(0)}bp`:"")
+    :`官方曲线未取到,退回盘中报价(欧洲交易所老券,仅参考)· ${sm.length} 个期限点 · 短端 ${sm[0][1].toFixed(2)}% · 长端 ${last[1].toFixed(2)}%`;
 }
 
 function rowsOf(iss){
@@ -750,9 +758,9 @@ async function boot(){
     drawBreadth([]); showErr();
   });
 
-  try{ await loadCurve(); }catch(e){ state.errs.push("国债曲线取数失败（"+e.message+"），利差无法计算"); }
-  drawCurve();
+  try{ await loadCurve(); }catch(e){ state.errs.push("国债曲线盘中报价取数失败（"+e.message+"）"); }
   try{ await loadOfficial(); checkCurve(); }catch(e){ state.errs.push("财政部官方曲线取数失败（"+e.message+"）"); }
+  drawCurve();
 
   for(let i=0;i<ISSUERS.length;i+=5){
     await Promise.all(ISSUERS.slice(i,i+5).map(async iss=>{
