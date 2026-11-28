@@ -86,6 +86,9 @@
   .lrleg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:11px;color:#c6d2e0;margin:8px 0 2px}
   .lrleg i{display:inline-block;width:14px;height:2px;vertical-align:middle;margin-right:5px;border-radius:1px}
   .lrcw{position:relative}
+  .lrrng{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:8px 0 2px}
+  .lrrng .chip{font-size:11px;padding:3px 10px}
+  .lrzh{font-size:10.5px;color:#7d8b9c;margin-left:2px}
   .lrtip{position:absolute;pointer-events:none;background:#111820;border:1px solid #263140;border-radius:6px;
          padding:5px 8px;font-size:11px;line-height:1.5;color:#e6edf3;white-space:nowrap;display:none;z-index:2}
   .lrstats{margin:6px 0 0;padding-left:16px;font-size:11.5px;color:#c6d2e0}
@@ -445,12 +448,14 @@ function lrFmt(v,unit){
   const a=Math.abs(v), d=a>=100?0:a>=10?1:2;
   return v.toFixed(d)+({"%":"%","pp":"pp","x":"x","T":"T","k":"k"}[unit]||"");
 }
-function lrChart(series,unit,rec,refs,clip,H){
+function lrChart(series,unit,rec,refs,clip,H,win){
   const W=420,L=40,R=56,T=10,B=22; H=H||170;
+  // 2026-11-27 老师要能选 1/5/10 年、能拖动放大:窗内只画窗内的点,纵轴跟着可见数据走
+  if(win) series=series.map(s=>({...s,pts:s.pts.filter(p=>p[0]>=win[0]&&p[0]<=win[1])})).filter(s=>s.pts.length);
   const all=series.flatMap(s=>s.pts);
-  if(!all.length) return {svg:'<text x="210" y="80" text-anchor="middle" font-size="12" fill="#7d8b9c">无数据</text>',W,H,map:null};
+  if(!all.length) return {svg:'<text x="210" y="80" text-anchor="middle" font-size="12" fill="#7d8b9c">这段时间没有数据</text>',W,H,map:null};
   const t0=Math.min(...all.map(p=>p[0])), t1=Math.max(...all.map(p=>p[0]));
-  let ys=all.map(p=>p[1]).concat((refs||[]).map(r=>r.v));
+  let ys=all.map(p=>p[1]).concat(win?[]:(refs||[]).map(r=>r.v));
   let y0=Math.min(...ys), y1=Math.max(...ys);
   if(clip){y0=Math.max(y0,clip[0]); y1=Math.min(y1,clip[1]);}
   const nonneg=y0>=0, pad=(y1-y0)*0.06||1; y0-=pad; y1+=pad; if(nonneg) y0=Math.max(0,y0);
@@ -463,9 +468,10 @@ function lrChart(series,unit,rec,refs,clip,H){
   for(const v of ticks){
     g+=`<line x1="${L}" y1="${Y(v).toFixed(1)}" x2="${W-R}" y2="${Y(v).toFixed(1)}" stroke="#263140" stroke-opacity=".5"/>`;
     g+=`<text x="${L-6}" y="${(Y(v)+3.5).toFixed(1)}" text-anchor="end" font-size="9.5" fill="#7d8b9c" font-family="Roboto Mono,monospace">${lrFmt(v,"")}</text>`; }
-  const span=t1-t0, step=span>50?20:span>25?10:span>12?5:2;
-  for(let y=Math.ceil(t0/step)*step;y<=t1;y+=step)
-    g+=`<text x="${X(y).toFixed(1)}" y="${H-7}" text-anchor="middle" font-size="9.5" fill="#7d8b9c" font-family="Roboto Mono,monospace">${y}</text>`;
+  const span=t1-t0, step=span>50?20:span>25?10:span>12?5:span>5?2:span>2.5?1:span>1.2?.5:.25;
+  for(let y=Math.ceil(t0/step-1e-9)*step;y<=t1+1e-9;y+=step){
+    const yr=Math.floor(y+1e-6), mo=Math.round((y-yr)*12)+1;
+    g+=`<text x="${X(y).toFixed(1)}" y="${H-7}" text-anchor="middle" font-size="9.5" fill="#7d8b9c" font-family="Roboto Mono,monospace">${step<1?`${String(yr).slice(2)}-${String(mo).padStart(2,"0")}`:yr}</text>`; }
   for(const r of refs||[]){ if(r.v<y0||r.v>y1) continue;
     g+=`<line x1="${L}" y1="${Y(r.v).toFixed(1)}" x2="${W-R}" y2="${Y(r.v).toFixed(1)}" stroke="#8b98a8" stroke-dasharray="4 3" stroke-opacity=".8"/>`;
     g+=`<text x="${L+4}" y="${(Y(r.v)-3).toFixed(1)}" font-size="9" fill="#8b98a8">${esc(r.label)}</text>`; }
@@ -484,14 +490,19 @@ function lrChart(series,unit,rec,refs,clip,H){
     g+=`<text x="${W-R+5}" y="${ly.toFixed(1)}" font-size="10.5" font-weight="600" fill="${s.color}" font-family="Roboto Mono,monospace">${lrFmt(p[1],unit)}</text>`;
   }
   g+=`<line class="lrx" x1="0" y1="${T}" x2="0" y2="${H-B}" stroke="#c6d2e0" stroke-opacity=".45" visibility="hidden"/>`;
-  return {svg:g,W,H,X,t0,t1,L,R};
+  g+=`<rect class="lrsel" x="0" y="${T}" width="0" height="${H-T-B}" fill="#2dd4bf" fill-opacity=".12" stroke="#2dd4bf" stroke-opacity=".5" visibility="hidden"/>`;
+  return {svg:g,W,H,X,t0,t1,L,R,series};
 }
-function lrMount(host,series,unit,rec,refs,clip,H){
+function lrMount(host,series,unit,rec,refs,clip,H,win,onZoom,onReset){
   series=series.filter(s=>s.pts&&s.pts.length);          // 空序列(比如刚开始攒的历史)不画,也不许让整张图报错
-  const c=lrChart(series,unit,rec,refs,clip,H);
-  host.innerHTML=`<div class="lrcw"><svg viewBox="0 0 ${c.W} ${c.H}" width="100%" role="img">${c.svg}</svg><div class="lrtip"></div></div>`;
+  const c=lrChart(series,unit,rec,refs,clip,H,win);
+  host.innerHTML=`<div class="lrcw"><svg viewBox="0 0 ${c.W} ${c.H}" width="100%" role="img" style="touch-action:pan-y">${c.svg}</svg><div class="lrtip"></div></div>`;
   if(!c.X) return;
-  const svg=host.querySelector("svg"), tip=host.querySelector(".lrtip"), vl=svg.querySelector(".lrx");
+  series=c.series;
+  const svg=host.querySelector("svg"), tip=host.querySelector(".lrtip"), vl=svg.querySelector(".lrx"), sel=svg.querySelector(".lrsel");
+  const xOf=e=>{const r=svg.getBoundingClientRect();return Math.min(Math.max((e.clientX-r.left)/r.width*c.W,c.L),c.W-c.R);};
+  const tOf=x=>c.t0+(x-c.L)/(c.W-c.L-c.R)*(c.t1-c.t0);
+  let drag=null;
   const near=(pts,t)=>{let b=null,bd=1e9;for(const p of pts){const d=Math.abs(p[0]-t);if(d<bd){bd=d;b=p;}}return bd<1.01?b:null;};
   const move=e=>{
     const r=svg.getBoundingClientRect(), x=(e.clientX-r.left)/r.width*c.W;
@@ -499,14 +510,25 @@ function lrMount(host,series,unit,rec,refs,clip,H){
     const t=c.t0+(x-c.L)/(c.W-c.L-c.R)*(c.t1-c.t0);
     const rows=series.map(s=>({s,p:near(s.pts,t)})).filter(o=>o.p);
     if(!rows.length) return;
-    const tt=rows[0].p[0], yr=Math.floor(tt+1e-6), mo=Math.round((tt-yr)*12)+1;
-    tip.innerHTML=`<div style="color:#7d8b9c">${yr}-${String(mo).padStart(2,"0")}</div>`+rows.map(o=>`<div><span style="color:${o.s.color}">●</span> ${esc(o.s.label)} <b class="mono">${lrFmt(o.p[1],unit)}</b></div>`).join("");
+    const tt=rows[0].p[0], yr=Math.floor(tt+1e-6), mo=Math.min(12,Math.floor((tt-yr)*12+1e-6)+1), dd=Math.round((tt-yr-(mo-1)/12)*365)+1;
+    tip.innerHTML=`<div style="color:#7d8b9c">${yr}-${String(mo).padStart(2,"0")}${c.t1-c.t0<3?"-"+String(Math.max(1,dd)).padStart(2,"0"):""}</div>`+rows.map(o=>`<div><span style="color:${o.s.color}">●</span> ${esc(o.s.label)} <b class="mono">${lrFmt(o.p[1],unit)}</b></div>`).join("");
     vl.setAttribute("x1",c.X(tt)); vl.setAttribute("x2",c.X(tt)); vl.setAttribute("visibility","visible");
     tip.style.display="block";
     const px=(c.X(tt)/c.W)*r.width; tip.style.left=Math.min(Math.max(0,px+10),r.width-tip.offsetWidth)+"px"; tip.style.top="4px";
   };
-  svg.addEventListener("pointermove",move);
-  svg.addEventListener("pointerleave",()=>{tip.style.display="none";vl.setAttribute("visibility","hidden");});
+  svg.addEventListener("pointermove",e=>{
+    if(!drag){move(e);return;}
+    const x=xOf(e); sel.setAttribute("x",Math.min(x,drag)); sel.setAttribute("width",Math.abs(x-drag)); sel.setAttribute("visibility","visible");
+    tip.style.display="none"; vl.setAttribute("visibility","hidden");
+  });
+  svg.addEventListener("pointerdown",e=>{ if(!onZoom) return; drag=xOf(e); try{svg.setPointerCapture(e.pointerId);}catch(_){} move(e); });
+  svg.addEventListener("pointerup",e=>{
+    if(drag==null) return; const x=xOf(e), a=Math.min(x,drag), b=Math.max(x,drag); drag=null; sel.setAttribute("visibility","hidden");
+    if(b-a>8) onZoom([tOf(a),tOf(b)]);                  // 横向拖过 8 个单位才算放大,轻点只看读数
+  });
+  svg.addEventListener("pointercancel",()=>{drag=null;sel.setAttribute("visibility","hidden");});
+  if(onReset) svg.addEventListener("dblclick",onReset);
+  svg.addEventListener("pointerleave",()=>{ if(drag==null){tip.style.display="none";vl.setAttribute("visibility","hidden");} });
 }
 function renderLR(j){
   const ok=j.checks.filter(c=>c.ok).length;
@@ -515,21 +537,37 @@ function renderLR(j){
   rail.style.display=bad.length?"":"none";
   rail.innerHTML=bad.map(c=>`<div class="cell"><div class="lab">${esc(c.name)}</div><div class="big" style="font-size:17px;color:#f87171">不通过</div><div class="note">${esc(c.detail)}</div></div>`).join("");
   const age=Math.round((Date.now()-new Date(j.generated))/36e5);
-  document.getElementById("lrHint").textContent=`${j.cards.length} 张图 · 核对 ${ok}/${j.checks.length} 通过 · `+(age<24?`${age} 小时前更新`:`${Math.round(age/24)} 天前更新`)+" · 悬停看数值";
+  document.getElementById("lrHint").textContent=`${j.cards.length} 张图 · 核对 ${ok}/${j.checks.length} 通过 · `+(age<24?`${age} 小时前更新`:`${Math.round(age/24)} 天前更新`)+" · 悬停看数值 · 可选时间范围、拖动放大";
   const grid=document.getElementById("lrGrid");
   grid.innerHTML=j.cards.map((c,i)=>`<div class="lrcard">
     <div class="lrhead"><div><div class="lrgrp">${esc(c.group)}</div><div class="lrt">${esc(c.title)}${c.stale?'<span class="badge">数据偏旧</span>':""}</div><div class="lrsub">${esc(c.sub)}</div></div>
       <div><div class="lrv">${esc(c.latest.text)}</div><div class="lrd">${esc(c.latest.date)}${c.pct!=null?` · 历史分位 ${c.pct}%`:""}</div></div></div>
     ${(c.series.length>1||c.series2)?`<div class="lrleg">${[...c.series,...(c.series2?c.series2.series:[])].map(s=>`<span><i style="background:${s.color};opacity:${s.minor?.5:1}"></i>${esc(s.label)}</span>`).join("")}</div>`:""}
-    ${c.kpis?`<div class="lrkpi">${c.kpis.map(k=>`<div><div class="lrgrp">${esc(k.label)}</div><div class="mono" style="font-size:15px;font-weight:600;margin-top:2px">${esc(k.value)}</div><div class="lrd" style="text-align:left">${esc(k.note)}</div></div>`).join("")}</div>`:""}
+    ${c.kpis?`<div class="lrkpi"${c.kpis.length===4?' style="grid-template-columns:repeat(2,minmax(0,1fr))"':""}>${c.kpis.map(k=>`<div><div class="lrgrp">${esc(k.label)}</div><div class="mono" style="font-size:15px;font-weight:600;margin-top:2px">${esc(k.value)}</div><div class="lrd" style="text-align:left">${esc(k.note)}</div></div>`).join("")}</div>`:""}
+    <div class="lrrng" id="lrr${i}"></div>
     <div id="lrc${i}"></div>${c.series2?`<div id="lrc${i}b"></div>`:""}
     <ul class="lrstats">${c.stats.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
     ${c.explain?`<div class="lrexp">${c.explain.map(([k,v])=>`<div><b>${esc(k)}</b>　${esc(v)}</div>`).join("")}</div>`:""}
     <div class="lrread">${esc(c.read)}</div><div class="lrcav">局限:${esc(c.caveat)}</div>
     <div class="lrsrc">来源 ${c.src.map(s=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>`).join("")}</div></div>`).join("");
   j.cards.forEach((c,i)=>{
-    lrMount(document.getElementById("lrc"+i),c.series,c.unit,(c.norec?null:j.recessions),c.refs,c.clip,c.series2?130:170);
-    if(c.series2) lrMount(document.getElementById("lrc"+i+"b"),c.series2.series,c.series2.unit,(c.norec?null:j.recessions),c.series2.refs||null,c.series2.clip||null,130);
+    const allp=[...c.series,...(c.series2?c.series2.series:[])].flatMap(s=>s.pts||[]);
+    const tmin=Math.min(...allp.map(p=>p[0])), tmax=Math.max(...allp.map(p=>p[0]));
+    // 只给有意义的档:数据比这个窗长、且至少一条线在窗内有 4 个点(年度数据不出「1 年」)
+    const alls=[...c.series,...(c.series2?c.series2.series:[])];
+    const opts=[1,5,10].filter(w=>tmax-tmin>w*1.15&&alls.some(s=>(s.pts||[]).filter(p=>p[0]>=tmax-w).length>=4)).map(w=>({k:String(w),lab:w+" 年",win:[tmax-w,tmax+1e-6]}));
+    if(opts.length) opts.push({k:"max",lab:"最长",win:null});
+    let cur="max", win=null;
+    const draw=()=>{
+      const zoom=w=>{cur=null;win=w;draw();};
+      const rr=document.getElementById("lrr"+i);
+      rr.innerHTML=opts.map(o=>`<button class="chip" type="button" data-k="${o.k}" aria-pressed="${o.k===cur}">${o.lab}</button>`).join("")
+        +(opts.length?`<span class="lrzh">${cur?"图上横向拖动可放大":"已放大 · 点按钮或双击图还原"}</span>`:"");
+      rr.querySelectorAll("button").forEach(b=>b.onclick=()=>{const o=opts.find(o=>o.k===b.dataset.k);cur=o.k;win=o.win;draw();});
+      lrMount(document.getElementById("lrc"+i),c.series,c.unit,(c.norec?null:j.recessions),c.refs,c.clip,c.series2?130:170,win,zoom,()=>{cur="max";win=null;draw();});
+      if(c.series2) lrMount(document.getElementById("lrc"+i+"b"),c.series2.series,c.series2.unit,(c.norec?null:j.recessions),c.series2.refs||null,c.series2.clip||null,130,win,zoom,()=>{cur="max";win=null;draw();});
+    };
+    draw();
   });
 }
 
