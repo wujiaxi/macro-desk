@@ -526,8 +526,8 @@ function renderLR(j){
     <div class="lrread">${esc(c.read)}</div><div class="lrcav">局限:${esc(c.caveat)}</div>
     <div class="lrsrc">来源 ${c.src.map(s=>`<a href="${s.url}" target="_blank" rel="noopener noreferrer">${esc(s.name)}</a>`).join("")}</div></div>`).join("");
   j.cards.forEach((c,i)=>{
-    lrMount(document.getElementById("lrc"+i),c.series,c.unit,j.recessions,c.refs,c.clip,c.series2?130:170);
-    if(c.series2) lrMount(document.getElementById("lrc"+i+"b"),c.series2.series,c.series2.unit,j.recessions,c.series2.refs||null,c.series2.clip||null,130);
+    lrMount(document.getElementById("lrc"+i),c.series,c.unit,(c.norec?null:j.recessions),c.refs,c.clip,c.series2?130:170);
+    if(c.series2) lrMount(document.getElementById("lrc"+i+"b"),c.series2.series,c.series2.unit,(c.norec?null:j.recessions),c.series2.refs||null,c.series2.clip||null,130);
   });
 }
 
